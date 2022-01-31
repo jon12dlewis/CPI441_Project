@@ -26,6 +26,7 @@ public class Collidable : MonoBehaviour
                 continue;
 
             OnCollide(hits[i]);
+            //Debug.Log(hits[i]);
 
             hits[i] = null;
         }
