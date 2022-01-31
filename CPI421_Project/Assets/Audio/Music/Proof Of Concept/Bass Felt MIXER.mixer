@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!241 &24100000
+AudioMixerController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Bass Felt MIXER
+  m_OutputGroup: {fileID: 3647269949370838504, guid: a67599e016366384aa781cb8867cdec0, type: 2}
+  m_MasterGroup: {fileID: 24300002}
+  m_Snapshots:
+  - {fileID: 5044398636956377413}
+  - {fileID: 24500006}
+  m_StartSnapshot: {fileID: 5044398636956377413}
+  m_SuspendThreshold: -80
+  m_EnableSuspend: 1
+  m_UpdateMode: 0
+  m_ExposedParameters: []
+  m_AudioMixerGroupViews:
+  - guids:
+    - 25ccdc42cc9cb2146a6fc34eb326f30c
+    name: View
+  m_CurrentViewIndex: 0
+  m_TargetSnapshot: {fileID: 5044398636956377413}
+--- !u!243 &24300002
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Master
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 25ccdc42cc9cb2146a6fc34eb326f30c
+  m_Children: []
+  m_Volume: 77171cdbc38028d4abd476d3acd7b475
+  m_Pitch: e0c5e80c543987e4ba2cbf601dc5d789
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: 24400004}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!244 &24400004
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 5ebeec7d0fb70d34889603de3e8969dd
+  m_EffectName: Attenuation
+  m_MixLevel: d7c8fa484aaef19459189abb9d0f3024
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!245 &24500006
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: On
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: d52a91af69e383343b44df19572e59fe
+  m_FloatValues: {}
+  m_TransitionOverrides: {}
+--- !u!245 &5044398636956377413
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Off
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: 9a6fcce51b0164c49893ca8b8e295e8c
+  m_FloatValues:
+    77171cdbc38028d4abd476d3acd7b475: -80
+  m_TransitionOverrides: {}
