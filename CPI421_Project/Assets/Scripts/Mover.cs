@@ -10,8 +10,8 @@ public abstract class Mover : Fighter
 
     protected RaycastHit2D hit;
 
-    protected float ySpeed = 0.75f;
-    protected float xSpeed = 1.0f;
+    protected float ySpeed = 1.5f;
+    protected float xSpeed = 2f;
 
 
     // Start is called before the first frame update
@@ -30,12 +30,17 @@ public abstract class Mover : Fighter
         
         if(moveDelta.x > 0)
         {
-            transform.localScale = Vector3.one;
+            transform.localScale = new Vector3(1.5f,1.5f,1.5f);
         }
         else 
         if(moveDelta.x < 0)
         {
-            transform.localScale = new Vector3(-1,1,1);
+            transform.localScale = new Vector3(-1.5f,1.5f,1.5f);
+        }
+
+        if(transform.name == "Enemy")
+        {
+            transform.localScale = new Vector3(8.5f,8.5f,1f);
         }
 
         // Add push vector if any
