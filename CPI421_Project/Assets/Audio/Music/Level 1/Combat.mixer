@@ -26,7 +26,7 @@ AudioMixerSnapshotController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Off
+  m_Name: NoCombat
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 2cb330835e6b6604c80aef9ac50f784c
   m_FloatValues:
@@ -76,7 +76,7 @@ AudioMixerController:
     - 6a78e197b3275c646a38a9830fed7b50
     name: View
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: 24500006}
+  m_TargetSnapshot: {fileID: -2095114150504227844}
 --- !u!243 &24300002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -118,15 +118,16 @@ AudioMixerSnapshotController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: On
+  m_Name: InCombat
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 652cf0c87c2e47a46960200d79a21771
   m_FloatValues:
     1116b6e17943a674e945b0c2dfc38c73: 1.8
-    d5586e3278fd0404ea125a8cb266b6b2: 0.13552584
+    d5586e3278fd0404ea125a8cb266b6b2: 0
     0bc70ad2d8299c7458f7df04202aaed0: -8297
     09e2dc834af65854194df9f8dbbea321: 3.2
     65370c935f7d8d7449dd4e736bdec11c: 567
+    0cfbc3156a50f754faa7473024f9ef74: 1.7477665
     d28f4638ae1c6514f9d8cd1e03e79a2a: -8185
     9ea1bd7864636eb4d95356d7e2853e1c: -6823
     404fe39941d85c542bafa9945ebd254e: -713
