@@ -40,9 +40,14 @@ public abstract class Mover : Fighter
 
         if(transform.name == "Enemy")
         {
-            transform.localScale = new Vector3(8.5f,8.5f,1f);
+            transform.localScale = new Vector3(5f,5f,1f);
         }
-
+        
+        if(transform.name == "Enemy_Spider")
+        {
+            transform.localScale = new Vector3(0.25f,0.25f,1f);
+        }
+        
         // Add push vector if any
         moveDelta += pushDirection;
 

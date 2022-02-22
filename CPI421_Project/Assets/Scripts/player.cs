@@ -31,5 +31,11 @@ public class player : Mover
         
         UpdateMotor(new Vector3(x,y,0));
     } 
+
+    protected override void Death()
+    {
+        Application.Quit();
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Title");
+    }
     
 }
