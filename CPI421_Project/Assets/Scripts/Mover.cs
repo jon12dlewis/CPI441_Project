@@ -13,6 +13,7 @@ public abstract class Mover : Fighter
     protected float ySpeed = 1.5f;
     protected float xSpeed = 2f;
 
+    //Vector3 mousePos;
 
     // Start is called before the first frame update
     protected virtual void Start()
@@ -27,13 +28,17 @@ public abstract class Mover : Fighter
         moveDelta = new Vector3(input.x * xSpeed, input.y * ySpeed, 0);
 
         // Swap sprite direction
+
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         
-        if(moveDelta.x > 0)
+
+        
+        if(mousePos.x > this.transform.position.x)
         {
             transform.localScale = new Vector3(1.5f,1.5f,1.5f);
         }
         else 
-        if(moveDelta.x < 0)
+        if(mousePos.x < this.transform.position.x)
         {
             transform.localScale = new Vector3(-1.5f,1.5f,1.5f);
         }
@@ -43,7 +48,12 @@ public abstract class Mover : Fighter
             transform.localScale = new Vector3(5f,5f,1f);
         }
         
-        if(transform.name == "Enemy_Spider")
+        if(transform.name == "Enemy_Spider" && moveDelta.x > 0)
+        {
+            transform.localScale = new Vector3(-0.25f,0.25f,1f);
+        }
+        else
+        if(transform.name == "Enemy_Spider" && moveDelta.x < 0)
         {
             transform.localScale = new Vector3(0.25f,0.25f,1f);
         }

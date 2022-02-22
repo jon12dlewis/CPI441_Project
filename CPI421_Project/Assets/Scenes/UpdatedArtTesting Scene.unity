@@ -61065,6 +61065,10 @@ MonoBehaviour:
   pushRecoverySpeed: 0.2
   pickAxe: {fileID: 1635608936}
   sword: {fileID: 548055508}
+  up: {fileID: 7406846285924938708, guid: 94708218f504761499d4d5212174d9a5, type: 3}
+  down: {fileID: -5273128768667658329, guid: 94708218f504761499d4d5212174d9a5, type: 3}
+  left: {fileID: 7848508640818667534, guid: 94708218f504761499d4d5212174d9a5, type: 3}
+  right: {fileID: -5064636949540451836, guid: 94708218f504761499d4d5212174d9a5, type: 3}
 --- !u!61 &290186434
 BoxCollider2D:
   m_ObjectHideFlags: 0
