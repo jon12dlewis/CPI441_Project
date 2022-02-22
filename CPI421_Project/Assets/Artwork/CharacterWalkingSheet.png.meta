@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 153789e65ff2fc94b9c9396ea2c1ee48
+guid: 75cee8c76ea316c4580f47bacf2e7ef8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1227704340391545750
-    second: character_side_view_0
+      213: 4426377128438480272
+    second: CharacterWalkingSheet_0
+  - first:
+      213: 3492568828770842068
+    second: CharacterWalkingSheet_1
+  - first:
+      213: 9098072329831629483
+    second: CharacterWalkingSheet_2
+  - first:
+      213: -6103476065664128305
+    second: CharacterWalkingSheet_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -50,7 +59,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 51, y: 27, z: 57, w: 43}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -78,39 +87,15 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: character_side_view_0
+      name: CharacterWalkingSheet_0
       rect:
         serializedVersion: 2
-        x: 50
-        y: 30
+        x: 51
+        y: 539
         width: 210
         height: 440
       alignment: 0
@@ -120,8 +105,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a64b1c5386156fee0800000000000000
-      internalID: -1227704340391545750
+      spriteID: 09d3d7edb86ad6d30800000000000000
+      internalID: 4426377128438480272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterWalkingSheet_1
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 539
+        width: 210
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d5fc7868d8187030800000000000000
+      internalID: 3492568828770842068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterWalkingSheet_2
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 539
+        width: 210
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba2cc609498d24e70800000000000000
+      internalID: 9098072329831629483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterWalkingSheet_3
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 539
+        width: 210
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcaadfa1bd81c4ba0800000000000000
+      internalID: -6103476065664128305
       vertices: []
       indices: 
       edges: []
