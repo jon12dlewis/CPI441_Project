@@ -34,7 +34,7 @@ public class crystal_node : Fighter
     protected override void Death()
     {
         Destroy(gameObject);
-        //GameManager.instance.expierence += xpValue;
+        GameManager.instance.GiveBlueCrystal(69);
         GameManager.instance.ShowText("Blue Crystal Obtained ", 40, Color.blue, transform.position, Vector3.up * 40, 1.0f);
     }
 }

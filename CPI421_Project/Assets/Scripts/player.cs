@@ -61,8 +61,8 @@ public class player : Mover
 
     protected override void Death()
     {
-        Application.Quit();
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Title");
+        //Application.Quit();
+        //UnityEngine.SceneManagement.SceneManager.LoadScene("Title");
     }
     
 }

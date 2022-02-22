@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
     // Logic
     public int mula;
     public int expierence;
+    public int blue_crystals;
 
     // Floating text
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
@@ -69,5 +70,22 @@ public class GameManager : MonoBehaviour
         // change the weapon level
 
         Debug.Log("LoadState");
+    }
+
+    public void GiveBlueCrystal(int ammount)
+    {
+        Debug.Log("Blue Crystal Added");
+        blue_crystals += ammount;
+    }
+
+    public void GiveExpierence(int ammount)
+    {
+        Debug.Log("Expierence Added");
+        expierence += ammount;
+    }
+
+    public void GiveMula(int ammount)
+    {
+        mula += ammount;
     }
 }

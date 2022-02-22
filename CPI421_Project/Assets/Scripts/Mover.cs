@@ -50,12 +50,12 @@ public abstract class Mover : Fighter
         
         if(transform.name == "Enemy_Spider" && moveDelta.x > 0)
         {
-            transform.localScale = new Vector3(-0.25f,0.25f,1f);
+            transform.localScale = new Vector3(-0.2f,0.2f,1f);
         }
         else
         if(transform.name == "Enemy_Spider" && moveDelta.x < 0)
         {
-            transform.localScale = new Vector3(0.25f,0.25f,1f);
+            transform.localScale = new Vector3(0.2f,0.2f,1f);
         }
         
         // Add push vector if any
