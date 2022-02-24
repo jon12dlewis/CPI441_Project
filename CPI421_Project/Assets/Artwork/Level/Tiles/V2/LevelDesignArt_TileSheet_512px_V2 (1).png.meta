@@ -1,0 +1,1080 @@
+fileFormatVersion: 2
+guid: 215f764a660cf7b4795821bc492dd075
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1947700163067212711
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_0
+  - first:
+      213: 6641755473918833083
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_1
+  - first:
+      213: 3327461884806874050
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_2
+  - first:
+      213: -789318539524554065
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_3
+  - first:
+      213: 8743084541609365479
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_4
+  - first:
+      213: 6641313580656228761
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_5
+  - first:
+      213: 7555322642329358041
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_6
+  - first:
+      213: 1680213433122516758
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_7
+  - first:
+      213: 2018922002170811740
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_8
+  - first:
+      213: -7336458507388164801
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_9
+  - first:
+      213: -5429350825114394022
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_10
+  - first:
+      213: -6173240195389427532
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_11
+  - first:
+      213: 3998124666945697246
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_12
+  - first:
+      213: 7764349885352380635
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_13
+  - first:
+      213: -7506610086559384059
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_14
+  - first:
+      213: -6152155107739515934
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_15
+  - first:
+      213: 1589857685300160436
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_16
+  - first:
+      213: 2650670139839219079
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_17
+  - first:
+      213: -3859197033661333904
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_18
+  - first:
+      213: 3257226910504781813
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_19
+  - first:
+      213: -7820657319001305055
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_20
+  - first:
+      213: -8093011802738982146
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_21
+  - first:
+      213: 8601817056617692148
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_22
+  - first:
+      213: 4067746883434582985
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_23
+  - first:
+      213: -509901608036627576
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_24
+  - first:
+      213: 5248062410273561037
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_25
+  - first:
+      213: 7855540129319221921
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_26
+  - first:
+      213: -7191828303396134457
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_27
+  - first:
+      213: 383538886644486416
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_28
+  - first:
+      213: -8894133096349427234
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_29
+  - first:
+      213: -8471060984432748267
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_30
+  - first:
+      213: -406563205847960827
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_31
+  - first:
+      213: 7522656397915739472
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_32
+  - first:
+      213: -273310000311422813
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_33
+  - first:
+      213: 1753488442363208453
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_34
+  - first:
+      213: 2367459422531283303
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_35
+  - first:
+      213: -7821140932759476047
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_36
+  - first:
+      213: -6405798515206499553
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_37
+  - first:
+      213: -3301216681714945880
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_38
+  - first:
+      213: -6015292472300722852
+    second: LevelDesignArt_TileSheet_512px_V2 (1)_39
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 409
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a3779c9afe970b10800000000000000
+      internalID: 1947700163067212711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_1
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 409
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb130fbf9614c2c50800000000000000
+      internalID: 6641755473918833083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_2
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 409
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c3c09f54f48d2e20800000000000000
+      internalID: 3327461884806874050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_3
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 409
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa2420568f6cb05f0800000000000000
+      internalID: -789318539524554065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_4
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 409
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7efc5d7511da55970800000000000000
+      internalID: 8743084541609365479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_5
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 409
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 999fdf0b38faa2c50800000000000000
+      internalID: 6641313580656228761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_6
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 409
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dec183d9e5e9d860800000000000000
+      internalID: 7555322642329358041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_7
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 409
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61f6b1c1731515710800000000000000
+      internalID: 1680213433122516758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 307
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c559c904dd6a40c10800000000000000
+      internalID: 2018922002170811740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_9
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 307
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f356cb59bd9af2a90800000000000000
+      internalID: -7336458507388164801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_10
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 307
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a522514c03217a4b0800000000000000
+      internalID: -5429350825114394022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_11
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 307
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b076a0efbe345aa0800000000000000
+      internalID: -6173240195389427532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_12
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 307
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed5760d93313c7730800000000000000
+      internalID: 3998124666945697246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_13
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 307
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd8064c551380cb60800000000000000
+      internalID: 7764349885352380635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_14
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 307
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50e7343e5e923d790800000000000000
+      internalID: -7506610086559384059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_15
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 307
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e3c41866872f9aa0800000000000000
+      internalID: -6152155107739515934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 205
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b7adbf242f401610800000000000000
+      internalID: 1589857685300160436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_17
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 205
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7850ad5c27219c420800000000000000
+      internalID: 2650670139839219079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_18
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 205
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07eff5aaeb0617ac0800000000000000
+      internalID: -3859197033661333904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_19
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 205
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f70b791e9ef33d20800000000000000
+      internalID: 3257226910504781813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_20
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 205
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1205ede9a91777390800000000000000
+      internalID: -7820657319001305055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_21
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 205
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef203bed4a8dfaf80800000000000000
+      internalID: -8093011802738982146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_22
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 205
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fbf792e90bcf5770800000000000000
+      internalID: 8601817056617692148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_23
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 205
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c312571d3a837830800000000000000
+      internalID: 4067746883434582985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 103
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88b839660377ce8f0800000000000000
+      internalID: -509901608036627576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_25
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 103
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc99f6be4fcd4d840800000000000000
+      internalID: 5248062410273561037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_26
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 103
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aaf5ee802c740d60800000000000000
+      internalID: 7855540129319221921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_27
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 103
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c12972134e713c90800000000000000
+      internalID: -7191828303396134457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_28
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 103
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0115ef7d59a925500800000000000000
+      internalID: 383538886644486416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_29
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 103
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed91c0f6211b19480800000000000000
+      internalID: -8894133096349427234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_30
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 103
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51917309aeeb07a80800000000000000
+      internalID: -8471060984432748267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_31
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 103
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50330b81be89b5af0800000000000000
+      internalID: -406563205847960827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 055561d1328d56860800000000000000
+      internalID: 7522656397915739472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_33
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 1
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a030e5b002053cf0800000000000000
+      internalID: -273310000311422813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_34
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 1
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 503efcca274a55810800000000000000
+      internalID: 1753488442363208453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_35
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 1
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 769e02c2dc7ead020800000000000000
+      internalID: 2367459422531283303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_36
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 1
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b8aa9482c9b57390800000000000000
+      internalID: -7821140932759476047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_37
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 1
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f13546690380a17a0800000000000000
+      internalID: -6405798515206499553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_38
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 1
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a079c72be8bf22d0800000000000000
+      internalID: -3301216681714945880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_V2 (1)_39
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 1
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c552f68ed53658ca0800000000000000
+      internalID: -6015292472300722852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
