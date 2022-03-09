@@ -74,7 +74,7 @@ public class Weapon :Collidable
                         Swing();
                         break;
                     case 3:
-                        Swing();
+                        SwingLeft();
                         break;
 
                 }
@@ -116,5 +116,10 @@ public class Weapon :Collidable
     private void Swing()
     {
         anim.SetTrigger("SwingSide");
+    }
+
+    private void SwingLeft()
+    {
+        anim.SetTrigger("SwingLeft");
     }
 }

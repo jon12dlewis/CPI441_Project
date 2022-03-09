@@ -32,21 +32,26 @@ public abstract class Mover : Fighter
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         
 
+        /*
         
         if(mousePos.x > this.transform.position.x)
         {
-            transform.localScale = new Vector3(1.5f,1.5f,1.5f);
+            transform.localScale = new Vector3(-0.3f,0.3f,0.3f);
         }
         else 
         if(mousePos.x < this.transform.position.x)
         {
-            transform.localScale = new Vector3(-1.5f,1.5f,1.5f);
+            transform.localScale = new Vector3(0.3f,0.3f,0.3f);
         }
 
+        */
+
+        /*
         if(transform.name == "Enemy")
         {
             transform.localScale = new Vector3(5f,5f,1f);
         }
+        */
         
         if(transform.name == "Enemy_Spider" && moveDelta.x > 0)
         {

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Enemy : Mover
 {
@@ -15,6 +16,10 @@ public class Enemy : Mover
     private Transform playerTransform;
     private Vector3 startingPosition;
 
+    // AI
+    public Transform target;
+    NavMeshAgent agent;
+
     // HitBox
     public ContactFilter2D filter;
     private BoxCollider2D hitBox;
@@ -26,32 +31,14 @@ public class Enemy : Mover
         playerTransform = GameManager.instance.player.transform;
         startingPosition = transform.position;
         hitBox = transform.GetChild(0).GetComponent<BoxCollider2D>();
+
+        agent = GetComponent<NavMeshAgent>();
+		agent.updateRotation = false;
+		agent.updateUpAxis = false;
     }
 
     private void FixedUpdate()
     {
-        if(Vector3.Distance(playerTransform.position, startingPosition) < chaseLength)
-        {
-            chasing = Vector3.Distance(playerTransform.position, startingPosition) < triggerLength;
-            
-            if(chasing)
-            {
-                if(!collideWithPlayer)
-                {
-                    UpdateMotor((playerTransform.position - transform.position).normalized);
-                }
-            }
-            else
-            {
-                UpdateMotor(startingPosition - transform.position);
-            }
-        }
-        else
-        {
-            UpdateMotor(startingPosition - transform.position);
-            chasing = false;
-        }
-
         // check for overlaps
         collideWithPlayer = false;
         boxCollider.OverlapCollider(filter, hits);
@@ -66,6 +53,33 @@ public class Enemy : Mover
             }
 
             hits[i] = null;
+        }
+    }
+
+    private void Update()
+    {
+        if(Vector3.Distance(playerTransform.position, startingPosition) < chaseLength)
+        {
+            chasing = Vector3.Distance(playerTransform.position, startingPosition) < triggerLength;
+
+            if(chasing)
+            {
+                if(!collideWithPlayer)
+                {
+                    agent.SetDestination(target.position);
+                }
+            }
+            else
+            {
+                //UpdateMotor(startingPosition - transform.position);
+                agent.SetDestination(startingPosition);
+            }
+        }
+        else
+        {
+            //UpdateMotor(startingPosition - transform.position);
+            agent.SetDestination(startingPosition);
+            chasing = false;
         }
     }
 
