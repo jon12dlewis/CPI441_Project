@@ -72,22 +72,23 @@ public abstract class Mover : Fighter
 
 
         // check if something is in the way
-        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(0, moveDelta.y), Mathf.Abs(moveDelta.y * Time.deltaTime), LayerMask.GetMask("Actor","Blocking"));
+        hit = Physics2D.BoxCast(transform.position, boxCollider.size/2, 0, new Vector2(0, moveDelta.y), Mathf.Abs(moveDelta.y * Time.deltaTime), LayerMask.GetMask("Actor","Blocking"));
 
         if(hit.collider == null)
         {
 
             transform.Translate(0, moveDelta.y * Time.deltaTime, 0);
         }
-
-        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x, 0), Mathf.Abs(moveDelta.x * Time.deltaTime), LayerMask.GetMask("Actor","Blocking"));
+        
+        
+        hit = Physics2D.BoxCast(transform.position, boxCollider.size/2, 0, new Vector2(moveDelta.x, 0), Mathf.Abs(moveDelta.x * Time.deltaTime), LayerMask.GetMask("Actor","Blocking"));
 
         if(hit.collider == null)
         {
 
             transform.Translate(moveDelta.x * Time.deltaTime, 0, 0);
         }
-
+        
 
     }
 
