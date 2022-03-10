@@ -19,6 +19,9 @@ public class Enemy : Mover
     // AI
     public Transform target;
     NavMeshAgent agent;
+    public Vector3 agentSpeed;
+    Vector2 movement = new Vector2(0.0f, -1.0f);
+    public Animator animator;
 
     // HitBox
     public ContactFilter2D filter;
@@ -35,6 +38,7 @@ public class Enemy : Mover
         agent = GetComponent<NavMeshAgent>();
 		agent.updateRotation = false;
 		agent.updateUpAxis = false;
+        agentSpeed = agent.velocity;
     }
 
     private void FixedUpdate()
@@ -42,6 +46,8 @@ public class Enemy : Mover
         // check for overlaps
         collideWithPlayer = false;
         boxCollider.OverlapCollider(filter, hits);
+        agentSpeed = agent.velocity;
+
         for(int i = 0; i < hits.Length; i++)
         {
             if(hits[i] == null)
@@ -58,6 +64,11 @@ public class Enemy : Mover
 
     private void Update()
     {
+
+        movement.x = agentSpeed.x;
+        movement.y = agentSpeed.y;
+        
+
         if(Vector3.Distance(playerTransform.position, startingPosition) < chaseLength)
         {
             chasing = Vector3.Distance(playerTransform.position, startingPosition) < triggerLength;
@@ -81,6 +92,11 @@ public class Enemy : Mover
             agent.SetDestination(startingPosition);
             chasing = false;
         }
+
+        animator.SetFloat("horizontal", movement.x);
+        animator.SetFloat("vertical", movement.y);
+        animator.SetFloat("speed", movement.sqrMagnitude);
+
     }
 
     protected override void Death()

@@ -12,10 +12,6 @@ public class player : Mover
 
     public Animator animator;
 
-    public Sprite up;
-    public Sprite down;
-    public Sprite left;
-    public Sprite right;
     public float moveSpeed = 2f; 
 
     Vector2 movement; 
@@ -86,29 +82,6 @@ public class player : Mover
             //pickAxe.SetTrigger("Sheath");
             sword.SetTrigger("Idle");
         }
-
-        /*
-        if(mousePos.y > this.transform.position.y + 1.5)
-        {
-            GetComponent<SpriteRenderer>().sprite = up;
-        }
-        else
-        if(mousePos.y < this.transform.position.y - 1.5)
-        {
-            GetComponent<SpriteRenderer>().sprite = down;
-        }
-        
-        if(mousePos.x > this.transform.position.x + 1.5)
-        {
-            GetComponent<SpriteRenderer>().sprite = right;
-        }
-        else
-        if(mousePos.x < this.transform.position.x - 1.5)
-        {
-            GetComponent<SpriteRenderer>().sprite = right;
-        }
-
-        */
 
     }
 
