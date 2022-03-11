@@ -1,7 +1,19 @@
 fileFormatVersion: 2
 guid: ddc2ddf0a0358d543a4e7077703c438e
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -7943946185508967335
+    second: spider_attack_right_0
+  - first:
+      213: -129257100791978273
+    second: spider_attack_right_1
+  - first:
+      213: 2017602561344338221
+    second: spider_attack_right_2
+  - first:
+      213: -5996582197231181822
+    second: spider_attack_right_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,7 +113,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: spider_attack_right_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1050
+        width: 475
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95c2be9780f61c190800000000000000
+      internalID: -7943946185508967335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider_attack_right_1
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 1050
+        width: 475
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd6e8960a59c43ef0800000000000000
+      internalID: -129257100791978273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider_attack_right_2
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 1050
+        width: 475
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d29f8def6d6fffb10800000000000000
+      internalID: 2017602561344338221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider_attack_right_3
+      rect:
+        serializedVersion: 2
+        x: 1556
+        y: 1050
+        width: 475
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 200aa9b434cd7cca0800000000000000
+      internalID: -5996582197231181822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

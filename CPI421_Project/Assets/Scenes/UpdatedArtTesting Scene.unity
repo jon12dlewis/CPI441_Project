@@ -61064,6 +61064,7 @@ MonoBehaviour:
   hitPoint: 10
   maxHitpoint: 10
   pushRecoverySpeed: 0.2
+  wasHit: 0
   pickAxe: {fileID: 1635608936}
   sword: {fileID: 548055508}
   weapon: {fileID: 548055506}
@@ -62044,12 +62045,14 @@ MonoBehaviour:
   hitPoint: 5
   maxHitpoint: 5
   pushRecoverySpeed: 0.2
+  wasHit: 0
   xpValue: 5
-  triggerLength: 5
-  chaseLength: 5
+  triggerLength: 50
+  chaseLength: 50
   target: {fileID: 290186432}
   agentSpeed: {x: 0, y: 0, z: 0}
   animator: {fileID: 880180769}
+  attack: 0
   filter:
     useTriggers: 0
     useLayerMask: 0
@@ -62077,7 +62080,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: e1b05e4cf09ca774680c2256408a55dd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -103518,6 +103521,7 @@ MonoBehaviour:
   hitPoint: 10
   maxHitpoint: 10
   pushRecoverySpeed: 0.2
+  wasHit: 0
   Crystal_0: {fileID: 2567062743575994014, guid: e73d74817f4109d41bbf009f98a049ed, type: 3}
   Crystal_1: {fileID: 1902730286595786473, guid: e73d74817f4109d41bbf009f98a049ed, type: 3}
   Crystal_2: {fileID: 3616794774998649175, guid: e73d74817f4109d41bbf009f98a049ed, type: 3}

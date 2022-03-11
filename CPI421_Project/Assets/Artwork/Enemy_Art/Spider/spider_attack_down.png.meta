@@ -1,7 +1,19 @@
 fileFormatVersion: 2
 guid: 27807e5b9640e094eb0321c74533f6c0
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 7317279832612562217
+    second: spider_attack_down_0
+  - first:
+      213: -4954380259688034656
+    second: spider_attack_down_1
+  - first:
+      213: -1315655222319079410
+    second: spider_attack_down_2
+  - first:
+      213: 8951310481541404530
+    second: spider_attack_down_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,7 +113,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: spider_attack_down_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1080
+        width: 475
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92560093d333c8560800000000000000
+      internalID: 7317279832612562217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider_attack_down_1
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 1095
+        width: 475
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ae461b37618e3bb0800000000000000
+      internalID: -4954380259688034656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider_attack_down_2
+      rect:
+        serializedVersion: 2
+        x: 1043
+        y: 1051
+        width: 475
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e00a8c2cb8addbde0800000000000000
+      internalID: -1315655222319079410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spider_attack_down_3
+      rect:
+        serializedVersion: 2
+        x: 1556
+        y: 1083
+        width: 475
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2779186f471793c70800000000000000
+      internalID: 8951310481541404530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

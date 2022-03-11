@@ -22,6 +22,12 @@ public class Enemy : Mover
     public Vector3 agentSpeed;
     Vector2 movement = new Vector2(0.0f, -1.0f);
     public Animator animator;
+    protected float stagger = 2f;
+    protected float staggerTime;
+    public bool attack;
+
+protected float attackTime = 2.0f;
+    protected float lastAttack;
 
     // HitBox
     public ContactFilter2D filter;
@@ -39,6 +45,7 @@ public class Enemy : Mover
 		agent.updateRotation = false;
 		agent.updateUpAxis = false;
         agentSpeed = agent.velocity;
+        staggerTime = stagger;
     }
 
     private void FixedUpdate()
@@ -46,7 +53,6 @@ public class Enemy : Mover
         // check for overlaps
         collideWithPlayer = false;
         boxCollider.OverlapCollider(filter, hits);
-        agentSpeed = agent.velocity;
 
         for(int i = 0; i < hits.Length; i++)
         {
@@ -64,11 +70,32 @@ public class Enemy : Mover
 
     private void Update()
     {
-
+        agentSpeed = agent.velocity;
         movement.x = agentSpeed.x;
         movement.y = agentSpeed.y;
-        
 
+        
+        if(wasHit == true)
+        {
+            staggerTime -= Time.deltaTime;
+            agent.velocity = Vector3.zero;
+            if(staggerTime <= 0)
+            {
+                staggerTime = stagger;
+                wasHit = false;
+            }
+        }
+
+        if(Vector3.Distance(playerTransform.position, this.transform.position) <= 1.5f) 
+        {
+            if(Time.time - lastAttack > attackTime)
+            {
+                lastAttack = Time.time;
+                animator.SetTrigger("attack");
+            }
+            agent.SetDestination(target.position);
+        }
+        else
         if(Vector3.Distance(playerTransform.position, startingPosition) < chaseLength)
         {
             chasing = Vector3.Distance(playerTransform.position, startingPosition) < triggerLength;
@@ -103,6 +130,6 @@ public class Enemy : Mover
     {
         Destroy(gameObject);
         GameManager.instance.expierence += xpValue;
-        GameManager.instance.ShowText("+ " + xpValue + "xp", 30, Color.magenta, transform.position, Vector3.up * 40, 1.0f);
+        GameManager.instance.ShowText("+ " + xpValue + "xp", 60, Color.magenta, transform.position, Vector3.up * 40, 1.0f);
     }
 }
