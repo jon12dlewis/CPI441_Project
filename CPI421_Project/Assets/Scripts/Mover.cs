@@ -13,6 +13,7 @@ public abstract class Mover : Fighter
     protected float ySpeed = 1.5f;
     protected float xSpeed = 2f;
 
+    //Vector3 mousePos;
 
     // Start is called before the first frame update
     protected virtual void Start()
@@ -27,25 +28,39 @@ public abstract class Mover : Fighter
         moveDelta = new Vector3(input.x * xSpeed, input.y * ySpeed, 0);
 
         // Swap sprite direction
+
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         
-        if(moveDelta.x > 0)
+
+        /*
+        
+        if(mousePos.x > this.transform.position.x)
         {
-            transform.localScale = new Vector3(1.5f,1.5f,1.5f);
+            transform.localScale = new Vector3(-0.3f,0.3f,0.3f);
         }
         else 
-        if(moveDelta.x < 0)
+        if(mousePos.x < this.transform.position.x)
         {
-            transform.localScale = new Vector3(-1.5f,1.5f,1.5f);
+            transform.localScale = new Vector3(0.3f,0.3f,0.3f);
         }
 
+        */
+
+        /*
         if(transform.name == "Enemy")
         {
             transform.localScale = new Vector3(5f,5f,1f);
         }
+        */
         
-        if(transform.name == "Enemy_Spider")
+        if(transform.name == "Enemy_Spider" && moveDelta.x > 0)
         {
-            transform.localScale = new Vector3(0.25f,0.25f,1f);
+            transform.localScale = new Vector3(-0.2f,0.2f,1f);
+        }
+        else
+        if(transform.name == "Enemy_Spider" && moveDelta.x < 0)
+        {
+            transform.localScale = new Vector3(0.2f,0.2f,1f);
         }
         
         // Add push vector if any
@@ -57,22 +72,23 @@ public abstract class Mover : Fighter
 
 
         // check if something is in the way
-        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(0, moveDelta.y), Mathf.Abs(moveDelta.y * Time.deltaTime), LayerMask.GetMask("Actor","Blocking"));
+        hit = Physics2D.BoxCast(transform.position, boxCollider.size/2, 0, new Vector2(0, moveDelta.y), Mathf.Abs(moveDelta.y * Time.deltaTime), LayerMask.GetMask("Actor","Blocking"));
 
         if(hit.collider == null)
         {
 
             transform.Translate(0, moveDelta.y * Time.deltaTime, 0);
         }
-
-        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x, 0), Mathf.Abs(moveDelta.x * Time.deltaTime), LayerMask.GetMask("Actor","Blocking"));
+        
+        
+        hit = Physics2D.BoxCast(transform.position, boxCollider.size/2, 0, new Vector2(moveDelta.x, 0), Mathf.Abs(moveDelta.x * Time.deltaTime), LayerMask.GetMask("Actor","Blocking"));
 
         if(hit.collider == null)
         {
 
             transform.Translate(moveDelta.x * Time.deltaTime, 0, 0);
         }
-
+        
 
     }
 
