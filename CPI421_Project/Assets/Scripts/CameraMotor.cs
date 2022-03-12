@@ -12,7 +12,7 @@ public class CameraMotor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        lookAt = GameObject.Find("Player").transform;
     }
 
     // Update is called once per frame

@@ -9,6 +9,7 @@ public class player : Mover
 
     public GameObject weapon;
     public GameObject pickaxe;
+    public GameObject bow;
 
     public Animator animator;
 
@@ -22,7 +23,11 @@ public class player : Mover
     protected override void Start()
     {
         base.Start();
+        DontDestroyOnLoad(gameObject);
         playerPosition = transform.position;
+        weapon.SetActive(false);
+        pickaxe.SetActive(true);
+        bow.SetActive(false);
     }
 
 
@@ -71,6 +76,7 @@ public class player : Mover
         {
             weapon.SetActive(false);
             pickaxe.SetActive(true);
+            bow.SetActive(false);
             //sword.SetTrigger("Sheath");
             pickAxe.SetTrigger("Idle");
         }
@@ -79,8 +85,18 @@ public class player : Mover
         {
             weapon.SetActive(true);
             pickaxe.SetActive(false);
+            bow.SetActive(false);
             //pickAxe.SetTrigger("Sheath");
             sword.SetTrigger("Idle");
+        }
+        else
+        if(Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            weapon.SetActive(false);
+            pickaxe.SetActive(false);
+            bow.SetActive(true);
+            //pickAxe.SetTrigger("Sheath");
+            //sword.SetTrigger("Idle");
         }
 
     }
@@ -94,7 +110,8 @@ public class player : Mover
     protected override void Death()
     {
         //Application.Quit();
-        //UnityEngine.SceneManagement.SceneManager.LoadScene("Title");
+        GameManager.instance.SaveState();
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Cave_1");
     }
     
 }

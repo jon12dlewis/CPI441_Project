@@ -25,7 +25,8 @@ public class GameManager : MonoBehaviour
 
     // References
 
-    public player player;
+    //public player player;
+    public Transform player;
 
     //public Weapon weapon;
 
@@ -40,7 +41,6 @@ public class GameManager : MonoBehaviour
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
     {
         floatingTextManager.Show(msg, fontSize, color, position, motion, duration);
-
     }
 
     // Save state

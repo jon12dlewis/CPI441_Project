@@ -1,25 +1,19 @@
 fileFormatVersion: 2
-guid: ea782bbbacf435d4e89d7707d3c0f6bc
+guid: f94c91e5e39ad924ab9ee00dee573695
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2832349319219517414
-    second: bow_front_3
+      213: 8169498687628321681
+    second: spider_web_left_0
   - first:
-      213: -1678798641733236077
-    second: bow_front_2
+      213: 4654302056926472095
+    second: spider_web_left_1
   - first:
-      213: 4255250038498631885
-    second: bow_front_1
+      213: -3983084532964807848
+    second: spider_web_left_2
   - first:
-      213: -2420875985268499954
-    second: pick_axe_front_3
-  - first:
-      213: 4356591859326393900
-    second: pick_axe_front_4
-  - first:
-      213: -4257611531856423015
-    second: pick_axe_front_5
+      213: -3083220033261501870
+    second: spider_web_left_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -121,127 +115,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bow_front_3
+      name: spider_web_left_0
       rect:
         serializedVersion: 2
-        x: 723
-        y: 539
-        width: 75
-        height: 440
+        x: 30
+        y: 1040
+        width: 450
+        height: 360
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a18e914fc4971b8d0800000000000000
-      internalID: -2832349319219517414
+      spriteID: 1932b15c5c3ef5170800000000000000
+      internalID: 8169498687628321681
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bow_front_2
+      name: spider_web_left_1
       rect:
         serializedVersion: 2
-        x: 411
-        y: 539
-        width: 75
-        height: 440
+        x: 531
+        y: 1040
+        width: 450
+        height: 360
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39a051ea785b3b8e0800000000000000
-      internalID: -1678798641733236077
+      spriteID: f97e87caf07679040800000000000000
+      internalID: 4654302056926472095
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bow_front_1
+      name: spider_web_left_2
       rect:
         serializedVersion: 2
-        x: 88
-        y: 541
-        width: 75
-        height: 440
+        x: 1036
+        y: 1040
+        width: 450
+        height: 360
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc0ad2f5d5fad0b30800000000000000
-      internalID: 4255250038498631885
+      spriteID: 85ba74678bd39b8c0800000000000000
+      internalID: -3983084532964807848
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pick_axe_front_3
+      name: spider_web_left_3
       rect:
         serializedVersion: 2
-        x: 51
-        y: 86
-        width: 200
-        height: 410
+        x: 1549
+        y: 1040
+        width: 450
+        height: 360
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0a1cc42e12576ed0800000000000000
-      internalID: -2420875985268499954
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pick_axe_front_4
-      rect:
-        serializedVersion: 2
-        x: 701
-        y: 36
-        width: 200
-        height: 410
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c2e128eb639b57c30800000000000000
-      internalID: 4356591859326393900
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pick_axe_front_5
-      rect:
-        serializedVersion: 2
-        x: 370
-        y: 64
-        width: 200
-        height: 410
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 997571c9edce9e4c0800000000000000
-      internalID: -4257611531856423015
+      spriteID: 252841127b33635d0800000000000000
+      internalID: -3083220033261501870
       vertices: []
       indices: 
       edges: []
