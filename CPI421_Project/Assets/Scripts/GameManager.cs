@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    //public player player;
+    public Transform player;
+    public FloatingTextManager floatingTextManager;
+
     private void Awake()
     {
         if(GameManager.instance != null)
@@ -16,6 +20,7 @@ public class GameManager : MonoBehaviour
         instance = this;
         SceneManager.sceneLoaded += LoadState;
         DontDestroyOnLoad(gameObject);
+        floatingTextManager = GameObject.Find("FloatingTextManager").GetComponent<FloatingTextManager>();
     }
 
     public List<Sprite> playerSprites;
@@ -25,12 +30,10 @@ public class GameManager : MonoBehaviour
 
     // References
 
-    //public player player;
-    public Transform player;
 
     //public Weapon weapon;
 
-    public FloatingTextManager floatingTextManager;
+    
 
     // Logic
     public int mula;
@@ -54,6 +57,7 @@ public class GameManager : MonoBehaviour
         s += "0";                           // weapon level 
 
         PlayerPrefs.SetString("SaveState", s);
+        floatingTextManager = GameObject.Find("FloatingTextManager").GetComponent<FloatingTextManager>();
     }
 
     public void LoadState(Scene s, LoadSceneMode mode)
@@ -70,6 +74,7 @@ public class GameManager : MonoBehaviour
         // change the weapon level
 
         Debug.Log("LoadState");
+        floatingTextManager = GameObject.Find("FloatingTextManager").GetComponent<FloatingTextManager>();
     }
 
     public void GiveBlueCrystal(int ammount)

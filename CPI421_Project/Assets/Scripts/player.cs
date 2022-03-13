@@ -11,6 +11,8 @@ public class player : Mover
     public GameObject pickaxe;
     public GameObject bow;
 
+    public Transform startingPoint;
+
     public Animator animator;
 
     public float moveSpeed = 2f; 
@@ -20,11 +22,24 @@ public class player : Mover
 
     Vector2 playerPosition;
 
+    public static player instance;
+    private void Awake()
+    {
+        if(player.instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+
     protected override void Start()
     {
         base.Start();
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
         playerPosition = transform.position;
+        //startingPoint = transform;
         weapon.SetActive(false);
         pickaxe.SetActive(true);
         bow.SetActive(false);
@@ -112,6 +127,8 @@ public class player : Mover
         //Application.Quit();
         GameManager.instance.SaveState();
         UnityEngine.SceneManagement.SceneManager.LoadScene("Cave_1");
+        transform.position = startingPoint.position;
+        hitPoint = 10;
     }
     
 }
