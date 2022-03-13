@@ -1,7 +1,16 @@
 fileFormatVersion: 2
 guid: f5acd545c67f70b4e9f77b579e4844d5
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -1347175886302021379
+    second: web_projectile_0
+  - first:
+      213: 2555393886189120347
+    second: web_projectile_1
+  - first:
+      213: -8617708787720260648
+    second: web_projectile_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,7 +110,70 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: web_projectile_0
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 60
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df8fef64baedd4de0800000000000000
+      internalID: -1347175886302021379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: web_projectile_1
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 60
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5be18f4335967320800000000000000
+      internalID: 2555393886189120347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: web_projectile_2
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 60
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d3fb22248fb76880800000000000000
+      internalID: -8617708787720260648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

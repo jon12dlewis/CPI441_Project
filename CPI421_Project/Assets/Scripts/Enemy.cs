@@ -28,12 +28,17 @@ public class Enemy : Mover
     public bool attack;
     int facing = 0;
     public GameObject arrow;
+    public Transform fireSpot;
+    private bool canShoot = false;
 
     protected float attackTime = 2.0f;
     //protected float webTime = 2.0f;
     protected float lastAttack;
     protected float webIdleTime;
     protected float idleTime = 2.0f;
+
+    protected float shotTime = 0.5f;
+    protected float idle;
 
     // HitBox
     public ContactFilter2D filter;
@@ -54,6 +59,7 @@ public class Enemy : Mover
         agentSpeed = agent.velocity;
         staggerTime = stagger;
         webIdleTime = idleTime;
+        idle = shotTime;
     }
 
     private void FixedUpdate()
@@ -83,10 +89,31 @@ public class Enemy : Mover
         movement.y = agentSpeed.y;
 
         webIdleTime -= Time.deltaTime;
+        idle -= Time.deltaTime;
 
         if(webIdleTime <= 0)
         {
             agent.isStopped = false;
+        }
+
+        if(idle <= 0 && canShoot)
+        {
+            canShoot = false;
+            switch(facing)
+                    {
+                        case 0:
+                            ShootDown();
+                            break;
+                        case 1:
+                            ShootUp();
+                            break;
+                        case 2:
+                            ShootRight();
+                            break;
+                        case 3:
+                            ShootLeft();
+                            break;
+                    }
         }
 
         if(target != null)
@@ -120,24 +147,10 @@ public class Enemy : Mover
 
                     webIdleTime = idleTime;
                     agent.isStopped = true;
-
-                    switch(facing)
-                    {
-                        case 0:
-                            ShootDown();
-                            break;
-                        case 1:
-                            ShootUp();
-                            break;
-                        case 2:
-                            ShootRight();
-                            break;
-                        case 3:
-                            ShootLeft();
-                            break;
-                    }
-
                     animator.SetTrigger("web_attack");
+                    idle = shotTime;
+                    canShoot = true;
+ 
                 }
                 agent.SetDestination(target.position);
             }
@@ -184,14 +197,14 @@ public class Enemy : Mover
             {
                 direction.x = 0;
                 direction.y = 1;
-                facing = 1;
+                facing = 0;
             }
             else
             if(agentSpeed.y < -0.2f)
             {
                 direction.x = 0;
                 direction.y = -1;
-                facing = 0;
+                facing = 1;
             }
         }
 
@@ -218,24 +231,24 @@ public class Enemy : Mover
     {
         Vector3 newRot = new Vector3(0,0,90);
         Quaternion rot = Quaternion.Euler(newRot); 
-        Instantiate(arrow, transform.position, rot);
+        Instantiate(arrow, fireSpot.position, rot);
     }
     void ShootDown()
     {
         Vector3 newRot = new Vector3(0,0,270);
         Quaternion rot = Quaternion.Euler(newRot); 
-        Instantiate(arrow, transform.position, rot);
+        Instantiate(arrow, fireSpot.position, rot);
     }
     void ShootLeft()
     {
         Vector3 newRot = new Vector3(0,0,0);
         Quaternion rot = Quaternion.Euler(newRot); 
-        Instantiate(arrow, transform.position, rot);
+        Instantiate(arrow, fireSpot.position, rot);
     }
     void ShootRight()
     {
-        Vector3 newRot = new Vector3(0,0,180);
+        Vector3 newRot = new Vector3(0,0,90);
         Quaternion rot = Quaternion.Euler(newRot); 
-        Instantiate(arrow, transform.position, rot);
+        Instantiate(arrow, fireSpot.position, rot);
     }
 }
