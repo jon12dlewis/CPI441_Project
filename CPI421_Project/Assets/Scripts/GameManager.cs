@@ -39,6 +39,8 @@ public class GameManager : MonoBehaviour
     public int mula;
     public int expierence;
     public int blue_crystals;
+    public int yellow_crystals;
+    public int red_crystals;
 
     // Floating text
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
@@ -81,6 +83,18 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Blue Crystal Added");
         blue_crystals += ammount;
+    }
+
+    public void GiveRedCrystal(int ammount)
+    {
+        Debug.Log("Red Crystal Added");
+        red_crystals += ammount;
+    }
+
+    public void GiveYellowCrystal(int ammount)
+    {
+        Debug.Log("Yellow Crystal Added");
+        yellow_crystals += ammount;
     }
 
     public void GiveExpierence(int ammount)

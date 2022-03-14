@@ -13,7 +13,7 @@ public class CharacterMenu : MonoBehaviour
     {
         healthText.text = player.hitPoint.ToString() + "/" +player.maxHitpoint.ToString();
         blueCrystalText.text = GameManager.instance.blue_crystals.ToString();
-        yellowCrystalText.text = "0";
-        redCrystalText.text = "0";
+        yellowCrystalText.text = GameManager.instance.yellow_crystals.ToString();;
+        redCrystalText.text = GameManager.instance.red_crystals.ToString();;
     }
 }
