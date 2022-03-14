@@ -63,8 +63,7 @@ public abstract class Mover : Fighter
             transform.localScale = new Vector3(0.2f,0.2f,1f);
         }
         
-        // Add push vector if any
-        moveDelta += pushDirection;
+        
 
         // reduce push force
 
@@ -76,7 +75,8 @@ public abstract class Mover : Fighter
 
         if(hit.collider == null)
         {
-
+            // Add push vector if any
+            moveDelta += pushDirection;
             transform.Translate(0, moveDelta.y * Time.deltaTime, 0);
         }
         
