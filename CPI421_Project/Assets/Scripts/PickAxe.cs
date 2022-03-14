@@ -14,7 +14,7 @@ public class PickAxe : Collidable
 
     // Swing 
     private Animator anim;
-    private float coolDown = 0.5f;
+    private float coolDown = 1.5f;
     private float lastSwing;
     int direction = 0;
 

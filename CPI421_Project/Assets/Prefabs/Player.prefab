@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2363212578852531357
 Transform:
   m_ObjectHideFlags: 0
@@ -26,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2363212578852531356}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.24, y: -0.28, z: 0}
-  m_LocalScale: {x: -0.6666666, y: 0.6666666, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: 0.59, y: -0.28, z: 0}
+  m_LocalScale: {x: 0.6666666, y: 0.6666666, z: 1}
   m_Children: []
   m_Father: {fileID: 3386749949196032535}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &2363212578852531352
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1347732417
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 8908327582187454787, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4acda5d4c89e774da4773b20dbbb30d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrow: {fileID: 0}
+  arrow: {fileID: 2019870412111893886, guid: 0697e303e9acd9a4ead9ea8c3b6211c6, type: 3}
 --- !u!1 &3386749949196032534
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,7 +143,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3386749949196032534}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.23, y: -2.58, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
@@ -225,6 +225,7 @@ MonoBehaviour:
   weapon: {fileID: 3386749949820187094}
   pickaxe: {fileID: 3386749949856379488}
   bow: {fileID: 2363212578852531356}
+  startingPoint: {fileID: 0}
   animator: {fileID: 3386749949196032528}
   moveSpeed: 2
 --- !u!61 &3386749949196032529

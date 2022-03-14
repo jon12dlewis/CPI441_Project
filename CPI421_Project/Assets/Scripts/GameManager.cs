@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    //public player player;
+    public Transform player;
+    public FloatingTextManager floatingTextManager;
+
     private void Awake()
     {
         if(GameManager.instance != null)
@@ -16,6 +20,7 @@ public class GameManager : MonoBehaviour
         instance = this;
         SceneManager.sceneLoaded += LoadState;
         DontDestroyOnLoad(gameObject);
+        floatingTextManager = GameObject.Find("FloatingTextManager").GetComponent<FloatingTextManager>();
     }
 
     public List<Sprite> playerSprites;
@@ -25,17 +30,17 @@ public class GameManager : MonoBehaviour
 
     // References
 
-    //public player player;
-    public Transform player;
 
     //public Weapon weapon;
 
-    public FloatingTextManager floatingTextManager;
+    
 
     // Logic
     public int mula;
     public int expierence;
     public int blue_crystals;
+    public int yellow_crystals;
+    public int red_crystals;
 
     // Floating text
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
@@ -54,6 +59,7 @@ public class GameManager : MonoBehaviour
         s += "0";                           // weapon level 
 
         PlayerPrefs.SetString("SaveState", s);
+        floatingTextManager = GameObject.Find("FloatingTextManager").GetComponent<FloatingTextManager>();
     }
 
     public void LoadState(Scene s, LoadSceneMode mode)
@@ -70,12 +76,25 @@ public class GameManager : MonoBehaviour
         // change the weapon level
 
         Debug.Log("LoadState");
+        floatingTextManager = GameObject.Find("FloatingTextManager").GetComponent<FloatingTextManager>();
     }
 
     public void GiveBlueCrystal(int ammount)
     {
         Debug.Log("Blue Crystal Added");
         blue_crystals += ammount;
+    }
+
+    public void GiveRedCrystal(int ammount)
+    {
+        Debug.Log("Red Crystal Added");
+        red_crystals += ammount;
+    }
+
+    public void GiveYellowCrystal(int ammount)
+    {
+        Debug.Log("Yellow Crystal Added");
+        yellow_crystals += ammount;
     }
 
     public void GiveExpierence(int ammount)

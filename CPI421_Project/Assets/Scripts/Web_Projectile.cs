@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Web_Projectile : Collidable
 {
-    public Rigidbody2D rb;
-    float speed = 2.5f;
+    //public Rigidbody2D rb;
+    float speed = 5f;
 
     public int damagePoint = 1;
     public float pushForce = 2.0f;
@@ -14,17 +14,14 @@ public class Web_Projectile : Collidable
     protected override void Start()
     {
         base.Start();
-        rb.velocity = -transform.right * speed;
+        //rb.velocity = -transform.right * speed;
     }
 
     // Update is called once per frame
     protected override void Update()
     {
         base.Update();
-        if(rb.velocity == Vector2.zero)
-        {
-            Destroy(gameObject);
-        }
+        transform.Translate( -speed * Time.deltaTime, 0, 0);
     }
 
     protected override void OnCollide(Collider2D coll)
@@ -33,7 +30,7 @@ public class Web_Projectile : Collidable
         {
             if(coll.name == "Enemy_Spider")
                 return;
-            rb.velocity = Vector2.zero;
+            //rb.velocity = Vector2.zero;
             Damage dmg = new Damage
             {
                 damageAmount = damagePoint,
@@ -48,7 +45,7 @@ public class Web_Projectile : Collidable
         else
         if(coll.tag == "Wall")
         {
-            rb.velocity = Vector2.zero;
+            //rb.velocity = Vector2.zero;
             Destroy(gameObject);
         }
         else

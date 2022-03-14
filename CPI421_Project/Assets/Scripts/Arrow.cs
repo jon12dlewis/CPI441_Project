@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Arrow : Collidable
 {
-    public Rigidbody2D rb;
-    float speed = 20f;
+    //public Rigidbody2D rb;
+    float speed = 10f;
 
     public int damagePoint = 1;
     public float pushForce = 2.0f;
@@ -14,14 +14,17 @@ public class Arrow : Collidable
     protected override void Start()
     {
         base.Start();
-        rb.velocity = transform.right * speed;
+        //rb.velocity = transform.right * speed;
+        //transform.Translate( speed * Time.deltaTime, 0, 0);
     }
 
     // Update is called once per frame
     protected override void Update()
     {
         base.Update();
+        transform.Translate( speed * Time.deltaTime, 0, 0);
     }
+    
 
     protected override void OnCollide(Collider2D coll)
     {
@@ -29,7 +32,7 @@ public class Arrow : Collidable
         {
             if(coll.name == "Player")
                 return;
-            rb.velocity = Vector2.zero;
+            //rb.velocity = Vector2.zero;
             Damage dmg = new Damage
             {
                 damageAmount = damagePoint,
@@ -44,7 +47,7 @@ public class Arrow : Collidable
         else
         if(coll.tag == "Wall")
         {
-            rb.velocity = Vector2.zero;
+            //rb.velocity = Vector2.zero;
             Destroy(gameObject);
         }
     }
