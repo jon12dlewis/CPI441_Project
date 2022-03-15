@@ -18,7 +18,6 @@ public class PauseMenu : MonoBehaviour
     void Update ()
     { if (Input.GetKeyDown(KeyCode.Escape))
         {
-            AudioEvents.TriggerEvent(pauseEventKey);    // changes to pause music
 
             if (GameIsPaused)
             {
@@ -34,12 +33,14 @@ public class PauseMenu : MonoBehaviour
     }
     public void Resume ()
     {
+        AudioEvents.TriggerEvent(pauseEventKey);    // changes to pause music
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
     void Pause ()
     {
+        AudioEvents.TriggerEvent(pauseEventKey);    // changes to pause music
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
