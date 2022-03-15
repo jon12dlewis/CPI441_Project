@@ -18,7 +18,7 @@ public class AudioEvents : MonoBehaviour
         // get children of triggerparent
         triggers = gameObject.GetComponentsInChildren<Transform>();     // get the music keys (this script is placed on the parent of the set of keys)
         events = new MusicEvent[triggers.Length];                       // create corresponding events
-
+        
         oldToggleboi = toggleboi;   // ignore this
     }
 

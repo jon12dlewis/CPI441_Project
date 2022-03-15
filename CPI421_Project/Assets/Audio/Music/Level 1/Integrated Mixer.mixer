@@ -34,7 +34,7 @@ AudioMixerController:
   m_StartSnapshot: {fileID: 4675736407107260339}
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
-  m_UpdateMode: 0
+  m_UpdateMode: 1
   m_ExposedParameters: []
   m_AudioMixerGroupViews:
   - guids:
