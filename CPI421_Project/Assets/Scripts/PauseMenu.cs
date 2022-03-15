@@ -49,6 +49,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.transform.GetChild(0).gameObject.SetActive(true);
         pauseMenuUI.transform.GetChild(1).gameObject.SetActive(false);
         pauseMenuUI.transform.GetChild(2).gameObject.SetActive(false);
+        pauseMenuUI.transform.GetChild(4).gameObject.SetActive(false);
 
         Time.timeScale = 0f;
         GameIsPaused = true;
