@@ -9,6 +9,10 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pauseMenuUI;
     [SerializeField] GameObject pauseEventKey;    // for use with toggling audio state
+    [SerializeField] AudioSource open;
+    [SerializeField] AudioSource close;
+    [SerializeField] AudioSource buttonClick;
+    [SerializeField] AudioSource buttonHover;
 
     // Update is called once per frame
     void Update ()
@@ -18,10 +22,12 @@ public class PauseMenu : MonoBehaviour
 
             if (GameIsPaused)
             {
+                close.Play(0);
                 Resume();
             }
             else
             {
+                open.Play(0);
                 Pause();
             }
         }
@@ -46,5 +52,11 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("Quitting game...");
         Application.Quit();
+    }
+    public void ButtonSound() {
+        buttonClick.Play(0);
+    }
+    public void ButtonHover() {
+        buttonHover.Play(0);
     }
 }
