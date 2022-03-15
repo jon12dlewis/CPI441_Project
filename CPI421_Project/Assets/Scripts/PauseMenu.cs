@@ -34,6 +34,10 @@ public class PauseMenu : MonoBehaviour
     public void Resume ()
     {
         AudioEvents.TriggerEvent(pauseEventKey);    // changes to pause music
+        pauseMenuUI.transform.GetChild(0).gameObject.SetActive(false);
+        pauseMenuUI.transform.GetChild(1).gameObject.SetActive(false);
+        pauseMenuUI.transform.GetChild(2).gameObject.SetActive(false);
+
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
@@ -42,6 +46,10 @@ public class PauseMenu : MonoBehaviour
     {
         AudioEvents.TriggerEvent(pauseEventKey);    // changes to pause music
         pauseMenuUI.SetActive(true);
+        pauseMenuUI.transform.GetChild(0).gameObject.SetActive(true);
+        pauseMenuUI.transform.GetChild(1).gameObject.SetActive(false);
+        pauseMenuUI.transform.GetChild(2).gameObject.SetActive(false);
+
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
