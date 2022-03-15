@@ -5,7 +5,7 @@ using UnityEngine;
 public class Web_Projectile : Collidable
 {
     //public Rigidbody2D rb;
-    float speed = 5f;
+    float speed = 3f;
 
     public int damagePoint = 1;
     public float pushForce = 2.0f;
@@ -50,6 +50,11 @@ public class Web_Projectile : Collidable
         }
         else
         if(coll.name == "Weapon")
+        {
+            Destroy(gameObject);
+        }
+        else
+        if(coll.name == "arrow(Clone)")
         {
             Destroy(gameObject);
         }

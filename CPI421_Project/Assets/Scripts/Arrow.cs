@@ -50,5 +50,10 @@ public class Arrow : Collidable
             //rb.velocity = Vector2.zero;
             Destroy(gameObject);
         }
+        else
+        if(coll.name == "web_projectile(Clone)")
+        {
+            Destroy(gameObject);
+        }
     }
 }
