@@ -10,6 +10,12 @@ public class Web_Projectile : Collidable
     public int damagePoint = 1;
     public float pushForce = 2.0f;
 
+    // SFX
+    string damageSource;
+    [SerializeField] AudioClip weaponSound;
+    [SerializeField] AudioSource weaponAudioSource;
+    public DeathSound deathSoundPrefab;
+
     // Start is called before the first frame update
     protected override void Start()
     {
@@ -51,12 +57,24 @@ public class Web_Projectile : Collidable
         else
         if(coll.name == "Weapon")
         {
+            damageSource = "Weapon";
             Destroy(gameObject);
         }
         else
         if(coll.name == "arrow(Clone)")
         {
+            damageSource = "arrow(Clone)";
             Destroy(gameObject);
+        }
+    }
+
+    void OnDestroy() {
+        if (damageSource == "Weapon") {
+            var temp = Instantiate(deathSoundPrefab);
+            temp.gameObject.SendMessage("SetAudioSource", weaponAudioSource);
+        }
+        if (damageSource == "arrow(Clone)") {
+            
         }
     }
 }

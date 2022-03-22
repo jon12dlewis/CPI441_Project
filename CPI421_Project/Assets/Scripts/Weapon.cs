@@ -21,6 +21,9 @@ public class Weapon :Collidable
     int direction = 0;
     Vector3 buffer = new Vector3(0,1,0);
 
+    // SFX
+    [SerializeField] AudioSource hitSound;
+
     protected override void Start()
     {
         base.Start();
@@ -98,6 +101,7 @@ public class Weapon :Collidable
                 pushForce = pushForce
             };
 
+            if (hitSound != null) hitSound.Play(0);
             coll.SendMessage("RecieveDamage", dmg);
         }
     }
