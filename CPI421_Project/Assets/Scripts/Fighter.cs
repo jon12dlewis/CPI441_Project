@@ -7,6 +7,7 @@ public class Fighter : MonoBehaviour
     public int hitPoint = 10;
     public int maxHitpoint = 10;
     public float pushRecoverySpeed = 0.2f;
+    public bool wasHit = false;
 
     // Immunity
     protected float immuneTime = 1.0f;
@@ -21,11 +22,12 @@ public class Fighter : MonoBehaviour
     {
         if(Time.time - lastImmune > immuneTime)
         {
+            wasHit = true;
             lastImmune = Time.time;
             hitPoint -= dmg.damageAmount;
             pushDirection = (transform.position - dmg.origin).normalized * dmg.pushForce;
             
-            GameManager.instance.ShowText(dmg.damageAmount.ToString(), 25, Color.red, transform.position, Vector3.zero, 0.5f);
+            GameManager.instance.ShowText(dmg.damageAmount.ToString(), 50, Color.red, transform.position, Vector3.zero, 0.5f);
 
             if(hitPoint <= 0)
             {

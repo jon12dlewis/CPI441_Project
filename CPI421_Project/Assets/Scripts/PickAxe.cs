@@ -14,8 +14,9 @@ public class PickAxe : Collidable
 
     // Swing 
     private Animator anim;
-    private float coolDown = 0.5f;
+    private float coolDown = 1.5f;
     private float lastSwing;
+    int direction = 0;
 
     protected override void Start()
     {
@@ -29,6 +30,7 @@ public class PickAxe : Collidable
     {
         base.Update();  // Need to check collision
 
+        /*
         if(Input.GetKeyDown(KeyCode.Space))
         {
             if(Time.time - lastSwing > coolDown)
@@ -37,6 +39,57 @@ public class PickAxe : Collidable
                 Swing();
             }   
         }
+        */
+
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        if(mousePos.y > this.transform.position.y + 1.5)
+        {
+            direction = 1;
+        }
+        else
+        if(mousePos.y < this.transform.position.y - 1.5)
+        {
+            direction = 0;
+        }
+        
+        if(mousePos.x > this.transform.position.x + 1.5)
+        {
+            direction = 2;
+        }
+        else
+        if(mousePos.x < this.transform.position.x - 1.5)
+        {
+            direction = 3;
+        }
+        
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            if(Time.time - lastSwing > coolDown)
+            {
+                lastSwing = Time.time;
+
+                switch(direction)
+                {
+                    case 0:
+                        SwingDown();
+                        break;
+                    case 1:
+                        SwingUp();
+                        break;
+                    case 2:
+                        SwingRight();
+                        break;
+                    case 3:
+                        SwingLeft();
+                        break;
+
+                }
+
+                //Swing();
+            }   
+        }
+
     }
 
     protected override void OnCollide(Collider2D coll)
@@ -57,8 +110,23 @@ public class PickAxe : Collidable
         }
     }
 
-    private void Swing()
+    private void SwingUp()
     {
-        anim.SetTrigger("Swing");
+        anim.SetTrigger("SwingUp");
+    }
+
+    private void SwingDown()
+    {
+        anim.SetTrigger("SwingDown");
+    }
+
+    private void SwingLeft()
+    {
+        anim.SetTrigger("SwingLeft");
+    }
+
+    private void SwingRight()
+    {
+        anim.SetTrigger("SwingRight");
     }
 }

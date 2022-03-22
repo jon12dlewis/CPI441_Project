@@ -18,19 +18,15 @@ public class AudioEvents : MonoBehaviour
         // get children of triggerparent
         triggers = gameObject.GetComponentsInChildren<Transform>();     // get the music keys (this script is placed on the parent of the set of keys)
         events = new MusicEvent[triggers.Length];                       // create corresponding events
-
+        
         oldToggleboi = toggleboi;   // ignore this
     }
 
     // TEMP
     // this is an example of how an event will be called, it will not be in the final version
     void Update() {
-        if (toggleboi != oldToggleboi) {    // ignore this
-
-            ref var temp = ref AudioEvents.EventLookup(keyboi);     // access the event via the game object key
-            if (temp != null) {                                     // ensure that something is subscribed to this event
-                temp();                                             // trigger the event
-            }
+        if (toggleboi != oldToggleboi) {
+            AudioEvents.TriggerEvent(keyboi);
         }
         oldToggleboi = toggleboi;   // ignore this
     }
@@ -43,6 +39,20 @@ public class AudioEvents : MonoBehaviour
                 return ref events[i];
             }
         }
+        Debug.Log("EventLookup Audio Error");
         return ref events[0];   // should probably set this to some kind of null reference instead
+    }
+
+    // internally triggers the event using an external key
+    public static void TriggerEvent(GameObject key) {
+
+        for (int i = 0; i < triggers.Length; i++) {
+            if (key == triggers[i].gameObject) {
+               events[i]();
+               Debug.Log(events[i]);
+               return;
+            }
+        }
+        Debug.Log("Event specified does not exist");
     }
 }

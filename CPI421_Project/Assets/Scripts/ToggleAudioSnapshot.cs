@@ -42,5 +42,6 @@ public class ToggleAudioSnapshot : MonoBehaviour
         weights[1] = Mathf.Abs(weights[1] - 1);
         
         mixer.TransitionToSnapshots(snapshots, weights, transitionSpeed);
+        Debug.Log("Audio transition occurred");
     }
 }

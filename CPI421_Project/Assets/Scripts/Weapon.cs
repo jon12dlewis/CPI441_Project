@@ -17,6 +17,10 @@ public class Weapon :Collidable
     private float coolDown = 0.5f;
     private float lastSwing;
 
+    // Directions
+    int direction = 0;
+    Vector3 buffer = new Vector3(0,1,0);
+
     protected override void Start()
     {
         base.Start();
@@ -28,12 +32,54 @@ public class Weapon :Collidable
     {
         base.Update();  // Need to check collision
 
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+
+        if(mousePos.y > this.transform.position.y + 1.5)
+        {
+            direction = 1;
+        }
+        else
+        if(mousePos.y < this.transform.position.y - 1.5)
+        {
+            direction = 0;
+        }
+        
+        if(mousePos.x > this.transform.position.x + 1.5)
+        {
+            direction = 2;
+        }
+        else
+        if(mousePos.x < this.transform.position.x - 1.5)
+        {
+            direction = 3;
+        }
+        
+
         if(Input.GetKeyDown(KeyCode.Space))
         {
             if(Time.time - lastSwing > coolDown)
             {
                 lastSwing = Time.time;
-                Swing();
+
+                switch(direction)
+                {
+                    case 0:
+                        SwingDown();
+                        break;
+                    case 1:
+                        SwingUp();
+                        break;
+                    case 2:
+                        Swing();
+                        break;
+                    case 3:
+                        SwingLeft();
+                        break;
+
+                }
+
+                //Swing();
             }   
         }
     }
@@ -56,8 +102,24 @@ public class Weapon :Collidable
         }
     }
 
+
+    private void SwingUp()
+    {
+        anim.SetTrigger("SwingUp");
+    }
+
+    private void SwingDown()
+    {
+        anim.SetTrigger("SwingDown");
+    }
+
     private void Swing()
     {
-        anim.SetTrigger("Swing");
+        anim.SetTrigger("SwingSide");
+    }
+
+    private void SwingLeft()
+    {
+        anim.SetTrigger("SwingLeft");
     }
 }
