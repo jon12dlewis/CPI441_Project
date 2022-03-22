@@ -37,11 +37,10 @@ public class Fighter : MonoBehaviour
             if(hitPoint <= 0)
             {
                 hitPoint = 0;
-
-                if (deathSound != null) {   // TODO: currently does not play because spider is destroyed instantly on death
-                    deathSound.Play(0);
-                }
                 Death();
+            }
+            else {
+                damageSound.Play(0);
             }
         }
     }

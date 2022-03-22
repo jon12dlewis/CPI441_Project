@@ -74,7 +74,8 @@ public class Web_Projectile : Collidable
             temp.gameObject.SendMessage("SetAudioSource", weaponAudioSource);
         }
         if (damageSource == "arrow(Clone)") {
-            
+            var temp = Instantiate(deathSoundPrefab);
+            temp.gameObject.SendMessage("SetAudioSource", weaponAudioSource);
         }
     }
 }
