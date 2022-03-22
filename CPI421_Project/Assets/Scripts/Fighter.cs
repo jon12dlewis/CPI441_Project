@@ -16,6 +16,11 @@ public class Fighter : MonoBehaviour
     // push
     protected Vector3 pushDirection;
 
+    // SFX
+    [SerializeField] AudioSource damageSound;
+    [SerializeField] AudioSource deathSound;
+    [SerializeField] DeathSound deathSoundPrefab;
+
     // All fighters can recieve damage / die
 
     protected virtual void RecieveDamage(Damage dmg)
@@ -32,6 +37,10 @@ public class Fighter : MonoBehaviour
             if(hitPoint <= 0)
             {
                 hitPoint = 0;
+
+                if (deathSound != null) {   // TODO: currently does not play because spider is destroyed instantly on death
+                    deathSound.Play(0);
+                }
                 Death();
             }
         }
@@ -40,5 +49,10 @@ public class Fighter : MonoBehaviour
     protected virtual void Death()
     {
 
+    }
+
+    void OnDestroy() {
+        var temp = Instantiate(deathSoundPrefab);
+        temp.gameObject.SendMessage("SetAudioSource", deathSound);
     }
 }
