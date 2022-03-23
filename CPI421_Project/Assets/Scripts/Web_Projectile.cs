@@ -34,8 +34,9 @@ public class Web_Projectile : Collidable
     {
         if(coll.tag == "Fighter")
         {
-            if(coll.name == "Enemy_Spider")
+            if(coll.name == "Enemy_Spider" || coll.name == "Enemy_Spider_Blue" || coll.name == "Enemy_Spider_Yellow")
                 return;
+
             //rb.velocity = Vector2.zero;
             Damage dmg = new Damage
             {

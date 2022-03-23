@@ -1,0 +1,600 @@
+fileFormatVersion: 2
+guid: 5911d431c195b324c817bd1224a9b25f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1877719247087893624
+    second: ArmorSheet1_Helmet_0
+  - first:
+      213: 2945757062300031313
+    second: ArmorSheet1_Helmet_1
+  - first:
+      213: -2076940362984614830
+    second: ArmorSheet1_Helmet_2
+  - first:
+      213: 1015275964889096167
+    second: ArmorSheet1_Helmet_3
+  - first:
+      213: -4174861260758934022
+    second: ArmorSheet1_Helmet_4
+  - first:
+      213: 2086065836788995985
+    second: ArmorSheet1_Helmet_5
+  - first:
+      213: -4190987649827435080
+    second: ArmorSheet1_Helmet_6
+  - first:
+      213: 4613394764313199451
+    second: ArmorSheet1_Helmet_7
+  - first:
+      213: 7750589931030540079
+    second: ArmorSheet1_Helmet_8
+  - first:
+      213: -8703282935477232337
+    second: ArmorSheet1_Helmet_9
+  - first:
+      213: -4971798598102881093
+    second: ArmorSheet1_Helmet_10
+  - first:
+      213: -6299431991265746437
+    second: ArmorSheet1_Helmet_11
+  - first:
+      213: -1326143414374889039
+    second: ArmorSheet1_Helmet_12
+  - first:
+      213: -2996755271695772429
+    second: ArmorSheet1_Helmet_13
+  - first:
+      213: 5942972843235888819
+    second: ArmorSheet1_Helmet_14
+  - first:
+      213: 7709838691078704066
+    second: ArmorSheet1_Helmet_15
+  - first:
+      213: 6249064529355436691
+    second: ArmorSheet1_Helmet_16
+  - first:
+      213: 7747468606764239615
+    second: ArmorSheet1_Helmet_17
+  - first:
+      213: -532099021184929983
+    second: ArmorSheet1_Helmet_18
+  - first:
+      213: 4233878408422364977
+    second: ArmorSheet1_Helmet_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ArmorSheet1_Helmet_0
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 2365
+        width: 250
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87c7696e4bffe0a10800000000000000
+      internalID: 1877719247087893624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArmorSheet1_Helmet_1
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 2365
+        width: 250
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 159ddfcd07e61e820800000000000000
+      internalID: 2945757062300031313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArmorSheet1_Helmet_2
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 2365
+        width: 250
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25491a47eb93d23e0800000000000000
+      internalID: -2076940362984614830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArmorSheet1_Helmet_3
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 2365
+        width: 250
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7efd4346c1cf61e00800000000000000
+      internalID: 1015275964889096167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArmorSheet1_Helmet_4
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 1850
+        width: 250
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afd9ced7dc9ef06c0800000000000000
+      internalID: -4174861260758934022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArmorSheet1_Helmet_5
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 1850
+        width: 250
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 197d2eb73d133fc10800000000000000
+      internalID: 2086065836788995985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArmorSheet1_Helmet_6
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 1850
+        width: 250
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bd8cf1ffee96d5c0800000000000000
+      internalID: -4190987649827435080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArmorSheet1_Helmet_7
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1850
+        width: 250
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5309876812160040800000000000000
+      internalID: 4613394764313199451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArmorSheet1_Helmet_8
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 1340
+        width: 250
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2f6bc65a70af8b60800000000000000
+      internalID: 7750589931030540079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArmorSheet1_Helmet_9
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 1340
+        width: 250
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2d192b384ab73780800000000000000
+      internalID: -8703282935477232337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArmorSheet1_Helmet_10
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 1340
+        width: 250
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbcea49448f900bb0800000000000000
+      internalID: -4971798598102881093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArmorSheet1_Helmet_11
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1340
+        width: 250
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf1afd1dafbe398a0800000000000000
+      internalID: -6299431991265746437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArmorSheet1_Helmet_12
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 830
+        width: 250
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b906f04797989de0800000000000000
+      internalID: -1326143414374889039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArmorSheet1_Helmet_13
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 830
+        width: 250
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f45bc735f26966d0800000000000000
+      internalID: -2996755271695772429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArmorSheet1_Helmet_14
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 830
+        width: 250
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3be4ede405ea97250800000000000000
+      internalID: 5942972843235888819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArmorSheet1_Helmet_15
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 830
+        width: 250
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cb0f49e079defa60800000000000000
+      internalID: 7709838691078704066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArmorSheet1_Helmet_16
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 320
+        width: 250
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39279ba941329b650800000000000000
+      internalID: 6249064529355436691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArmorSheet1_Helmet_17
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 320
+        width: 250
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffa4ca666a9848b60800000000000000
+      internalID: 7747468606764239615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArmorSheet1_Helmet_18
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 320
+        width: 250
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14f60f862ca9d98f0800000000000000
+      internalID: -532099021184929983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArmorSheet1_Helmet_19
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 320
+        width: 250
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 137163cfaf1c1ca30800000000000000
+      internalID: 4233878408422364977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
