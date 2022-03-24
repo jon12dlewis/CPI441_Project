@@ -12,7 +12,6 @@ public class Web_Projectile : Collidable
 
     // SFX
     string damageSource;
-    [SerializeField] AudioClip weaponSound;
     [SerializeField] AudioSource weaponAudioSource;
     public DeathSound deathSoundPrefab;
 
