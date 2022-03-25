@@ -1,7 +1,43 @@
 fileFormatVersion: 2
 guid: 7e38d016488ffde44b0807aece5c5bbe
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 7874753112390174732
+    second: EnemyUpdate_ScorpionAttackOtherSide__0
+  - first:
+      213: 2553499574545381195
+    second: EnemyUpdate_ScorpionAttackOtherSide__1
+  - first:
+      213: 1964409838753155950
+    second: EnemyUpdate_ScorpionAttackOtherSide__2
+  - first:
+      213: -4270926137005717800
+    second: EnemyUpdate_ScorpionAttackOtherSide__3
+  - first:
+      213: 4112634989641203923
+    second: EnemyUpdate_ScorpionAttackOtherSide__4
+  - first:
+      213: -4126411166736935227
+    second: EnemyUpdate_ScorpionAttackOtherSide__5
+  - first:
+      213: 4139525694744976450
+    second: EnemyUpdate_ScorpionAttackOtherSide__6
+  - first:
+      213: -426831918174459425
+    second: EnemyUpdate_ScorpionAttackOtherSide__7
+  - first:
+      213: 7397004913202278810
+    second: EnemyUpdate_ScorpionAttackOtherSide__8
+  - first:
+      213: -1535292679846886529
+    second: EnemyUpdate_ScorpionAttackOtherSide__9
+  - first:
+      213: 6295675984043483363
+    second: EnemyUpdate_ScorpionAttackOtherSide__10
+  - first:
+      213: 4069144088964656457
+    second: EnemyUpdate_ScorpionAttackOtherSide__11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +77,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +111,345 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Lumin
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: EnemyUpdate_ScorpionAttackOtherSide__0
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1075
+        width: 470
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c080be5cb3eb84d60800000000000000
+      internalID: 7874753112390174732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyUpdate_ScorpionAttackOtherSide__1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 565
+        width: 470
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4773e2855adf6320800000000000000
+      internalID: 2553499574545381195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyUpdate_ScorpionAttackOtherSide__2
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 45
+        width: 470
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6b0a28275cf24b10800000000000000
+      internalID: 1964409838753155950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyUpdate_ScorpionAttackOtherSide__3
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 1075
+        width: 470
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d6c7d58e4f9ab4c0800000000000000
+      internalID: -4270926137005717800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyUpdate_ScorpionAttackOtherSide__4
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 1075
+        width: 470
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d00860cbb3031930800000000000000
+      internalID: 4112634989641203923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyUpdate_ScorpionAttackOtherSide__5
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 1075
+        width: 470
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c6907118ea0cb6c0800000000000000
+      internalID: -4126411166736935227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyUpdate_ScorpionAttackOtherSide__6
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 565
+        width: 470
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24c50edefac827930800000000000000
+      internalID: 4139525694744976450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyUpdate_ScorpionAttackOtherSide__7
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 45
+        width: 470
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd9a962c1a6931af0800000000000000
+      internalID: -426831918174459425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyUpdate_ScorpionAttackOtherSide__8
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 565
+        width: 470
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a91bd3d07c077a660800000000000000
+      internalID: 7397004913202278810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyUpdate_ScorpionAttackOtherSide__9
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 45
+        width: 470
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f730877217b81bae0800000000000000
+      internalID: -1535292679846886529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyUpdate_ScorpionAttackOtherSide__10
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 45
+        width: 470
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e0aed993fbbe5750800000000000000
+      internalID: 6295675984043483363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyUpdate_ScorpionAttackOtherSide__11
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 565
+        width: 470
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94d6e9a5df0887830800000000000000
+      internalID: 4069144088964656457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
