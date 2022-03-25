@@ -45,6 +45,9 @@ public class Enemy : Mover
     private BoxCollider2D hitBox;
     private Collider2D[] hits = new Collider2D[10];
 
+    // SFX
+    [SerializeField] AudioSource attackSound;
+
     protected override void Start()
     {
         base.Start();
@@ -135,6 +138,7 @@ public class Enemy : Mover
                 {
                     lastAttack = Time.time;
                     animator.SetTrigger("attack");
+                    attackSound.Play();
                 }
                 agent.SetDestination(target.position);
             }
