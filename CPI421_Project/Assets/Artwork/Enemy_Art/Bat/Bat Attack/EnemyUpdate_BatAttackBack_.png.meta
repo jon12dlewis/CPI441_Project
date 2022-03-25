@@ -1,7 +1,43 @@
 fileFormatVersion: 2
 guid: 4e0ba23002106ec4fa34ee1b63f36eda
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8010675162486669996
+    second: EnemyUpdate_BatAttackBack__0
+  - first:
+      213: -4655016227489907009
+    second: EnemyUpdate_BatAttackBack__1
+  - first:
+      213: -4851661878786929236
+    second: EnemyUpdate_BatAttackBack__2
+  - first:
+      213: 5709156952305404890
+    second: EnemyUpdate_BatAttackBack__3
+  - first:
+      213: -4888683347893704557
+    second: EnemyUpdate_BatAttackBack__4
+  - first:
+      213: 5033807877091777168
+    second: EnemyUpdate_BatAttackBack__5
+  - first:
+      213: -1028847636153493033
+    second: EnemyUpdate_BatAttackBack__6
+  - first:
+      213: -3587361095371468168
+    second: EnemyUpdate_BatAttackBack__7
+  - first:
+      213: 550906191526739456
+    second: EnemyUpdate_BatAttackBack__8
+  - first:
+      213: 5420138774524162091
+    second: EnemyUpdate_BatAttackBack__9
+  - first:
+      213: -832490456423224012
+    second: EnemyUpdate_BatAttackBack__10
+  - first:
+      213: 5292485664035079993
+    second: EnemyUpdate_BatAttackBack__11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +77,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +111,345 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Lumin
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: EnemyUpdate_BatAttackBack__0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1205
+        width: 510
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca2001f2e92ab2f60800000000000000
+      internalID: 8010675162486669996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyUpdate_BatAttackBack__1
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 1205
+        width: 510
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbef8c8876f066fb0800000000000000
+      internalID: -4655016227489907009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyUpdate_BatAttackBack__2
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 1205
+        width: 510
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cadc998f93f6bacb0800000000000000
+      internalID: -4851661878786929236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyUpdate_BatAttackBack__3
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 1205
+        width: 510
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adb8d1deffffa3f40800000000000000
+      internalID: 5709156952305404890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyUpdate_BatAttackBack__4
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 710
+        width: 510
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 398ad6d7568e72cb0800000000000000
+      internalID: -4888683347893704557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyUpdate_BatAttackBack__5
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 710
+        width: 510
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09a5e9d089dabd540800000000000000
+      internalID: 5033807877091777168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyUpdate_BatAttackBack__6
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 710
+        width: 510
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d91217a68cc8b1f0800000000000000
+      internalID: -1028847636153493033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyUpdate_BatAttackBack__7
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 710
+        width: 510
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 872d3552712273ec0800000000000000
+      internalID: -3587361095371468168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyUpdate_BatAttackBack__8
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 190
+        width: 510
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00eb38a234635a700800000000000000
+      internalID: 550906191526739456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyUpdate_BatAttackBack__9
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 190
+        width: 510
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2075d09f73383b40800000000000000
+      internalID: 5420138774524162091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyUpdate_BatAttackBack__10
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 190
+        width: 510
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43dadf137566274f0800000000000000
+      internalID: -832490456423224012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyUpdate_BatAttackBack__11
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 190
+        width: 510
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93788afabafa27940800000000000000
+      internalID: 5292485664035079993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

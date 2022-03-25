@@ -1,7 +1,43 @@
 fileFormatVersion: 2
 guid: c08d6008410e50240a990a665f5527c1
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -7000829794919950170
+    second: EnemyUpdate_BatFrontWalk_0
+  - first:
+      213: 1343949653633130855
+    second: EnemyUpdate_BatFrontWalk_1
+  - first:
+      213: 3829941472225401561
+    second: EnemyUpdate_BatFrontWalk_2
+  - first:
+      213: -2968532436898347773
+    second: EnemyUpdate_BatFrontWalk_3
+  - first:
+      213: 3885301426579089506
+    second: EnemyUpdate_BatFrontWalk_4
+  - first:
+      213: -8290886493897382532
+    second: EnemyUpdate_BatFrontWalk_5
+  - first:
+      213: -2433915565072931048
+    second: EnemyUpdate_BatFrontWalk_6
+  - first:
+      213: 772509927526860644
+    second: EnemyUpdate_BatFrontWalk_7
+  - first:
+      213: -7524916557633977037
+    second: EnemyUpdate_BatFrontWalk_8
+  - first:
+      213: 8363648216791027781
+    second: EnemyUpdate_BatFrontWalk_9
+  - first:
+      213: 787490734897797673
+    second: EnemyUpdate_BatFrontWalk_10
+  - first:
+      213: -8352477185706825050
+    second: EnemyUpdate_BatFrontWalk_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +77,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +111,345 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Lumin
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: EnemyUpdate_BatFrontWalk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1180
+        width: 510
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a853dcb46e08de90800000000000000
+      internalID: -7000829794919950170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyUpdate_BatFrontWalk_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1180
+        width: 510
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 761efc4e61ba6a210800000000000000
+      internalID: 1343949653633130855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyUpdate_BatFrontWalk_2
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 1180
+        width: 510
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9da18822a7fa62530800000000000000
+      internalID: 3829941472225401561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyUpdate_BatFrontWalk_3
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 1180
+        width: 510
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30503720a77adc6d0800000000000000
+      internalID: -2968532436898347773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyUpdate_BatFrontWalk_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 655
+        width: 510
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 268a090ff0d5be530800000000000000
+      internalID: 3885301426579089506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyUpdate_BatFrontWalk_5
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 655
+        width: 510
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c75a92a29aad0fc80800000000000000
+      internalID: -8290886493897382532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyUpdate_BatFrontWalk_6
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 655
+        width: 510
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 817a88260bef83ed0800000000000000
+      internalID: -2433915565072931048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyUpdate_BatFrontWalk_7
+      rect:
+        serializedVersion: 2
+        x: 1533
+        y: 655
+        width: 510
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46783b7afa188ba00800000000000000
+      internalID: 772509927526860644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyUpdate_BatFrontWalk_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 145
+        width: 510
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33585c17240229790800000000000000
+      internalID: -7524916557633977037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyUpdate_BatFrontWalk_9
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 145
+        width: 510
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 540982c9db5a11470800000000000000
+      internalID: 8363648216791027781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyUpdate_BatFrontWalk_10
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 145
+        width: 510
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92a9e7da6aabdea00800000000000000
+      internalID: 787490734897797673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyUpdate_BatFrontWalk_11
+      rect:
+        serializedVersion: 2
+        x: 1533
+        y: 145
+        width: 510
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aae36fb04a061c80800000000000000
+      internalID: -8352477185706825050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
