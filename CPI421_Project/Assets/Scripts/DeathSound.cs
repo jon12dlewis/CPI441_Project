@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class DeathSound : MonoBehaviour
 {
+    AudioSource asource;
 
     // called via SendMessage() in OnDestroy() functions
     void SetAudioSource(AudioSource inputSource) {
 
         // create new audio source
-        AudioSource asource = gameObject.AddComponent<AudioSource>();
+        asource = gameObject.AddComponent<AudioSource>();
 
         // copy attributes of input audio source to new audio source
         asource.clip = inputSource.clip;
