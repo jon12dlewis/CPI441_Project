@@ -13,6 +13,7 @@ public class Web_Projectile : Collidable
     // SFX
     string damageSource;
     [SerializeField] AudioSource weaponAudioSource;
+    [SerializeField] AudioSource webShootSound;
     public DeathSound deathSoundPrefab;
 
     // Start is called before the first frame update
@@ -20,6 +21,8 @@ public class Web_Projectile : Collidable
     {
         base.Start();
         //rb.velocity = -transform.right * speed;
+        webShootSound.Play();
+
     }
 
     // Update is called once per frame
@@ -69,13 +72,15 @@ public class Web_Projectile : Collidable
     }
 
     void OnDestroy() {
-        if (damageSource == "Weapon") {
-            var temp = Instantiate(deathSoundPrefab);
-            temp.gameObject.SendMessage("SetAudioSource", weaponAudioSource);
-        }
-        if (damageSource == "arrow(Clone)") {
-            var temp = Instantiate(deathSoundPrefab);
-            temp.gameObject.SendMessage("SetAudioSource", weaponAudioSource);
+        if (gameObject.scene.isLoaded) {
+            if (damageSource == "Weapon") {
+                var temp = Instantiate(deathSoundPrefab);
+                temp.gameObject.SendMessage("SetAudioSource", weaponAudioSource);
+            }
+            if (damageSource == "arrow(Clone)") {
+                var temp = Instantiate(deathSoundPrefab);
+                temp.gameObject.SendMessage("SetAudioSource", weaponAudioSource);
+            }
         }
     }
 }

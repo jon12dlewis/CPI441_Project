@@ -62,7 +62,9 @@ public class Arrow : Collidable
     }
 
     void OnDestroy() {
-        var temp = Instantiate(deathSoundPrefab);
-        temp.gameObject.SendMessage("SetAudioSource", impactSound);
+        if (gameObject.scene.isLoaded) {
+            var temp = Instantiate(deathSoundPrefab);
+            temp.gameObject.SendMessage("SetAudioSource", impactSound);
+        }
     }
 }
