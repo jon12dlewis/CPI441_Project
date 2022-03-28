@@ -109032,6 +109032,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 925973401}
+    - target: {fileID: 955206794820718515, guid: ea548834ccb92084dbbcbfe3ce2b0922, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1835051857310800879, guid: ea548834ccb92084dbbcbfe3ce2b0922, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -109244,6 +109248,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 925973401}
+    - target: {fileID: 3231519697996255467, guid: ea548834ccb92084dbbcbfe3ce2b0922, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3231519698074637248, guid: ea548834ccb92084dbbcbfe3ce2b0922, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -109340,6 +109348,10 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 925973401}
+    - target: {fileID: 4612432338629004568, guid: ea548834ccb92084dbbcbfe3ce2b0922, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5041196941162835264, guid: ea548834ccb92084dbbcbfe3ce2b0922, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -109352,6 +109364,10 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 925973401}
+    - target: {fileID: 7441466237345036645, guid: ea548834ccb92084dbbcbfe3ce2b0922, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 9207756885426177021, guid: ea548834ccb92084dbbcbfe3ce2b0922, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
