@@ -239,9 +239,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3656335181703268391}
-        m_TargetAssemblyTypeName: setVolume, Assembly-CSharp
-        m_MethodName: SetLevel
+      - m_Target: {fileID: 3204649101846828718}
+        m_TargetAssemblyTypeName: VolumeHelper, Assembly-CSharp
+        m_MethodName: SetMasterLevel
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -661,8 +661,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3656335181936088832}
-        m_TargetAssemblyTypeName: setVolume, Assembly-CSharp
+      - m_Target: {fileID: 3204649101846828718}
+        m_TargetAssemblyTypeName: VolumeHelper, Assembly-CSharp
         m_MethodName: SetEnemyLevel
         m_Mode: 0
         m_Arguments:
@@ -889,8 +889,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3656335182600599683}
-        m_TargetAssemblyTypeName: setVolume, Assembly-CSharp
+      - m_Target: {fileID: 3204649101846828718}
+        m_TargetAssemblyTypeName: VolumeHelper, Assembly-CSharp
         m_MethodName: SetSFXLevel
         m_Mode: 0
         m_Arguments:
@@ -1001,6 +1001,7 @@ GameObject:
   - component: {fileID: 3656335180636921237}
   - component: {fileID: 3656335180636921236}
   - component: {fileID: 382092930554009585}
+  - component: {fileID: 3204649101846828718}
   m_Layer: 5
   m_Name: Sound Menu
   m_TagString: Untagged
@@ -1087,6 +1088,19 @@ MonoBehaviour:
   MusicSlider: {fileID: 2190230953921895611}
   SFXSlider: {fileID: 2190230953806489967}
   EnemySlider: {fileID: 2190230953747532941}
+--- !u!114 &3204649101846828718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2190230953818208639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95ceee37533ef224fb7d48316effd338, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: 37186d25dd11dc44ca458c00d2bf2c13, type: 2}
 --- !u!1 &2190230953842138056
 GameObject:
   m_ObjectHideFlags: 0
@@ -1290,8 +1304,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3656335181879951384}
-        m_TargetAssemblyTypeName: setVolume, Assembly-CSharp
+      - m_Target: {fileID: 3204649101846828718}
+        m_TargetAssemblyTypeName: VolumeHelper, Assembly-CSharp
         m_MethodName: SetMusicLevel
         m_Mode: 0
         m_Arguments:
