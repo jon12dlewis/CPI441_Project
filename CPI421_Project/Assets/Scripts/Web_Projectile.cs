@@ -10,11 +10,19 @@ public class Web_Projectile : Collidable
     public int damagePoint = 1;
     public float pushForce = 2.0f;
 
+    // SFX
+    string damageSource;
+    [SerializeField] AudioSource weaponAudioSource;
+    [SerializeField] AudioSource webShootSound;
+    public DeathSound deathSoundPrefab;
+
     // Start is called before the first frame update
     protected override void Start()
     {
         base.Start();
         //rb.velocity = -transform.right * speed;
+        webShootSound.Play();
+
     }
 
     // Update is called once per frame
@@ -28,8 +36,9 @@ public class Web_Projectile : Collidable
     {
         if(coll.tag == "Fighter")
         {
-            if(coll.name == "Enemy_Spider")
+            if(coll.name == "Enemy_Spider" || coll.name == "Enemy_Spider_Blue" || coll.name == "Enemy_Spider_Yellow")
                 return;
+
             //rb.velocity = Vector2.zero;
             Damage dmg = new Damage
             {
@@ -51,12 +60,27 @@ public class Web_Projectile : Collidable
         else
         if(coll.name == "Weapon")
         {
+            damageSource = "Weapon";
             Destroy(gameObject);
         }
         else
         if(coll.name == "arrow(Clone)")
         {
+            damageSource = "arrow(Clone)";
             Destroy(gameObject);
+        }
+    }
+
+    void OnDestroy() {
+        if (gameObject.scene.isLoaded) {
+            if (damageSource == "Weapon") {
+                var temp = Instantiate(deathSoundPrefab);
+                temp.gameObject.SendMessage("SetAudioSource", weaponAudioSource);
+            }
+            if (damageSource == "arrow(Clone)") {
+                var temp = Instantiate(deathSoundPrefab);
+                temp.gameObject.SendMessage("SetAudioSource", weaponAudioSource);
+            }
         }
     }
 }

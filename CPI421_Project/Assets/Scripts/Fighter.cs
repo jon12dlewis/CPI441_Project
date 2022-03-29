@@ -16,6 +16,12 @@ public class Fighter : MonoBehaviour
     // push
     protected Vector3 pushDirection;
 
+    // SFX
+    [SerializeField] AudioSource damageSound;
+    [SerializeField] AudioSource damageSound2;  // for player
+    [SerializeField] AudioSource deathSound;
+    [SerializeField] protected DeathSound deathSoundPrefab;
+
     // All fighters can recieve damage / die
 
     protected virtual void RecieveDamage(Damage dmg)
@@ -34,11 +40,22 @@ public class Fighter : MonoBehaviour
                 hitPoint = 0;
                 Death();
             }
+            else {
+                damageSound.Play(0);
+                if (damageSound2 != null) damageSound2.Play();
+            }
         }
     }
 
     protected virtual void Death()
     {
 
+    }
+
+    void OnDestroy() {
+        if (gameObject.scene.isLoaded) {
+            var temp = Instantiate(deathSoundPrefab);
+            temp.gameObject.SendMessage("SetAudioSource", deathSound);
+        }
     }
 }

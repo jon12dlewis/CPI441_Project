@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -44,6 +44,9 @@ public class Enemy : Mover
     public ContactFilter2D filter;
     private BoxCollider2D hitBox;
     private Collider2D[] hits = new Collider2D[10];
+
+    // SFX
+    [SerializeField] AudioSource attackSound;
 
     protected override void Start()
     {
@@ -135,6 +138,7 @@ public class Enemy : Mover
                 {
                     lastAttack = Time.time;
                     animator.SetTrigger("attack");
+                    attackSound.Play();
                 }
                 agent.SetDestination(target.position);
             }

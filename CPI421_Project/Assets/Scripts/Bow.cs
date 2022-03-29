@@ -10,6 +10,7 @@ public class Bow : MonoBehaviour
     int facing = 0;
     private float coolDown = 1.5f;
     private float lastShot;
+    [SerializeField] AudioSource fireSound;
 
     // Start is called before the first frame update
     void Start()
@@ -56,6 +57,7 @@ public class Bow : MonoBehaviour
             if(Time.time - lastShot > coolDown)
             {
                 lastShot = Time.time;
+                fireSound.Play(0);
 
                 switch(facing)
                 {

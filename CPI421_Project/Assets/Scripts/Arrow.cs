@@ -10,6 +10,10 @@ public class Arrow : Collidable
     public int damagePoint = 1;
     public float pushForce = 2.0f;
 
+    // SFX
+    [SerializeField] AudioSource impactSound;
+    [SerializeField] DeathSound deathSoundPrefab;
+
     // Start is called before the first frame update
     protected override void Start()
     {
@@ -54,6 +58,13 @@ public class Arrow : Collidable
         if(coll.name == "web_projectile(Clone)")
         {
             Destroy(gameObject);
+        }
+    }
+
+    void OnDestroy() {
+        if (gameObject.scene.isLoaded) {
+            var temp = Instantiate(deathSoundPrefab);
+            temp.gameObject.SendMessage("SetAudioSource", impactSound);
         }
     }
 }
