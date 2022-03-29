@@ -97,6 +97,41 @@ public class GameManager : MonoBehaviour
         yellow_crystals += ammount;
     }
 
+    public void TakeBlueCrystal(int ammount)
+    {
+        Debug.Log("Blue Crystal Taken");
+        blue_crystals -= ammount;
+    }
+
+    public void TakeRedCrystal(int ammount)
+    {
+        Debug.Log("Red Crystal Taken");
+        red_crystals -= ammount;
+    }
+
+    public void TakeYellowCrystal(int ammount)
+    {
+        Debug.Log("Yellow Crystal Taken");
+        yellow_crystals -= ammount;
+    }
+
+
+
+    public int GetBlueCrystal()
+    {
+        return blue_crystals;
+    }
+
+    public int GetRedCrystal()
+    {
+        return red_crystals;
+    }
+
+    public int GetYellowCrystal()
+    {
+        return yellow_crystals;
+    }
+
     public void GiveExpierence(int ammount)
     {
         Debug.Log("Expierence Added");
