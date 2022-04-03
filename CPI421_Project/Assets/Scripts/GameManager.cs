@@ -50,6 +50,12 @@ public class GameManager : MonoBehaviour
     public int[] bows = {0,0,0};
     public int arrows = 0;
     public int levelsCompleted;
+    public int pickAxeSelected;
+    public int weaponSelected;
+    public int bowSelected;
+    public int helmetSelected;
+    public int chestSelected;
+    public int legSelected;
     
 
     // Floating text
@@ -85,8 +91,14 @@ public class GameManager : MonoBehaviour
         s += legs[0].ToString() + "|";                           // legs level 1 unlocked 1 = yes 0 = no
         s += legs[1].ToString() + "|";                           // legs level 2 unlocked 1 = yes 0 = no
         s += legs[2].ToString() + "|";                           // legs level 3 unlocked 1 = yes 0 = no
-        s += arrows + "|";
-        s += levelsCompleted;                           // Level one completed
+        s += arrows.ToString() + "|";
+        s += levelsCompleted.ToString() + "|";                                   // Level one completed
+        s += pickAxeSelected.ToString() + "|";
+        s += weaponSelected.ToString() + "|";
+        s += bowSelected.ToString() + "|";
+        s += helmetSelected.ToString() + "|";
+        s += chestSelected.ToString() + "|";
+        s += legSelected.ToString();
 
         PlayerPrefs.SetString("SaveState", s);
         floatingTextManager = GameObject.Find("FloatingTextManager").GetComponent<FloatingTextManager>();
@@ -123,7 +135,14 @@ public class GameManager : MonoBehaviour
         legs[0] = int.Parse(data[20]);
         legs[0] = int.Parse(data[21]);
         arrows = int.Parse(data[22]);
-        levelsCompleted = int.Parse(data[23]); 
+        levelsCompleted = int.Parse(data[23]);
+        pickAxeSelected = int.Parse(data[24]);
+        weaponSelected = int.Parse(data[25]);
+        bowSelected = int.Parse(data[26]);
+        helmetSelected = int.Parse(data[27]);
+        chestSelected = int.Parse(data[28]);
+        legSelected = int.Parse(data[29]);
+
         // change the weapon level
 
         Debug.Log("LoadState");
