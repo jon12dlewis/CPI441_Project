@@ -35,6 +35,10 @@ public class Fighter : MonoBehaviour
             
             GameManager.instance.ShowText(dmg.damageAmount.ToString(), 50, Color.red, transform.position, Vector3.zero, 0.5f);
 
+            // play on hit effect
+            HitEffect hitEffect = this.GetComponent<HitEffect>();
+            if (hitEffect != null) hitEffect.PlayHitEffect();
+
             if(hitPoint <= 0)
             {
                 hitPoint = 0;
