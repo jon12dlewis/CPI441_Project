@@ -70,31 +70,31 @@ public class GameManager : MonoBehaviour
         string s = "";
 
         s += "0" + "|";
-        s += blue_crystals.ToString() + "|";         // Blue Crystals
-        s += yellow_crystals.ToString() + "|";   // Red Crystals
-        s += red_crystals.ToString() + "|";   // Yellow Crystals
+        s += blue_crystals.ToString() + "|";                        // Blue Crystals
+        s += yellow_crystals.ToString() + "|";                      // Red Crystals
+        s += red_crystals.ToString() + "|";                         // Yellow Crystals
         s += weapons[0].ToString() + "|";                           // weapon level 1 unlocked 1 = yes 0 = no
         s += weapons[1].ToString() + "|";                           // weapon level 2 unlocked 1 = yes 0 = no
         s += weapons[2].ToString() + "|";                           // weapon level 3 unlocked 1 = yes 0 = no
-        s += bows[0].ToString() + "|";                           // bow level 1 unlocked 1 = yes 0 = no
-        s += bows[1].ToString() + "|";                           // bow level 2 unlocked 1 = yes 0 = no
-        s += bows[2].ToString() + "|";                           // bow level 3 unlocked 1 = yes 0 = no
-        s += pickaxes[0].ToString() + "|";                           // pickaxe level 1 unlocked 1 = yes 0 = no
-        s += pickaxes[1].ToString() + "|";                           // piackaxe level 2 unlocked 1 = yes 0 = no
-        s += pickaxes[2].ToString() + "|";                           // pickaxe level 3 unlocked 1 = yes 0 = no
+        s += bows[0].ToString() + "|";                              // bow level 1 unlocked 1 = yes 0 = no
+        s += bows[1].ToString() + "|";                              // bow level 2 unlocked 1 = yes 0 = no
+        s += bows[2].ToString() + "|";                              // bow level 3 unlocked 1 = yes 0 = no
+        s += pickaxes[0].ToString() + "|";                          // pickaxe level 1 unlocked 1 = yes 0 = no
+        s += pickaxes[1].ToString() + "|";                          // piackaxe level 2 unlocked 1 = yes 0 = no
+        s += pickaxes[2].ToString() + "|";                          // pickaxe level 3 unlocked 1 = yes 0 = no
         s += helmets[0].ToString() + "|";                           // helmet level 1 unlocked 1 = yes 0 = no
         s += helmets[1].ToString() + "|";                           // helmet level 2 unlocked 1 = yes 0 = no
         s += helmets[2].ToString() + "|";                           // helmet level 3 unlocked 1 = yes 0 = no
-        s += chests[0].ToString() + "|";                           // chest level 1 unlocked 1 = yes 0 = no
-        s += chests[1].ToString() + "|";                           // chest level 2 unlocked 1 = yes 0 = no
-        s += chests[2].ToString() + "|";                           // chest level 3 unlocked 1 = yes 0 = no
-        s += legs[0].ToString() + "|";                           // legs level 1 unlocked 1 = yes 0 = no
-        s += legs[1].ToString() + "|";                           // legs level 2 unlocked 1 = yes 0 = no
-        s += legs[2].ToString() + "|";                           // legs level 3 unlocked 1 = yes 0 = no
+        s += chests[0].ToString() + "|";                            // chest level 1 unlocked 1 = yes 0 = no
+        s += chests[1].ToString() + "|";                            // chest level 2 unlocked 1 = yes 0 = no
+        s += chests[2].ToString() + "|";                            // chest level 3 unlocked 1 = yes 0 = no
+        s += legs[0].ToString() + "|";                              // legs level 1 unlocked 1 = yes 0 = no
+        s += legs[1].ToString() + "|";                              // legs level 2 unlocked 1 = yes 0 = no
+        s += legs[2].ToString() + "|";                              // legs level 3 unlocked 1 = yes 0 = no
         s += arrows.ToString() + "|";
-        s += levelsCompleted.ToString() + "|";                                   // Level one completed
-        s += pickAxeSelected.ToString() + "|";
-        s += weaponSelected.ToString() + "|";
+        s += levelsCompleted.ToString() + "|";                      // Level one completed
+        s += pickAxeSelected.ToString() + "|";                      // Level two completed
+        s += weaponSelected.ToString() + "|";                       // Level three completed
         s += bowSelected.ToString() + "|";
         s += helmetSelected.ToString() + "|";
         s += chestSelected.ToString() + "|";
