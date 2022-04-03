@@ -171,6 +171,7 @@ GameObject:
   - component: {fileID: 1169174447158272607}
   - component: {fileID: 1169174447158272606}
   - component: {fileID: 1169174447158272605}
+  - component: {fileID: 9092543775159127386}
   m_Layer: 9
   m_Name: Enemy_Spider
   m_TagString: Fighter
@@ -216,7 +217,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 149b8262e50039b4eb18e30db3f7eb7a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -291,6 +292,7 @@ MonoBehaviour:
   pushRecoverySpeed: 0.2
   wasHit: 0
   damageSound: {fileID: 2244254948639023910}
+  damageSound2: {fileID: 0}
   deathSound: {fileID: 2623788380902354572}
   deathSoundPrefab: {fileID: 2762172986477452311, guid: 57b9530324a7eeb44bb1426368ab9d99, type: 3}
   xpValue: 5
@@ -358,6 +360,21 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &9092543775159127386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169174447158272604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6d8623bca4f632489d68373413ad7e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0.8018868, g: 0.6157885, b: 0.6157885, a: 0}
+  fadeTime: 0.1
+  lingerTime: 0.005
 --- !u!1 &1169174448202551198
 GameObject:
   m_ObjectHideFlags: 0
