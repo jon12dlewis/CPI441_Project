@@ -42,12 +42,12 @@ public class GameManager : MonoBehaviour
     public int yellow_crystals;
     public int red_crystals;
     
-    public int[] helmets = [0,0,0];
-    public int[] chests = [0,0,0];
-    public int[] legs = [0,0,0];
-    public int[] weapons = [0,0,0];
-    public int[] pickaxes = [0,0,0];
-    public int[] bows = [0,0,0];
+    public int[] helmets = {0,0,0};
+    public int[] chests = {0,0,0};
+    public int[] legs = {0,0,0};
+    public int[] weapons = {0,0,0};
+    public int[] pickaxes = {0,0,0};
+    public int[] bows = {0,0,0};
     public int arrows = 0;
     public int levelsCompleted;
     
@@ -63,28 +63,28 @@ public class GameManager : MonoBehaviour
     {
         string s = "";
 
-        //s += "0" + "|";
+        s += "0" + "|";
         s += blue_crystals.ToString() + "|";         // Blue Crystals
         s += yellow_crystals.ToString() + "|";   // Red Crystals
         s += red_crystals.ToString() + "|";   // Yellow Crystals
-        s += weapons[0] + "|";                           // weapon level 1 unlocked 1 = yes 0 = no
-        s += weapons[1] + "|";                           // weapon level 2 unlocked 1 = yes 0 = no
-        s += weapons[2] + "|";                           // weapon level 3 unlocked 1 = yes 0 = no
-        s += bows[0] + "|";                           // bow level 1 unlocked 1 = yes 0 = no
-        s += bows[1] + "|";                           // bow level 2 unlocked 1 = yes 0 = no
-        s += bows[2] + "|";                           // bow level 3 unlocked 1 = yes 0 = no
-        s += pickaxes[0] + "|";                           // pickaxe level 1 unlocked 1 = yes 0 = no
-        s += pickaxes[1] + "|";                           // piackaxe level 2 unlocked 1 = yes 0 = no
-        s += pickaxes[2] + "|";                           // pickaxe level 3 unlocked 1 = yes 0 = no
-        s += helmets[0] + "|";                           // helmet level 1 unlocked 1 = yes 0 = no
-        s += helmets[1] + "|";                           // helmet level 2 unlocked 1 = yes 0 = no
-        s += helmets[2] + "|";                           // helmet level 3 unlocked 1 = yes 0 = no
-        s += chests[0] + "|";                           // chest level 1 unlocked 1 = yes 0 = no
-        s += chests[1] + "|";                           // chest level 2 unlocked 1 = yes 0 = no
-        s += chests[2] + "|";                           // chest level 3 unlocked 1 = yes 0 = no
-        s += legs[0] + "|";                           // legs level 1 unlocked 1 = yes 0 = no
-        s += legs[1] + "|";                           // legs level 2 unlocked 1 = yes 0 = no
-        s += legs[2] + "|";                           // legs level 3 unlocked 1 = yes 0 = no
+        s += weapons[0].ToString() + "|";                           // weapon level 1 unlocked 1 = yes 0 = no
+        s += weapons[1].ToString() + "|";                           // weapon level 2 unlocked 1 = yes 0 = no
+        s += weapons[2].ToString() + "|";                           // weapon level 3 unlocked 1 = yes 0 = no
+        s += bows[0].ToString() + "|";                           // bow level 1 unlocked 1 = yes 0 = no
+        s += bows[1].ToString() + "|";                           // bow level 2 unlocked 1 = yes 0 = no
+        s += bows[2].ToString() + "|";                           // bow level 3 unlocked 1 = yes 0 = no
+        s += pickaxes[0].ToString() + "|";                           // pickaxe level 1 unlocked 1 = yes 0 = no
+        s += pickaxes[1].ToString() + "|";                           // piackaxe level 2 unlocked 1 = yes 0 = no
+        s += pickaxes[2].ToString() + "|";                           // pickaxe level 3 unlocked 1 = yes 0 = no
+        s += helmets[0].ToString() + "|";                           // helmet level 1 unlocked 1 = yes 0 = no
+        s += helmets[1].ToString() + "|";                           // helmet level 2 unlocked 1 = yes 0 = no
+        s += helmets[2].ToString() + "|";                           // helmet level 3 unlocked 1 = yes 0 = no
+        s += chests[0].ToString() + "|";                           // chest level 1 unlocked 1 = yes 0 = no
+        s += chests[1].ToString() + "|";                           // chest level 2 unlocked 1 = yes 0 = no
+        s += chests[2].ToString() + "|";                           // chest level 3 unlocked 1 = yes 0 = no
+        s += legs[0].ToString() + "|";                           // legs level 1 unlocked 1 = yes 0 = no
+        s += legs[1].ToString() + "|";                           // legs level 2 unlocked 1 = yes 0 = no
+        s += legs[2].ToString() + "|";                           // legs level 3 unlocked 1 = yes 0 = no
         s += arrows + "|";
         s += levelsCompleted;                           // Level one completed
 
@@ -104,9 +104,9 @@ public class GameManager : MonoBehaviour
         blue_crystals = int.Parse(data[1]);
         yellow_crystals = int.Parse(data[2]);
         red_crystals = int.Parse(data[3]);
-        weapons[0] = int.Parse(data[4]);;
-        weapons[1] = int.Parse(data[5]);;
-        weapons[2] = int.Parse(data[6]);;
+        weapons[0] = int.Parse(data[4]);
+        weapons[1] = int.Parse(data[5]);
+        weapons[2] = int.Parse(data[6]);
         bows[0] = int.Parse(data[7]);
         bows[0] = int.Parse(data[8]);
         bows[0] = int.Parse(data[9]);
