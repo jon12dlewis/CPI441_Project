@@ -59,6 +59,7 @@ public class CraftingStation : Collidable
         if(GameManager.instance.GetYellowCrystal() >= 10)
         {
             GameManager.instance.TakeYellowCrystal(10);
+            GameManager.instance.helmets[0] = 1;
             Debug.Log("Crafting Helmet 1");
         }
         else
@@ -73,6 +74,7 @@ public class CraftingStation : Collidable
         {
             GameManager.instance.TakeYellowCrystal(50);
             GameManager.instance.TakeBlueCrystal(10);
+            GameManager.instance.helmets[1] = 1;
             Debug.Log("Crafting Helmet 2");
         }
         else
@@ -88,6 +90,7 @@ public class CraftingStation : Collidable
             GameManager.instance.TakeYellowCrystal(30);
             GameManager.instance.TakeBlueCrystal(20);
             GameManager.instance.TakeRedCrystal(5);
+            GameManager.instance.helmets[2] = 1;
             Debug.Log("Crafting Helmet 3");
         }
         else
@@ -101,6 +104,7 @@ public class CraftingStation : Collidable
         if(GameManager.instance.GetYellowCrystal() >= 10)
         {
             GameManager.instance.TakeYellowCrystal(10);
+            GameManager.instance.chests[0] = 1;
 
             Debug.Log("Crafting Chest 1");
         }
@@ -116,6 +120,7 @@ public class CraftingStation : Collidable
         {
             GameManager.instance.TakeYellowCrystal(15);
             GameManager.instance.TakeBlueCrystal(10);
+            GameManager.instance.chests[1] = 1;
             Debug.Log("Crafting Chest 2");
         }
         else
@@ -131,6 +136,7 @@ public class CraftingStation : Collidable
             GameManager.instance.TakeYellowCrystal(30);
             GameManager.instance.TakeBlueCrystal(20);
             GameManager.instance.TakeRedCrystal(5);
+            GameManager.instance.chests[2] = 1;
 
             Debug.Log("Crafting Chest 3");
         }
@@ -145,6 +151,7 @@ public class CraftingStation : Collidable
         if(GameManager.instance.GetYellowCrystal() >= 10)
         {
             GameManager.instance.TakeYellowCrystal(10);
+            GameManager.instance.legs[0] = 1;
             Debug.Log("Crafting Boots 1");
         }
         else
@@ -159,6 +166,7 @@ public class CraftingStation : Collidable
         {
             GameManager.instance.TakeYellowCrystal(15);
             GameManager.instance.TakeBlueCrystal(10);
+            GameManager.instance.legs[1] = 1;
 
             Debug.Log("Crafting Boots 2");
         }
@@ -175,6 +183,7 @@ public class CraftingStation : Collidable
             GameManager.instance.TakeYellowCrystal(30);
             GameManager.instance.TakeBlueCrystal(20);
             GameManager.instance.TakeRedCrystal(5);
+            GameManager.instance.legs[2] = 1;
 
             Debug.Log("Crafting Boots 3");
         }
