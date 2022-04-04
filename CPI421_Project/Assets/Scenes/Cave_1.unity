@@ -83505,6 +83505,26 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &476422725 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6234803846274970448, guid: f390d10d2c46c134f9c5d08aeb59b906, type: 3}
+  m_PrefabInstance: {fileID: 982575296}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &476422726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476422725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6d8623bca4f632489d68373413ad7e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0.053097185, g: 0.15730649, b: 0.1792453, a: 0}
+  fadeTime: 0.075
+  lingerTime: 0.01
 --- !u!1 &492647083
 GameObject:
   m_ObjectHideFlags: 0
@@ -99597,6 +99617,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6234803846274970455, guid: f390d10d2c46c134f9c5d08aeb59b906, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 149b8262e50039b4eb18e30db3f7eb7a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f390d10d2c46c134f9c5d08aeb59b906, type: 3}
 --- !u!1 &985595244
@@ -99750,7 +99774,19 @@ MonoBehaviour:
   blueCrystalText: {fileID: 322911209}
   yellowCrystalText: {fileID: 1436190785}
   redCrystalText: {fileID: 1510665365}
+  pickAxeDamage: {fileID: 0}
+  weaponDamage: {fileID: 0}
+  bowDamage: {fileID: 0}
   player: {fileID: 977758262}
+  pickAxeImage: []
+  weaponImage: []
+  bowImage: []
+  pickAxeDisplay: {fileID: 0}
+  weaponDisplay: {fileID: 0}
+  bowDisplay: {fileID: 0}
+  weapon: {fileID: 0}
+  pickAxe: {fileID: 0}
+  bow: {fileID: 0}
 --- !u!82 &986060033 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 857293230110999088, guid: f689c50f7aae12c488649770c589d8a2, type: 3}
@@ -109034,7 +109070,7 @@ PrefabInstance:
       objectReference: {fileID: 925973401}
     - target: {fileID: 955206794820718515, guid: ea548834ccb92084dbbcbfe3ce2b0922, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1835051857310800879, guid: ea548834ccb92084dbbcbfe3ce2b0922, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -109366,7 +109402,7 @@ PrefabInstance:
       objectReference: {fileID: 925973401}
     - target: {fileID: 7441466237345036645, guid: ea548834ccb92084dbbcbfe3ce2b0922, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9207756885426177021, guid: ea548834ccb92084dbbcbfe3ce2b0922, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target

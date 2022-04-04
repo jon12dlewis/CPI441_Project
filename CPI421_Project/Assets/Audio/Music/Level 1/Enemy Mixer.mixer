@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!244 &-5671087698906199409
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: d7573b36b64593549ad4709db6152138
+  m_EffectName: Attenuation
+  m_MixLevel: e4ed29c08360528429c7fdc6af3af2f3
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!241 &24100000
 AudioMixerController:
   m_ObjectHideFlags: 0
@@ -20,6 +34,7 @@ AudioMixerController:
   - guids:
     - 59e7f95b8c1962f44a6a70079d52e7ba
     - b3c577978bac88640910b074b5a3ab96
+    - 7e495eb2807d5ca4c936da830ce6339e
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -34,6 +49,7 @@ AudioMixerGroupController:
   m_GroupID: 59e7f95b8c1962f44a6a70079d52e7ba
   m_Children:
   - {fileID: 7862432672910135339}
+  - {fileID: 2397381410951313708}
   m_Volume: ec29d4952e7cf6142a1e1dbbdc46538a
   m_Pitch: aee17d5dc4ada6f4bb1c011cddb84e68
   m_Send: 00000000000000000000000000000000
@@ -69,6 +85,25 @@ AudioMixerSnapshotController:
   m_FloatValues:
     7ef18f0a424f67d4c9a49f95df0f66a0: -0.39762527
   m_TransitionOverrides: {}
+--- !u!243 &2397381410951313708
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Scorpion
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 7e495eb2807d5ca4c936da830ce6339e
+  m_Children: []
+  m_Volume: 6ca7ba75c5b6fdb46a94b6405bb5e0ed
+  m_Pitch: 8c78c3c4c388ee345926ea4052e3edda
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -5671087698906199409}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!244 &7080639146525771736
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
