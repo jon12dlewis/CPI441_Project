@@ -339,7 +339,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &37061675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14653,7 +14653,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1347732417
   m_SortingLayer: 2
-  m_SortingOrder: 5
+  m_SortingOrder: 4
   m_Sprite: {fileID: 8691193292123259965, guid: f1d7437124c87a34ebdb22952f867e0d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -83539,7 +83539,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1347732417
   m_SortingLayer: 2
-  m_SortingOrder: 5
+  m_SortingOrder: 4
   m_Sprite: {fileID: -5861964134365009741, guid: bc666451e18733a4397eb19955183791, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -104340,6 +104340,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 2363212578852531356, guid: d2e7fe73eef80a440a4a31bf422ec54f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2363212578852531357, guid: d2e7fe73eef80a440a4a31bf422ec54f, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -104395,6 +104399,22 @@ PrefabInstance:
     - target: {fileID: 3386749949196032535, guid: d2e7fe73eef80a440a4a31bf422ec54f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3386749949856379490, guid: d2e7fe73eef80a440a4a31bf422ec54f, type: 3}
+      propertyPath: damagePoint
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3386749949856379490, guid: d2e7fe73eef80a440a4a31bf422ec54f, type: 3}
+      propertyPath: pickAxeLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3386749949856379500, guid: d2e7fe73eef80a440a4a31bf422ec54f, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3386749949856379500, guid: d2e7fe73eef80a440a4a31bf422ec54f, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 4.3
       objectReference: {fileID: 0}
     - target: {fileID: 4909775313748856498, guid: d2e7fe73eef80a440a4a31bf422ec54f, type: 3}
       propertyPath: m_RootOrder
@@ -106601,7 +106621,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1347732417
   m_SortingLayer: 2
-  m_SortingOrder: 5
+  m_SortingOrder: 4
   m_Sprite: {fileID: 6249064529355436691, guid: 5911d431c195b324c817bd1224a9b25f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
