@@ -29,8 +29,6 @@ public class HitEffect : MonoBehaviour
             material.SetColor("_OverlayColor", variableColor);
         }
         else if (active == true) {
-            Debug.Log(variableColor);
-            Debug.Log(color);
             StartCoroutine(Linger());
         }
     }
