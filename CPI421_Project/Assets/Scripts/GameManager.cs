@@ -30,10 +30,7 @@ public class GameManager : MonoBehaviour
 
     // References
 
-
     //public Weapon weapon;
-
-    
 
     // Logic
     public int mula;
@@ -93,8 +90,8 @@ public class GameManager : MonoBehaviour
         s += legs[2].ToString() + "|";                              // legs level 3 unlocked 1 = yes 0 = no
         s += arrows.ToString() + "|";
         s += levelsCompleted.ToString() + "|";                      // Level one completed
-        s += pickAxeSelected.ToString() + "|";                      // Level two completed
-        s += weaponSelected.ToString() + "|";                       // Level three completed
+        s += pickAxeSelected.ToString() + "|";                      
+        s += weaponSelected.ToString() + "|";                       
         s += bowSelected.ToString() + "|";
         s += helmetSelected.ToString() + "|";
         s += chestSelected.ToString() + "|";
@@ -212,4 +209,20 @@ public class GameManager : MonoBehaviour
     {
         mula += ammount;
     }
+
+    public void setWeapon(int selection)
+    {
+        weaponSelected = selection;
+    }
+
+    public void setPickAxe(int selection)
+    {
+        pickAxeSelected = selection;
+    }
+
+    public void setBow(int selection)
+    {
+        bowSelected = selection;
+    }
+
 }

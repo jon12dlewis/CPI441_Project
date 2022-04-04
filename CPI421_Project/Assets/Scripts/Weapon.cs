@@ -126,4 +126,14 @@ public class Weapon :Collidable
     {
         anim.SetTrigger("SwingLeft");
     }
+
+    public void setDamage(int selected)
+    {
+        damagePoint = selected;
+    }
+
+    public void setImage(Sprite selected)
+    {
+        spriteRenderer.sprite = selected;
+    }
 }

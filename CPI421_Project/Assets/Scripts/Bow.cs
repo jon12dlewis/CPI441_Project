@@ -11,11 +11,14 @@ public class Bow : MonoBehaviour
     private float coolDown = 1.5f;
     private float lastShot;
     [SerializeField] AudioSource fireSound;
+    private SpriteRenderer spriteRenderer;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -105,4 +108,15 @@ public class Bow : MonoBehaviour
         Quaternion rot = Quaternion.Euler(newRot); 
         Instantiate(arrow, transform.position, rot);
     }
+    /*
+    public void setDamage(int selected)
+    {
+        damagePoint = selected;
+    }
+    */
+    public void setImage(Sprite selected)
+    {
+        spriteRenderer.sprite = selected;
+    }
+
 }

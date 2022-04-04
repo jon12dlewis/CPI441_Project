@@ -356,6 +356,9 @@ MonoBehaviour:
   blueCrystalText: {fileID: 1155957721}
   yellowCrystalText: {fileID: 378063034}
   redCrystalText: {fileID: 211726280}
+  pickAxeDamage: {fileID: 1013848937}
+  weaponDamage: {fileID: 1687427004}
+  bowDamage: {fileID: 861220995}
   player: {fileID: 350499114}
   pickAxeImage:
   - {fileID: -2524866322221298658, guid: 6e751a69e014f9c46a5c11d6f0c95796, type: 3}
@@ -365,9 +368,16 @@ MonoBehaviour:
   - {fileID: -2623596988240756955, guid: 6e751a69e014f9c46a5c11d6f0c95796, type: 3}
   - {fileID: -5771472453229242279, guid: 6e751a69e014f9c46a5c11d6f0c95796, type: 3}
   - {fileID: 5832851917504112497, guid: 6e751a69e014f9c46a5c11d6f0c95796, type: 3}
-  bowImage: []
-  weapon: {fileID: 0}
-  pickAxe: {fileID: 0}
+  bowImage:
+  - {fileID: 4985555235073230528, guid: 6e751a69e014f9c46a5c11d6f0c95796, type: 3}
+  - {fileID: -2317407925730432843, guid: 6e751a69e014f9c46a5c11d6f0c95796, type: 3}
+  - {fileID: 1461704134705905207, guid: 6e751a69e014f9c46a5c11d6f0c95796, type: 3}
+  pickAxeDisplay: {fileID: 1204180742}
+  weaponDisplay: {fileID: 1824749728}
+  bowDisplay: {fileID: 1954156202}
+  weapon: {fileID: 509006045}
+  pickAxe: {fileID: 895456077}
+  bow: {fileID: 2012658417}
 --- !u!224 &37061676
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2412,7 +2422,7 @@ GameObject:
   - component: {fileID: 259658366}
   - component: {fileID: 259658365}
   m_Layer: 5
-  m_Name: WeaponLeft
+  m_Name: WeaponRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2480,7 +2490,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 259658366}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 37061675}
+        m_TargetAssemblyTypeName: CharacterMenu, Assembly-CSharp
+        m_MethodName: increaseWeapon
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &259658366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2722,7 +2744,7 @@ GameObject:
   - component: {fileID: 285074279}
   - component: {fileID: 285074278}
   m_Layer: 5
-  m_Name: BowRight
+  m_Name: BowLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2790,7 +2812,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 285074279}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 37061675}
+        m_TargetAssemblyTypeName: CharacterMenu, Assembly-CSharp
+        m_MethodName: decreaseBow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &285074279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4897,6 +4931,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &509006045 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3386749949820187089, guid: d2e7fe73eef80a440a4a31bf422ec54f, type: 3}
+  m_PrefabInstance: {fileID: 1559987352}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a7cf72c5492c2f4a9fe7781d8306cb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &509976100
 GameObject:
   m_ObjectHideFlags: 0
@@ -5344,7 +5389,7 @@ GameObject:
   - component: {fileID: 529831284}
   - component: {fileID: 529831283}
   m_Layer: 5
-  m_Name: PickAxeLeft
+  m_Name: PickAxeRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5412,7 +5457,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 529831284}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 37061675}
+        m_TargetAssemblyTypeName: CharacterMenu, Assembly-CSharp
+        m_MethodName: increasePickAxe
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &529831284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15053,6 +15110,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 886534985}
   m_CullTransparentMesh: 1
+--- !u!114 &895456077 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3386749949856379490, guid: d2e7fe73eef80a440a4a31bf422ec54f, type: 3}
+  m_PrefabInstance: {fileID: 1559987352}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b348d3e67a649e84d88cd3b88e6884bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &914603355 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3231519697503322134, guid: ea548834ccb92084dbbcbfe3ce2b0922, type: 3}
@@ -76146,7 +76214,7 @@ GameObject:
   - component: {fileID: 961762089}
   - component: {fileID: 961762088}
   m_Layer: 5
-  m_Name: WeaponRight
+  m_Name: WeaponLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76214,7 +76282,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 961762089}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 37061675}
+        m_TargetAssemblyTypeName: CharacterMenu, Assembly-CSharp
+        m_MethodName: decreaseWeapon
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &961762089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102933,7 +103013,7 @@ GameObject:
   - component: {fileID: 1413645554}
   - component: {fileID: 1413645553}
   m_Layer: 5
-  m_Name: PickAxeRight
+  m_Name: PickAxeLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103001,7 +103081,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1413645554}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 37061675}
+        m_TargetAssemblyTypeName: CharacterMenu, Assembly-CSharp
+        m_MethodName: decreasePickAxe
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1413645554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104359,7 +104451,7 @@ GameObject:
   - component: {fileID: 1590173653}
   - component: {fileID: 1590173652}
   m_Layer: 5
-  m_Name: BowLeft
+  m_Name: BowRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -104427,7 +104519,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1590173653}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 37061675}
+        m_TargetAssemblyTypeName: CharacterMenu, Assembly-CSharp
+        m_MethodName: increaseBow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1590173653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108064,6 +108168,7 @@ GameObject:
   - component: {fileID: 1918042676}
   - component: {fileID: 1918042675}
   - component: {fileID: 1918042674}
+  - component: {fileID: 1918042678}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -108151,6 +108256,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1918042678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918042673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &1922907288
 GameObject:
   m_ObjectHideFlags: 0
@@ -108606,6 +108744,17 @@ Transform:
   m_Father: {fileID: 1306051972}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2012658417 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2363212578852531358, guid: d2e7fe73eef80a440a4a31bf422ec54f, type: 3}
+  m_PrefabInstance: {fileID: 1559987352}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4acda5d4c89e774da4773b20dbbb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2017945287
 GameObject:
   m_ObjectHideFlags: 0
