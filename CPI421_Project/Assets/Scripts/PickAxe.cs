@@ -129,4 +129,14 @@ public class PickAxe : Collidable
     {
         anim.SetTrigger("SwingRight");
     }
+
+    public void setDamage(int selected)
+    {
+        damagePoint = selected;
+    }
+
+    public void setImage(Sprite selected)
+    {
+        spriteRenderer.sprite = selected;
+    }
 }
