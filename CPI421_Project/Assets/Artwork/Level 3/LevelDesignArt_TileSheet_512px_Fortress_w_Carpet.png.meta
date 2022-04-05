@@ -1,0 +1,1080 @@
+fileFormatVersion: 2
+guid: d9f51c4d43dd3da4982b3fa246803650
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8816556140350000301
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_0
+  - first:
+      213: 5144710797068892944
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_1
+  - first:
+      213: -7177818569136254132
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_2
+  - first:
+      213: 2607287698472237770
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_3
+  - first:
+      213: 1085858539101458861
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_4
+  - first:
+      213: -3122746979546286655
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_5
+  - first:
+      213: -945268774108549189
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_6
+  - first:
+      213: 3887552391685022118
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_7
+  - first:
+      213: 6179479515028585807
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_8
+  - first:
+      213: 6696594320414268666
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_9
+  - first:
+      213: -896636068715952941
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_10
+  - first:
+      213: 3255687009117913287
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_11
+  - first:
+      213: 8790749991891651133
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_12
+  - first:
+      213: -1124180620743514809
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_13
+  - first:
+      213: -3757490860099770980
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_14
+  - first:
+      213: 2431529428514411235
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_15
+  - first:
+      213: -2848004712432908653
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_16
+  - first:
+      213: -3959225457239594624
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_17
+  - first:
+      213: 468179639759118615
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_18
+  - first:
+      213: -7799467190526423877
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_19
+  - first:
+      213: 6825880277066494490
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_20
+  - first:
+      213: -2418078399343613588
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_21
+  - first:
+      213: 1851280827574280918
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_22
+  - first:
+      213: -8946789681614030605
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_23
+  - first:
+      213: 6937369896444772135
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_24
+  - first:
+      213: 7084879159738539714
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_25
+  - first:
+      213: 3504680682586022392
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_26
+  - first:
+      213: -4737179665544719377
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_27
+  - first:
+      213: 5338385683150970807
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_28
+  - first:
+      213: 6933225326678649835
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_29
+  - first:
+      213: 4754601697190584674
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_30
+  - first:
+      213: -6645606032219123006
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_31
+  - first:
+      213: 1141916552839366441
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_32
+  - first:
+      213: 7650145866193815224
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_33
+  - first:
+      213: 815798975466238310
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_34
+  - first:
+      213: 4322301216309064010
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_35
+  - first:
+      213: -2093608731859916406
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_36
+  - first:
+      213: -641211522774277136
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_37
+  - first:
+      213: 1516486623947130105
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_38
+  - first:
+      213: 7041206065760882950
+    second: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_39
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 512
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dacc9d7f813ba5a70800000000000000
+      internalID: 8816556140350000301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01b786b463fa56740800000000000000
+      internalID: 5144710797068892944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c435e648a04436c90800000000000000
+      internalID: -7177818569136254132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acafea60952fe2420800000000000000
+      internalID: 2607287698472237770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_4
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da19773969eb11f00800000000000000
+      internalID: 1085858539101458861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_5
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c538b8ca26c9a4d0800000000000000
+      internalID: -3122746979546286655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_6
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbfadf5ee0bb1e2f0800000000000000
+      internalID: -945268774108549189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_7
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a12b189d4c53f530800000000000000
+      internalID: 3887552391685022118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4df41ee0ebe1c550800000000000000
+      internalID: 6179479515028585807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_9
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afcd039ed051fec50800000000000000
+      internalID: 6696594320414268666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_10
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d4026ffe328e83f0800000000000000
+      internalID: -896636068715952941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_11
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c0c35ed5168e2d20800000000000000
+      internalID: 3255687009117913287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_12
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3a48ffca840ff970800000000000000
+      internalID: 8790749991891651133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_13
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 745643d7eab1660f0800000000000000
+      internalID: -1124180620743514809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_14
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c95e9f488f5badbc0800000000000000
+      internalID: -3757490860099770980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_15
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e29287e1278eb120800000000000000
+      internalID: 2431529428514411235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3964cccadcad978d0800000000000000
+      internalID: -2848004712432908653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_17
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 089ec8b6c610e09c0800000000000000
+      internalID: -3959225457239594624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_18
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 711a9eed6ee4f7600800000000000000
+      internalID: 468179639759118615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_19
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbccb5fd9e9b2c390800000000000000
+      internalID: -7799467190526423877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_20
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a12b4e962f56abe50800000000000000
+      internalID: 6825880277066494490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_21
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c692410e182417ed0800000000000000
+      internalID: -2418078399343613588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_22
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d26e0baa1211b910800000000000000
+      internalID: 1851280827574280918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_23
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f8f34bcf2e96d380800000000000000
+      internalID: -8946789681614030605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72f34114a2d764060800000000000000
+      internalID: 6937369896444772135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_25
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce98c8fe0c825260800000000000000
+      internalID: 7084879159738539714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_26
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f1a6b0238023a030800000000000000
+      internalID: 3504680682586022392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_27
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe3d00e5138224eb0800000000000000
+      internalID: -4737179665544719377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_28
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bf9e3eae71c51a40800000000000000
+      internalID: 5338385683150970807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_29
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beb2c6863b3c73060800000000000000
+      internalID: 6933225326678649835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_30
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 261a3897d0dbbf140800000000000000
+      internalID: 4754601697190584674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_31
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c2d26c068016c3a0800000000000000
+      internalID: -6645606032219123006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 927012ffd07e8df00800000000000000
+      internalID: 1141916552839366441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_33
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b6c7621227ca2a60800000000000000
+      internalID: 7650145866193815224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_34
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 661facc88dc425b00800000000000000
+      internalID: 815798975466238310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_35
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4137524e06ebfb30800000000000000
+      internalID: 4322301216309064010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_36
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8965d663f102f2e0800000000000000
+      internalID: -2093608731859916406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_37
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f3e62f6485f917f0800000000000000
+      internalID: -641211522774277136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_38
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f4000fbc84ab0510800000000000000
+      internalID: 1516486623947130105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelDesignArt_TileSheet_512px_Fortress_w_Carpet_39
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 601d0046c9367b160800000000000000
+      internalID: 7041206065760882950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
