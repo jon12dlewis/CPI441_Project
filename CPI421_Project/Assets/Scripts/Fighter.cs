@@ -21,7 +21,6 @@ public class Fighter : MonoBehaviour
     [SerializeField] AudioSource damageSound2;  // for player
     [SerializeField] AudioSource deathSound;
     [SerializeField] protected DeathSound deathSoundPrefab;
-
     // All fighters can recieve damage / die
 
     protected virtual void RecieveDamage(Damage dmg)

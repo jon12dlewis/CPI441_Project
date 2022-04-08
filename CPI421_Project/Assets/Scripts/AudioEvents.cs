@@ -8,27 +8,21 @@ public class AudioEvents : MonoBehaviour
 
     public static Transform[] triggers;
     private static MusicEvent[] events;
-
-    public bool toggleboi;
-    private bool oldToggleboi;
-    public GameObject keyboi;
     
     // needs to be awake instead of start so that it triggers before OnEnable events in other scripts
     void Awake() {
         // get children of triggerparent
         triggers = gameObject.GetComponentsInChildren<Transform>();     // get the music keys (this script is placed on the parent of the set of keys)
         events = new MusicEvent[triggers.Length];                       // create corresponding events
-        
-        oldToggleboi = toggleboi;   // ignore this
     }
 
     // TEMP
     // this is an example of how an event will be called, it will not be in the final version
     void Update() {
-        if (toggleboi != oldToggleboi) {
-            AudioEvents.TriggerEvent(keyboi);
-        }
-        oldToggleboi = toggleboi;   // ignore this
+        // if (toggleboi != oldToggleboi) {
+        //     AudioEvents.TriggerEvent(keyboi);
+        // }
+        // oldToggleboi = toggleboi;   // ignore this
     }
 
     // returns the event (for subscription and triggering purposes) of a corresponding key (empty game object)
