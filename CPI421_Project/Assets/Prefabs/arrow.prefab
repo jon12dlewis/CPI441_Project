@@ -115,6 +115,7 @@ MonoBehaviour:
   pushForce: 2
   impactSound: {fileID: 5739465786252229343}
   deathSoundPrefab: {fileID: 2762172986477452311, guid: 57b9530324a7eeb44bb1426368ab9d99, type: 3}
+  audioFalloff: 10
 --- !u!61 &-6086900756142327183
 BoxCollider2D:
   m_ObjectHideFlags: 0

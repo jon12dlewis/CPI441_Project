@@ -13,6 +13,11 @@ public class Arrow : Collidable
     // SFX
     [SerializeField] AudioSource impactSound;
     [SerializeField] DeathSound deathSoundPrefab;
+    [SerializeField] float audioFalloff;    // how far away is it weird to hear the arrow break
+
+    Vector2 startPosition;
+    bool mute;
+    float distanceTraveled;
 
     // Start is called before the first frame update
     protected override void Start()
@@ -20,6 +25,7 @@ public class Arrow : Collidable
         base.Start();
         //rb.velocity = transform.right * speed;
         //transform.Translate( speed * Time.deltaTime, 0, 0);
+        startPosition = transform.position;
     }
 
     // Update is called once per frame
@@ -27,6 +33,9 @@ public class Arrow : Collidable
     {
         base.Update();
         transform.Translate( speed * Time.deltaTime, 0, 0);
+
+        distanceTraveled = Mathf.Abs(Vector2.Distance(startPosition, transform.position));
+        if (distanceTraveled > audioFalloff) mute = true;
     }
     
 
@@ -63,8 +72,10 @@ public class Arrow : Collidable
 
     void OnDestroy() {
         if (gameObject.scene.isLoaded) {
-            var temp = Instantiate(deathSoundPrefab);
-            temp.gameObject.SendMessage("SetAudioSource", impactSound);
+            if (!mute) {
+                var temp = Instantiate(deathSoundPrefab);
+                temp.gameObject.SendMessage("SetAudioSource", impactSound);
+            }
         }
     }
 }

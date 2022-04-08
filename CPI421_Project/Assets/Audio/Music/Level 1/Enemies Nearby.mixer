@@ -113,7 +113,7 @@ AudioMixerSnapshotController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: On
+  m_Name: Enemies Nearby
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: d19867b629755e442a3772930ef50e92
   m_FloatValues:
@@ -144,7 +144,7 @@ AudioMixerSnapshotController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Off
+  m_Name: No Enemies Nearby
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 3679c294bf981f9479af3ebc321190ac
   m_FloatValues:

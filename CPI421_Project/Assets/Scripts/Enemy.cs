@@ -47,6 +47,7 @@ public class Enemy : Mover
 
     // SFX
     [SerializeField] AudioSource attackSound;
+    MusicController musicController;
 
     protected override void Start()
     {
@@ -63,6 +64,12 @@ public class Enemy : Mover
         staggerTime = stagger;
         webIdleTime = idleTime;
         idle = shotTime;
+    }
+
+    void Awake() {
+        GameObject temp = GameObject.FindGameObjectWithTag("GameController");
+        musicController = temp.GetComponent<MusicController>();
+        musicController.EnemyEnable();
     }
 
     private void FixedUpdate()
@@ -93,6 +100,10 @@ public class Enemy : Mover
 
         webIdleTime -= Time.deltaTime;
         idle -= Time.deltaTime;
+
+        if (chasing) {
+            musicController.InCombat(this.gameObject);
+        }
 
         if(webIdleTime <= 0)
         {
@@ -226,6 +237,7 @@ public class Enemy : Mover
 
     protected override void Death()
     {
+        musicController.EnemyDisable(this.gameObject);
         Destroy(gameObject);
         GameManager.instance.expierence += xpValue;
         GameManager.instance.ShowText("+ " + xpValue + "xp", 60, Color.magenta, transform.position, Vector3.up * 40, 1.0f);
