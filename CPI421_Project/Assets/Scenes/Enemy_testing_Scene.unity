@@ -339,7 +339,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &37061675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -361,17 +361,17 @@ MonoBehaviour:
   bowDamage: {fileID: 861220995}
   player: {fileID: 350499114}
   pickAxeImage:
-  - {fileID: -2524866322221298658, guid: 6e751a69e014f9c46a5c11d6f0c95796, type: 3}
-  - {fileID: -1129540845087455946, guid: 6e751a69e014f9c46a5c11d6f0c95796, type: 3}
-  - {fileID: 8237978205697163419, guid: 6e751a69e014f9c46a5c11d6f0c95796, type: 3}
+  - {fileID: -5452995409636915031, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
+  - {fileID: -284684359218076793, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
+  - {fileID: 6286047024291171867, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
   weaponImage:
-  - {fileID: -2623596988240756955, guid: 6e751a69e014f9c46a5c11d6f0c95796, type: 3}
-  - {fileID: -5771472453229242279, guid: 6e751a69e014f9c46a5c11d6f0c95796, type: 3}
-  - {fileID: 5832851917504112497, guid: 6e751a69e014f9c46a5c11d6f0c95796, type: 3}
+  - {fileID: -6165666198007455012, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
+  - {fileID: 6323654629948150628, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
+  - {fileID: 9129873020269735136, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
   bowImage:
-  - {fileID: 4985555235073230528, guid: 6e751a69e014f9c46a5c11d6f0c95796, type: 3}
-  - {fileID: -2317407925730432843, guid: 6e751a69e014f9c46a5c11d6f0c95796, type: 3}
-  - {fileID: 1461704134705905207, guid: 6e751a69e014f9c46a5c11d6f0c95796, type: 3}
+  - {fileID: 8908327582187454787, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
+  - {fileID: 8844115668977670054, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
+  - {fileID: 7003559093154264791, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
   pickAxeDisplay: {fileID: 1204180742}
   weaponDisplay: {fileID: 1824749728}
   bowDisplay: {fileID: 1954156202}
@@ -4916,7 +4916,7 @@ MonoBehaviour:
   m_VoxelSize: 0.06666667
   m_BuildHeightMesh: 0
   m_HideEditorLogs: 0
-  m_NavMeshData: {fileID: 23800000, guid: 08dbea2ec05e94d4498f734f4af3e948, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 52f64c1b819e61b478a67fbc7b05cadb, type: 2}
 --- !u!4 &500170263
 Transform:
   m_ObjectHideFlags: 0
@@ -104400,6 +104400,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3386749949820187091, guid: d2e7fe73eef80a440a4a31bf422ec54f, type: 3}
+      propertyPath: m_Size.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3386749949820187091, guid: d2e7fe73eef80a440a4a31bf422ec54f, type: 3}
+      propertyPath: m_Size.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3386749949820187091, guid: d2e7fe73eef80a440a4a31bf422ec54f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6165666198007455012, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
+    - target: {fileID: 3386749949820187091, guid: d2e7fe73eef80a440a4a31bf422ec54f, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3386749949856379490, guid: d2e7fe73eef80a440a4a31bf422ec54f, type: 3}
       propertyPath: damagePoint
       value: 3
@@ -104415,6 +104431,22 @@ PrefabInstance:
     - target: {fileID: 3386749949856379500, guid: d2e7fe73eef80a440a4a31bf422ec54f, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 4.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3386749949856379501, guid: d2e7fe73eef80a440a4a31bf422ec54f, type: 3}
+      propertyPath: m_Size.x
+      value: 3.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3386749949856379501, guid: d2e7fe73eef80a440a4a31bf422ec54f, type: 3}
+      propertyPath: m_Size.y
+      value: 4.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 3386749949856379501, guid: d2e7fe73eef80a440a4a31bf422ec54f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5452995409636915031, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
+    - target: {fileID: 3386749949856379501, guid: d2e7fe73eef80a440a4a31bf422ec54f, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4909775313748856498, guid: d2e7fe73eef80a440a4a31bf422ec54f, type: 3}
       propertyPath: m_RootOrder
