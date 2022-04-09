@@ -102,15 +102,15 @@ public class CharacterMenu : MonoBehaviour
         {
             case 1:
                 bowDamage.text = "5";
-                //bow.setDamage(5);
+                bow.SetLevelAnimation(bowSelected);
             break;
             case 2:
                 bowDamage.text = "8";
-                //bow.setDamage(8);
+                bow.SetLevelAnimation(bowSelected);
             break;
             case 3:
                 bowDamage.text = "15";
-                //bow.setDamage(15);
+                bow.SetLevelAnimation(bowSelected);
             break;
 
         }
