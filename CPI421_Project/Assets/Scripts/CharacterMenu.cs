@@ -7,8 +7,9 @@ public class CharacterMenu : MonoBehaviour
 {
     public Text healthText, blueCrystalText, yellowCrystalText, redCrystalText, pickAxeDamage, weaponDamage, bowDamage;
     public player player; 
-    public Sprite[] pickAxeImage, weaponImage, bowImage;
-    public Image pickAxeDisplay, weaponDisplay, bowDisplay;
+    public Sprite[] pickAxeImage, weaponImage, bowImage, helmetImage, chestImage, legsImage;
+    public Image pickAxeDisplay, weaponDisplay, bowDisplay, helmetDisplay, chestDisplay, legsDisplay;
+
     public Weapon weapon;
     public PickAxe pickAxe;
     public Bow bow;
@@ -16,6 +17,9 @@ public class CharacterMenu : MonoBehaviour
     int weaponSelected = 1;
     int pickAxeSelected = 1;
     int bowSelected = 1;
+    int helmetSelected = 1;
+    int chestSelected = 1;
+    int legsSelected = 1;
 
     // Update is called once per frame
     public void UpdateMenu()
@@ -210,5 +214,208 @@ public class CharacterMenu : MonoBehaviour
         }
 
     }
+
+    public void increaseHelmet()
+    {
+        helmetSelected += 1;
+        if(helmetSelected > 3)
+        {
+            helmetSelected = 1;
+        }
+        helmetDisplay.sprite = helmetImage[helmetSelected-1];
+        GameManager.instance.setHelmet(helmetSelected);
+        //helmet.setImage(helmetImage[pickAxeSelected-1]);
+
+        switch(helmetSelected)
+        {
+            case 1:
+            /*
+                pickAxeDamage.text = "5";
+                pickAxe.setDamage(5);
+                pickAxe.setLevel(pickAxeSelected);
+                */
+            break;
+            case 2:
+            /*
+                pickAxeDamage.text = "8";
+                pickAxe.setDamage(8);
+                pickAxe.setLevel(pickAxeSelected);
+                */
+            break;
+            case 3:
+            /*
+                pickAxeDamage.text = "15";
+                pickAxe.setDamage(15);
+                pickAxe.setLevel(pickAxeSelected);
+                */
+            break;
+
+        }
+    }
+
+public void decreaseHelmet()
+    {
+        helmetSelected -= 1;
+        if(helmetSelected < 1)
+        {
+            helmetSelected = 3;
+        }
+        helmetDisplay.sprite = helmetImage[helmetSelected-1];
+        GameManager.instance.setHelmet(helmetSelected);
+        //helmet.setImage(helmetImage[pickAxeSelected-1]);
+
+        switch(helmetSelected)
+        {
+            case 1:
+            /*
+                pickAxeDamage.text = "5";
+                pickAxe.setDamage(5);
+                pickAxe.setLevel(pickAxeSelected);
+                */
+            break;
+            case 2:
+            /*
+                pickAxeDamage.text = "8";
+                pickAxe.setDamage(8);
+                pickAxe.setLevel(pickAxeSelected);
+                */
+            break;
+            case 3:
+            /*
+                pickAxeDamage.text = "15";
+                pickAxe.setDamage(15);
+                pickAxe.setLevel(pickAxeSelected);
+                */
+            break;
+
+        }
+    }
+
+    public void increaseChest()
+    {
+        chestSelected += 1;
+        if(chestSelected > 3)
+        {
+            chestSelected = 1;
+        }
+        chestDisplay.sprite = chestImage[chestSelected-1];
+        GameManager.instance.setChest(chestSelected);
+        //chest.setImage(chestImage[chestSelected-1]);
+
+        switch(chestSelected)
+        {
+            case 1:
+
+
+            break;
+            case 2:
+
+
+            break;
+            case 3:
+
+
+            break;
+
+        }
+    }
+
+    public void decreaseChest()
+    {
+        chestSelected -= 1;
+        if(chestSelected < 1)
+        {
+            chestSelected = 3;
+        }
+        chestDisplay.sprite = chestImage[chestSelected-1];
+        GameManager.instance.setChest(chestSelected);
+        //chest.setImage(chestImage[chestSelected-1]);
+
+        switch(chestSelected)
+        {
+            case 1:
+
+
+            break;
+            case 2:
+
+
+            break;
+            case 3:
+
+
+            break;
+
+        }
+    }
+
+    public void increaseLegs()
+    {
+        legsSelected += 1;
+        if(legsSelected > 3)
+        {
+            legsSelected = 1;
+        }
+        legsDisplay.sprite = legsImage[legsSelected-1];
+
+        GameManager.instance.setLegs(legsSelected);
+        //pickAxe.setImage(pickAxeImage[pickAxeSelected-1]);
+
+        switch(legsSelected)
+        {
+            case 1:
+
+
+            break;
+            case 2:
+
+
+            break;
+            case 3:
+
+
+            break;
+            case 4:
+
+
+            break;
+
+        }
+    }
+
+    public void decreaseLegs()
+    {
+        legsSelected -= 1;
+        if(legsSelected < 1)
+        {
+            legsSelected = 3;
+        }
+        legsDisplay.sprite = legsImage[legsSelected-1];
+        GameManager.instance.setLegs(legsSelected);
+        //pickAxe.setImage(pickAxeImage[pickAxeSelected-1]);
+
+        switch(legsSelected)
+        {
+            case 1:
+
+
+            break;
+            case 2:
+
+
+            break;
+            case 3:
+
+
+            break;
+            case 4:
+
+
+            break;
+
+        }
+
+    }
+
 
 }
