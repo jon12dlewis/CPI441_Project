@@ -249,6 +249,9 @@ public class CharacterMenu : MonoBehaviour
                 pickAxe.setLevel(pickAxeSelected);
                 */
             break;
+            case 4:
+
+            break;
 
         }
     }
@@ -287,6 +290,10 @@ public void decreaseHelmet()
                 pickAxe.setLevel(pickAxeSelected);
                 */
             break;
+            case 4:
+
+
+            break;
 
         }
     }
@@ -316,6 +323,9 @@ public void decreaseHelmet()
 
 
             break;
+            case 4:
+
+            break;
 
         }
     }
@@ -342,6 +352,10 @@ public void decreaseHelmet()
 
             break;
             case 3:
+
+
+            break;
+            case 4:
 
 
             break;
