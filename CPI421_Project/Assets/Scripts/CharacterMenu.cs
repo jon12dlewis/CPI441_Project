@@ -162,14 +162,17 @@ public class CharacterMenu : MonoBehaviour
             case 1:
                 pickAxeDamage.text = "5";
                 pickAxe.setDamage(5);
+                pickAxe.setLevel(pickAxeSelected);
             break;
             case 2:
                 pickAxeDamage.text = "8";
                 pickAxe.setDamage(8);
+                pickAxe.setLevel(pickAxeSelected);
             break;
             case 3:
                 pickAxeDamage.text = "15";
                 pickAxe.setDamage(15);
+                pickAxe.setLevel(pickAxeSelected);
             break;
 
         }
@@ -191,14 +194,17 @@ public class CharacterMenu : MonoBehaviour
             case 1:
                 pickAxeDamage.text = "5";
                 pickAxe.setDamage(5);
+                pickAxe.setLevel(pickAxeSelected);
             break;
             case 2:
                 pickAxeDamage.text = "8";
                 pickAxe.setDamage(8);
+                pickAxe.setLevel(pickAxeSelected);
             break;
             case 3:
                 pickAxeDamage.text = "15";
                 pickAxe.setDamage(15);
+                pickAxe.setLevel(pickAxeSelected);
             break;
 
         }
