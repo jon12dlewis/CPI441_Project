@@ -18,6 +18,8 @@ public class PickAxe : Collidable
     private float lastSwing;
     int direction = 0;
 
+    Vector2 dir = new Vector2(0.0f, -1.0f);
+
     protected override void Start()
     {
         base.Start();
@@ -46,22 +48,33 @@ public class PickAxe : Collidable
         if(mousePos.y > this.transform.position.y + 1.5)
         {
             direction = 1;
+            dir.x = 0;
+            dir.y = 1;
         }
         else
         if(mousePos.y < this.transform.position.y - 1.5)
         {
             direction = 0;
+            dir.x = 0;
+            dir.y = -1;
         }
         
         if(mousePos.x > this.transform.position.x + 1.5)
         {
             direction = 2;
+            dir.x = 1;
+            dir.y = 0;
         }
         else
         if(mousePos.x < this.transform.position.x - 1.5)
         {
             direction = 3;
+            dir.x = -1;
+            dir.y = 0;
         }
+
+        anim.SetFloat("horizontal", dir.x);
+        anim.SetFloat("vertical", dir.y);
         
         if(Input.GetKeyDown(KeyCode.Space))
         {
@@ -112,27 +125,33 @@ public class PickAxe : Collidable
 
     private void SwingUp()
     {
-        anim.SetTrigger("SwingUp");
+        anim.SetTrigger("Swing");
+        
     }
 
     private void SwingDown()
     {
-        anim.SetTrigger("SwingDown");
+        anim.SetTrigger("Swing");
     }
 
     private void SwingLeft()
     {
-        anim.SetTrigger("SwingLeft");
+        anim.SetTrigger("Swing");
     }
 
     private void SwingRight()
     {
-        anim.SetTrigger("SwingRight");
+        anim.SetTrigger("Swing");
     }
 
     public void setDamage(int selected)
     {
         damagePoint = selected;
+    }
+
+    public void setLevel(int level)
+    {
+        anim.SetInteger("pickAxeLvl", level);
     }
 
     public void setImage(Sprite selected)

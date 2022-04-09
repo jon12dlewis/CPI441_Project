@@ -225,4 +225,19 @@ public class GameManager : MonoBehaviour
         bowSelected = selection;
     }
 
+    public void setHelmet(int selection)
+    {
+        helmetSelected = selection;
+    }
+
+    public void setChest(int selection)
+    {
+        chestSelected = selection;
+    }
+
+    public void setLegs(int selection)
+    {
+        legSelected = selection;
+    }
+
 }
