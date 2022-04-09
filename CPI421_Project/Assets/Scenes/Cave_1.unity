@@ -111684,6 +111684,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7285613656188660562, guid: 07d1c57600f14ad4baf1d215025cf189, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285613656188660562, guid: 07d1c57600f14ad4baf1d215025cf189, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1346493195
+      objectReference: {fileID: 0}
+    - target: {fileID: 7870812146034605157, guid: 07d1c57600f14ad4baf1d215025cf189, type: 3}
+      propertyPath: ShapeModule.type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7870812146034605157, guid: 07d1c57600f14ad4baf1d215025cf189, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7870812146034605157, guid: 07d1c57600f14ad4baf1d215025cf189, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7870812146034605157, guid: 07d1c57600f14ad4baf1d215025cf189, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.0001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07d1c57600f14ad4baf1d215025cf189, type: 3}
 --- !u!1001 &6234803847723628218
