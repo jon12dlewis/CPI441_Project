@@ -390,9 +390,9 @@ MonoBehaviour:
   helmetDisplay: {fileID: 1321043719}
   chestDisplay: {fileID: 2110292884}
   legsDisplay: {fileID: 2102266418}
-  weapon: {fileID: 509006045}
-  pickAxe: {fileID: 895456077}
-  bow: {fileID: 2012658417}
+  weapon: {fileID: 298326784}
+  pickAxe: {fileID: 2100656790}
+  bow: {fileID: 1246976083}
 --- !u!224 &37061676
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3195,6 +3195,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 294835725}
   m_CullTransparentMesh: 1
+--- !u!1 &298326784 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3386749949820187094, guid: d2e7fe73eef80a440a4a31bf422ec54f, type: 3}
+  m_PrefabInstance: {fileID: 1559987352}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &306915642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3496,6 +3501,42 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1907705752}
+        m_TargetAssemblyTypeName: WeaponStation, Assembly-CSharp
+        m_MethodName: resetWeapon
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1907705752}
+        m_TargetAssemblyTypeName: WeaponStation, Assembly-CSharp
+        m_MethodName: updateStats
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1907705752}
+        m_TargetAssemblyTypeName: WeaponStation, Assembly-CSharp
+        m_MethodName: updateRequirements
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4864,7 +4905,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 467248826}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1907705752}
+        m_TargetAssemblyTypeName: WeaponStation, Assembly-CSharp
+        m_MethodName: craftWeapon2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &467248826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5087,17 +5140,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!114 &509006045 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3386749949820187089, guid: d2e7fe73eef80a440a4a31bf422ec54f, type: 3}
-  m_PrefabInstance: {fileID: 1559987352}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a7cf72c5492c2f4a9fe7781d8306cb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &509976100
 GameObject:
   m_ObjectHideFlags: 0
@@ -6790,6 +6832,42 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1907705752}
+        m_TargetAssemblyTypeName: WeaponStation, Assembly-CSharp
+        m_MethodName: resetWeapon
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1907705752}
+        m_TargetAssemblyTypeName: WeaponStation, Assembly-CSharp
+        m_MethodName: updateStats
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1907705752}
+        m_TargetAssemblyTypeName: WeaponStation, Assembly-CSharp
+        m_MethodName: updateRequirements
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -15472,7 +15550,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 886534988}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1907705752}
+        m_TargetAssemblyTypeName: WeaponStation, Assembly-CSharp
+        m_MethodName: craftWeapon3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &886534988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15511,17 +15601,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 886534985}
   m_CullTransparentMesh: 1
---- !u!114 &895456077 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3386749949856379490, guid: d2e7fe73eef80a440a4a31bf422ec54f, type: 3}
-  m_PrefabInstance: {fileID: 1559987352}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b348d3e67a649e84d88cd3b88e6884bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &912675854
 GameObject:
   m_ObjectHideFlags: 0
@@ -78072,6 +78151,42 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1907705752}
+        m_TargetAssemblyTypeName: WeaponStation, Assembly-CSharp
+        m_MethodName: resetWeapon
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1907705752}
+        m_TargetAssemblyTypeName: WeaponStation, Assembly-CSharp
+        m_MethodName: updateStats
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1907705752}
+        m_TargetAssemblyTypeName: WeaponStation, Assembly-CSharp
+        m_MethodName: updateRequirements
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1066387953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101680,6 +101795,37 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1246976083 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2363212578852531356, guid: d2e7fe73eef80a440a4a31bf422ec54f, type: 3}
+  m_PrefabInstance: {fileID: 1559987352}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &1246976087
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246976083}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.6, y: 4.55}
+    newSize: {x: 1.6, y: 4.55}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6, y: 4.55}
+  m_EdgeRadius: 0
 --- !u!1 &1250698770
 GameObject:
   m_ObjectHideFlags: 0
@@ -102049,7 +102195,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1306051969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103825,7 +103971,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1439436247}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1907705752}
+        m_TargetAssemblyTypeName: WeaponStation, Assembly-CSharp
+        m_MethodName: craftPickAxe2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1439436247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104597,7 +104755,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1538929041}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1907705752}
+        m_TargetAssemblyTypeName: WeaponStation, Assembly-CSharp
+        m_MethodName: craftPickAxe1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1538929041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105366,7 +105536,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1646534525}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1907705752}
+        m_TargetAssemblyTypeName: WeaponStation, Assembly-CSharp
+        m_MethodName: craftWeapon1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1646534525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106282,7 +106464,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1712958051}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1907705752}
+        m_TargetAssemblyTypeName: WeaponStation, Assembly-CSharp
+        m_MethodName: craftWeapon2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1712958051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107520,7 +107714,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1829272051}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1907705752}
+        m_TargetAssemblyTypeName: WeaponStation, Assembly-CSharp
+        m_MethodName: craftBow3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1829272051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108993,17 +109199,6 @@ Transform:
   m_Father: {fileID: 1306051972}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2012658417 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2363212578852531358, guid: d2e7fe73eef80a440a4a31bf422ec54f, type: 3}
-  m_PrefabInstance: {fileID: 1559987352}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4acda5d4c89e774da4773b20dbbb30d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2017945287
 GameObject:
   m_ObjectHideFlags: 0
@@ -109831,7 +110026,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2091927120}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1907705752}
+        m_TargetAssemblyTypeName: WeaponStation, Assembly-CSharp
+        m_MethodName: craftBow1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2091927120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109972,7 +110179,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2092898491}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1907705752}
+        m_TargetAssemblyTypeName: WeaponStation, Assembly-CSharp
+        m_MethodName: craftPickAxe3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2092898491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110011,6 +110230,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2092898488}
   m_CullTransparentMesh: 1
+--- !u!1 &2100656790 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3386749949856379488, guid: d2e7fe73eef80a440a4a31bf422ec54f, type: 3}
+  m_PrefabInstance: {fileID: 1559987352}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2102266416
 GameObject:
   m_ObjectHideFlags: 0
