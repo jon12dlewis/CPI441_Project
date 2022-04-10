@@ -10,9 +10,9 @@ public class CharacterMenu : MonoBehaviour
     public Sprite[] pickAxeImage, weaponImage, bowImage, helmetImage, chestImage, legsImage;
     public Image pickAxeDisplay, weaponDisplay, bowDisplay, helmetDisplay, chestDisplay, legsDisplay;
 
-    public GameObject weapon;
-    public GameObject pickAxe;
-    public GameObject bow;
+    public Weapon weapon;
+    public PickAxe pickAxe;
+    public Bow bow;
 
     int weaponSelected = 1;
     int pickAxeSelected = 1;
@@ -40,21 +40,21 @@ public class CharacterMenu : MonoBehaviour
         weaponDisplay.sprite = weaponImage[weaponSelected-1];
         GameManager.instance.setWeapon(weaponSelected);
 
-        weapon.GetComponent<Weapon>().setImage(weaponImage[weaponSelected-1]);
+        weapon.setImage(weaponImage[weaponSelected-1]);
 
         switch(weaponSelected)
         {
             case 1:
                 weaponDamage.text = "5";
-                weapon.GetComponent<Weapon>().setDamage(5);
+                weapon.setDamage(5);
             break;
             case 2:
                 weaponDamage.text = "8";
-                weapon.GetComponent<Weapon>().setDamage(8);
+                weapon.setDamage(8);
             break;
             case 3:
                 weaponDamage.text = "15";
-                weapon.GetComponent<Weapon>().setDamage(15);
+                weapon.setDamage(15);
             break;
 
         }
@@ -69,22 +69,22 @@ public class CharacterMenu : MonoBehaviour
         }
         weaponDisplay.sprite = weaponImage[weaponSelected-1];
         GameManager.instance.setWeapon(weaponSelected);
-        weapon.GetComponent<Weapon>().setDamage(1);
-        weapon.GetComponent<Weapon>().setImage(weaponImage[weaponSelected-1]);
+        weapon.setDamage(1);
+        weapon.setImage(weaponImage[weaponSelected-1]);
 
         switch(weaponSelected)
         {
             case 1:
                 weaponDamage.text = "5";
-                weapon.GetComponent<Weapon>().setDamage(5);
+                weapon.setDamage(5);
             break;
             case 2:
                 weaponDamage.text = "8";
-                weapon.GetComponent<Weapon>().setDamage(8);
+                weapon.setDamage(8);
             break;
             case 3:
                 weaponDamage.text = "15";
-                weapon.GetComponent<Weapon>().setDamage(15);
+                weapon.setDamage(15);
             break;
 
         }
@@ -100,21 +100,21 @@ public class CharacterMenu : MonoBehaviour
         }
         bowDisplay.sprite = bowImage[bowSelected-1];
         GameManager.instance.setBow(bowSelected);
-        bow.GetComponent<Bow>().setImage(bowImage[bowSelected-1]);
+        bow.setImage(bowImage[bowSelected-1]);
         
         switch(bowSelected)
         {
             case 1:
                 bowDamage.text = "5";
-                bow.GetComponent<Bow>().SetLevelAnimation(bowSelected);
+                bow.SetLevelAnimation(bowSelected);
             break;
             case 2:
                 bowDamage.text = "8";
-                bow.GetComponent<Bow>().SetLevelAnimation(bowSelected);
+                bow.SetLevelAnimation(bowSelected);
             break;
             case 3:
                 bowDamage.text = "15";
-                bow.GetComponent<Bow>().SetLevelAnimation(bowSelected);
+                bow.SetLevelAnimation(bowSelected);
             break;
 
         }
@@ -129,7 +129,7 @@ public class CharacterMenu : MonoBehaviour
         }
         bowDisplay.sprite = bowImage[bowSelected-1];
         GameManager.instance.setBow(bowSelected);
-        bow.GetComponent<Bow>().setImage(bowImage[bowSelected-1]);
+        bow.setImage(bowImage[bowSelected-1]);
 
         switch(bowSelected)
         {
@@ -159,25 +159,24 @@ public class CharacterMenu : MonoBehaviour
         }
         pickAxeDisplay.sprite = pickAxeImage[pickAxeSelected-1];
         GameManager.instance.setPickAxe(pickAxeSelected);
-        pickAxe.GetComponent<PickAxe>().setImage(pickAxeImage[pickAxeSelected-1]);
+        pickAxe.setImage(pickAxeImage[pickAxeSelected-1]);
 
         switch(pickAxeSelected)
         {
             case 1:
                 pickAxeDamage.text = "5";
-                pickAxe.GetComponent<PickAxe>().setDamage(5);
-                pickAxe.GetComponent<PickAxe>().setLevel(pickAxeSelected);
+                pickAxe.setDamage(5);
+                pickAxe.setLevel(pickAxeSelected);
             break;
             case 2:
                 pickAxeDamage.text = "8";
-                pickAxe.GetComponent<PickAxe>().setDamage(8);
-                pickAxe.GetComponent<PickAxe>().setLevel(pickAxeSelected);
-
+                pickAxe.setDamage(8);
+                pickAxe.setLevel(pickAxeSelected);
             break;
             case 3:
                 pickAxeDamage.text = "15";
-                pickAxe.GetComponent<PickAxe>().setDamage(15);
-                pickAxe.GetComponent<PickAxe>().setLevel(pickAxeSelected);
+                pickAxe.setDamage(15);
+                pickAxe.setLevel(pickAxeSelected);
             break;
 
         }
@@ -192,24 +191,24 @@ public class CharacterMenu : MonoBehaviour
         }
         pickAxeDisplay.sprite = pickAxeImage[pickAxeSelected-1];
         GameManager.instance.setPickAxe(pickAxeSelected);
-        pickAxe.GetComponent<PickAxe>().setImage(pickAxeImage[pickAxeSelected-1]);
+        pickAxe.setImage(pickAxeImage[pickAxeSelected-1]);
 
         switch(pickAxeSelected)
         {
             case 1:
                 pickAxeDamage.text = "5";
-                pickAxe.GetComponent<PickAxe>().setDamage(5);
-                pickAxe.GetComponent<PickAxe>().setLevel(pickAxeSelected);
+                pickAxe.setDamage(5);
+                pickAxe.setLevel(pickAxeSelected);
             break;
             case 2:
                 pickAxeDamage.text = "8";
-                pickAxe.GetComponent<PickAxe>().setDamage(8);
-                pickAxe.GetComponent<PickAxe>().setLevel(pickAxeSelected);
+                pickAxe.setDamage(8);
+                pickAxe.setLevel(pickAxeSelected);
             break;
             case 3:
                 pickAxeDamage.text = "15";
-                pickAxe.GetComponent<PickAxe>().setDamage(15);
-                pickAxe.GetComponent<PickAxe>().setLevel(pickAxeSelected);
+                pickAxe.setDamage(15);
+                pickAxe.setLevel(pickAxeSelected);
             break;
 
         }

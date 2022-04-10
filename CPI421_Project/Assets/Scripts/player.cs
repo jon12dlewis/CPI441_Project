@@ -40,9 +40,9 @@ public class player : Mover
         //DontDestroyOnLoad(gameObject);
         playerPosition = transform.position;
         //startingPoint = transform;
-        //weapon.SetActive(false);
-        //pickaxe.SetActive(true);
-        //bow.SetActive(false);
+        weapon.SetActive(false);
+        pickaxe.SetActive(true);
+        bow.SetActive(false);
     }
 
 
@@ -89,55 +89,27 @@ public class player : Mover
 
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
-            //weapon.SetActive(false);
-            //pickaxe.SetActive(true);
-            //bow.SetActive(false);
-
-            //weapon.GetComponent<BoxCollider2D>().enabled = false;
-            weapon.GetComponent<Weapon>().isEquipped(false);
-            //pickaxe.GetComponent<BoxCollider2D>().enabled = true;
-            pickaxe.GetComponent<PickAxe>().isEquipped(true);
-            bow.GetComponent<Bow>().isEquipped(false);
-            bow.GetComponent<SpriteRenderer>().enabled = false;
-
+            weapon.SetActive(false);
+            pickaxe.SetActive(true);
+            bow.SetActive(false);
             //sword.SetTrigger("Sheath");
             pickAxe.SetTrigger("Idle");
         }
         else
         if(Input.GetKeyDown(KeyCode.Alpha2))
         {
-            /*
             weapon.SetActive(true);
             pickaxe.SetActive(false);
             bow.SetActive(false);
-            */
-
-            //weapon.GetComponent<BoxCollider2D>().enabled = true;
-            weapon.GetComponent<Weapon>().isEquipped(true);
-            //pickaxe.GetComponent<BoxCollider2D>().enabled = false;
-            pickaxe.GetComponent<PickAxe>().isEquipped(false);
-            bow.GetComponent<Bow>().isEquipped(false);
-            bow.GetComponent<SpriteRenderer>().enabled = false;
-
             //pickAxe.SetTrigger("Sheath");
             sword.SetTrigger("Idle");
         }
         else
         if(Input.GetKeyDown(KeyCode.Alpha3))
         {
-            /*
             weapon.SetActive(false);
             pickaxe.SetActive(false);
             bow.SetActive(true);
-            */
-
-            //weapon.GetComponent<BoxCollider2D>().enabled = false;
-            weapon.GetComponent<Weapon>().isEquipped(false);
-            //pickaxe.GetComponent<BoxCollider2D>().enabled = false;
-            pickaxe.GetComponent<PickAxe>().isEquipped(false);
-            bow.GetComponent<Bow>().isEquipped(true);
-            bow.GetComponent<SpriteRenderer>().enabled = true;
-
             //pickAxe.SetTrigger("Sheath");
             //sword.SetTrigger("Idle");
         }

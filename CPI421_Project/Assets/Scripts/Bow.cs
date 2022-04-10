@@ -12,7 +12,6 @@ public class Bow : MonoBehaviour
     private float lastShot;
     [SerializeField] AudioSource fireSound;
     private SpriteRenderer spriteRenderer;
-    private bool equipped;
     
 
     // Start is called before the first frame update
@@ -56,33 +55,29 @@ public class Bow : MonoBehaviour
             facing = 0;
         }
 
-    
-        if(equipped)
+        if(Input.GetKeyDown(KeyCode.Space))
         {
-            if(Input.GetKeyDown(KeyCode.Space))
+            if(Time.time - lastShot > coolDown)
             {
-                if(Time.time - lastShot > coolDown)
-                {
-                    lastShot = Time.time;
-                    fireSound.Play(0);
+                lastShot = Time.time;
+                fireSound.Play(0);
 
-                    switch(facing)
-                    {
-                        case 0:
-                            ShootDown();
-                            break;
-                        case 1:
-                            ShootUp();
-                            break;
-                        case 2:
-                            ShootRight();
-                            break;
-                        case 3:
-                            ShootLeft();
-                            break;
-                    }
-                }   
-            }
+                switch(facing)
+                {
+                    case 0:
+                        ShootDown();
+                        break;
+                    case 1:
+                        ShootUp();
+                        break;
+                    case 2:
+                        ShootRight();
+                        break;
+                    case 3:
+                        ShootLeft();
+                        break;
+                }
+            }   
         }
 
         animator.SetFloat("horizontal", direction.x);
@@ -128,11 +123,6 @@ public class Bow : MonoBehaviour
                 animator.SetTrigger("lvl3");
             break;
         }
-    }
-
-    public void isEquipped(bool choice)
-    {
-        equipped = choice;
     }
 
 

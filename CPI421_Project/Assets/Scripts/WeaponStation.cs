@@ -16,8 +16,6 @@ public class WeaponStation : Collidable
 protected override void Start()
     {
         base.Start();
-        statsText.text = "Stats:\nAttack: +3";
-        requirementsText.text = "Requirements:\nYellow Crystals: 10 (" + GameManager.instance.GetYellowCrystal() + ")";
     }
 
     // Update is called once per frame
@@ -235,7 +233,7 @@ protected override void Start()
         }
     }
 
-    public void resetWeapon()
+    public void resetArmor()
     {
         weapon = 1;
     }

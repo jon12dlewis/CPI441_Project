@@ -16,7 +16,6 @@ public class Weapon :Collidable
     private Animator anim;
     private float coolDown = 0.5f;
     private float lastSwing;
-    private bool equipped;
 
     // Directions
     int direction = 0;
@@ -60,36 +59,32 @@ public class Weapon :Collidable
         }
         
 
-        if(equipped)
+        if(Input.GetKeyDown(KeyCode.Space))
         {
-            if(Input.GetKeyDown(KeyCode.Space))
+            if(Time.time - lastSwing > coolDown)
             {
-                if(Time.time - lastSwing > coolDown)
+                lastSwing = Time.time;
+
+                switch(direction)
                 {
-                    lastSwing = Time.time;
+                    case 0:
+                        SwingDown();
+                        break;
+                    case 1:
+                        SwingUp();
+                        break;
+                    case 2:
+                        Swing();
+                        break;
+                    case 3:
+                        SwingLeft();
+                        break;
 
-                    switch(direction)
-                    {
-                        case 0:
-                            SwingDown();
-                            break;
-                        case 1:
-                            SwingUp();
-                            break;
-                        case 2:
-                            Swing();
-                            break;
-                        case 3:
-                            SwingLeft();
-                            break;
+                }
 
-                    }
-
-                    //Swing();
-                }   
-            }
+                //Swing();
+            }   
         }
-
     }
 
     protected override void OnCollide(Collider2D coll)
@@ -141,10 +136,4 @@ public class Weapon :Collidable
     {
         spriteRenderer.sprite = selected;
     }
-
-    public void isEquipped(bool choice)
-    {
-        equipped = choice;
-    }
-
 }
