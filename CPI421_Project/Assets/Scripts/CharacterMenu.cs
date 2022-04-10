@@ -69,7 +69,7 @@ public class CharacterMenu : MonoBehaviour
         }
         weaponDisplay.sprite = weaponImage[weaponSelected-1];
         GameManager.instance.setWeapon(weaponSelected);
-        weapon.GetComponent<Weapon>().setDamage(1);
+        //weapon.GetComponent<Weapon>().setDamage(1);
         weapon.GetComponent<Weapon>().setImage(weaponImage[weaponSelected-1]);
 
         switch(weaponSelected)
@@ -136,14 +136,17 @@ public class CharacterMenu : MonoBehaviour
             case 1:
                 bowDamage.text = "5";
                 //bow.setDamage(5);
+                bow.GetComponent<Bow>().SetLevelAnimation(bowSelected);
             break;
             case 2:
                 bowDamage.text = "8";
                 //bow.setDamage(8);
+                bow.GetComponent<Bow>().SetLevelAnimation(bowSelected);
             break;
             case 3:
                 bowDamage.text = "15";
                 //bow.setDamage(15);
+                bow.GetComponent<Bow>().SetLevelAnimation(bowSelected);
             break;
 
         }
