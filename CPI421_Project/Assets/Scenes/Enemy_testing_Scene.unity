@@ -3809,7 +3809,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1907705752}
         m_TargetAssemblyTypeName: WeaponStation, Assembly-CSharp
-        m_MethodName: craftWeapon2
+        m_MethodName: craftBow2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8116,6 +8116,8 @@ MonoBehaviour:
   statsText: {fileID: 1055309173}
   requirementsText: {fileID: 1168485897}
   armor: 1
+  max: 3
+  min: 1
 --- !u!1 &834920460
 GameObject:
   m_ObjectHideFlags: 0
@@ -100151,9 +100153,45 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 350499116}
     - target: {fileID: 3181201188676350155, guid: 9db291b5cad3d0944a837ec6a600cd47, type: 3}
+      propertyPath: red_crystals
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3181201188676350155, guid: 9db291b5cad3d0944a837ec6a600cd47, type: 3}
+      propertyPath: blue_crystals
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3181201188676350155, guid: 9db291b5cad3d0944a837ec6a600cd47, type: 3}
+      propertyPath: yellow_crystals
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3181201188676350155, guid: 9db291b5cad3d0944a837ec6a600cd47, type: 3}
+      propertyPath: bows.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3181201188676350155, guid: 9db291b5cad3d0944a837ec6a600cd47, type: 3}
+      propertyPath: legs.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3181201188676350155, guid: 9db291b5cad3d0944a837ec6a600cd47, type: 3}
       propertyPath: floatingTextManager
       value: 
       objectReference: {fileID: 1522917877}
+    - target: {fileID: 3181201188676350155, guid: 9db291b5cad3d0944a837ec6a600cd47, type: 3}
+      propertyPath: chests.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3181201188676350155, guid: 9db291b5cad3d0944a837ec6a600cd47, type: 3}
+      propertyPath: helmets.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3181201188676350155, guid: 9db291b5cad3d0944a837ec6a600cd47, type: 3}
+      propertyPath: weapons.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3181201188676350155, guid: 9db291b5cad3d0944a837ec6a600cd47, type: 3}
+      propertyPath: pickaxes.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9db291b5cad3d0944a837ec6a600cd47, type: 3}
 --- !u!1 &1401668255
@@ -104282,6 +104320,8 @@ MonoBehaviour:
   statsText: {fileID: 387156671}
   requirementsText: {fileID: 954144418}
   weapon: 1
+  max: 3
+  min: 1
 --- !u!1 &1918042673
 GameObject:
   m_ObjectHideFlags: 0
@@ -121525,6 +121565,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1246976083}
     - target: {fileID: 6346708695621684787, guid: c397caf26e0506b40b4029fd4f574283, type: 3}
+      propertyPath: maxBow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6346708695621684787, guid: c397caf26e0506b40b4029fd4f574283, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 350499114}
@@ -121533,9 +121577,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 298326784}
     - target: {fileID: 6346708695621684787, guid: c397caf26e0506b40b4029fd4f574283, type: 3}
+      propertyPath: maxLegs
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6346708695621684787, guid: c397caf26e0506b40b4029fd4f574283, type: 3}
       propertyPath: pickAxe
       value: 
       objectReference: {fileID: 2100656790}
+    - target: {fileID: 6346708695621684787, guid: c397caf26e0506b40b4029fd4f574283, type: 3}
+      propertyPath: maxChest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6346708695621684787, guid: c397caf26e0506b40b4029fd4f574283, type: 3}
+      propertyPath: maxHelmet
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6346708695621684787, guid: c397caf26e0506b40b4029fd4f574283, type: 3}
+      propertyPath: maxWeapon
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6346708695621684787, guid: c397caf26e0506b40b4029fd4f574283, type: 3}
+      propertyPath: maxPickAxe
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6346708695621684788, guid: c397caf26e0506b40b4029fd4f574283, type: 3}
       propertyPath: m_Pivot.x
       value: 0

@@ -21,6 +21,13 @@ public class CharacterMenu : MonoBehaviour
     int chestSelected = 1;
     int legsSelected = 1;
 
+    public int maxWeapon = 1;
+    public int maxPickAxe = 1;
+    public int maxBow = 1;
+    public int maxHelmet = 1;
+    public int maxChest = 1;
+    public int maxLegs = 1;
+
     // Update is called once per frame
     public void UpdateMenu()
     {
@@ -30,10 +37,62 @@ public class CharacterMenu : MonoBehaviour
         redCrystalText.text = GameManager.instance.red_crystals.ToString();
     }
 
+    public void setMax()
+    {
+        int[] weapons = GameManager.instance.weapons;
+        int[] bows = GameManager.instance.bows;
+        int[] pickAxes = GameManager.instance.pickaxes;
+        int[] helmets = GameManager.instance.helmets;
+        int[] chests = GameManager.instance.chests;
+        int[] legs = GameManager.instance.legs;
+
+        maxWeapon = 0;
+        maxPickAxe = 0;
+        maxBow = 0;
+        maxHelmet = 0;
+        maxChest = 0;
+        maxLegs = 0;
+
+
+        for(int i = 0; i < weapons.Length; i++)
+        {
+            if(weapons[i] == 1)
+            {
+                maxWeapon += 1; 
+            }
+
+            if(pickAxes[i] == 1)
+            {
+                maxPickAxe += 1; 
+            }
+
+            if(bows[i] == 1)
+            {
+                maxBow += 1; 
+            }
+
+            if(helmets[i] == 1)
+            {
+                maxHelmet += 1; 
+            }
+
+            if(chests[i] == 1)
+            {
+                maxChest += 1; 
+            }
+
+            if(legs[i] == 1)
+            {
+                maxLegs += 1; 
+            }
+        }
+    }
+
     public void increaseWeapon()
     {
+        setMax();
         weaponSelected += 1;
-        if(weaponSelected > 3)
+        if(weaponSelected > maxWeapon)
         {
             weaponSelected = 1;
         }
@@ -41,6 +100,7 @@ public class CharacterMenu : MonoBehaviour
         GameManager.instance.setWeapon(weaponSelected);
 
         weapon.GetComponent<Weapon>().setImage(weaponImage[weaponSelected-1]);
+
 
         switch(weaponSelected)
         {
@@ -62,10 +122,11 @@ public class CharacterMenu : MonoBehaviour
 
     public void decreaseWeapon()
     {
+        setMax();
         weaponSelected -= 1;
         if(weaponSelected < 1)
         {
-            weaponSelected = 3;
+            weaponSelected = maxWeapon;
         }
         weaponDisplay.sprite = weaponImage[weaponSelected-1];
         GameManager.instance.setWeapon(weaponSelected);
@@ -93,8 +154,9 @@ public class CharacterMenu : MonoBehaviour
 
     public void increaseBow()
     {
+        setMax();
         bowSelected += 1;
-        if(bowSelected > 3)
+        if(bowSelected > maxBow)
         {
             bowSelected = 1;
         }
@@ -122,10 +184,11 @@ public class CharacterMenu : MonoBehaviour
 
     public void decreaseBow()
     {
+        setMax();
         bowSelected -= 1;
         if(bowSelected < 1)
         {
-            bowSelected = 3;
+            bowSelected = maxBow;
         }
         bowDisplay.sprite = bowImage[bowSelected-1];
         GameManager.instance.setBow(bowSelected);
@@ -155,8 +218,9 @@ public class CharacterMenu : MonoBehaviour
 
     public void increasePickAxe()
     {
+        setMax();
         pickAxeSelected += 1;
-        if(pickAxeSelected > 3)
+        if(pickAxeSelected > maxPickAxe)
         {
             pickAxeSelected = 1;
         }
@@ -188,10 +252,11 @@ public class CharacterMenu : MonoBehaviour
 
     public void decreasePickAxe()
     {
+        setMax();
         pickAxeSelected -= 1;
         if(pickAxeSelected < 1)
         {
-            pickAxeSelected = 3;
+            pickAxeSelected = maxPickAxe;
         }
         pickAxeDisplay.sprite = pickAxeImage[pickAxeSelected-1];
         GameManager.instance.setPickAxe(pickAxeSelected);
@@ -221,8 +286,9 @@ public class CharacterMenu : MonoBehaviour
 
     public void increaseHelmet()
     {
+        setMax();
         helmetSelected += 1;
-        if(helmetSelected > 3)
+        if(helmetSelected > maxHelmet)
         {
             helmetSelected = 1;
         }
@@ -262,10 +328,11 @@ public class CharacterMenu : MonoBehaviour
 
 public void decreaseHelmet()
     {
+        setMax();
         helmetSelected -= 1;
         if(helmetSelected < 1)
         {
-            helmetSelected = 3;
+            helmetSelected = maxHelmet;
         }
         helmetDisplay.sprite = helmetImage[helmetSelected-1];
         GameManager.instance.setHelmet(helmetSelected);
@@ -304,8 +371,9 @@ public void decreaseHelmet()
 
     public void increaseChest()
     {
+        setMax();
         chestSelected += 1;
-        if(chestSelected > 3)
+        if(chestSelected > maxChest)
         {
             chestSelected = 1;
         }
@@ -336,10 +404,11 @@ public void decreaseHelmet()
 
     public void decreaseChest()
     {
+        setMax();
         chestSelected -= 1;
         if(chestSelected < 1)
         {
-            chestSelected = 3;
+            chestSelected = maxChest;
         }
         chestDisplay.sprite = chestImage[chestSelected-1];
         GameManager.instance.setChest(chestSelected);
@@ -369,8 +438,9 @@ public void decreaseHelmet()
 
     public void increaseLegs()
     {
+        setMax();
         legsSelected += 1;
-        if(legsSelected > 3)
+        if(legsSelected > maxLegs)
         {
             legsSelected = 1;
         }
@@ -403,10 +473,11 @@ public void decreaseHelmet()
 
     public void decreaseLegs()
     {
+        setMax();
         legsSelected -= 1;
         if(legsSelected < 1)
         {
-            legsSelected = 3;
+            legsSelected = maxLegs;
         }
         legsDisplay.sprite = legsImage[legsSelected-1];
         GameManager.instance.setLegs(legsSelected);

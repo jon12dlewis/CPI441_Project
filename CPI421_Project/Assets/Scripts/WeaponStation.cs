@@ -12,6 +12,9 @@ public class WeaponStation : Collidable
 
     public int weapon = 1;
 
+    public int max = 3;
+    public int min = 1;
+
     // Start is called before the first frame update
 protected override void Start()
     {
@@ -44,21 +47,21 @@ protected override void Start()
 
     public void nextWeapon()
     {
-        weapon += 1;
+        weapon += min;
         Debug.Log("Switching to Helmet: " + weapon);
-        if(weapon > 3)
+        if(weapon > max)
         {
-            weapon = 1;
+            weapon = min;
         }
     }
 
     public void previousWeapon()
     {
-        weapon -= 1;
+        weapon -= min;
         Debug.Log("Switching to Helmet: " + weapon);
-        if(weapon < 1)
+        if(weapon < min)
         {
-            weapon = 3;
+            weapon = max;
         }
     }
 
