@@ -12,6 +12,9 @@ public class CraftingStation : Collidable
 
     public int armor = 1;
 
+    public int max = 3;
+    public int min = 1;
+
     // Start is called before the first frame update
     protected override void Start()
     {
@@ -36,21 +39,21 @@ public class CraftingStation : Collidable
 
     public void nextArmor()
     {
-        armor += 1;
+        armor += min;
         Debug.Log("Switching to Helmet: " + armor);
-        if(armor > 3)
+        if(armor > max)
         {
-            armor = 1;
+            armor = min;
         }
     }
 
     public void previousArmor()
     {
-        armor -= 1;
+        armor -= min;
         Debug.Log("Switching to Helmet: " + armor);
-        if(armor < 1)
+        if(armor < min)
         {
-            armor = 3;
+            armor = max;
         }
     }
 

@@ -39,12 +39,12 @@ public class GameManager : MonoBehaviour
     public int yellow_crystals;
     public int red_crystals;
     
-    public int[] helmets = {0,0,0};
-    public int[] chests = {0,0,0};
-    public int[] legs = {0,0,0};
-    public int[] weapons = {0,0,0};
-    public int[] pickaxes = {0,0,0};
-    public int[] bows = {0,0,0};
+    public int[] helmets = {1,0,0};
+    public int[] chests = {1,0,0};
+    public int[] legs = {1,0,0};
+    public int[] weapons = {1,0,0};
+    public int[] pickaxes = {1,0,0};
+    public int[] bows = {1,0,0};
     public int arrows = 0;
     public int levelsCompleted;
     public int pickAxeSelected;
