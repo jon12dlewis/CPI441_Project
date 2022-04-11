@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
         SceneManager.sceneLoaded += LoadState;
         DontDestroyOnLoad(gameObject);
         floatingTextManager = GameObject.Find("FloatingTextManager").GetComponent<FloatingTextManager>();
+        player = GameObject.Find("Player").GetComponent<Transform>();
     }
 
     public List<Sprite> playerSprites;
@@ -100,6 +101,7 @@ public class GameManager : MonoBehaviour
 
         PlayerPrefs.SetString("SaveState", s);
         floatingTextManager = GameObject.Find("FloatingTextManager").GetComponent<FloatingTextManager>();
+        //player = GameObject.Find("Player").GetComponent<Transform>();
     }
 
     public void LoadState(Scene s, LoadSceneMode mode)
@@ -146,6 +148,7 @@ public class GameManager : MonoBehaviour
 
         Debug.Log("LoadState");
         floatingTextManager = GameObject.Find("FloatingTextManager").GetComponent<FloatingTextManager>();
+        player = GameObject.Find("Player").GetComponent<Transform>();
     }
 
     public void GiveBlueCrystal(int ammount)

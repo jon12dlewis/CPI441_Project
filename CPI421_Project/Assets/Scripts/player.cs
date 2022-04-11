@@ -154,7 +154,7 @@ public class player : Mover
     {
         //Application.Quit();
         GameManager.instance.SaveState();
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Cave_1");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("HomeBase");
         transform.position = startingPoint.position;
         hitPoint = 10;
     }
