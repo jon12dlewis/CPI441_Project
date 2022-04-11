@@ -64,6 +64,7 @@ public class GameManager : MonoBehaviour
     // Save state
     public void SaveState()
     {
+        Debug.Log("Save State");
         string s = "";
 
         s += "0" + "|";
@@ -103,6 +104,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadState(Scene s, LoadSceneMode mode)
     {
+
         if(!PlayerPrefs.HasKey("SaveState"))
             return;
 
