@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: helmet_left
+  m_Name: chest_idle_up_lvlBoss
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,7 +20,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0.01, y: 1.590001, z: 0}
+        value: {x: 0.003, y: -0.328, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -36,7 +36,7 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -532099021184929983, guid: 5911d431c195b324c817bd1224a9b25f, type: 3}
+      value: {fileID: -2274260097264352244, guid: fc0facf1c6944354a8adcf84f2bf5069, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -63,7 +63,7 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 0
     pptrCurveMapping:
-    - {fileID: -532099021184929983, guid: 5911d431c195b324c817bd1224a9b25f, type: 3}
+    - {fileID: -2274260097264352244, guid: fc0facf1c6944354a8adcf84f2bf5069, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -90,7 +90,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.01
+        value: 0.003
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -109,7 +109,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1.590001
+        value: -0.328
         inSlope: 0
         outSlope: 0
         tangentMode: 136
