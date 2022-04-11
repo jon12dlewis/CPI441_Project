@@ -111722,7 +111722,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7870812146034605157, guid: 07d1c57600f14ad4baf1d215025cf189, type: 3}
       propertyPath: InitialModule.gravityModifier.scalar
-      value: 0.25
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7870812146034605157, guid: 07d1c57600f14ad4baf1d215025cf189, type: 3}
       propertyPath: InitialModule.startLifetime.minScalar
