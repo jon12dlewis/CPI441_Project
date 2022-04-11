@@ -43,6 +43,7 @@ public class player : Mover
         //weapon.SetActive(false);
         //pickaxe.SetActive(true);
         //bow.SetActive(false);
+        transform.position = playerPosition;
     }
 
 
