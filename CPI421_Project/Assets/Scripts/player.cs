@@ -143,6 +143,8 @@ public class player : Mover
             //sword.SetTrigger("Idle");
         }
 
+        //UpdateMotor(new Vector3(movement.x,movement.y,0));
+
     }
 
     private void FixedUpdate()
