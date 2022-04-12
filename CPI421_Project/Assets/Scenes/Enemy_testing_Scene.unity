@@ -123492,6 +123492,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1246976083}
     - target: {fileID: 6346708695621684787, guid: c397caf26e0506b40b4029fd4f574283, type: 3}
+      propertyPath: bowUI
+      value: 
+      objectReference: {fileID: 375279740}
+    - target: {fileID: 6346708695621684787, guid: c397caf26e0506b40b4029fd4f574283, type: 3}
       propertyPath: maxBow
       value: 1
       objectReference: {fileID: 0}
@@ -123516,6 +123520,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6346708695621684787, guid: c397caf26e0506b40b4029fd4f574283, type: 3}
+      propertyPath: weaponUI
+      value: 
+      objectReference: {fileID: 697903384}
+    - target: {fileID: 6346708695621684787, guid: c397caf26e0506b40b4029fd4f574283, type: 3}
       propertyPath: maxHelmet
       value: 1
       objectReference: {fileID: 0}
@@ -123523,6 +123531,10 @@ PrefabInstance:
       propertyPath: maxWeapon
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6346708695621684787, guid: c397caf26e0506b40b4029fd4f574283, type: 3}
+      propertyPath: pickAxeUI
+      value: 
+      objectReference: {fileID: 666065546}
     - target: {fileID: 6346708695621684787, guid: c397caf26e0506b40b4029fd4f574283, type: 3}
       propertyPath: maxPickAxe
       value: 1

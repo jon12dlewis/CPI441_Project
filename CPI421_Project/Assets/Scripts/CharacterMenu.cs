@@ -9,6 +9,7 @@ public class CharacterMenu : MonoBehaviour
     public player player; 
     public Sprite[] pickAxeImage, weaponImage, bowImage, helmetImage, chestImage, legsImage;
     public Image pickAxeDisplay, weaponDisplay, bowDisplay, helmetDisplay, chestDisplay, legsDisplay;
+    public Image pickAxeUI, weaponUI, bowUI;
 
     public GameObject weapon;
     public GameObject pickAxe;
@@ -100,6 +101,7 @@ public class CharacterMenu : MonoBehaviour
         GameManager.instance.setWeapon(weaponSelected);
 
         weapon.GetComponent<Weapon>().setImage(weaponImage[weaponSelected-1]);
+        weaponUI.sprite = weaponImage[weaponSelected-1];
 
 
         switch(weaponSelected)
@@ -132,6 +134,7 @@ public class CharacterMenu : MonoBehaviour
         GameManager.instance.setWeapon(weaponSelected);
         //weapon.GetComponent<Weapon>().setDamage(1);
         weapon.GetComponent<Weapon>().setImage(weaponImage[weaponSelected-1]);
+        weaponUI.sprite = weaponImage[weaponSelected-1];
 
         switch(weaponSelected)
         {
@@ -161,6 +164,7 @@ public class CharacterMenu : MonoBehaviour
             bowSelected = 1;
         }
         bowDisplay.sprite = bowImage[bowSelected-1];
+        bowUI.sprite = bowImage[bowSelected-1];
         GameManager.instance.setBow(bowSelected);
         bow.GetComponent<Bow>().setImage(bowImage[bowSelected-1]);
         
@@ -191,6 +195,7 @@ public class CharacterMenu : MonoBehaviour
             bowSelected = maxBow;
         }
         bowDisplay.sprite = bowImage[bowSelected-1];
+        bowUI.sprite = bowImage[bowSelected-1];
         GameManager.instance.setBow(bowSelected);
         bow.GetComponent<Bow>().setImage(bowImage[bowSelected-1]);
 
@@ -225,6 +230,7 @@ public class CharacterMenu : MonoBehaviour
             pickAxeSelected = 1;
         }
         pickAxeDisplay.sprite = pickAxeImage[pickAxeSelected-1];
+        pickAxeUI.sprite = pickAxeImage[pickAxeSelected-1];
         GameManager.instance.setPickAxe(pickAxeSelected);
         pickAxe.GetComponent<PickAxe>().setImage(pickAxeImage[pickAxeSelected-1]);
 
@@ -259,6 +265,7 @@ public class CharacterMenu : MonoBehaviour
             pickAxeSelected = maxPickAxe;
         }
         pickAxeDisplay.sprite = pickAxeImage[pickAxeSelected-1];
+        pickAxeUI.sprite = pickAxeImage[pickAxeSelected-1];
         GameManager.instance.setPickAxe(pickAxeSelected);
         pickAxe.GetComponent<PickAxe>().setImage(pickAxeImage[pickAxeSelected-1]);
 
