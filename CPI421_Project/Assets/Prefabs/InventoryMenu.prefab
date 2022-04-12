@@ -157,9 +157,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '1
-
-'
+  m_Text: 5
 --- !u!1 &6346708695116616520
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,9 +944,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '1
-
-'
+  m_Text: 5
 --- !u!1 &6346708695392642527
 GameObject:
   m_ObjectHideFlags: 0
@@ -1558,9 +1554,18 @@ MonoBehaviour:
   helmetDisplay: {fileID: 6346708696501964063}
   chestDisplay: {fileID: 6346708696178149772}
   legsDisplay: {fileID: 6346708696169594922}
+  pickAxeUI: {fileID: 0}
+  weaponUI: {fileID: 0}
+  bowUI: {fileID: 0}
   weapon: {fileID: 0}
   pickAxe: {fileID: 0}
   bow: {fileID: 0}
+  maxWeapon: 1
+  maxPickAxe: 1
+  maxBow: 1
+  maxHelmet: 1
+  maxChest: 1
+  maxLegs: 1
 --- !u!1 &6346708695645576703
 GameObject:
   m_ObjectHideFlags: 0
@@ -2448,9 +2453,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '1
-
-'
+  m_Text: 5
 --- !u!1 &6346708696067537869
 GameObject:
   m_ObjectHideFlags: 0

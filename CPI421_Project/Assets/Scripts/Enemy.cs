@@ -22,7 +22,7 @@ public class Enemy : Mover
     public Vector3 agentSpeed;
     Vector2 movement = new Vector2(0.0f, -1.0f);
     Vector2 direction = new Vector2(0.0f, -1.0f);
-    public Animator animator;
+    private Animator animator;
     protected float stagger = 2f;
     protected float staggerTime;
     public bool attack;
@@ -56,6 +56,7 @@ public class Enemy : Mover
         playerTransform = GameManager.instance.player.transform;
         startingPosition = transform.position;
         hitBox = transform.GetChild(0).GetComponent<BoxCollider2D>();
+        animator = GetComponent<Animator>();
 
         agent = GetComponent<NavMeshAgent>();
 		agent.updateRotation = false;
