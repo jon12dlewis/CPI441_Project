@@ -20,6 +20,8 @@ public class player : Mover
     Vector2 movement; 
     Vector2 direction = new Vector2(0.0f, -1.0f);
 
+    public bool Dead = false;
+
     Vector2 playerPosition;
 
     public static player instance;
@@ -49,12 +51,22 @@ public class player : Mover
 
     private void Update()
     {
+
+        if(!Dead)
+        {
+
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         playerPosition = transform.position;
 
+        if(hitPoint > maxHitpoint)
+        {
+            hitPoint = maxHitpoint;
+        }
+
+
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-
+        
         if(mousePos.x > playerPosition.x + 1.5)
         {
             direction.x = 1;
@@ -144,6 +156,7 @@ public class player : Mover
         }
 
         //UpdateMotor(new Vector3(movement.x,movement.y,0));
+        }
 
     }
 
@@ -157,8 +170,9 @@ public class player : Mover
     {
         //Application.Quit();
         GameManager.instance.SaveState();
-        UnityEngine.SceneManagement.SceneManager.LoadScene("HomeBase");
+        //UnityEngine.SceneManagement.SceneManager.LoadScene("HomeBase");
         transform.position = startingPoint.position;
+        Dead = true;
         hitPoint = 10;
     }
     

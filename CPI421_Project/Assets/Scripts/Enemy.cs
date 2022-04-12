@@ -15,6 +15,7 @@ public class Enemy : Mover
     private bool collideWithPlayer;
     private Transform playerTransform;
     private Vector3 startingPosition;
+    public GameObject arrowDrop, healthDrop;
 
     // AI
     public Transform target;
@@ -242,6 +243,22 @@ public class Enemy : Mover
         Destroy(gameObject);
         GameManager.instance.expierence += xpValue;
         GameManager.instance.ShowText("+ " + xpValue + "xp", 60, Color.magenta, transform.position, Vector3.up * 40, 1.0f);
+        Vector3 newRot = new Vector3(0,0,0);
+        Quaternion rot = Quaternion.Euler(newRot); 
+
+        int rand = Random.Range(0, 10);
+
+        if(rand == 1)
+        {
+            Instantiate(arrowDrop, transform.position, rot);
+        }
+        if(rand == 3)
+        {
+            Instantiate(healthDrop, transform.position, rot);  
+        }
+
+
+
     }
 
     void ShootUp()

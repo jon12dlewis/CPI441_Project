@@ -59,7 +59,7 @@ public class Bow : MonoBehaviour
     
         if(equipped)
         {
-            if(Input.GetKeyDown(KeyCode.Space))
+            if(Input.GetKeyDown(KeyCode.Space) && GameManager.instance.arrows > 0)
             {
                 if(Time.time - lastShot > coolDown)
                 {
@@ -91,24 +91,28 @@ public class Bow : MonoBehaviour
 
     void ShootUp()
     {
+        GameManager.instance.takeArrow(1);
         Vector3 newRot = new Vector3(0,0,90);
         Quaternion rot = Quaternion.Euler(newRot); 
         Instantiate(arrow, transform.position, rot);
     }
     void ShootDown()
     {
+        GameManager.instance.takeArrow(1);
         Vector3 newRot = new Vector3(0,0,270);
         Quaternion rot = Quaternion.Euler(newRot); 
         Instantiate(arrow, transform.position, rot);
     }
     void ShootLeft()
     {
+        GameManager.instance.takeArrow(1);
         Vector3 newRot = new Vector3(0,0,0);
         Quaternion rot = Quaternion.Euler(newRot); 
         Instantiate(arrow, transform.position, rot);
     }
     void ShootRight()
     {
+        GameManager.instance.takeArrow(1);
         Vector3 newRot = new Vector3(0,0,180);
         Quaternion rot = Quaternion.Euler(newRot); 
         Instantiate(arrow, transform.position, rot);

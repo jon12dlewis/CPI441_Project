@@ -245,4 +245,14 @@ public class GameManager : MonoBehaviour
         legSelected = selection;
     }
 
+    public void addArrow(int amount)
+    {
+        arrows += amount;
+    }
+
+    public void takeArrow(int amount)
+    {
+        arrows -= amount;
+    }
+
 }

@@ -38,4 +38,10 @@ public class levelSelect : MonoBehaviour
         string sceneName = sceneNames[2];
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
     }
+
+    public void loadLevelHomeBase()
+    {
+        GameManager.instance.SaveState();
+        UnityEngine.SceneManagement.SceneManager.LoadScene("HomeBase");
+    }
 }

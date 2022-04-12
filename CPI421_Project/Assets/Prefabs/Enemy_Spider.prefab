@@ -299,9 +299,10 @@ MonoBehaviour:
   xpValue: 5
   triggerLength: 10
   chaseLength: 20
+  arrowDrop: {fileID: 2969710603989795948, guid: 755afd9e2e470b14f8114927b019641d, type: 3}
+  healthDrop: {fileID: 5475437713343371530, guid: c079b73999e209d4793dc7a272f51b7f, type: 3}
   target: {fileID: 3386749949196032535, guid: d2e7fe73eef80a440a4a31bf422ec54f, type: 3}
   agentSpeed: {x: 0, y: 0, z: 0}
-  animator: {fileID: 1169174447158272606}
   attack: 0
   arrow: {fileID: 194769510474371563, guid: 455b6954bb378f7418eefd15b31aa8fe, type: 3}
   fireSpot: {fileID: 1169174446836262089}
