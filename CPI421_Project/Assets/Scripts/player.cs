@@ -156,10 +156,11 @@ public class player : Mover
     protected override void Death()
     {
         //Application.Quit();
+        hitPoint = 10;
         GameManager.instance.SaveState();
         UnityEngine.SceneManagement.SceneManager.LoadScene("HomeBase");
         transform.position = startingPoint.position;
-        hitPoint = 10;
+    
     }
     
 }
