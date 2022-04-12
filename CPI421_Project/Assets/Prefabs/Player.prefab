@@ -1066,7 +1066,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  damagePoint: 5
+  damagePoint: 1
   pushForce: 10
   weaponLevel: 0
   hitSound: {fileID: 682563389702798960}
@@ -1245,7 +1245,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  damagePoint: 5
+  damagePoint: 1
   pushForce: 0
   pickAxeLevel: 1
 --- !u!1 &4217734506880878111

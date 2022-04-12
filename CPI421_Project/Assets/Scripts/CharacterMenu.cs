@@ -107,16 +107,16 @@ public class CharacterMenu : MonoBehaviour
         switch(weaponSelected)
         {
             case 1:
-                weaponDamage.text = "5";
-                weapon.GetComponent<Weapon>().setDamage(5);
+                weaponDamage.text = "1";
+                weapon.GetComponent<Weapon>().setDamage(1);
             break;
             case 2:
-                weaponDamage.text = "8";
-                weapon.GetComponent<Weapon>().setDamage(8);
+                weaponDamage.text = "3";
+                weapon.GetComponent<Weapon>().setDamage(3);
             break;
             case 3:
-                weaponDamage.text = "15";
-                weapon.GetComponent<Weapon>().setDamage(15);
+                weaponDamage.text = "6";
+                weapon.GetComponent<Weapon>().setDamage(6);
             break;
 
         }
@@ -139,16 +139,16 @@ public class CharacterMenu : MonoBehaviour
         switch(weaponSelected)
         {
             case 1:
-                weaponDamage.text = "5";
-                weapon.GetComponent<Weapon>().setDamage(5);
+                weaponDamage.text = "1";
+                weapon.GetComponent<Weapon>().setDamage(1);
             break;
             case 2:
-                weaponDamage.text = "8";
-                weapon.GetComponent<Weapon>().setDamage(8);
+                weaponDamage.text = "3";
+                weapon.GetComponent<Weapon>().setDamage(3);
             break;
             case 3:
-                weaponDamage.text = "15";
-                weapon.GetComponent<Weapon>().setDamage(15);
+                weaponDamage.text = "6";
+                weapon.GetComponent<Weapon>().setDamage(6);
             break;
 
         }
@@ -171,15 +171,15 @@ public class CharacterMenu : MonoBehaviour
         switch(bowSelected)
         {
             case 1:
-                bowDamage.text = "5";
+                bowDamage.text = "1";
                 bow.GetComponent<Bow>().SetLevelAnimation(bowSelected);
             break;
             case 2:
-                bowDamage.text = "8";
+                bowDamage.text = "2";
                 bow.GetComponent<Bow>().SetLevelAnimation(bowSelected);
             break;
             case 3:
-                bowDamage.text = "15";
+                bowDamage.text = "5";
                 bow.GetComponent<Bow>().SetLevelAnimation(bowSelected);
             break;
 
@@ -202,17 +202,17 @@ public class CharacterMenu : MonoBehaviour
         switch(bowSelected)
         {
             case 1:
-                bowDamage.text = "5";
+                bowDamage.text = "1";
                 //bow.setDamage(5);
                 bow.GetComponent<Bow>().SetLevelAnimation(bowSelected);
             break;
             case 2:
-                bowDamage.text = "8";
+                bowDamage.text = "2";
                 //bow.setDamage(8);
                 bow.GetComponent<Bow>().SetLevelAnimation(bowSelected);
             break;
             case 3:
-                bowDamage.text = "15";
+                bowDamage.text = "5";
                 //bow.setDamage(15);
                 bow.GetComponent<Bow>().SetLevelAnimation(bowSelected);
             break;
@@ -237,19 +237,19 @@ public class CharacterMenu : MonoBehaviour
         switch(pickAxeSelected)
         {
             case 1:
-                pickAxeDamage.text = "5";
-                pickAxe.GetComponent<PickAxe>().setDamage(5);
+                pickAxeDamage.text = "1";
+                pickAxe.GetComponent<PickAxe>().setDamage(1);
                 pickAxe.GetComponent<PickAxe>().setLevel(pickAxeSelected);
             break;
             case 2:
-                pickAxeDamage.text = "8";
-                pickAxe.GetComponent<PickAxe>().setDamage(8);
+                pickAxeDamage.text = "2";
+                pickAxe.GetComponent<PickAxe>().setDamage(2);
                 pickAxe.GetComponent<PickAxe>().setLevel(pickAxeSelected);
 
             break;
             case 3:
-                pickAxeDamage.text = "15";
-                pickAxe.GetComponent<PickAxe>().setDamage(15);
+                pickAxeDamage.text = "5";
+                pickAxe.GetComponent<PickAxe>().setDamage(5);
                 pickAxe.GetComponent<PickAxe>().setLevel(pickAxeSelected);
             break;
 
@@ -272,18 +272,18 @@ public class CharacterMenu : MonoBehaviour
         switch(pickAxeSelected)
         {
             case 1:
-                pickAxeDamage.text = "5";
-                pickAxe.GetComponent<PickAxe>().setDamage(5);
+                pickAxeDamage.text = "1";
+                pickAxe.GetComponent<PickAxe>().setDamage(1);
                 pickAxe.GetComponent<PickAxe>().setLevel(pickAxeSelected);
             break;
             case 2:
-                pickAxeDamage.text = "8";
-                pickAxe.GetComponent<PickAxe>().setDamage(8);
+                pickAxeDamage.text = "2";
+                pickAxe.GetComponent<PickAxe>().setDamage(2);
                 pickAxe.GetComponent<PickAxe>().setLevel(pickAxeSelected);
             break;
             case 3:
-                pickAxeDamage.text = "15";
-                pickAxe.GetComponent<PickAxe>().setDamage(15);
+                pickAxeDamage.text = "5";
+                pickAxe.GetComponent<PickAxe>().setDamage(5);
                 pickAxe.GetComponent<PickAxe>().setLevel(pickAxeSelected);
             break;
 
