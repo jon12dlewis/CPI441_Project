@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     //public player player;
     public Transform player;
+    public Transform playerStartPos;
     public FloatingTextManager floatingTextManager;
 
     private void Awake()
@@ -22,6 +23,7 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         floatingTextManager = GameObject.Find("FloatingTextManager").GetComponent<FloatingTextManager>();
         player = GameObject.Find("Player").GetComponent<Transform>();
+        
     }
 
     public List<Sprite> playerSprites;
@@ -149,6 +151,8 @@ public class GameManager : MonoBehaviour
         Debug.Log("LoadState");
         floatingTextManager = GameObject.Find("FloatingTextManager").GetComponent<FloatingTextManager>();
         player = GameObject.Find("Player").GetComponent<Transform>();
+        playerStartPos = GameObject.Find("PlayerStartingPosition").GetComponent<Transform>();
+        player.position = playerStartPos.position;
     }
 
     public void GiveBlueCrystal(int ammount)
