@@ -15,6 +15,11 @@ public class MusicController : MonoBehaviour
     void Awake() {
         currentMusicState = MusicState.Default;
         combatants = new LinkedList<GameObject>();
+        enemyCount = 0;
+
+        if (EnemiesNearbyMusicKey != null) {
+            Debug.Log("key working");
+        }
     }
     void Update() {
 

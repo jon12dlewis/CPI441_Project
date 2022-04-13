@@ -14,6 +14,14 @@ public class AudioEvents : MonoBehaviour
         // get children of triggerparent
         triggers = gameObject.GetComponentsInChildren<Transform>();     // get the music keys (this script is placed on the parent of the set of keys)
         events = new MusicEvent[triggers.Length];                       // create corresponding events
+        Debug.Log(triggers.Length);
+    }
+
+    void Start() {
+        var nearbykey = GameObject.Find("Nearby Key");
+        Debug.Log(nearbykey);
+        var combatkey = GameObject.Find("Combat Key");
+        Debug.Log(combatkey);
     }
 
     // TEMP
