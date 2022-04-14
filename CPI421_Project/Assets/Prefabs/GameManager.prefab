@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 179462643668689227}
   - component: {fileID: 202483784090604076}
   - component: {fileID: 8632588538405063510}
+  - component: {fileID: 1853207015490146420}
   - component: {fileID: 5679853037874774882}
   m_Layer: 0
   m_Name: GameManager
@@ -121,6 +122,23 @@ MonoBehaviour:
   snapshot1: {fileID: 2701219159869433471, guid: 6acf71c5dc6457c428dbb1dd4c3e3a4f, type: 2}
   snapshot2: {fileID: 24500006, guid: 6acf71c5dc6457c428dbb1dd4c3e3a4f, type: 2}
   transitionSpeed: 0.6
+--- !u!114 &1853207015490146420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3181201188676350152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60aeb1703c240f547a91ffb641d6796b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StimulusKey: {fileID: 7416556997557607225}
+  mixer: {fileID: 24100000, guid: af8649a31f0a1904dbc44df07f370d85, type: 2}
+  snapshot1: {fileID: 4675736407107260339, guid: af8649a31f0a1904dbc44df07f370d85, type: 2}
+  snapshot2: {fileID: 24500006, guid: af8649a31f0a1904dbc44df07f370d85, type: 2}
+  transitionSpeed: 0
 --- !u!114 &5679853037874774882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,6 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemiesNearbyMusicKey: {fileID: 3681037310829138454}
   CombatMusicKey: {fileID: 3266673192177964593}
+  PauseMusicKey: {fileID: 7416556997557607225}
 --- !u!1 &3266673192177964593
 GameObject:
   m_ObjectHideFlags: 0

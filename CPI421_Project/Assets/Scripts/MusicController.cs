@@ -7,6 +7,7 @@ public class MusicController : MonoBehaviour
 {
     [SerializeField] GameObject EnemiesNearbyMusicKey;
     [SerializeField] GameObject CombatMusicKey;
+    [SerializeField] GameObject PauseMusicKey;
     int enemyCount;
     LinkedList<GameObject> combatants;
     enum MusicState {Default, Nearby, Combat};
@@ -21,6 +22,14 @@ public class MusicController : MonoBehaviour
             Debug.Log("key working");
         }
     }
+
+    void OnEnable() {
+        PauseMenu.pauseEvent += TogglePauseMusic;
+    }
+    void OnDisable() {
+        PauseMenu.pauseEvent -= TogglePauseMusic;
+    }
+
     void Update() {
 
         // only player is remaining
@@ -44,8 +53,6 @@ public class MusicController : MonoBehaviour
             }
             currentMusicState = MusicState.Combat;
         }
-
-
     }
 
     // counting enemies
@@ -73,12 +80,19 @@ public class MusicController : MonoBehaviour
         EnemiesNearbyMusic();
         CombatMusic();
     }
+
     void EnemiesNearbyMusic() {
+        Debug.Log(EnemiesNearbyMusicKey);   // temp
         AudioEvents.TriggerEvent(EnemiesNearbyMusicKey);
         Debug.Log("Enemies Nearby");
     }
+
     void CombatMusic() {
         AudioEvents.TriggerEvent(CombatMusicKey);
         Debug.Log("Combat");
+    }
+
+    void TogglePauseMusic() {
+        AudioEvents.TriggerEvent(PauseMusicKey);
     }
 }
