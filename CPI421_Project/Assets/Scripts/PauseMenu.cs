@@ -8,15 +8,18 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUI;
-    [SerializeField] GameObject pauseEventKey;    // for use with toggling audio state
     [SerializeField] AudioSource open;
     [SerializeField] AudioSource close;
     [SerializeField] AudioSource buttonClick;
     [SerializeField] AudioSource buttonHover;
 
+    void Start() {
+    }
+
     // Update is called once per frame
     void Update ()
-    { if (Input.GetKeyDown(KeyCode.Escape))
+    { 
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
 
             if (GameIsPaused)
@@ -33,7 +36,8 @@ public class PauseMenu : MonoBehaviour
     }
     public void Resume ()
     {
-        AudioEvents.TriggerEvent(pauseEventKey);    // changes to pause music
+        
+        AudioEvents_V2.GamePaused();
         pauseMenuUI.transform.GetChild(0).gameObject.SetActive(false);
         pauseMenuUI.transform.GetChild(1).gameObject.SetActive(false);
         pauseMenuUI.transform.GetChild(2).gameObject.SetActive(false);
@@ -44,7 +48,7 @@ public class PauseMenu : MonoBehaviour
     }
     void Pause ()
     {
-        AudioEvents.TriggerEvent(pauseEventKey);    // changes to pause music
+        AudioEvents_V2.GamePaused();
         pauseMenuUI.SetActive(true);
         pauseMenuUI.transform.GetChild(0).gameObject.SetActive(true);
         pauseMenuUI.transform.GetChild(1).gameObject.SetActive(false);
