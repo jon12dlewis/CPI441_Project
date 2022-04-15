@@ -5,9 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class MusicController : MonoBehaviour
 {
-    [SerializeField] GameObject EnemiesNearbyMusicKey;
-    [SerializeField] GameObject CombatMusicKey;
-    [SerializeField] GameObject PauseMusicKey;
     int enemyCount;
     LinkedList<GameObject> combatants;
     enum MusicState {Default, Nearby, Combat};
@@ -17,17 +14,6 @@ public class MusicController : MonoBehaviour
         currentMusicState = MusicState.Default;
         combatants = new LinkedList<GameObject>();
         enemyCount = 0;
-
-        if (EnemiesNearbyMusicKey != null) {
-            Debug.Log("key working");
-        }
-    }
-
-    void OnEnable() {
-        PauseMenu.pauseEvent += TogglePauseMusic;
-    }
-    void OnDisable() {
-        PauseMenu.pauseEvent -= TogglePauseMusic;
     }
 
     void Update() {
@@ -76,23 +62,19 @@ public class MusicController : MonoBehaviour
         combatants.AddLast(obj);
     }
 
+    // toggles off Enemies Nearby music and Combat Music
     void DefaultMusic() {
         EnemiesNearbyMusic();
         CombatMusic();
     }
 
+    // toggles on Enemies nearby music
     void EnemiesNearbyMusic() {
-        Debug.Log(EnemiesNearbyMusicKey);   // temp
-        AudioEvents.TriggerEvent(EnemiesNearbyMusicKey);
-        Debug.Log("Enemies Nearby");
+        AudioEvents_V2.EnemiesNearby();
     }
 
+    // toggles on Enemies nearby music
     void CombatMusic() {
-        AudioEvents.TriggerEvent(CombatMusicKey);
-        Debug.Log("Combat");
-    }
-
-    void TogglePauseMusic() {
-        AudioEvents.TriggerEvent(PauseMusicKey);
+        AudioEvents_V2.InCombat();
     }
 }

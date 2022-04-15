@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////// ----- DO NOT USE THIS CLASS, BREAKS ON BUILD. USE AudioEvents_V2.cs INSTEAD ------- //////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 public class AudioEvents : MonoBehaviour
 {
     public delegate void MusicEvent();
@@ -39,6 +42,8 @@ public class AudioEvents : MonoBehaviour
         Debug.Log("Attempting to Trigger Event");
         Debug.Log(key);
 
+        ResetArrays();
+
         for (int i = 0; i < triggers.Length; i++) {
             Debug.Log("In for loop");
             Debug.Log(triggers[i]);
@@ -51,5 +56,12 @@ public class AudioEvents : MonoBehaviour
             }
         }
         Debug.Log("Event specified does not exist");
+    }
+
+    static void ResetArrays() {
+        // triggers = gameObject.GetComponentsInChildren<Transform>();     // get the music keys (this script is placed on the parent of the set of keys)
+        // events = new MusicEvent[triggers.Length];                       // create corresponding events
+        // Debug.Log("Resetting Arrays");
+        // Debug.Log(triggers[0]);
     }
 }

@@ -25,15 +25,14 @@ public class ToggleAudioSnapshot : MonoBehaviour
     // subscribe to events here
     void OnEnable()
     {
-        Debug.Log(gameObject.name);
-        ref var stimulus = ref AudioEvents.EventLookup(StimulusKey);
+        ref var stimulus = ref AudioEvents_V2.EventLookup(StimulusKey);
         stimulus += ToggleSnapshot;
     }
 
     // unsubscribe from events here
     void OnDisable()
     {
-        ref var stimulus = ref AudioEvents.EventLookup(StimulusKey);
+        ref var stimulus = ref AudioEvents_V2.EventLookup(StimulusKey);
         stimulus -= ToggleSnapshot;
     }
 

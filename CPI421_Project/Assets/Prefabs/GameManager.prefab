@@ -223,7 +223,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4680259274373445862}
-  - component: {fileID: 3771885479331503953}
+  - component: {fileID: 1419199369}
   m_Layer: 0
   m_Name: Music Keys
   m_TagString: Untagged
@@ -248,7 +248,7 @@ Transform:
   m_Father: {fileID: 3181201188676350154}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3771885479331503953
+--- !u!114 &1419199369
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -257,7 +257,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5576884770723380202}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adc5d90aee6833f4e9b25e745ec87728, type: 3}
+  m_Script: {fileID: 11500000, guid: b0b92f8b045e2084da14dd7618921964, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7416556997557607225

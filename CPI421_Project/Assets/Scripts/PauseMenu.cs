@@ -12,9 +12,6 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] AudioSource close;
     [SerializeField] AudioSource buttonClick;
     [SerializeField] AudioSource buttonHover;
-    [SerializeField] GameObject parentOfMusicController;
-    public delegate void MusicEvent();
-    public static MusicEvent pauseEvent;
 
     void Start() {
     }
@@ -27,13 +24,11 @@ public class PauseMenu : MonoBehaviour
 
             if (GameIsPaused)
             {
-                if (pauseEvent != null) pauseEvent();
                 close.Play(0);
                 Resume();
             }
             else
             {
-                if (pauseEvent != null) pauseEvent();
                 open.Play(0);
                 Pause();
             }
@@ -41,6 +36,8 @@ public class PauseMenu : MonoBehaviour
     }
     public void Resume ()
     {
+        
+        AudioEvents_V2.GamePaused();
         pauseMenuUI.transform.GetChild(0).gameObject.SetActive(false);
         pauseMenuUI.transform.GetChild(1).gameObject.SetActive(false);
         pauseMenuUI.transform.GetChild(2).gameObject.SetActive(false);
@@ -51,6 +48,7 @@ public class PauseMenu : MonoBehaviour
     }
     void Pause ()
     {
+        AudioEvents_V2.GamePaused();
         pauseMenuUI.SetActive(true);
         pauseMenuUI.transform.GetChild(0).gameObject.SetActive(true);
         pauseMenuUI.transform.GetChild(1).gameObject.SetActive(false);
