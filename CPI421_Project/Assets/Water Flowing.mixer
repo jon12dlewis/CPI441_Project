@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!245 &-6740259744888885798
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Focus Water
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: 96a5aa7ea135dab40a780c48613103fd
+  m_FloatValues:
+    421a1f7ac9e904144965832afbe3b858: -2.8722944
+  m_TransitionOverrides: {}
+--- !u!243 &-3524991421147719008
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Water Flowing
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 2b04078f76f7b2f44a643eb86e7a51a3
+  m_Children: []
+  m_Volume: 421a1f7ac9e904144965832afbe3b858
+  m_Pitch: 8b3b7cf90f5f27f46b7dbae0861b5792
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -2039925992674570097}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!244 &-2039925992674570097
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 2d75d5c499681684f8243af34b8daf4c
+  m_EffectName: Attenuation
+  m_MixLevel: c9a49e2f9f61f8a439560f1ad8d3dd7e
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!241 &24100000
+AudioMixerController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Water Flowing
+  m_OutputGroup: {fileID: -8178868905882591382, guid: 0377a4a032d31954baecb8f0fa3612b2, type: 2}
+  m_MasterGroup: {fileID: 24300002}
+  m_Snapshots:
+  - {fileID: 24500006}
+  - {fileID: -6740259744888885798}
+  m_StartSnapshot: {fileID: 24500006}
+  m_SuspendThreshold: -80
+  m_EnableSuspend: 1
+  m_UpdateMode: 0
+  m_ExposedParameters: []
+  m_AudioMixerGroupViews:
+  - guids:
+    - 89ccf8b3ddf723b4a89ab098edcaebc8
+    - 2b04078f76f7b2f44a643eb86e7a51a3
+    name: View
+  m_CurrentViewIndex: 0
+  m_TargetSnapshot: {fileID: -6740259744888885798}
+--- !u!243 &24300002
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Master
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 89ccf8b3ddf723b4a89ab098edcaebc8
+  m_Children:
+  - {fileID: -3524991421147719008}
+  m_Volume: 77517cc1ae36ecd4a831de261f10033b
+  m_Pitch: 362cca8a4d7c7e543a1595f4d8a57507
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: 24400004}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!244 &24400004
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 5bd23ba05377ca64eb80b67b1a0ce5b5
+  m_EffectName: Attenuation
+  m_MixLevel: 0b5e44f32906370489c1facc8e78bee2
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!245 &24500006
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Default Water
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: 2eee4a9139dab604ab24e25f6f719a3d
+  m_FloatValues:
+    421a1f7ac9e904144965832afbe3b858: -11.400904
+  m_TransitionOverrides: {}

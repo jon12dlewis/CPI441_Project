@@ -5,6 +5,9 @@ using UnityEngine;
 public class levelSelect : MonoBehaviour
 {
     public string[] sceneNames;
+    public delegate void MusicEvent();
+    public static MusicEvent loadHomeBase;
+    public static MusicEvent loadLevel;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +26,7 @@ public class levelSelect : MonoBehaviour
         GameManager.instance.SaveState();
         string sceneName = sceneNames[0];
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+        if (loadLevel != null) loadLevel();
     }
 
     public void loadLevel2()
@@ -30,6 +34,7 @@ public class levelSelect : MonoBehaviour
         GameManager.instance.SaveState();
         string sceneName = sceneNames[1];
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+        if (loadLevel != null) loadLevel();
     }
 
     public void loadLevel3()
@@ -37,11 +42,13 @@ public class levelSelect : MonoBehaviour
         GameManager.instance.SaveState();
         string sceneName = sceneNames[2];
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+        if (loadLevel != null) loadLevel();
     }
 
     public void loadLevelHomeBase()
     {
         GameManager.instance.SaveState();
         UnityEngine.SceneManagement.SceneManager.LoadScene("HomeBase");
+        if (loadHomeBase != null) loadHomeBase();
     }
 }

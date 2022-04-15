@@ -22,14 +22,24 @@ public class MusicManager : MonoBehaviour
     }
 
     void OnEnable() {
-        MainMenu.gameStart += StopMenuMusic;
+        levelSelect.loadLevel += StopMenuMusic;
+        levelSelect.loadHomeBase += PlayMenuMusic;
     }
 
     void OnDisable() {
-        MainMenu.gameStart -= StopMenuMusic;
+        levelSelect.loadLevel -= StopMenuMusic;
+        levelSelect.loadHomeBase -= PlayMenuMusic;
+    }
+
+    void PlayMenuMusic() {
+        if (!music.isPlaying) {
+            music.Play();
+        }
     }
 
     void StopMenuMusic() {
-        music.Stop();
+        if (music.isPlaying) {
+            music.Stop();
+        }
     }
 }
