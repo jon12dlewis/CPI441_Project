@@ -21,6 +21,7 @@ public class AudioEvents_V2 : MonoBehaviour
         else if (key.gameObject.name == "Paused Key") {
             return ref gamePausedEvent;
         }
+
         else {
             Debug.Log("error with event lookup");
             return ref gamePausedEvent; // temp probably

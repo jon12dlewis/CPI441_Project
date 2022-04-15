@@ -13,9 +13,9 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
         // emits a game start event so that we can switch the music
-        if (gameStart != null) {
-            gameStart();
-        }
+        // if (gameStart != null) {
+        //     gameStart();
+        // }
 
     }
     public void QuitGame ()
