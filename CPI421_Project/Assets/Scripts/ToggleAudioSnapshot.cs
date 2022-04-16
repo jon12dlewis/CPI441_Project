@@ -10,6 +10,9 @@ public class ToggleAudioSnapshot : MonoBehaviour
     [SerializeField] AudioMixerSnapshot snapshot1;
     [SerializeField] AudioMixerSnapshot snapshot2;
     [SerializeField] float transitionSpeed = 0.6f;
+    [SerializeField] float transitionSpeed_2 = 0.6f;
+
+    bool isOn;
 
     private AudioMixerSnapshot[] snapshots;
     private float[] weights = {1f, 0f};
@@ -41,7 +44,10 @@ public class ToggleAudioSnapshot : MonoBehaviour
         weights[0] = Mathf.Abs(weights[0] - 1);
         weights[1] = Mathf.Abs(weights[1] - 1);
         
-        mixer.TransitionToSnapshots(snapshots, weights, transitionSpeed);
-        Debug.Log("Audio transition occurred");
+        var speed = isOn ? transitionSpeed_2 : transitionSpeed;
+
+        mixer.TransitionToSnapshots(snapshots, weights, speed);
+
+        isOn = !isOn;
     }
 }
