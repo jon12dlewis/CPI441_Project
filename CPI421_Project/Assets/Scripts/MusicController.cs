@@ -28,7 +28,10 @@ public class MusicController : MonoBehaviour
         // Enemies exist in the level
         else if (combatants.Count == 0) {
             if (currentMusicState != MusicState.Nearby) {
-               EnemiesNearbyMusic();
+                if (currentMusicState != MusicState.Combat) {
+                    EnemiesNearbyMusic();
+                }
+               
             }
             currentMusicState = MusicState.Nearby;
         }
@@ -50,6 +53,10 @@ public class MusicController : MonoBehaviour
     public void EnemyDisable(GameObject obj) {
         enemyCount--;
         combatants.Remove(obj);
+
+        if (combatants.Count == 0) {
+            CombatMusic();
+        }
     }
 
     // adding units to a list of combatants
