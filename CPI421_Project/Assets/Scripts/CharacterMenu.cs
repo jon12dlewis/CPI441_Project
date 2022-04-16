@@ -109,6 +109,7 @@ public class CharacterMenu : MonoBehaviour
         weaponUI.sprite = weaponImage[weaponSelected-1];
 
 
+
         switch(weaponSelected)
         {
             case 1:
