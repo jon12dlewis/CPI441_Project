@@ -6,11 +6,17 @@ using UnityEngine.UI;
 public class WeaponStation : Collidable
 {
 
-    public GameObject weaponStation;
+    public GameObject weaponStation, weaponUpgradeButton, pickAxeUpgradeButton, bowUpgradeButton;
 
     public Text statsText, requirementsText;
 
-    public int weapon = 1;
+    public Image bowImage, weaponImage, pickAxeImage;
+
+    public Sprite[] bows, weapons, pickAxes;
+
+    public int weaponLevel = 1;
+    public int pickAxeLevel = 1;
+    public int bowLevel = 1;
 
     public int max = 3;
     public int min = 1;
@@ -19,14 +25,28 @@ public class WeaponStation : Collidable
 protected override void Start()
     {
         base.Start();
-        statsText.text = "Stats:\nAttack: +3";
+        statsText.text = "Stats:\nAttack: +1";
         requirementsText.text = "Requirements:\nYellow Crystals: 10 (" + GameManager.instance.GetYellowCrystal() + ")";
+        weaponLevel = GameManager.instance.weaponLevel;
+        updateWeaponStats();
     }
 
     // Update is called once per frame
     protected override void Update()
     {
          base.Update();  // Need to check collision
+         weaponLevel = GameManager.instance.weaponLevel;
+         weaponImage.sprite = weapons[weaponLevel - 1];
+         if(weaponLevel >= 4)
+            weaponUpgradeButton.SetActive(false);
+
+        pickAxeLevel = GameManager.instance.pickaxeLevel;
+        pickAxeImage.sprite = pickAxes[pickAxeLevel - 1];
+        if(pickAxeLevel >= 4)
+            pickAxeUpgradeButton.SetActive(false);
+
+
+        
     }
 
     protected override void OnCollide(Collider2D coll)
@@ -45,202 +65,288 @@ protected override void Start()
 
     }
 
-    public void nextWeapon()
+
+    public void upgradeWeapon()
     {
-        weapon += min;
-        Debug.Log("Switching to Helmet: " + weapon);
-        if(weapon > max)
-        {
-            weapon = min;
-        }
-    }
+        weaponLevel = GameManager.instance.weaponLevel;
 
-    public void previousWeapon()
-    {
-        weapon -= min;
-        Debug.Log("Switching to Helmet: " + weapon);
-        if(weapon < min)
+        Debug.Log("upgrading weapon: " + weaponLevel);
+        
+        if(weaponLevel > max)
         {
-            weapon = max;
+            weaponLevel = min;
         }
-    }
+        
 
-    public void craftWeapon1()
-    {
-        if(GameManager.instance.GetYellowCrystal() >= 10)
-        {
-            GameManager.instance.TakeYellowCrystal(10);
-            GameManager.instance.weapons[0] = 1;
-            Debug.Log("Crafting Sword 1");
-        }
-        else
-        {
-            Debug.Log("Not Enough Crystals");
-        }
-    }
-
-    public void craftWeapon2()
-    {
-        if(GameManager.instance.GetYellowCrystal() >= 15 && GameManager.instance.GetBlueCrystal() >= 10)
-        {
-            GameManager.instance.TakeYellowCrystal(15);
-            GameManager.instance.TakeBlueCrystal(10);
-            GameManager.instance.weapons[1] = 1;
-            Debug.Log("Crafting Sword 2");
-        }
-        else
-        {
-            Debug.Log("Not Enough Crystals");
-        }
-    }
-
-    public void craftWeapon3()
-    {
-        if(GameManager.instance.GetYellowCrystal() >= 30 && GameManager.instance.GetBlueCrystal() >= 20 && GameManager.instance.GetRedCrystal() >= 5)
-        {
-            GameManager.instance.TakeYellowCrystal(30);
-            GameManager.instance.TakeBlueCrystal(20);
-            GameManager.instance.TakeRedCrystal(5);
-            GameManager.instance.weapons[2] = 1;
-            Debug.Log("Crafting Sword 3");
-        }
-        else
-        {
-            Debug.Log("Not Enough Crystals");
-        }
-    }
-
-    public void craftPickAxe1()
-    {
-        if(GameManager.instance.GetYellowCrystal() >= 10)
-        {
-            GameManager.instance.TakeYellowCrystal(10);
-            GameManager.instance.pickaxes[0] = 1;
-
-            Debug.Log("Crafting Pickaxe 1");
-        }
-        else
-        {
-            Debug.Log("Not Enough Crystals");
-        }
-    }
-
-    public void craftPickAxe2()
-    {
-        if(GameManager.instance.GetYellowCrystal() >= 15 && GameManager.instance.GetBlueCrystal() >= 10)
-        {
-            GameManager.instance.TakeYellowCrystal(15);
-            GameManager.instance.TakeBlueCrystal(10);
-            GameManager.instance.pickaxes[1] = 1;
-            Debug.Log("Crafting Pickaxe 2");
-        }
-        else
-        {
-            Debug.Log("Not Enough Crystals");
-        }
-    }
-
-    public void craftPickAxe3()
-    {
-        if(GameManager.instance.GetYellowCrystal() >= 30 && GameManager.instance.GetBlueCrystal() >= 20 && GameManager.instance.GetRedCrystal() >= 5)
-        {
-            GameManager.instance.TakeYellowCrystal(30);
-            GameManager.instance.TakeBlueCrystal(20);
-            GameManager.instance.TakeRedCrystal(5);
-            GameManager.instance.pickaxes[2] = 1;
-
-            Debug.Log("Crafting Pickaxe 3");
-        }
-        else
-        {
-            Debug.Log("Not Enough Crystals");
-        }
-    }
-
-    public void craftBow1()
-    {
-        if(GameManager.instance.GetYellowCrystal() >= 10)
-        {
-            GameManager.instance.TakeYellowCrystal(10);
-            GameManager.instance.bows[0] = 1;
-            Debug.Log("Crafting Bow 1");
-        }
-        else
-        {
-            Debug.Log("Not Enough Crystals");
-        }
-    }
-
-    public void craftBow2()
-    {
-        if(GameManager.instance.GetYellowCrystal() >= 15 && GameManager.instance.GetBlueCrystal() >= 10)
-        {
-            GameManager.instance.TakeYellowCrystal(15);
-            GameManager.instance.TakeBlueCrystal(10);
-            GameManager.instance.bows[1] = 1;
-
-            Debug.Log("Crafting Bow 2");
-        }
-        else
-        {
-            Debug.Log("Not Enough Crystals");
-        }
-    }
-
-    public void craftBow3()
-    {
-        if(GameManager.instance.GetYellowCrystal() >= 30 && GameManager.instance.GetBlueCrystal() >= 20 && GameManager.instance.GetRedCrystal() >= 5)
-        {
-            GameManager.instance.TakeYellowCrystal(30);
-            GameManager.instance.TakeBlueCrystal(20);
-            GameManager.instance.TakeRedCrystal(5);
-            GameManager.instance.bows[2] = 1;
-
-            Debug.Log("Crafting Bow 3");
-        }
-        else
-        {
-            Debug.Log("Not Enough Crystals");
-        }
-    }
-
-    public void updateStats()
-    {
-        switch(weapon)
+        switch(weaponLevel)
         {
             case 1:
-                    statsText.text = "Stats:\nDamage: +3";
+                 if(GameManager.instance.GetYellowCrystal() >= 10)
+                {
+                    weaponLevel = GameManager.instance.upgradeWeaponLevel();
+                    GameManager.instance.TakeYellowCrystal(10);
+                    weaponImage.sprite = weapons[weaponLevel - 1];
+                    Debug.Log("Crafting Sword 1");
+                    updateWeaponStats();
+                }
+                else
+                {
+                    Debug.Log("Not Enough Crystals");
+                }
             break;
+
             case 2:
-                    statsText.text = "Stats:\nDamage: +10";
+
+                 if(GameManager.instance.GetYellowCrystal() >= 10 && GameManager.instance.GetBlueCrystal() >= 15)
+                {
+                    weaponLevel = GameManager.instance.upgradeWeaponLevel();
+                    GameManager.instance.TakeYellowCrystal(10);
+                    GameManager.instance.TakeBlueCrystal(15);
+                    weaponImage.sprite = weapons[weaponLevel - 1];
+                    Debug.Log("Crafting Sword 2");
+                    updateWeaponStats();
+                }
+                else
+                {
+                    Debug.Log("Not Enough Crystals");
+                }
+
             break;
+
             case 3:
-                    statsText.text = "Stats:\nDamage: +15";
+                if(GameManager.instance.GetYellowCrystal() >= 20 && GameManager.instance.GetBlueCrystal() >= 20 && GameManager.instance.GetRedCrystal() >= 15)
+                {
+                    weaponLevel = GameManager.instance.upgradeWeaponLevel();
+                    GameManager.instance.TakeYellowCrystal(20);
+                    GameManager.instance.TakeBlueCrystal(20);
+                    GameManager.instance.TakeRedCrystal(15);
+                    if(weaponLevel >= 4)
+                        weaponLevel = 3;
+                    weaponImage.sprite = weapons[weaponLevel - 1];
+                    Debug.Log("Crafting Sword 3");
+                    weaponUpgradeButton.SetActive(false);
+                    updateWeaponStats();
+                }
+                else
+                {
+                    Debug.Log("Not Enough Crystals");
+                }
+            break;
+
+            default: 
+                    
+            break;
+        }
+
+       
+    }
+
+
+
+    public void upgradePickAxe()
+    {
+
+        Debug.Log("upgrading weapon: " + pickAxeLevel);
+        
+
+        switch(pickAxeLevel)
+        {
+            case 1:
+                 if(GameManager.instance.GetYellowCrystal() >= 10)
+                {
+                    pickAxeLevel = GameManager.instance.upgradePickAxeLevel();
+                    GameManager.instance.TakeYellowCrystal(10);
+                    pickAxeImage.sprite = pickAxes[pickAxeLevel - 1];
+                    Debug.Log("Crafting PickAxe 1");
+                    updatePickAxeStats();
+                }
+                else
+                {
+                    Debug.Log("Not Enough Crystals");
+                }
+            break;
+
+            case 2:
+
+                 if(GameManager.instance.GetYellowCrystal() >= 10 && GameManager.instance.GetBlueCrystal() >= 15)
+                {
+                    pickAxeLevel = GameManager.instance.upgradePickAxeLevel();
+                    GameManager.instance.TakeYellowCrystal(10);
+                    GameManager.instance.TakeBlueCrystal(15);
+                    pickAxeImage.sprite = pickAxes[pickAxeLevel - 1];
+                    Debug.Log("Crafting pickAxe 2");
+                    updatePickAxeStats();
+                }
+                else
+                {
+                    Debug.Log("Not Enough Crystals");
+                }
+
+            break;
+
+            case 3:
+                if(GameManager.instance.GetYellowCrystal() >= 20 && GameManager.instance.GetBlueCrystal() >= 20 && GameManager.instance.GetRedCrystal() >= 15)
+                {
+                    pickAxeLevel = GameManager.instance.upgradePickAxeLevel();
+                    GameManager.instance.TakeYellowCrystal(20);
+                    GameManager.instance.TakeBlueCrystal(20);
+                    GameManager.instance.TakeRedCrystal(15);
+                    if(pickAxeLevel >= 4)
+                        pickAxeLevel = 3;
+                    pickAxeImage.sprite = pickAxes[pickAxeLevel - 1];
+                    Debug.Log("Crafting Sword 3");
+                    pickAxeUpgradeButton.SetActive(false);
+                    updatePickAxeStats();
+                }
+                else
+                {
+                    Debug.Log("Not Enough Crystals");
+                }
+            break;
+
+            default: 
+                    
             break;
         }
     }
 
-    public void updateRequirements()
+
+
+    public void upgradeBow()
     {
-        switch(weapon)
+         Debug.Log("upgrading bow: " + pickAxeLevel);
+        
+
+        switch(bowLevel)
         {
             case 1:
+                 if(GameManager.instance.GetYellowCrystal() >= 10)
+                {
+                    bowLevel = GameManager.instance.upgradeBowLevel();
+                    GameManager.instance.TakeYellowCrystal(10);
+                    bowImage.sprite = bows[bowLevel - 1];
+                    Debug.Log("Crafting Bow 1");
+                    updateBowStats();
+                }
+                else
+                {
+                    Debug.Log("Not Enough Crystals");
+                }
+            break;
+
+            case 2:
+
+                 if(GameManager.instance.GetYellowCrystal() >= 10 && GameManager.instance.GetBlueCrystal() >= 15)
+                {
+                    bowLevel = GameManager.instance.upgradeBowLevel();
+                    GameManager.instance.TakeYellowCrystal(10);
+                    GameManager.instance.TakeBlueCrystal(15);
+                    bowImage.sprite = bows[bowLevel - 1];
+                    Debug.Log("Crafting Bow 2");
+                    updateBowStats();
+                }
+                else
+                {
+                    Debug.Log("Not Enough Crystals");
+                }
+
+            break;
+
+            case 3:
+                if(GameManager.instance.GetYellowCrystal() >= 20 && GameManager.instance.GetBlueCrystal() >= 20 && GameManager.instance.GetRedCrystal() >= 15)
+                {
+                    bowLevel = GameManager.instance.upgradeBowLevel();
+                    GameManager.instance.TakeYellowCrystal(20);
+                    GameManager.instance.TakeBlueCrystal(20);
+                    GameManager.instance.TakeRedCrystal(15);
+                    if(bowLevel >= 4)
+                        bowLevel = 3;
+                    bowImage.sprite = bows[bowLevel - 1];
+                    Debug.Log("Crafting Bow 3");
+                    bowUpgradeButton.SetActive(false);
+                    updateBowStats();
+                }
+                else
+                {
+                    Debug.Log("Not Enough Crystals");
+                }
+            break;
+
+            default: 
+                    
+            break;
+        }
+    }
+
+    public void updatePickAxeStats()
+    {
+        switch(pickAxeLevel)
+        {
+            case 1:
+                    statsText.text = "Stats:\nDamage: +1";
                     requirementsText.text = "Requirements:\nYellow Crystals: 10(" + GameManager.instance.GetYellowCrystal() + ")";
             break;
-
             case 2:
+                    statsText.text = "Stats:\nDamage: +3";
                     requirementsText.text = "Requirements:\nYellow Crystals: 15(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 10(" + GameManager.instance.GetBlueCrystal() + ")";
             break;
-
             case 3:
+                    statsText.text = "Stats:\nDamage: +5";
+                    requirementsText.text = "Requirements:\nYellow Crystals: 30(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 20(" + GameManager.instance.GetBlueCrystal() + ")\nRed Crystals: 5(" + GameManager.instance.GetRedCrystal() +")" ;
+            break;
+            case 4:
+                    statsText.text = "Stats:\nDamage: +8";
                     requirementsText.text = "Requirements:\nYellow Crystals: 30(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 20(" + GameManager.instance.GetBlueCrystal() + ")\nRed Crystals: 5(" + GameManager.instance.GetRedCrystal() +")" ;
             break;
         }
     }
 
-    public void resetWeapon()
+    public void updateBowStats()
     {
-        weapon = 1;
+        switch(bowLevel)
+        {
+            case 1:
+                    statsText.text = "Stats:\nDamage: +1";
+                    requirementsText.text = "Requirements:\nYellow Crystals: 10(" + GameManager.instance.GetYellowCrystal() + ")";
+            break;
+            case 2:
+                    statsText.text = "Stats:\nDamage: +3";
+                    requirementsText.text = "Requirements:\nYellow Crystals: 15(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 10(" + GameManager.instance.GetBlueCrystal() + ")";
+            break;
+            case 3:
+                    statsText.text = "Stats:\nDamage: +5";
+                    requirementsText.text = "Requirements:\nYellow Crystals: 30(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 20(" + GameManager.instance.GetBlueCrystal() + ")\nRed Crystals: 5(" + GameManager.instance.GetRedCrystal() +")" ;
+            break;
+            case 4:
+                    statsText.text = "Stats:\nDamage: +8";
+                    requirementsText.text = "Requirements:\nYellow Crystals: 30(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 20(" + GameManager.instance.GetBlueCrystal() + ")\nRed Crystals: 5(" + GameManager.instance.GetRedCrystal() +")" ;
+            break;
+        }
     }
+
+
+    public void updateWeaponStats()
+    {
+        switch(weaponLevel)
+        {
+            case 1:
+                    statsText.text = "Stats:\nDamage: +1";
+                    requirementsText.text = "Requirements:\nYellow Crystals: 10(" + GameManager.instance.GetYellowCrystal() + ")";
+            break;
+            case 2:
+                    statsText.text = "Stats:\nDamage: +3";
+                    requirementsText.text = "Requirements:\nYellow Crystals: 15(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 10(" + GameManager.instance.GetBlueCrystal() + ")";
+            break;
+            case 3:
+                    statsText.text = "Stats:\nDamage: +5";
+                    requirementsText.text = "Requirements:\nYellow Crystals: 30(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 20(" + GameManager.instance.GetBlueCrystal() + ")\nRed Crystals: 5(" + GameManager.instance.GetRedCrystal() +")" ;
+            break;
+            case 4:
+                    statsText.text = "Stats:\nDamage: +8";
+                    requirementsText.text = "Requirements:\nYellow Crystals: 30(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 20(" + GameManager.instance.GetBlueCrystal() + ")\nRed Crystals: 5(" + GameManager.instance.GetRedCrystal() +")" ;
+            break;
+        }
+    }
+
 
 }
