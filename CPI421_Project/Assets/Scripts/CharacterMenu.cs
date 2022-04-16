@@ -29,6 +29,13 @@ public class CharacterMenu : MonoBehaviour
     public int maxChest = 1;
     public int maxLegs = 1;
 
+    void Start()
+    {
+        displayWeapon();
+        displayPickAxe();
+        displayBow();
+    }
+
     // Update is called once per frame
     public void UpdateMenu()
     {
@@ -40,6 +47,7 @@ public class CharacterMenu : MonoBehaviour
 
     public void setMax()
     {
+        /*
         int[] weapons = GameManager.instance.weapons;
         int[] bows = GameManager.instance.bows;
         int[] pickAxes = GameManager.instance.pickaxes;
@@ -87,21 +95,19 @@ public class CharacterMenu : MonoBehaviour
                 maxLegs += 1; 
             }
         }
+        */
     }
 
-    public void increaseWeapon()
+    public void displayWeapon()
     {
-        setMax();
-        weaponSelected += 1;
-        if(weaponSelected > maxWeapon)
-        {
-            weaponSelected = 1;
-        }
+        //setMax();
+        weaponSelected = GameManager.instance.weaponLevel;
         weaponDisplay.sprite = weaponImage[weaponSelected-1];
-        GameManager.instance.setWeapon(weaponSelected);
+        //GameManager.instance.setWeapon(weaponSelected);
 
         weapon.GetComponent<Weapon>().setImage(weaponImage[weaponSelected-1]);
         weaponUI.sprite = weaponImage[weaponSelected-1];
+
 
 
         switch(weaponSelected)
@@ -122,37 +128,74 @@ public class CharacterMenu : MonoBehaviour
         }
     }
 
-    public void decreaseWeapon()
-    {
-        setMax();
-        weaponSelected -= 1;
-        if(weaponSelected < 1)
-        {
-            weaponSelected = maxWeapon;
-        }
-        weaponDisplay.sprite = weaponImage[weaponSelected-1];
-        GameManager.instance.setWeapon(weaponSelected);
-        //weapon.GetComponent<Weapon>().setDamage(1);
-        weapon.GetComponent<Weapon>().setImage(weaponImage[weaponSelected-1]);
-        weaponUI.sprite = weaponImage[weaponSelected-1];
 
-        switch(weaponSelected)
+    public void displayBow()
+    {
+        //setMax();
+        bowSelected = GameManager.instance.bowLevel;
+        bowDisplay.sprite = bowImage[bowSelected-1];
+        //GameManager.instance.setWeapon(weaponSelected);
+
+        bow.GetComponent<Bow>().setImage(bowImage[bowSelected-1]);
+        bowUI.sprite = bowImage[bowSelected-1];
+
+
+        switch(bowSelected)
         {
             case 1:
-                weaponDamage.text = "1";
-                weapon.GetComponent<Weapon>().setDamage(1);
+                bowDamage.text = "1";
+                //bow.GetComponent<Weapon>().setDamage(1);
+                bowDamage.text = "1";
+                bow.GetComponent<Bow>().SetLevelAnimation(bowSelected);
             break;
             case 2:
-                weaponDamage.text = "3";
-                weapon.GetComponent<Weapon>().setDamage(3);
+                bowDamage.text = "3";
+                //bow.GetComponent<Weapon>().setDamage(3);
+                bowDamage.text = "3";
+                bow.GetComponent<Bow>().SetLevelAnimation(bowSelected);
             break;
             case 3:
-                weaponDamage.text = "6";
-                weapon.GetComponent<Weapon>().setDamage(6);
+                bowDamage.text = "6";
+                bowDamage.text = "6";
+                bow.GetComponent<Bow>().SetLevelAnimation(bowSelected);
+                //bow.GetComponent<Bow>().setDamage(6);
             break;
 
         }
 
+    }
+
+
+    public void displayPickAxe()
+    {
+        //setMax();
+        pickAxeSelected = GameManager.instance.pickaxeLevel;
+        pickAxeDisplay.sprite = pickAxeImage[pickAxeSelected-1];
+        //GameManager.instance.setWeapon(weaponSelected);
+
+        pickAxe.GetComponent<PickAxe>().setImage(pickAxeImage[pickAxeSelected-1]);
+        pickAxeUI.sprite = pickAxeImage[pickAxeSelected-1];
+
+
+        switch(pickAxeSelected)
+        {
+            case 1:
+                pickAxeDamage.text = "1";
+                pickAxe.GetComponent<PickAxe>().setDamage(1);
+                pickAxe.GetComponent<PickAxe>().setLevel(pickAxeSelected);
+            break;
+            case 2:
+                pickAxeDamage.text = "3";
+                pickAxe.GetComponent<PickAxe>().setDamage(3);
+                pickAxe.GetComponent<PickAxe>().setLevel(pickAxeSelected);
+            break;
+            case 3:
+                pickAxeDamage.text = "6";
+                pickAxe.GetComponent<PickAxe>().setDamage(6);
+                pickAxe.GetComponent<PickAxe>().setLevel(pickAxeSelected);
+            break;
+
+        }
     }
 
     public void increaseBow()
@@ -165,7 +208,7 @@ public class CharacterMenu : MonoBehaviour
         }
         bowDisplay.sprite = bowImage[bowSelected-1];
         bowUI.sprite = bowImage[bowSelected-1];
-        GameManager.instance.setBow(bowSelected);
+        //GameManager.instance.setBow(bowSelected);
         bow.GetComponent<Bow>().setImage(bowImage[bowSelected-1]);
         
         switch(bowSelected)
@@ -186,39 +229,6 @@ public class CharacterMenu : MonoBehaviour
         }
     }
 
-    public void decreaseBow()
-    {
-        setMax();
-        bowSelected -= 1;
-        if(bowSelected < 1)
-        {
-            bowSelected = maxBow;
-        }
-        bowDisplay.sprite = bowImage[bowSelected-1];
-        bowUI.sprite = bowImage[bowSelected-1];
-        GameManager.instance.setBow(bowSelected);
-        bow.GetComponent<Bow>().setImage(bowImage[bowSelected-1]);
-
-        switch(bowSelected)
-        {
-            case 1:
-                bowDamage.text = "1";
-                //bow.setDamage(5);
-                bow.GetComponent<Bow>().SetLevelAnimation(bowSelected);
-            break;
-            case 2:
-                bowDamage.text = "2";
-                //bow.setDamage(8);
-                bow.GetComponent<Bow>().SetLevelAnimation(bowSelected);
-            break;
-            case 3:
-                bowDamage.text = "5";
-                //bow.setDamage(15);
-                bow.GetComponent<Bow>().SetLevelAnimation(bowSelected);
-            break;
-
-        }
-    }
 
 
     public void increasePickAxe()
@@ -231,7 +241,7 @@ public class CharacterMenu : MonoBehaviour
         }
         pickAxeDisplay.sprite = pickAxeImage[pickAxeSelected-1];
         pickAxeUI.sprite = pickAxeImage[pickAxeSelected-1];
-        GameManager.instance.setPickAxe(pickAxeSelected);
+        //GameManager.instance.setPickAxe(pickAxeSelected);
         pickAxe.GetComponent<PickAxe>().setImage(pickAxeImage[pickAxeSelected-1]);
 
         switch(pickAxeSelected)
@@ -256,40 +266,6 @@ public class CharacterMenu : MonoBehaviour
         }
     }
 
-    public void decreasePickAxe()
-    {
-        setMax();
-        pickAxeSelected -= 1;
-        if(pickAxeSelected < 1)
-        {
-            pickAxeSelected = maxPickAxe;
-        }
-        pickAxeDisplay.sprite = pickAxeImage[pickAxeSelected-1];
-        pickAxeUI.sprite = pickAxeImage[pickAxeSelected-1];
-        GameManager.instance.setPickAxe(pickAxeSelected);
-        pickAxe.GetComponent<PickAxe>().setImage(pickAxeImage[pickAxeSelected-1]);
-
-        switch(pickAxeSelected)
-        {
-            case 1:
-                pickAxeDamage.text = "1";
-                pickAxe.GetComponent<PickAxe>().setDamage(1);
-                pickAxe.GetComponent<PickAxe>().setLevel(pickAxeSelected);
-            break;
-            case 2:
-                pickAxeDamage.text = "2";
-                pickAxe.GetComponent<PickAxe>().setDamage(2);
-                pickAxe.GetComponent<PickAxe>().setLevel(pickAxeSelected);
-            break;
-            case 3:
-                pickAxeDamage.text = "5";
-                pickAxe.GetComponent<PickAxe>().setDamage(5);
-                pickAxe.GetComponent<PickAxe>().setLevel(pickAxeSelected);
-            break;
-
-        }
-
-    }
 
     public void increaseHelmet()
     {
@@ -333,48 +309,6 @@ public class CharacterMenu : MonoBehaviour
         }
     }
 
-public void decreaseHelmet()
-    {
-        setMax();
-        helmetSelected -= 1;
-        if(helmetSelected < 1)
-        {
-            helmetSelected = maxHelmet;
-        }
-        helmetDisplay.sprite = helmetImage[helmetSelected-1];
-        GameManager.instance.setHelmet(helmetSelected);
-        //helmet.setImage(helmetImage[pickAxeSelected-1]);
-
-        switch(helmetSelected)
-        {
-            case 1:
-            /*
-                pickAxeDamage.text = "5";
-                pickAxe.setDamage(5);
-                pickAxe.setLevel(pickAxeSelected);
-                */
-            break;
-            case 2:
-            /*
-                pickAxeDamage.text = "8";
-                pickAxe.setDamage(8);
-                pickAxe.setLevel(pickAxeSelected);
-                */
-            break;
-            case 3:
-            /*
-                pickAxeDamage.text = "15";
-                pickAxe.setDamage(15);
-                pickAxe.setLevel(pickAxeSelected);
-                */
-            break;
-            case 4:
-
-
-            break;
-
-        }
-    }
 
     public void increaseChest()
     {
@@ -409,39 +343,6 @@ public void decreaseHelmet()
         }
     }
 
-    public void decreaseChest()
-    {
-        setMax();
-        chestSelected -= 1;
-        if(chestSelected < 1)
-        {
-            chestSelected = maxChest;
-        }
-        chestDisplay.sprite = chestImage[chestSelected-1];
-        GameManager.instance.setChest(chestSelected);
-        //chest.setImage(chestImage[chestSelected-1]);
-
-        switch(chestSelected)
-        {
-            case 1:
-
-
-            break;
-            case 2:
-
-
-            break;
-            case 3:
-
-
-            break;
-            case 4:
-
-
-            break;
-
-        }
-    }
 
     public void increaseLegs()
     {
@@ -478,40 +379,6 @@ public void decreaseHelmet()
         }
     }
 
-    public void decreaseLegs()
-    {
-        setMax();
-        legsSelected -= 1;
-        if(legsSelected < 1)
-        {
-            legsSelected = maxLegs;
-        }
-        legsDisplay.sprite = legsImage[legsSelected-1];
-        GameManager.instance.setLegs(legsSelected);
-        //pickAxe.setImage(pickAxeImage[pickAxeSelected-1]);
-
-        switch(legsSelected)
-        {
-            case 1:
-
-
-            break;
-            case 2:
-
-
-            break;
-            case 3:
-
-
-            break;
-            case 4:
-
-
-            break;
-
-        }
-
-    }
 
 
 }
