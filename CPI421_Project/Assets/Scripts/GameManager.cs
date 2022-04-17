@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
     public int pickaxeLevel = 1;
     public int bowLevel = 1;
     public int arrows = 0;
-    public int levelsCompleted;
+    public int levelsCompleted = 1;
     public int pickAxeSelected;
     public int weaponSelected;
     public int bowSelected;
@@ -229,6 +229,11 @@ public class GameManager : MonoBehaviour
     {
         legLevel += 1;
         return legLevel;
+    }
+
+    public void nextLevel()
+    {
+        levelsCompleted += 1;
     }
 
 }

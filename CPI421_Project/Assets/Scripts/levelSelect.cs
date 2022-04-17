@@ -8,17 +8,31 @@ public class levelSelect : MonoBehaviour
     public delegate void MusicEvent();
     public static MusicEvent loadHomeBase;
     public static MusicEvent loadLevel;
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator.GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void onOpen()
     {
-        
+        switch(GameManager.instance.levelsCompleted)
+        {
+            case 1:
+                animator.SetTrigger("level1");
+            break;
+            case 2:
+                animator.SetTrigger("level2");
+            break;
+            case 3:
+                animator.SetTrigger("level3");
+            break;
+            default:
+                animator.SetTrigger("level1");
+            break;
+        }
     }
 
     public void loadLevel1()
