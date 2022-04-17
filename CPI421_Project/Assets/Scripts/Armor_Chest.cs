@@ -59,18 +59,7 @@ public class Armor_Chest : MonoBehaviour
 
     public void SetLevelAnimation(int level)
     {
-        switch(level)
-        {
-            case 1:
-                animator.SetTrigger("lvl1");
-            break;
-            case 2:
-                animator.SetTrigger("lvl2");
-            break;
-            case 3:
-                animator.SetTrigger("lvl3");
-            break;
-        }
+        animator.SetInteger("level", level);
     }
 
 }
