@@ -6,11 +6,17 @@ using UnityEngine.UI;
 public class CraftingStation : Collidable
 {
 
-    public GameObject craftingStation;
+    public GameObject craftingStation, helmetUpgradeButton, chestUpgradeButton, legUpgradeButton;
 
     public Text statsText, requirementsText;
 
-    public int armor = 1;
+    public Image chestImage, helmetImage, legImage;
+
+    public Sprite[] chests, helmets, legs;
+
+    public int helmetLevel = 1;
+    public int chestLevel = 1;
+    public int legLevel = 1;
 
     public int max = 3;
     public int min = 1;
@@ -19,7 +25,7 @@ public class CraftingStation : Collidable
     protected override void Start()
     {
         base.Start();
-        statsText.text = "Stats:\nDefense: +3";
+        statsText.text = "Stats:\nDefense: +1";
         requirementsText.text = "Requirements:\nYellow Crystals: 10 (" + GameManager.instance.GetYellowCrystal() + ")";
     }
 
@@ -36,7 +42,7 @@ public class CraftingStation : Collidable
             craftingStation.SetActive(true);
         } 
     }
-
+    /*
     public void nextArmor()
     {
         armor += min;
@@ -46,17 +52,308 @@ public class CraftingStation : Collidable
             armor = min;
         }
     }
-
-    public void previousArmor()
+    */
+    public void upgradeHelmet()
     {
-        armor -= min;
-        Debug.Log("Switching to Helmet: " + armor);
-        if(armor < min)
+        helmetLevel = GameManager.instance.helmetLevel;
+
+        Debug.Log("upgrading helmet: " + helmetLevel);
+        
+        if(helmetLevel > max)
         {
-            armor = max;
+            helmetLevel = min;
+        }
+        
+
+        switch(helmetLevel)
+        {
+            case 1:
+                 if(GameManager.instance.GetYellowCrystal() >= 10)
+                {
+                    helmetLevel = GameManager.instance.upgradeHelmetLevel();
+                    GameManager.instance.TakeYellowCrystal(10);
+                    helmetImage.sprite = helmets[helmetLevel - 1];
+                    Debug.Log("Crafting helmet 1");
+                    updateHelmetStats();
+                }
+                else
+                {
+                    Debug.Log("Not Enough Crystals");
+                }
+            break;
+
+            case 2:
+
+                 if(GameManager.instance.GetYellowCrystal() >= 10 && GameManager.instance.GetBlueCrystal() >= 15)
+                {
+                    helmetLevel = GameManager.instance.upgradeHelmetLevel();
+                    GameManager.instance.TakeYellowCrystal(10);
+                    GameManager.instance.TakeBlueCrystal(15);
+                    helmetImage.sprite = helmets[helmetLevel - 1];
+                    Debug.Log("Crafting helmet 2");
+                    updateHelmetStats();
+                }
+                else
+                {
+                    Debug.Log("Not Enough Crystals");
+                }
+
+            break;
+
+            case 3:
+                if(GameManager.instance.GetYellowCrystal() >= 20 && GameManager.instance.GetBlueCrystal() >= 20 && GameManager.instance.GetRedCrystal() >= 15)
+                {
+                    helmetLevel = GameManager.instance.upgradeHelmetLevel();
+                    GameManager.instance.TakeYellowCrystal(20);
+                    GameManager.instance.TakeBlueCrystal(20);
+                    GameManager.instance.TakeRedCrystal(15);
+                    if(helmetLevel >= 4)
+                        helmetLevel = 3;
+                    helmetImage.sprite = helmets[helmetLevel - 1];
+                    Debug.Log("Crafting helmet 3");
+                    helmetUpgradeButton.SetActive(false);
+                    updateHelmetStats();
+                }
+                else
+                {
+                    Debug.Log("Not Enough Crystals");
+                }
+            break;
+
+            default: 
+                    
+            break;
+        }
+
+       
+    }
+
+
+    public void upgradeChest()
+    {
+        chestLevel = GameManager.instance.chestLevel;
+
+        Debug.Log("upgrading chest: " + chestLevel);
+        
+        if(chestLevel > max)
+        {
+            chestLevel = min;
+        }
+        
+
+        switch(chestLevel)
+        {
+            case 1:
+                 if(GameManager.instance.GetYellowCrystal() >= 10)
+                {
+                    chestLevel = GameManager.instance.upgradeChestLevel();
+                    GameManager.instance.TakeYellowCrystal(10);
+                    chestImage.sprite = chests[chestLevel - 1];
+                    Debug.Log("Crafting chest 1");
+                    updateChestStats();
+                }
+                else
+                {
+                    Debug.Log("Not Enough Crystals");
+                }
+            break;
+
+            case 2:
+
+                 if(GameManager.instance.GetYellowCrystal() >= 10 && GameManager.instance.GetBlueCrystal() >= 15)
+                {
+                    chestLevel = GameManager.instance.upgradeChestLevel();
+                    GameManager.instance.TakeYellowCrystal(10);
+                    GameManager.instance.TakeBlueCrystal(15);
+                    chestImage.sprite = chests[chestLevel - 1];
+                    Debug.Log("Crafting chest 2");
+                    updateChestStats();
+                }
+                else
+                {
+                    Debug.Log("Not Enough Crystals");
+                }
+
+            break;
+
+            case 3:
+                if(GameManager.instance.GetYellowCrystal() >= 20 && GameManager.instance.GetBlueCrystal() >= 20 && GameManager.instance.GetRedCrystal() >= 15)
+                {
+                    chestLevel = GameManager.instance.upgradeChestLevel();
+                    GameManager.instance.TakeYellowCrystal(20);
+                    GameManager.instance.TakeBlueCrystal(20);
+                    GameManager.instance.TakeRedCrystal(15);
+                    if(chestLevel >= 4)
+                        chestLevel = 3;
+                    chestImage.sprite = chests[chestLevel - 1];
+                    Debug.Log("Crafting chest 3");
+                    chestUpgradeButton.SetActive(false);
+                    updateChestStats();
+                }
+                else
+                {
+                    Debug.Log("Not Enough Crystals");
+                }
+            break;
+
+            default: 
+                    
+            break;
+        }
+
+       
+    }
+
+
+    public void upgradeLegs()
+    {
+        legLevel = GameManager.instance.legLevel;
+
+        Debug.Log("upgrading leg: " + legLevel);
+        
+        if(legLevel > max)
+        {
+            legLevel = min;
+        }
+        
+
+        switch(legLevel)
+        {
+            case 1:
+                 if(GameManager.instance.GetYellowCrystal() >= 10)
+                {
+                    legLevel = GameManager.instance.upgradeLegLevel();
+                    GameManager.instance.TakeYellowCrystal(10);
+                    legImage.sprite = legs[legLevel - 1];
+                    Debug.Log("Crafting leg 1");
+                    updateLegStats();
+                }
+                else
+                {
+                    Debug.Log("Not Enough Crystals");
+                }
+            break;
+
+            case 2:
+
+                 if(GameManager.instance.GetYellowCrystal() >= 10 && GameManager.instance.GetBlueCrystal() >= 15)
+                {
+                    legLevel = GameManager.instance.upgradeLegLevel();
+                    GameManager.instance.TakeYellowCrystal(10);
+                    GameManager.instance.TakeBlueCrystal(15);
+                    legImage.sprite = legs[legLevel - 1];
+                    Debug.Log("Crafting leg 2");
+                    updateLegStats();
+                }
+                else
+                {
+                    Debug.Log("Not Enough Crystals");
+                }
+
+            break;
+
+            case 3:
+                if(GameManager.instance.GetYellowCrystal() >= 20 && GameManager.instance.GetBlueCrystal() >= 20 && GameManager.instance.GetRedCrystal() >= 15)
+                {
+                    legLevel = GameManager.instance.upgradeLegLevel();
+                    GameManager.instance.TakeYellowCrystal(20);
+                    GameManager.instance.TakeBlueCrystal(20);
+                    GameManager.instance.TakeRedCrystal(15);
+                    if(legLevel >= 4)
+                        legLevel = 3;
+                    legImage.sprite = legs[legLevel - 1];
+                    Debug.Log("Crafting leg 3");
+                    legUpgradeButton.SetActive(false);
+                    updateLegStats();
+                }
+                else
+                {
+                    Debug.Log("Not Enough Crystals");
+                }
+            break;
+
+            default: 
+                    
+            break;
+        }
+
+       
+    }
+
+
+    public void updateHelmetStats()
+    {
+        switch(helmetLevel)
+        {
+            case 1:
+                    statsText.text = "Stats:\nDefense: +1";
+                    requirementsText.text = "Requirements:\nYellow Crystals: 10(" + GameManager.instance.GetYellowCrystal() + ")";
+            break;
+            case 2:
+                    statsText.text = "Stats:\nDefense: +3";
+                    requirementsText.text = "Requirements:\nYellow Crystals: 15(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 10(" + GameManager.instance.GetBlueCrystal() + ")";
+            break;
+            case 3:
+                    statsText.text = "Stats:\nDefense: +5";
+                    requirementsText.text = "Requirements:\nYellow Crystals: 30(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 20(" + GameManager.instance.GetBlueCrystal() + ")\nRed Crystals: 5(" + GameManager.instance.GetRedCrystal() +")" ;
+            break;
+            case 4:
+                    statsText.text = "Stats:\nDefense: +8";
+                    requirementsText.text = "Requirements:\nYellow Crystals: 30(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 20(" + GameManager.instance.GetBlueCrystal() + ")\nRed Crystals: 5(" + GameManager.instance.GetRedCrystal() +")" ;
+            break;
         }
     }
 
+    public void updateChestStats()
+    {
+        switch(chestLevel)
+        {
+            case 1:
+                    statsText.text = "Stats:\nDefense: +1";
+                    requirementsText.text = "Requirements:\nYellow Crystals: 10(" + GameManager.instance.GetYellowCrystal() + ")";
+            break;
+            case 2:
+                    statsText.text = "Stats:\nDefense: +3";
+                    requirementsText.text = "Requirements:\nYellow Crystals: 15(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 10(" + GameManager.instance.GetBlueCrystal() + ")";
+            break;
+            case 3:
+                    statsText.text = "Stats:\nDefense: +5";
+                    requirementsText.text = "Requirements:\nYellow Crystals: 30(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 20(" + GameManager.instance.GetBlueCrystal() + ")\nRed Crystals: 5(" + GameManager.instance.GetRedCrystal() +")" ;
+            break;
+            case 4:
+                    statsText.text = "Stats:\nDefense: +8";
+                    requirementsText.text = "Requirements:\nYellow Crystals: 30(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 20(" + GameManager.instance.GetBlueCrystal() + ")\nRed Crystals: 5(" + GameManager.instance.GetRedCrystal() +")" ;
+            break;
+        }
+    }
+
+    public void updateLegStats()
+    {
+        switch(legLevel)
+        {
+            case 1:
+                    statsText.text = "Stats:\nDefense: +1";
+                    requirementsText.text = "Requirements:\nYellow Crystals: 10(" + GameManager.instance.GetYellowCrystal() + ")";
+            break;
+            case 2:
+                    statsText.text = "Stats:\nDefense: +3";
+                    requirementsText.text = "Requirements:\nYellow Crystals: 15(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 10(" + GameManager.instance.GetBlueCrystal() + ")";
+            break;
+            case 3:
+                    statsText.text = "Stats:\nDefense: +5";
+                    requirementsText.text = "Requirements:\nYellow Crystals: 30(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 20(" + GameManager.instance.GetBlueCrystal() + ")\nRed Crystals: 5(" + GameManager.instance.GetRedCrystal() +")" ;
+            break;
+            case 4:
+                    statsText.text = "Stats:\nDefense: +8";
+                    requirementsText.text = "Requirements:\nYellow Crystals: 30(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 20(" + GameManager.instance.GetBlueCrystal() + ")\nRed Crystals: 5(" + GameManager.instance.GetRedCrystal() +")" ;
+            break;
+        }
+    }
+
+    
+
+
+/*
     public void craftHelmet1()
     {
         if(GameManager.instance.GetYellowCrystal() >= 10)
@@ -101,6 +398,8 @@ public class CraftingStation : Collidable
             Debug.Log("Not Enough Crystals");
         }
     }
+
+
 
     public void craftChest1()
     {
@@ -234,5 +533,7 @@ public class CraftingStation : Collidable
     {
         armor = 1;
     }
+
+    */
 
 }
