@@ -354,6 +354,7 @@ MonoBehaviour:
   xpValue: 5
   triggerLength: 10
   chaseLength: 20
+  heart: {fileID: 8966516169936256971, guid: 99f818fc5bb6de745997871fcb3cc629, type: 3}
   target: {fileID: 3386749949196032535, guid: d2e7fe73eef80a440a4a31bf422ec54f, type: 3}
   agentSpeed: {x: 0, y: 0, z: 0}
   attack: 0

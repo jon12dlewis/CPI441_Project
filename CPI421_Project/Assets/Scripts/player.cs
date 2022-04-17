@@ -153,6 +153,11 @@ public class player : Mover
         UpdateMotor(new Vector3(movement.x,movement.y,0));
     } 
 
+    public void addHealth()
+    {
+        hitPoint += 1;
+    }
+
     protected override void Death()
     {
         //Application.Quit();
