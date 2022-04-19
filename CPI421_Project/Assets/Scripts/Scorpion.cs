@@ -15,6 +15,7 @@ public class Scorpion : Mover
     private bool collideWithPlayer;
     private Transform playerTransform;
     private Vector3 startingPosition;
+    public GameObject heart;
 
     // AI
     public Transform target;
@@ -199,5 +200,14 @@ public class Scorpion : Mover
         Destroy(gameObject);
         GameManager.instance.expierence += xpValue;
         GameManager.instance.ShowText("+ " + xpValue + "xp", 60, Color.magenta, transform.position, Vector3.up * 40, 1.0f);
+
+        int val = Random.Range(1, 5);
+        if(val == 1)
+        {
+            Vector3 newRot = new Vector3(0,0,0);
+            Quaternion rot = Quaternion.Euler(newRot); 
+            Instantiate(heart, transform.position, rot);
+        }
+
     }
 }

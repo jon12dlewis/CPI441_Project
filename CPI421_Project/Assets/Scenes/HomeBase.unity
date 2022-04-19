@@ -2993,6 +2993,7 @@ MonoBehaviour:
   - Level 1
   - Level 2
   - Level 3
+  animator: {fileID: 407332681}
 --- !u!1 &437703708
 GameObject:
   m_ObjectHideFlags: 0
@@ -3123,19 +3124,16 @@ MonoBehaviour:
   helmetImage: {fileID: 1157829580}
   legImage: {fileID: 664033286}
   chests:
-  - {fileID: 7349709500177561522, guid: c66b93d7fd70d9a4fa47e847e3c60dde, type: 3}
-  - {fileID: 6696225551517210809, guid: 0095b25f0594fb0458bc578747d4365f, type: 3}
-  - {fileID: 8943462465168186209, guid: fac1c45862597374db5d9149acd1d9c9, type: 3}
-  - {fileID: 8943462465168186209, guid: fac1c45862597374db5d9149acd1d9c9, type: 3}
-  helmets:
   - {fileID: -4781227989788599172, guid: d50945d2f76a3f749ae39482d22080e6, type: 3}
   - {fileID: 5595627090532893865, guid: 935af226cc89fac4a9f3147db4f6b5af, type: 3}
   - {fileID: 7045524508807746798, guid: 3faf89d7857ae2940a6339560a5801c8, type: 3}
-  - {fileID: 7045524508807746798, guid: 3faf89d7857ae2940a6339560a5801c8, type: 3}
+  helmets:
+  - {fileID: 7349709500177561522, guid: c66b93d7fd70d9a4fa47e847e3c60dde, type: 3}
+  - {fileID: 6696225551517210809, guid: 0095b25f0594fb0458bc578747d4365f, type: 3}
+  - {fileID: 8943462465168186209, guid: fac1c45862597374db5d9149acd1d9c9, type: 3}
   legs:
   - {fileID: 5950978685415856814, guid: a780d7a0700339e46aab2cc00e3e16fe, type: 3}
   - {fileID: -8881663192579795401, guid: 1712b095aee3ed841a9a5e65487b8876, type: 3}
-  - {fileID: 4944535040205966742, guid: 15e4f05dfb9954449bd84ee395ec66d0, type: 3}
   - {fileID: 4944535040205966742, guid: 15e4f05dfb9954449bd84ee395ec66d0, type: 3}
   helmetLevel: 1
   chestLevel: 1
@@ -5260,7 +5258,7 @@ MonoBehaviour:
   weaponStation: {fileID: 1893591925}
   weaponUpgradeButton: {fileID: 465296667}
   pickAxeUpgradeButton: {fileID: 1330218015}
-  bowUpgradeButton: {fileID: 0}
+  bowUpgradeButton: {fileID: 393233393}
   statsText: {fileID: 2116126393}
   requirementsText: {fileID: 2041030855}
   bowImage: {fileID: 202404436}
@@ -5270,16 +5268,13 @@ MonoBehaviour:
   - {fileID: 8908327582187454787, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
   - {fileID: 8844115668977670054, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
   - {fileID: 7003559093154264791, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
-  - {fileID: 7003559093154264791, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
   weapons:
   - {fileID: -6165666198007455012, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
   - {fileID: 6323654629948150628, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
   - {fileID: 9129873020269735136, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
-  - {fileID: 9129873020269735136, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
   pickAxes:
   - {fileID: -5452995409636915031, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
   - {fileID: -284684359218076793, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
-  - {fileID: 6286047024291171867, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
   - {fileID: 6286047024291171867, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
   weaponLevel: 1
   pickAxeLevel: 1
@@ -8429,21 +8424,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 407332681}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
+      - m_Target: {fileID: 2064773793}
+        m_TargetAssemblyTypeName: MenuSounds, Assembly-CSharp
+        m_MethodName: ButtonClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: active
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2064773793}
-        m_TargetAssemblyTypeName: MenuSounds, Assembly-CSharp
-        m_MethodName: ButtonClick
+      - m_Target: {fileID: 407332682}
+        m_TargetAssemblyTypeName: levelSelect, Assembly-CSharp
+        m_MethodName: onOpen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
