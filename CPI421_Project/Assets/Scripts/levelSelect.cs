@@ -65,4 +65,11 @@ public class levelSelect : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("HomeBase");
         if (loadHomeBase != null) loadHomeBase();
     }
+
+    public void loadLevelMainMenu()
+    {
+        GameManager.instance.SaveState();
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Selection");
+        // if (loadHomeBase != null) loadHomeBase();
+    }
 }

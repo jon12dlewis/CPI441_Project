@@ -552,6 +552,7 @@ GameObject:
   - component: {fileID: 3231519697472516638}
   - component: {fileID: 785245364}
   - component: {fileID: 1835051857310800879}
+  - component: {fileID: 2187057847765435650}
   m_Layer: 5
   m_Name: Main Menu Button
   m_TagString: Untagged
@@ -673,6 +674,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2187057847765435650}
+        m_TargetAssemblyTypeName: levelSelect, Assembly-CSharp
+        m_MethodName: loadLevelMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &785245364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -731,6 +744,20 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &2187057847765435650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3231519697472516636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306b42c249547e841a93bdaed6a6a55e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneNames: []
+  animator: {fileID: 0}
 --- !u!1 &3231519697503322134
 GameObject:
   m_ObjectHideFlags: 0
@@ -1238,6 +1265,7 @@ GameObject:
   - component: {fileID: 3231519697996231307}
   - component: {fileID: 922126205}
   - component: {fileID: 9207756885426177021}
+  - component: {fileID: 907088195827020087}
   m_Layer: 5
   m_Name: Quit Button
   m_TagString: Untagged
@@ -1359,6 +1387,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 907088195827020087}
+        m_TargetAssemblyTypeName: QuitGame, Assembly-CSharp
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &922126205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1417,6 +1457,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &907088195827020087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3231519697996231305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3fdcd20ea0ec7c44911d11d6f7c88ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3231519698074637262
 GameObject:
   m_ObjectHideFlags: 0
@@ -2044,6 +2096,18 @@ MonoBehaviour:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: ButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2187057847765435650}
+        m_TargetAssemblyTypeName: levelSelect, Assembly-CSharp
+        m_MethodName: loadLevelHomeBase
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
