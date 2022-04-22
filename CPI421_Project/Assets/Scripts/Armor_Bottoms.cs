@@ -55,5 +55,11 @@ public class Armor_Bottoms : MonoBehaviour
         animator.SetFloat("idle_vertical", direction.y);
 
         animator.SetFloat("speed", movement.sqrMagnitude);
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            animator.SetTrigger("Attack");
+        }
+
     }
 }

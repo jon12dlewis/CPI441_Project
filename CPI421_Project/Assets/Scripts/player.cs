@@ -114,6 +114,11 @@ public class player : Mover
             //sword.SetTrigger("Idle");
         }
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            animator.SetTrigger("Attack");
+        }
+
     }
 
     private void FixedUpdate()
