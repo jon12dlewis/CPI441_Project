@@ -5,6 +5,7 @@ labels:
 - gvh_version-8.8.0
 - gvhp_exportpath-Firebase/Plugins/x86_64/FirebaseCppAuth.dll
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 timeCreated: 1480838400
 PluginImporter:
   serializedVersion: 1
@@ -76,6 +77,8 @@ PluginImporter:
   assetBundleName:
   assetBundleVariant:
 =======
+=======
+>>>>>>> Stashed changes
 PluginImporter:
   externalObjects: {}
   serializedVersion: 2
@@ -180,4 +183,7 @@ PluginImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
