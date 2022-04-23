@@ -14,13 +14,15 @@ public class Weapon :Collidable
 
     // Swing 
     private Animator anim;
-    private float coolDown = 0.5f;
+    private float coolDown = 1f;
     private float lastSwing;
     private bool equipped;
+    private Transform Player;
 
     // Directions
     int direction = 0;
     Vector3 buffer = new Vector3(0,1,0);
+    private Vector2 playerPosition;
 
     // SFX
     [SerializeField] AudioSource hitSound;
@@ -30,6 +32,7 @@ public class Weapon :Collidable
         base.Start();
         spriteRenderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        Player = GameObject.Find("Player").transform;
     }
 
     protected override void Update()
@@ -37,24 +40,25 @@ public class Weapon :Collidable
         base.Update();  // Need to check collision
 
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        playerPosition = Player.position;
 
 
-        if(mousePos.y > this.transform.position.y + 1.5)
+        if(mousePos.y > playerPosition.y + 1.5)
         {
             direction = 1;
         }
         else
-        if(mousePos.y < this.transform.position.y - 1.5)
+        if(mousePos.y < playerPosition.y - 1.5)
         {
             direction = 0;
         }
         
-        if(mousePos.x > this.transform.position.x + 1.5)
+        if(mousePos.x > playerPosition.x + 1.5)
         {
             direction = 2;
         }
         else
-        if(mousePos.x < this.transform.position.x - 1.5)
+        if(mousePos.x < playerPosition.x - 1.5)
         {
             direction = 3;
         }
@@ -62,7 +66,7 @@ public class Weapon :Collidable
 
         if(equipped)
         {
-            if(Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetMouseButton(0))
             {
                 if(Time.time - lastSwing > coolDown)
                 {

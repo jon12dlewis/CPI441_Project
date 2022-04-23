@@ -8,10 +8,12 @@ public class Helmet : MonoBehaviour
     Vector2 direction = new Vector2(0.0f, -1.0f);
     Vector2 playerPosition;
     private Animator animator;
+    private Transform Player;
 
     void Start()
     {
         animator = GetComponent<Animator>();
+        Player = GameObject.Find("Player").transform;
     }
 
 
@@ -19,7 +21,7 @@ public class Helmet : MonoBehaviour
     void Update()
     {
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        playerPosition = transform.position;
+        playerPosition = Player.position;
 
         if(mousePos.x > playerPosition.x + 1.5)
         {
