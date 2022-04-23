@@ -1741,18 +1741,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1157829578}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 2064773793}
         m_TargetAssemblyTypeName: MenuSounds, Assembly-CSharp
         m_MethodName: ButtonClick
@@ -2997,13 +2985,13 @@ MonoBehaviour:
   helmetImage: {fileID: 1157829580}
   legImage: {fileID: 664033286}
   chests:
-  - {fileID: -4781227989788599172, guid: d50945d2f76a3f749ae39482d22080e6, type: 3}
-  - {fileID: 5595627090532893865, guid: 935af226cc89fac4a9f3147db4f6b5af, type: 3}
-  - {fileID: 7045524508807746798, guid: 3faf89d7857ae2940a6339560a5801c8, type: 3}
-  helmets:
   - {fileID: 7349709500177561522, guid: c66b93d7fd70d9a4fa47e847e3c60dde, type: 3}
   - {fileID: 6696225551517210809, guid: 0095b25f0594fb0458bc578747d4365f, type: 3}
   - {fileID: 8943462465168186209, guid: fac1c45862597374db5d9149acd1d9c9, type: 3}
+  helmets:
+  - {fileID: -4781227989788599172, guid: d50945d2f76a3f749ae39482d22080e6, type: 3}
+  - {fileID: 5595627090532893865, guid: 935af226cc89fac4a9f3147db4f6b5af, type: 3}
+  - {fileID: 7045524508807746798, guid: 3faf89d7857ae2940a6339560a5801c8, type: 3}
   legs:
   - {fileID: 5950978685415856814, guid: a780d7a0700339e46aab2cc00e3e16fe, type: 3}
   - {fileID: -8881663192579795401, guid: 1712b095aee3ed841a9a5e65487b8876, type: 3}
@@ -5744,18 +5732,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1157829578}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 2064773793}
         m_TargetAssemblyTypeName: MenuSounds, Assembly-CSharp
