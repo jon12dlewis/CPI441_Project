@@ -11,6 +11,19 @@ public class GameManager : MonoBehaviour
     public Transform playerStartPos;
     public FloatingTextManager floatingTextManager;
 
+    private void Awake()
+    {
+        if(GameManager.instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        instance = this;
+        SceneManager.sceneLoaded += LoadState;
+        DontDestroyOnLoad(gameObject);
+        floatingTextManager = GameObject.Find("FloatingTextManager").GetComponent<FloatingTextManager>();
+        player = GameObject.Find("Player").GetComponent<Transform>();   // TODO: player does not exist in home base scene
+        
     public List<Sprite> playerSprites;
     public List<Sprite> weaponSprites;
     public List<int> weaponPrices;
@@ -41,25 +54,6 @@ public class GameManager : MonoBehaviour
     public int helmetSelected = 1;
     public int chestSelected = 1;
     public int legSelected = 1;
-
-    private void Awake()
-    {
-        if(GameManager.instance != null)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-
-        //PlayerPrefs.SetString("SaveState",  "0|0|0|0|1|1|1|1|1|1|15|1|1|1|1|1|1|1");
-
-        instance = this;
-        SceneManager.sceneLoaded += LoadState;
-        DontDestroyOnLoad(gameObject);
-        floatingTextManager = GameObject.Find("FloatingTextManager").GetComponent<FloatingTextManager>();
-        player = GameObject.Find("Player").GetComponent<Transform>();
-        
-    }
 
 
     

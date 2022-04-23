@@ -11,7 +11,7 @@ public class levelSelect : MonoBehaviour
     public Animator animator;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         animator.GetComponent<Animator>();
     }
@@ -64,5 +64,12 @@ public class levelSelect : MonoBehaviour
         GameManager.instance.SaveState();
         UnityEngine.SceneManagement.SceneManager.LoadScene("HomeBase");
         if (loadHomeBase != null) loadHomeBase();
+    }
+
+    public void loadLevelMainMenu()
+    {
+        GameManager.instance.SaveState();
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Selection");
+        // if (loadHomeBase != null) loadHomeBase();
     }
 }
