@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
+    public static bool OtherUIOpen = false;
 
     public GameObject pauseMenuUI;
     [SerializeField] AudioSource open;
@@ -13,7 +14,8 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] AudioSource buttonClick;
     [SerializeField] AudioSource buttonHover;
 
-    void Start() {
+    void Awake() {
+        SceneManager.sceneLoaded += Reload;
     }
 
     // Update is called once per frame
@@ -25,12 +27,17 @@ public class PauseMenu : MonoBehaviour
             if (GameIsPaused)
             {
                 close.Play(0);
-                Resume();
+                if (!OtherUIOpen) Resume();
             }
             else
             {
-                open.Play(0);
-                Pause();
+                if (!OtherUIOpen) {
+                    open.Play(0);
+                    Pause();
+                }
+                else {
+                    close.Play();
+                }
             }
         }
     }
@@ -72,5 +79,11 @@ public class PauseMenu : MonoBehaviour
     }
     public void ButtonHover() {
         buttonHover.Play(0);
+    }
+
+    // necessary to reset these when we change scenes because animators don't close
+    void Reload(Scene scene, LoadSceneMode mode) {
+        GameIsPaused = false;
+        OtherUIOpen = false;
     }
 }
