@@ -132,6 +132,33 @@ public class GameManager : MonoBehaviour
         player.position = playerStartPos.position;
     }
 
+    public string getString()
+    {
+        string s = "";
+
+        s += "0" + "|";                                             // buffer doesnt do anything
+        s += blue_crystals.ToString() + "|";                        // Blue Crystals
+        s += yellow_crystals.ToString() + "|";                      // Red Crystals
+        s += red_crystals.ToString() + "|";                         // Yellow Crystals
+        s += weaponLevel.ToString() + "|";                           // weapon level
+        s += bowLevel.ToString() + "|";                              // bow level
+        s += pickaxeLevel.ToString() + "|";                          // pickaxe level 
+        s += helmetLevel.ToString() + "|";                           // helmet level 1 unlocked 1 = yes 0 = no
+        s += chestLevel.ToString() + "|";                            // chest level 1 unlocked 1 = yes 0 = no
+        s += legLevel.ToString() + "|";                              // legs level 1 unlocked 1 = yes 0 = no
+        s += arrows.ToString() + "|";                                // number of arrows the player has
+        s += levelsCompleted.ToString() + "|";                      // Level one completed
+        s += pickAxeSelected.ToString() + "|";                      
+        s += weaponSelected.ToString() + "|";                       
+        s += bowSelected.ToString() + "|";
+        s += helmetSelected.ToString() + "|";
+        s += chestSelected.ToString() + "|";
+        s += legSelected.ToString();
+
+        return s;
+
+    }
+
     public void GiveBlueCrystal(int ammount)
     {
         Debug.Log("Blue Crystal Added");
