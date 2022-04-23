@@ -8,10 +8,10 @@ using System;
 
 public class DatabaseManager : MonoBehaviour
 {
+    public string Save;
+
     private string userID;
     private DatabaseReference dbReference;
-
-    public Transform Save;
 
     public Text SaveText;
 
@@ -31,7 +31,7 @@ public class DatabaseManager : MonoBehaviour
     }
 
     // Load Save Data
-    public IEnumerator GetSave(Action<Transform> onCallback)
+    public IEnumerator GetSave(Action<string> onCallback)
     {
         var userSaveData = dbReference.Child("users").Child("save").GetValueAsync();
 
@@ -41,23 +41,25 @@ public class DatabaseManager : MonoBehaviour
         {
             DataSnapshot snapshot = userSaveData.Result;
 
-            onCallback.Invoke((Transform)snapshot.Value);
+            onCallback.Invoke((string)snapshot.Value);
 
         }
     }
 
+    //Update Save Data
     public void UpdateSave()
     {
+        Save = GameManager.instance.getString();
         dbReference.Child("users").Child(userID).Child("save").SetValueAsync(Save);
 
     }
 
 
-    /*public void GetUserInfo()
+    public void GetUserInfo()
     {
-        StartCoroutine(GetSave((Transform save) =>
+        StartCoroutine(GetSave((string save) =>
         {
-            SaveText.text = save;
-        }))
-    }*/
+            SaveText.text = "Save: " + save;
+        }));
+    }
 }

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class User
 {
-    public Transform save;
+    public string save;
 
-    public User(Transform save)
+    public User(string save)
     {
         this.save = save;
     }
