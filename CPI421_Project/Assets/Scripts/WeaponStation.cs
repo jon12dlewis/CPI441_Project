@@ -48,6 +48,11 @@ protected override void Start()
         if(pickAxeLevel >= 4)
             pickAxeUpgradeButton.SetActive(false);
 
+        bowLevel = GameManager.instance.bowLevel;
+        if (bowLevel == 0) bowLevel = 1;                     // bandage
+        bowImage.sprite = bows[bowLevel - 1];
+        if(bowLevel >= 4)
+            bowUpgradeButton.SetActive(false);
 
         
     }

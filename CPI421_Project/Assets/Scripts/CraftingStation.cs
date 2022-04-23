@@ -27,12 +27,33 @@ public class CraftingStation : Collidable
         base.Start();
         statsText.text = "Stats:\nDefense: +1";
         requirementsText.text = "Requirements:\nYellow Crystals: 10 (" + GameManager.instance.GetYellowCrystal() + ")";
+        helmetLevel = GameManager.instance.helmetLevel;
+        if (helmetLevel == 0) helmetLevel = 1;                      // bandage
+        updateHelmetStats();
     }
 
     // Update is called once per frame
     protected override void Update()
     {
         base.Update();  // Need to check collision
+
+        helmetLevel = GameManager.instance.helmetLevel;
+        if (helmetLevel == 0) helmetLevel = 1;                     // bandage
+        helmetImage.sprite = helmets[helmetLevel - 1];
+        if(helmetLevel >= 4)
+        helmetUpgradeButton.SetActive(false);
+
+        chestLevel = GameManager.instance.chestLevel;
+        if (chestLevel == 0) chestLevel = 1;                     // bandage
+        chestImage.sprite = chests[chestLevel - 1];
+        if(chestLevel >= 4)
+        chestUpgradeButton.SetActive(false);
+
+        legLevel = GameManager.instance.legLevel;
+        if (legLevel == 0) legLevel = 1;                     // bandage
+        legImage.sprite = legs[legLevel - 1];
+        if(legLevel >= 4)
+        legUpgradeButton.SetActive(false);
     }
 
     protected override void OnCollide(Collider2D coll)
