@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
+// put this script on an item if you want to toggle a snapshot on hover. Must call ToggleSnapshot() from EventTrigger component
 public class UIHoverSnapshotToggle : MonoBehaviour
 {
     [SerializeField] AudioMixer mixer;

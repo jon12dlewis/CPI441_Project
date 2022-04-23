@@ -48,6 +48,7 @@ public class SoundSettings : MonoBehaviour
         mixer.SetFloat(sliderName, Mathf.Log10(sliderValue) * 20);
     }
 
+    // called elsewhere to set the mixer we're using
     public void SetMixer(AudioMixer mixerIn) {
         mixer = mixerIn;
     }

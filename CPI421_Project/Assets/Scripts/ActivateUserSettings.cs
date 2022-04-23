@@ -8,7 +8,8 @@ public class ActivateUserSettings : MonoBehaviour
     SoundSettings sound;
     VisualSettings visual;
     [SerializeField] AudioMixer mixer;
-    // Start is called before the first frame update
+    
+    // calls functions to update user preferences in the settings
     void Start()
     {
         sound = gameObject.AddComponent<SoundSettings>();
