@@ -17,6 +17,7 @@ public class PickAxe : Collidable
     private float coolDown = 1.5f;
     private float lastSwing;
     int direction = 0;
+    bool equipped = false;
 
     Vector2 dir = new Vector2(0.0f, -1.0f);
 
@@ -76,31 +77,34 @@ public class PickAxe : Collidable
         anim.SetFloat("horizontal", dir.x);
         anim.SetFloat("vertical", dir.y);
         
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(equipped)
         {
-            if(Time.time - lastSwing > coolDown)
+            if(Input.GetKeyDown(KeyCode.Space))
             {
-                lastSwing = Time.time;
-
-                switch(direction)
+                if(Time.time - lastSwing > coolDown)
                 {
-                    case 0:
-                        SwingDown();
-                        break;
-                    case 1:
-                        SwingUp();
-                        break;
-                    case 2:
-                        SwingRight();
-                        break;
-                    case 3:
-                        SwingLeft();
-                        break;
+                    lastSwing = Time.time;
 
-                }
+                    switch(direction)
+                    {
+                        case 0:
+                            SwingDown();
+                            break;
+                        case 1:
+                            SwingUp();
+                            break;
+                        case 2:
+                            SwingRight();
+                            break;
+                        case 3:
+                            SwingLeft();
+                            break;
 
-                //Swing();
-            }   
+                    }
+
+                    //Swing();
+                }   
+            }
         }
 
     }
@@ -157,5 +161,10 @@ public class PickAxe : Collidable
     public void setImage(Sprite selected)
     {
         spriteRenderer.sprite = selected;
+    }
+
+    public void isEquipped(bool choice)
+    {
+        equipped = choice;
     }
 }

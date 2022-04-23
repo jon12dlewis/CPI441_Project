@@ -50,4 +50,10 @@ public class Helmet : MonoBehaviour
 
 
     }
+
+    public void SetLevelAnimation(int level)
+    {
+        animator.SetInteger("level", level);
+    }
+
 }

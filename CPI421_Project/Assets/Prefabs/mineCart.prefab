@@ -393,6 +393,6 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   emptyChest: {fileID: 6440924508660118574, guid: e73d74817f4109d41bbf009f98a049ed, type: 3}
-  crystalAmount: 5
+  crystalAmount: 10
   coin1: {fileID: 7998394794781788293}
   positive: {fileID: 5058053551532749082}

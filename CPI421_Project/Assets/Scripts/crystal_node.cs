@@ -9,6 +9,8 @@ public class crystal_node : Fighter
     public Sprite Crystal_2;
     public Sprite Crystal_3;
 
+    public int crystal_level = 1;
+
     [SerializeField] AudioSource breakingSound;
     [SerializeField] AudioSource collectionSound;
 
@@ -58,7 +60,23 @@ public class crystal_node : Fighter
         temp.gameObject.SendMessage("SetAudioSource", collectionSound);
 
         Destroy(gameObject);
-        GameManager.instance.GiveBlueCrystal(10);
-        GameManager.instance.ShowText("Blue Crystal Obtained ", 40, Color.blue, transform.position, Vector3.up * 40, 1.0f);
+        if(crystal_level == 1)
+        {
+            GameManager.instance.GiveYellowCrystal(10);
+            GameManager.instance.ShowText("Yellow Crystal Obtained ", 40, Color.blue, transform.position, Vector3.up * 40, 1.0f);
+        }
+        else
+        if(crystal_level == 2)
+        {
+            GameManager.instance.GiveBlueCrystal(10);
+            GameManager.instance.ShowText("Blue Crystal Obtained ", 40, Color.blue, transform.position, Vector3.up * 40, 1.0f);
+        }
+        else
+        if(crystal_level == 3)
+        {
+            GameManager.instance.GiveRedCrystal(10);
+            GameManager.instance.ShowText("Red Crystal Obtained ", 40, Color.blue, transform.position, Vector3.up * 40, 1.0f);
+        }
+
     }
 }

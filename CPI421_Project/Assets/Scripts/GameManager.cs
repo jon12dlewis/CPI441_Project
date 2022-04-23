@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     //public player player;
     public Transform player;
+    public Transform playerStartPos;
     public FloatingTextManager floatingTextManager;
 
     private void Awake()
@@ -21,6 +22,8 @@ public class GameManager : MonoBehaviour
         SceneManager.sceneLoaded += LoadState;
         DontDestroyOnLoad(gameObject);
         floatingTextManager = GameObject.Find("FloatingTextManager").GetComponent<FloatingTextManager>();
+        player = GameObject.Find("Player").GetComponent<Transform>();
+        
     }
 
     public List<Sprite> playerSprites;
@@ -39,14 +42,14 @@ public class GameManager : MonoBehaviour
     public int yellow_crystals;
     public int red_crystals;
     
-    public int[] helmets = {0,0,0};
-    public int[] chests = {0,0,0};
-    public int[] legs = {0,0,0};
-    public int[] weapons = {0,0,0};
-    public int[] pickaxes = {0,0,0};
-    public int[] bows = {0,0,0};
+    public int helmetLevel = 1;
+    public int chestLevel = 1;
+    public int legLevel = 1;
+    public int weaponLevel = 1;
+    public int pickaxeLevel = 1;
+    public int bowLevel = 1;
     public int arrows = 0;
-    public int levelsCompleted;
+    public int levelsCompleted = 1;
     public int pickAxeSelected;
     public int weaponSelected;
     public int bowSelected;
@@ -64,30 +67,19 @@ public class GameManager : MonoBehaviour
     // Save state
     public void SaveState()
     {
+        Debug.Log("Save State");
         string s = "";
 
         s += "0" + "|";
         s += blue_crystals.ToString() + "|";                        // Blue Crystals
         s += yellow_crystals.ToString() + "|";                      // Red Crystals
         s += red_crystals.ToString() + "|";                         // Yellow Crystals
-        s += weapons[0].ToString() + "|";                           // weapon level 1 unlocked 1 = yes 0 = no
-        s += weapons[1].ToString() + "|";                           // weapon level 2 unlocked 1 = yes 0 = no
-        s += weapons[2].ToString() + "|";                           // weapon level 3 unlocked 1 = yes 0 = no
-        s += bows[0].ToString() + "|";                              // bow level 1 unlocked 1 = yes 0 = no
-        s += bows[1].ToString() + "|";                              // bow level 2 unlocked 1 = yes 0 = no
-        s += bows[2].ToString() + "|";                              // bow level 3 unlocked 1 = yes 0 = no
-        s += pickaxes[0].ToString() + "|";                          // pickaxe level 1 unlocked 1 = yes 0 = no
-        s += pickaxes[1].ToString() + "|";                          // piackaxe level 2 unlocked 1 = yes 0 = no
-        s += pickaxes[2].ToString() + "|";                          // pickaxe level 3 unlocked 1 = yes 0 = no
-        s += helmets[0].ToString() + "|";                           // helmet level 1 unlocked 1 = yes 0 = no
-        s += helmets[1].ToString() + "|";                           // helmet level 2 unlocked 1 = yes 0 = no
-        s += helmets[2].ToString() + "|";                           // helmet level 3 unlocked 1 = yes 0 = no
-        s += chests[0].ToString() + "|";                            // chest level 1 unlocked 1 = yes 0 = no
-        s += chests[1].ToString() + "|";                            // chest level 2 unlocked 1 = yes 0 = no
-        s += chests[2].ToString() + "|";                            // chest level 3 unlocked 1 = yes 0 = no
-        s += legs[0].ToString() + "|";                              // legs level 1 unlocked 1 = yes 0 = no
-        s += legs[1].ToString() + "|";                              // legs level 2 unlocked 1 = yes 0 = no
-        s += legs[2].ToString() + "|";                              // legs level 3 unlocked 1 = yes 0 = no
+        s += weaponLevel.ToString() + "|";                           // weapon level
+        s += bowLevel.ToString() + "|";                              // bow level
+        s += pickaxeLevel.ToString() + "|";                          // pickaxe level 
+        s += helmetLevel.ToString() + "|";                           // helmet level 1 unlocked 1 = yes 0 = no
+        s += chestLevel.ToString() + "|";                            // chest level 1 unlocked 1 = yes 0 = no
+        s += legLevel.ToString() + "|";                              // legs level 1 unlocked 1 = yes 0 = no
         s += arrows.ToString() + "|";
         s += levelsCompleted.ToString() + "|";                      // Level one completed
         s += pickAxeSelected.ToString() + "|";                      
@@ -99,10 +91,12 @@ public class GameManager : MonoBehaviour
 
         PlayerPrefs.SetString("SaveState", s);
         floatingTextManager = GameObject.Find("FloatingTextManager").GetComponent<FloatingTextManager>();
+        //player = GameObject.Find("Player").GetComponent<Transform>();
     }
 
     public void LoadState(Scene s, LoadSceneMode mode)
     {
+
         if(!PlayerPrefs.HasKey("SaveState"))
             return;
 
@@ -113,37 +107,28 @@ public class GameManager : MonoBehaviour
         blue_crystals = int.Parse(data[1]);
         yellow_crystals = int.Parse(data[2]);
         red_crystals = int.Parse(data[3]);
-        weapons[0] = int.Parse(data[4]);
-        weapons[1] = int.Parse(data[5]);
-        weapons[2] = int.Parse(data[6]);
-        bows[0] = int.Parse(data[7]);
-        bows[0] = int.Parse(data[8]);
-        bows[0] = int.Parse(data[9]);
-        pickaxes[0] = int.Parse(data[10]);
-        pickaxes[0] = int.Parse(data[11]);
-        pickaxes[0] = int.Parse(data[12]);
-        helmets[0] = int.Parse(data[13]);
-        helmets[0] = int.Parse(data[14]);
-        helmets[0] = int.Parse(data[15]);
-        chests[0] = int.Parse(data[16]);
-        chests[0] = int.Parse(data[17]);
-        chests[0] = int.Parse(data[18]);
-        legs[0] = int.Parse(data[19]);
-        legs[0] = int.Parse(data[20]);
-        legs[0] = int.Parse(data[21]);
-        arrows = int.Parse(data[22]);
-        levelsCompleted = int.Parse(data[23]);
-        pickAxeSelected = int.Parse(data[24]);
-        weaponSelected = int.Parse(data[25]);
-        bowSelected = int.Parse(data[26]);
-        helmetSelected = int.Parse(data[27]);
-        chestSelected = int.Parse(data[28]);
-        legSelected = int.Parse(data[29]);
+        weaponLevel = int.Parse(data[4]);
+        bowLevel = int.Parse(data[5]);
+        pickaxeLevel = int.Parse(data[6]);
+        helmetLevel = int.Parse(data[7]);
+        chestLevel = int.Parse(data[8]);
+        legLevel = int.Parse(data[9]);
+        arrows = int.Parse(data[10]);
+        levelsCompleted = int.Parse(data[11]);
+        pickAxeSelected = int.Parse(data[12]);
+        weaponSelected = int.Parse(data[13]);
+        bowSelected = int.Parse(data[14]);
+        helmetSelected = int.Parse(data[15]);
+        chestSelected = int.Parse(data[16]);
+        legSelected = int.Parse(data[17]);
 
         // change the weapon level
 
         Debug.Log("LoadState");
         floatingTextManager = GameObject.Find("FloatingTextManager").GetComponent<FloatingTextManager>();
+        player = GameObject.Find("Player").GetComponent<Transform>();
+        playerStartPos = GameObject.Find("PlayerStartingPosition").GetComponent<Transform>();
+        player.position = playerStartPos.position;
     }
 
     public void GiveBlueCrystal(int ammount)
@@ -210,34 +195,45 @@ public class GameManager : MonoBehaviour
         mula += ammount;
     }
 
-    public void setWeapon(int selection)
+    public int upgradeWeaponLevel()
     {
-        weaponSelected = selection;
+        weaponLevel += 1;
+        return weaponLevel;
     }
 
-    public void setPickAxe(int selection)
+    public int upgradePickAxeLevel()
     {
-        pickAxeSelected = selection;
+        pickaxeLevel += 1;
+        return pickaxeLevel;
     }
 
-    public void setBow(int selection)
+    public int upgradeBowLevel()
     {
-        bowSelected = selection;
+        bowLevel += 1;
+        return bowLevel;
     }
 
-    public void setHelmet(int selection)
+    public int upgradeHelmetLevel()
     {
-        helmetSelected = selection;
+        helmetLevel += 1;
+        return helmetLevel;
     }
 
-    public void setChest(int selection)
+    public int upgradeChestLevel()
     {
-        chestSelected = selection;
+        chestLevel += 1;
+        return chestLevel;
     }
 
-    public void setLegs(int selection)
+    public int upgradeLegLevel()
     {
-        legSelected = selection;
+        legLevel += 1;
+        return legLevel;
+    }
+
+    public void nextLevel()
+    {
+        levelsCompleted += 1;
     }
 
 }

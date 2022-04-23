@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class MusicController : MonoBehaviour
 {
-    [SerializeField] GameObject EnemiesNearbyMusicKey;
-    [SerializeField] GameObject CombatMusicKey;
     int enemyCount;
     LinkedList<GameObject> combatants;
     enum MusicState {Default, Nearby, Combat};
@@ -15,7 +13,9 @@ public class MusicController : MonoBehaviour
     void Awake() {
         currentMusicState = MusicState.Default;
         combatants = new LinkedList<GameObject>();
+        enemyCount = 0;
     }
+
     void Update() {
 
         // only player is remaining
@@ -39,8 +39,6 @@ public class MusicController : MonoBehaviour
             }
             currentMusicState = MusicState.Combat;
         }
-
-
     }
 
     // counting enemies
@@ -64,16 +62,19 @@ public class MusicController : MonoBehaviour
         combatants.AddLast(obj);
     }
 
+    // toggles off Enemies Nearby music and Combat Music
     void DefaultMusic() {
         EnemiesNearbyMusic();
         CombatMusic();
     }
+
+    // toggles on Enemies nearby music
     void EnemiesNearbyMusic() {
-        AudioEvents.TriggerEvent(EnemiesNearbyMusicKey);
-        Debug.Log("Enemies Nearby");
+        AudioEvents_V2.EnemiesNearby();
     }
+
+    // toggles on Enemies nearby music
     void CombatMusic() {
-        AudioEvents.TriggerEvent(CombatMusicKey);
-        Debug.Log("Combat");
+        AudioEvents_V2.InCombat();
     }
 }

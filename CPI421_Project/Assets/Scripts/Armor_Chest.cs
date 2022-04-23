@@ -56,4 +56,10 @@ public class Armor_Chest : MonoBehaviour
 
         animator.SetFloat("speed", movement.sqrMagnitude);
     }
+
+    public void SetLevelAnimation(int level)
+    {
+        animator.SetInteger("level", level);
+    }
+
 }

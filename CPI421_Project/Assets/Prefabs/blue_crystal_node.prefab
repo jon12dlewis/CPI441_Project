@@ -137,6 +137,7 @@ MonoBehaviour:
   Crystal_1: {fileID: 1902730286595786473, guid: e73d74817f4109d41bbf009f98a049ed, type: 3}
   Crystal_2: {fileID: 3616794774998649175, guid: e73d74817f4109d41bbf009f98a049ed, type: 3}
   Crystal_3: {fileID: -4600872999419145407, guid: e73d74817f4109d41bbf009f98a049ed, type: 3}
+  crystal_level: 2
   breakingSound: {fileID: 6234803846707104248}
   collectionSound: {fileID: 1646669996565331009}
 --- !u!1 &6234803846707104251

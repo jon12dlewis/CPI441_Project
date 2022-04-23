@@ -29,13 +29,13 @@ public class SoundSettings : MonoBehaviour
             PlayerPrefs.SetFloat("MasterVolume", MasterSlider.value);
             PlayerPrefs.SetFloat("MusicVolume", MusicSlider.value);
             PlayerPrefs.SetFloat("SFXVolume", SFXSlider.value);
-            PlayerPrefs.SetFloat("EnemyrVolume", EnemySlider.value);
+            PlayerPrefs.SetFloat("EnemyVolume", EnemySlider.value);
         }
     }
 
     // called by GameManager to update settings on launch
     public void UpdateSettings() {
-        mixer = (AudioMixer)AssetDatabase.LoadAssetAtPath("Assets/Audio/Music/Level 1/MAIN MIXER.mixer", typeof(AudioMixer));
+        Debug.Log(mixer);
 
         setVolume("MixerVol", PlayerPrefs.GetFloat("MasterVolume", 1), mixer);
         setVolume("MusicVol", PlayerPrefs.GetFloat("MusicVolume", 1), mixer);
@@ -46,5 +46,9 @@ public class SoundSettings : MonoBehaviour
     // helper method
     void setVolume(string sliderName, float sliderValue, AudioMixer mixer) {
         mixer.SetFloat(sliderName, Mathf.Log10(sliderValue) * 20);
+    }
+
+    public void SetMixer(AudioMixer mixerIn) {
+        mixer = mixerIn;
     }
 }
