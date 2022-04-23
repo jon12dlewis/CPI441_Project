@@ -23,7 +23,8 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         floatingTextManager = GameObject.Find("FloatingTextManager").GetComponent<FloatingTextManager>();
         player = GameObject.Find("Player").GetComponent<Transform>();   // TODO: player does not exist in home base scene
-        
+    }
+
     public List<Sprite> playerSprites;
     public List<Sprite> weaponSprites;
     public List<int> weaponPrices;
