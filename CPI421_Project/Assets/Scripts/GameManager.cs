@@ -22,8 +22,7 @@ public class GameManager : MonoBehaviour
         SceneManager.sceneLoaded += LoadState;
         DontDestroyOnLoad(gameObject);
         floatingTextManager = GameObject.Find("FloatingTextManager").GetComponent<FloatingTextManager>();
-        player = GameObject.Find("Player").GetComponent<Transform>();
-        
+        player = GameObject.Find("Player").GetComponent<Transform>();   // TODO: player does not exist in home base scene
     }
 
     public List<Sprite> playerSprites;
@@ -38,9 +37,9 @@ public class GameManager : MonoBehaviour
     // Logic
     public int mula;
     public int expierence;
-    public int blue_crystals;
-    public int yellow_crystals;
-    public int red_crystals;
+    public int blue_crystals = 100;
+    public int yellow_crystals = 100;
+    public int red_crystals = 100;
     
     public int helmetLevel = 1;
     public int chestLevel = 1;
@@ -50,12 +49,14 @@ public class GameManager : MonoBehaviour
     public int bowLevel = 1;
     public int arrows = 0;
     public int levelsCompleted = 1;
-    public int pickAxeSelected;
-    public int weaponSelected;
-    public int bowSelected;
-    public int helmetSelected;
-    public int chestSelected;
-    public int legSelected;
+    public int pickAxeSelected = 1;
+    public int weaponSelected = 1;
+    public int bowSelected = 1;
+    public int helmetSelected = 1;
+    public int chestSelected = 1;
+    public int legSelected = 1;
+
+
     
 
     // Floating text
@@ -129,6 +130,33 @@ public class GameManager : MonoBehaviour
         player = GameObject.Find("Player").GetComponent<Transform>();
         playerStartPos = GameObject.Find("PlayerStartingPosition").GetComponent<Transform>();
         player.position = playerStartPos.position;
+    }
+
+    public string getString()
+    {
+        string s = "";
+
+        s += "0" + "|";                                             // buffer doesnt do anything
+        s += blue_crystals.ToString() + "|";                        // Blue Crystals
+        s += yellow_crystals.ToString() + "|";                      // Red Crystals
+        s += red_crystals.ToString() + "|";                         // Yellow Crystals
+        s += weaponLevel.ToString() + "|";                           // weapon level
+        s += bowLevel.ToString() + "|";                              // bow level
+        s += pickaxeLevel.ToString() + "|";                          // pickaxe level 
+        s += helmetLevel.ToString() + "|";                           // helmet level 1 unlocked 1 = yes 0 = no
+        s += chestLevel.ToString() + "|";                            // chest level 1 unlocked 1 = yes 0 = no
+        s += legLevel.ToString() + "|";                              // legs level 1 unlocked 1 = yes 0 = no
+        s += arrows.ToString() + "|";                                // number of arrows the player has
+        s += levelsCompleted.ToString() + "|";                      // Level one completed
+        s += pickAxeSelected.ToString() + "|";                      
+        s += weaponSelected.ToString() + "|";                       
+        s += bowSelected.ToString() + "|";
+        s += helmetSelected.ToString() + "|";
+        s += chestSelected.ToString() + "|";
+        s += legSelected.ToString();
+
+        return s;
+
     }
 
     public void GiveBlueCrystal(int ammount)

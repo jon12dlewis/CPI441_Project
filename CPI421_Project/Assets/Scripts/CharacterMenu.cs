@@ -34,6 +34,14 @@ public class CharacterMenu : MonoBehaviour
 
     void Start()
     {
+        player = GameObject.Find("Player").GetComponent<player>();
+        weapon = player.transform.GetChild(1).gameObject;
+        pickAxe = player.transform.GetChild(2).gameObject;
+        bow = player.transform.GetChild(6).gameObject;
+        helmet = GameObject.Find("Armor_Helmet");
+        chest = GameObject.Find("Armor_Chest");
+        leg = GameObject.Find("Armor_Bottoms");
+
         displayWeapon();
         displayPickAxe();
         displayBow();
@@ -129,6 +137,10 @@ public class CharacterMenu : MonoBehaviour
             case 3:
                 weaponDamage.text = "6";
                 weapon.GetComponent<Weapon>().setDamage(6);
+            break;
+            default:
+                weaponDamage.text = "69";
+                weapon.GetComponent<Weapon>().setDamage(1); 
             break;
 
         }

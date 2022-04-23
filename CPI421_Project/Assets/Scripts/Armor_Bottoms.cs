@@ -8,10 +8,12 @@ public class Armor_Bottoms : MonoBehaviour
     Vector2 playerPosition;
     private Animator animator;
     Vector2 movement;
+    private Transform Player;
 
     void Start()
     {
         animator = GetComponent<Animator>();
+        Player = GameObject.Find("Player").transform;
     }
 
 
@@ -19,7 +21,7 @@ public class Armor_Bottoms : MonoBehaviour
     void Update()
     {
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        playerPosition = transform.position;
+        playerPosition = Player.position;
 
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");

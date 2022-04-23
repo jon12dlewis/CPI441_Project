@@ -28,6 +28,7 @@ protected override void Start()
         statsText.text = "Stats:\nAttack: +1";
         requirementsText.text = "Requirements:\nYellow Crystals: 10 (" + GameManager.instance.GetYellowCrystal() + ")";
         weaponLevel = GameManager.instance.weaponLevel;
+        if (weaponLevel == 0) weaponLevel = 1;                      // bandage
         updateWeaponStats();
     }
 
@@ -36,15 +37,22 @@ protected override void Start()
     {
          base.Update();  // Need to check collision
          weaponLevel = GameManager.instance.weaponLevel;
+         if (weaponLevel == 0) weaponLevel = 1;                     // bandage
          weaponImage.sprite = weapons[weaponLevel - 1];
          if(weaponLevel >= 4)
             weaponUpgradeButton.SetActive(false);
 
         pickAxeLevel = GameManager.instance.pickaxeLevel;
+        if (pickAxeLevel == 0) pickAxeLevel = 1;                     // bandage
         pickAxeImage.sprite = pickAxes[pickAxeLevel - 1];
         if(pickAxeLevel >= 4)
             pickAxeUpgradeButton.SetActive(false);
 
+        bowLevel = GameManager.instance.bowLevel;
+        if (bowLevel == 0) bowLevel = 1;                     // bandage
+        bowImage.sprite = bows[bowLevel - 1];
+        if(bowLevel >= 4)
+            bowUpgradeButton.SetActive(false);
 
         
     }

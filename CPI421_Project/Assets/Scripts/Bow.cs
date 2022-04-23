@@ -13,13 +13,16 @@ public class Bow : MonoBehaviour
     [SerializeField] AudioSource fireSound;
     private SpriteRenderer spriteRenderer;
     private bool equipped;
-    
+    private Transform Player;
+    private Vector2 playerPosition;
+
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        Player = GameObject.Find("Player").transform;
     }
 
     // Update is called once per frame
@@ -27,29 +30,30 @@ public class Bow : MonoBehaviour
     {
 
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        playerPosition = Player.position;
 
-        if(mousePos.x > this.transform.position.x + 1.5)
+        if(mousePos.x > playerPosition.x + 1.5)
         {
             direction .x = 1;
             direction.y = 0;
             facing = 3;
         }
         else
-        if(mousePos.x < this.transform.position.x - 1.5)
+        if(mousePos.x < playerPosition.x - 1.5)
         {
             direction.x = -1;
             direction.y = 0;
             facing = 2;
         }
         else
-        if(mousePos.y > this.transform.position.y + 1.5)
+        if(mousePos.y > playerPosition.y + 1.5)
         {
             direction.x = 0;
             direction.y = 1;
             facing = 1;
         }
         else
-        if(mousePos.y < this.transform.position.y - 1.5)
+        if(mousePos.y < playerPosition.y - 1.5)
         {
             direction.x = 0;
             direction.y = -1;
@@ -59,7 +63,7 @@ public class Bow : MonoBehaviour
     
         if(equipped)
         {
-            if(Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetMouseButton(0))
             {
                 if(Time.time - lastShot > coolDown)
                 {
