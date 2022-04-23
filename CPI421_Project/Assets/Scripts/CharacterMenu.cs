@@ -37,7 +37,7 @@ public class CharacterMenu : MonoBehaviour
         player = GameObject.Find("Player").GetComponent<player>();
         weapon = player.transform.GetChild(1).gameObject;
         pickAxe = player.transform.GetChild(2).gameObject;
-        bow = GameObject.Find("bow");
+        bow = player.transform.GetChild(6).gameObject;
         helmet = GameObject.Find("Armor_Helmet");
         chest = GameObject.Find("Armor_Chest");
         leg = GameObject.Find("Armor_Bottoms");
