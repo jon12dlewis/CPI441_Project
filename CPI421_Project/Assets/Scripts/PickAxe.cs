@@ -18,8 +18,10 @@ public class PickAxe : Collidable
     private float lastSwing;
     int direction = 0;
     bool equipped = false;
+    private Transform Player;
 
     Vector2 dir = new Vector2(0.0f, -1.0f);
+    private Vector2 playerPosition;
 
     protected override void Start()
     {
@@ -27,12 +29,13 @@ public class PickAxe : Collidable
         spriteRenderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         anim.SetTrigger("Sheath");
+        Player = GameObject.Find("Player").transform;
     }
 
     protected override void Update()
     {
         base.Update();  // Need to check collision
-
+        playerPosition = Player.position;
         /*
         if(Input.GetKeyDown(KeyCode.Space))
         {
@@ -46,28 +49,28 @@ public class PickAxe : Collidable
 
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        if(mousePos.y > this.transform.position.y + 1.5)
+        if(mousePos.y > playerPosition.y + 1.5)
         {
             direction = 1;
             dir.x = 0;
             dir.y = 1;
         }
         else
-        if(mousePos.y < this.transform.position.y - 1.5)
+        if(mousePos.y < playerPosition.y - 1.5)
         {
             direction = 0;
             dir.x = 0;
             dir.y = -1;
         }
         
-        if(mousePos.x > this.transform.position.x + 1.5)
+        if(mousePos.x > playerPosition.x + 1.5)
         {
             direction = 2;
             dir.x = 1;
             dir.y = 0;
         }
         else
-        if(mousePos.x < this.transform.position.x - 1.5)
+        if(mousePos.x < playerPosition.x - 1.5)
         {
             direction = 3;
             dir.x = -1;
@@ -79,7 +82,7 @@ public class PickAxe : Collidable
         
         if(equipped)
         {
-            if(Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetMouseButton(0))
             {
                 if(Time.time - lastSwing > coolDown)
                 {
