@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
         SceneManager.sceneLoaded += LoadState;
         DontDestroyOnLoad(gameObject);
         floatingTextManager = GameObject.Find("FloatingTextManager").GetComponent<FloatingTextManager>();
-        player = GameObject.Find("Player").GetComponent<Transform>();
+        player = GameObject.Find("Player").GetComponent<Transform>();   // TODO: player does not exist in home base scene
         
     }
 
