@@ -143,6 +143,11 @@ public class player : Mover
             //sword.SetTrigger("Idle");
         }
 
+        if (Input.GetMouseButton(0))
+        {
+            animator.SetTrigger("Attack");
+        }
+
         //UpdateMotor(new Vector3(movement.x,movement.y,0));
 
     }
