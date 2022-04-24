@@ -880,14 +880,17 @@ MonoBehaviour:
   - {fileID: -4781227989788599172, guid: 86e732b125894eb4ca183cb03fef01eb, type: 3}
   - {fileID: 5595627090532893865, guid: 11cacfc08711d08418db1f9af2000549, type: 3}
   - {fileID: 7045524508807746798, guid: fbfb664dadcbb974ca697d2e86462d35, type: 3}
+  - {fileID: 7861107476873968064, guid: d0ac782c43e20f241bae334008e4afaa, type: 3}
   chestImage:
   - {fileID: 7349709500177561522, guid: 63438a6d90a2f3745a28878347096e42, type: 3}
   - {fileID: 6696225551517210809, guid: e17a6b0c1b68fd74e96033a6fb176abe, type: 3}
   - {fileID: 8943462465168186209, guid: 457cd76c267babc40a279a57c9447234, type: 3}
+  - {fileID: -8416291500834379688, guid: 2cd325df8d642c64896d697fe0636d88, type: 3}
   legsImage:
   - {fileID: 5950978685415856814, guid: ffb5ac0b72ccd2b459263696e5510d36, type: 3}
   - {fileID: -8881663192579795401, guid: aeb9a86caf423ee4a9692db9f7382dde, type: 3}
   - {fileID: 4944535040205966742, guid: 9713178aae09c48439f353dedf78ad3f, type: 3}
+  - {fileID: -997670093131940233, guid: 9c50b6814961b5548921b52c01fb557c, type: 3}
   pickAxeDisplay: {fileID: 6346708696614706462}
   weaponDisplay: {fileID: 6346708695927173816}
   bowDisplay: {fileID: 6346708696321901746}
