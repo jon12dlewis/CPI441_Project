@@ -169,12 +169,12 @@ TextureImporter:
       name: ArmorCraft_3_Bottom_0
       rect:
         serializedVersion: 2
-        x: 97
+        x: 95
         y: 80
         width: 125
         height: 90
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
