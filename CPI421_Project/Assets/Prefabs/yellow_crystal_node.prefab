@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 2749083956315685053}
   - component: {fileID: 2749083956315685052}
   - component: {fileID: 2749083956315685051}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: yellow_crystal_node
   m_TagString: Crystal
   m_Icon: {fileID: 0}
@@ -264,6 +264,7 @@ MonoBehaviour:
   Crystal_1: {fileID: -8920311421202693270, guid: e73d74817f4109d41bbf009f98a049ed, type: 3}
   Crystal_2: {fileID: -2105349648739213142, guid: e73d74817f4109d41bbf009f98a049ed, type: 3}
   Crystal_3: {fileID: -1727900057525743124, guid: e73d74817f4109d41bbf009f98a049ed, type: 3}
+  crystal_level: 1
   breakingSound: {fileID: 2749083957284715026}
   collectionSound: {fileID: 7384471793526411179}
 --- !u!1 &2749083957284715025
