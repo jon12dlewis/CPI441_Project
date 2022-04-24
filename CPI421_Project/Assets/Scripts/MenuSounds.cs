@@ -20,6 +20,7 @@ public class MenuSounds : MonoBehaviour
     public void ButtonClick() {
         buttonClick.Play();
     }
+    
     public void ButtonHover() {
         buttonHover.Play();
     }
