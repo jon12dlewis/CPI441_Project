@@ -388,6 +388,7 @@ public class CharacterMenu : MonoBehaviour
             legsDisplay.enabled = false;
             legUI.enabled = false;
             leg.SetActive(false);
+            player.setSpeed(1f);
             return;
         }
         else
@@ -411,21 +412,25 @@ public class CharacterMenu : MonoBehaviour
             case 1:
                 //pickAxeDamage.text = "1";
                 //pickAxe.GetComponent<PickAxe>().setDamage(1);
+                player.setSpeed(1.1f);
                 leg.GetComponent<Armor_Bottoms>().SetLevelAnimation(legsSelected);
             break;
             case 2:
                 //pickAxeDamage.text = "3";
                 //pickAxe.GetComponent<PickAxe>().setDamage(3);
+                player.setSpeed(1.2f);
                 leg.GetComponent<Armor_Bottoms>().SetLevelAnimation(legsSelected);
             break;
             case 3:
                 //pickAxeDamage.text = "6";
                 //pickAxe.GetComponent<PickAxe>().setDamage(6);
+                player.setSpeed(1.3f);
                 leg.GetComponent<Armor_Bottoms>().SetLevelAnimation(legsSelected);
             break;
             case 4:
                 //pickAxeDamage.text = "6";
                 //pickAxe.GetComponent<PickAxe>().setDamage(6);
+                player.setSpeed(1.5f);
                 leg.GetComponent<Armor_Bottoms>().SetLevelAnimation(legsSelected);
             break;
 
