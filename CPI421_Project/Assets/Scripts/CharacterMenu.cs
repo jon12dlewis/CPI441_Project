@@ -38,9 +38,11 @@ public class CharacterMenu : MonoBehaviour
         weapon = player.transform.GetChild(1).gameObject;
         pickAxe = player.transform.GetChild(2).gameObject;
         bow = player.transform.GetChild(6).gameObject;
-        helmet = GameObject.Find("Armor_Helmet");
-        chest = GameObject.Find("Armor_Chest");
-        leg = GameObject.Find("Armor_Bottoms");
+        helmet = player.transform.GetChild(3).gameObject;
+        chest = player.transform.GetChild(5).gameObject;
+        leg = player.transform.GetChild(4).gameObject;
+
+        Debug.Log("I am setting all the display");
 
         displayWeapon();
         displayPickAxe();
@@ -112,10 +114,33 @@ public class CharacterMenu : MonoBehaviour
         */
     }
 
+    public void SetDisplay()
+    {
+        displayWeapon();
+        displayPickAxe();
+        displayBow();
+        displayLegs();
+        displayChest();
+        displayHelmet();
+    }
+
     public void displayWeapon()
     {
         //setMax();
         weaponSelected = GameManager.instance.weaponLevel;
+
+        if(weaponSelected == 0)
+        {
+            weaponDisplay.enabled = false;
+            weaponUI.enabled = false;
+            weapon.SetActive(false);
+            return;
+        }
+        
+        weaponDisplay.enabled = true;
+        weaponUI.enabled = true;
+        weapon.SetActive(true);
+
         weaponDisplay.sprite = weaponImage[weaponSelected-1];
         //GameManager.instance.setWeapon(weaponSelected);
 
@@ -151,6 +176,19 @@ public class CharacterMenu : MonoBehaviour
     {
         //setMax();
         bowSelected = GameManager.instance.bowLevel;
+
+        if(bowSelected == 0)
+        {
+            bowDisplay.enabled = false;
+            bowUI.enabled = false;
+            bow.SetActive(false);
+            return;
+        }
+
+        bowDisplay.enabled = true;
+        bowUI.enabled = true;
+        bow.SetActive(true);
+
         bowDisplay.sprite = bowImage[bowSelected-1];
         //GameManager.instance.setWeapon(weaponSelected);
 
@@ -188,6 +226,19 @@ public class CharacterMenu : MonoBehaviour
     {
         //setMax();
         pickAxeSelected = GameManager.instance.pickaxeLevel;
+
+        if(pickAxeSelected == 0)
+        {
+            pickAxeDisplay.enabled = false;
+            pickAxeUI.enabled = false;
+            pickAxe.SetActive(false);
+            return;
+        }
+
+        pickAxeDisplay.enabled = true;
+        pickAxeUI.enabled = true;
+        pickAxe.SetActive(true);
+        
         pickAxeDisplay.sprite = pickAxeImage[pickAxeSelected-1];
         //GameManager.instance.setWeapon(weaponSelected);
 
@@ -220,11 +271,30 @@ public class CharacterMenu : MonoBehaviour
     {
         //setMax();
         helmetSelected = GameManager.instance.helmetLevel;
-        helmetDisplay.sprite = helmetImage[helmetSelected-1];
+
+        if(helmetSelected == 0)
+        {
+            helmetDisplay.enabled = false;
+            helmetUI.enabled = false;
+            helmet.SetActive(false);
+            return;
+        }
+        else
+        {
+            helmetDisplay.enabled = true;
+            helmetUI.enabled = true;
+            helmet.SetActive(true);
+        }
+
+
+        
+        helmetDisplay.sprite = helmetImage[helmetSelected -1];
         //GameManager.instance.setWeapon(weaponSelected);
 
         //helmet.GetComponent<Helmet>().setImage(helmetImage[helmetSelected-1]);
-        helmetUI.sprite = helmetImage[helmetSelected-1];
+        helmetUI.sprite = helmetImage[helmetSelected -1];
+
+        Debug.Log(helmetSelected + "helmet level");
 
 
         switch(helmetSelected)
@@ -258,11 +328,28 @@ public class CharacterMenu : MonoBehaviour
     {
         //setMax();
         chestSelected = GameManager.instance.chestLevel;
-        chestDisplay.sprite = chestImage[chestSelected-1];
+
+        if(chestSelected == 0)
+        {
+            chestDisplay.enabled = false;
+            chestUI.enabled = false;
+            chest.SetActive(false);
+            return;
+        }
+        else
+        {
+            chestDisplay.enabled = true;
+            chestUI.enabled = true;
+            chest.SetActive(true);
+        }
+
+
+
+        chestDisplay.sprite = chestImage[chestSelected -1];
         //GameManager.instance.setWeapon(weaponSelected);
 
         //chest.GetComponent<Chest>().setImage(chestImage[chestSelected-1]);
-        chestUI.sprite = chestImage[chestSelected-1];
+        chestUI.sprite = chestImage[chestSelected -1];
 
 
         switch(chestSelected)
@@ -295,11 +382,28 @@ public class CharacterMenu : MonoBehaviour
     {
         //setMax();
         legsSelected = GameManager.instance.legLevel;
-        legsDisplay.sprite = legsImage[legsSelected-1];
+
+        if(legsSelected == 0)
+        {
+            legsDisplay.enabled = false;
+            legUI.enabled = false;
+            leg.SetActive(false);
+            return;
+        }
+        else
+        {
+            legsDisplay.enabled = true;
+            legUI.enabled = true;
+            leg.SetActive(true);
+        }
+
+
+
+        legsDisplay.sprite = legsImage[legsSelected -1];
         //GameManager.instance.setWeapon(weaponSelected);
 
         //leg.GetComponent<Leg>().setImage(legImage[legSelected-1]);
-        legUI.sprite = legsImage[legsSelected-1];
+        legUI.sprite = legsImage[legsSelected -1];
 
 
         switch(legsSelected)
