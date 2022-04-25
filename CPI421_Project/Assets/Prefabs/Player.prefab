@@ -757,6 +757,7 @@ GameObject:
   - component: {fileID: 3386749949196032529}
   - component: {fileID: 3386749949196032528}
   - component: {fileID: 7255693770048803870}
+  - component: {fileID: 1543582753803457939}
   m_Layer: 9
   m_Name: Player
   m_TagString: Fighter
@@ -904,7 +905,7 @@ Animator:
   m_GameObject: {fileID: 3386749949196032534}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2025b485efb05cc40b88cf49c82f4864, type: 2}
+  m_Controller: {fileID: 9100000, guid: e02d41f6d56bfb043af7c09a5823473d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -928,6 +929,18 @@ MonoBehaviour:
   color: {r: 0.6320754, g: 0.25879315, b: 0.25879315, a: 0}
   fadeTime: 0.1
   lingerTime: 0.1
+--- !u!114 &1543582753803457939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3386749949196032534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28d231b1259320b45893430ac59e0d8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3386749949820187094
 GameObject:
   m_ObjectHideFlags: 0
