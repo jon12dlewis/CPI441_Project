@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3019132149928039961
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3107528322626406679}
+  m_Layer: 0
+  m_Name: Unpaused Key
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3107528322626406679
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3019132149928039961}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4680259274373445862}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3181201188676350152
 GameObject:
   m_ObjectHideFlags: 0
@@ -15,6 +45,7 @@ GameObject:
   - component: {fileID: 8632588538405063510}
   - component: {fileID: 1853207015490146420}
   - component: {fileID: 5679853037874774882}
+  - component: {fileID: 2969222615918498330}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameController
@@ -129,7 +160,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3181201188676350152}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60aeb1703c240f547a91ffb641d6796b, type: 3}
   m_Name: 
@@ -151,6 +182,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a244160f0a25fd34998cdfa9fd722d1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2969222615918498330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3181201188676350152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46ca9e14efe6d22418d8d4b107ae4d49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnKey: {fileID: 7416556997557607225}
+  OffKey: {fileID: 3019132149928039961}
+  mixer: {fileID: 24100000, guid: af8649a31f0a1904dbc44df07f370d85, type: 2}
+  snapshot1: {fileID: 4675736407107260339, guid: af8649a31f0a1904dbc44df07f370d85, type: 2}
+  snapshot2: {fileID: 24500006, guid: af8649a31f0a1904dbc44df07f370d85, type: 2}
+  transitionSpeed: 0
 --- !u!1 &3266673192177964593
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,6 +291,7 @@ Transform:
   - {fileID: 490482786601788513}
   - {fileID: 2106621154219271149}
   - {fileID: 8681718270724891545}
+  - {fileID: 3107528322626406679}
   m_Father: {fileID: 3181201188676350154}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

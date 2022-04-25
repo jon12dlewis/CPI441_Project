@@ -9,6 +9,7 @@ public class AudioEvents_V2 : MonoBehaviour
     public static MusicEvent enemiesNearbyEvent;
     public static MusicEvent inCombatEvent;
     public static MusicEvent gamePausedEvent;
+    public static MusicEvent gameUnpausedEvent;
 
     // returns a reference to a music event that can be subscribed to from other functions
     public static ref MusicEvent EventLookup(GameObject key) {
@@ -20,6 +21,9 @@ public class AudioEvents_V2 : MonoBehaviour
         }
         else if (key.gameObject.name == "Paused Key") {
             return ref gamePausedEvent;
+        }
+        else if (key.gameObject.name == "Unpaused Key") {
+            return ref gameUnpausedEvent;
         }
 
         else {
@@ -41,5 +45,9 @@ public class AudioEvents_V2 : MonoBehaviour
     // triggers the game paused event, all subscribed functions are called
     public static void GamePaused() {
         if (gamePausedEvent != null) gamePausedEvent();
+    }
+
+    public static void GameUnpaused() {
+        if (gameUnpausedEvent != null) gameUnpausedEvent();
     }
 }
