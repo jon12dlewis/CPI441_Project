@@ -9,6 +9,7 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
     public static bool OtherUIOpen = false;
     public static PauseMenu Instance;
+    bool inMenu;
 
     public GameObject pauseMenuUI;
     [SerializeField] AudioSource open;
@@ -17,6 +18,11 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] AudioSource buttonHover;
     [SerializeField] Button homeButton;
     [SerializeField] Text homeButtonText;
+
+    GameObject pauseMenu;
+    GameObject soundMenu;
+    GameObject controlsMenu;
+    GameObject visualsMenu;
 
     void Awake() {
         SceneManager.activeSceneChanged += Reload;
@@ -31,6 +37,11 @@ public class PauseMenu : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         if (SceneManager.GetActiveScene().name == "HomeBase") DisableButton();
+
+        pauseMenu = pauseMenuUI.transform.GetChild(0).gameObject;
+        soundMenu = pauseMenuUI.transform.GetChild(1).gameObject;
+        controlsMenu = pauseMenuUI.transform.GetChild(2).gameObject;
+        visualsMenu = pauseMenuUI.transform.GetChild(3).gameObject;
     }
 
     // Update is called once per frame
@@ -38,6 +49,7 @@ public class PauseMenu : MonoBehaviour
     { 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            if (inMenu) return;
 
             if (GameIsPaused)
             {
@@ -56,26 +68,29 @@ public class PauseMenu : MonoBehaviour
             }
         }
     }
-    public void Resume ()
+    void Resume ()
     {
-        AudioEvents_V2.GamePaused();
-        pauseMenuUI.transform.GetChild(0).gameObject.SetActive(false);
-        pauseMenuUI.transform.GetChild(1).gameObject.SetActive(false);
-        pauseMenuUI.transform.GetChild(2).gameObject.SetActive(false);
+        AudioEvents_V2.GameUnpaused();
+
+        soundMenu.SetActive(false);
+        controlsMenu.gameObject.SetActive(false);
+        visualsMenu.gameObject.SetActive(false);
 
         pauseMenuUI.SetActive(false);
+
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
     void Pause ()
     {
-        Debug.Log("WTF");
         AudioEvents_V2.GamePaused();
+
         pauseMenuUI.SetActive(true);
-        pauseMenuUI.transform.GetChild(0).gameObject.SetActive(true);
-        pauseMenuUI.transform.GetChild(1).gameObject.SetActive(false);
-        pauseMenuUI.transform.GetChild(2).gameObject.SetActive(false);
-        pauseMenuUI.transform.GetChild(3).gameObject.SetActive(false);
+
+        pauseMenu.SetActive(true);
+        soundMenu.SetActive(false);
+        controlsMenu.SetActive(false);
+        visualsMenu.SetActive(false);
 
         Time.timeScale = 0f;
         GameIsPaused = true;
@@ -107,6 +122,13 @@ public class PauseMenu : MonoBehaviour
         }
         else {
             EnableButton();
+        }
+
+        if (next.name == "Selection" && current.name != "Title") {
+            inMenu = true;
+        }
+        else {
+            inMenu = false;
         }
     }
 
