@@ -89,10 +89,18 @@ public class GameManager : MonoBehaviour
         s += helmetSelected.ToString() + "|";
         s += chestSelected.ToString() + "|";
         s += legSelected.ToString();
+        
+        //"0|0|0|0|1|1|1|1|1|1|0|1|1|1|1|1|1"
 
         PlayerPrefs.SetString("SaveState", s);
         floatingTextManager = GameObject.Find("FloatingTextManager").GetComponent<FloatingTextManager>();
         //player = GameObject.Find("Player").GetComponent<Transform>();
+    }
+
+    public void newGame()
+    {
+        string s = "0|0|0|0|1|1|1|1|1|1|0|1|1|1|1|1|1";
+        PlayerPrefs.SetString("SaveState", s);
     }
 
     public void LoadState(Scene s, LoadSceneMode mode)
