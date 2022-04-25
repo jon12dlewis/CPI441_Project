@@ -21,11 +21,13 @@ public class MusicManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    // subscribe functions to loading levels
     void OnEnable() {
         levelSelect.loadLevel += StopMenuMusic;
         levelSelect.loadHomeBase += PlayMenuMusic;
     }
 
+    // unsubscribe functions to loading levels
     void OnDisable() {
         levelSelect.loadLevel -= StopMenuMusic;
         levelSelect.loadHomeBase -= PlayMenuMusic;
