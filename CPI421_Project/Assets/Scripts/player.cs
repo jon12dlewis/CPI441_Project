@@ -18,7 +18,7 @@ public class player : Mover
     public float moveSpeed = 2f; 
 
     Vector2 movement; 
-    // Vector2 direction = new Vector2(0.0f, -1.0f);
+    Vector2 direction = new Vector2(0.0f, -1.0f);
 
     Vector2 playerPosition;
 
@@ -49,7 +49,7 @@ public class player : Mover
 
     private void Update()
     {
-        // Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         playerPosition = transform.position;
 
         movement.x = Input.GetAxisRaw("Horizontal");
@@ -143,10 +143,10 @@ public class player : Mover
             //sword.SetTrigger("Idle");
         }
 
-        if (Input.GetMouseButton(0))
-        {
-            animator.SetTrigger("Attack");
-        }
+        // if (Input.GetMouseButton(0))
+        // {
+        //     animator.SetTrigger("Attack");
+        // }
 
         //UpdateMotor(new Vector3(movement.x,movement.y,0));
 

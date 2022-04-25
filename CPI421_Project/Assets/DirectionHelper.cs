@@ -16,6 +16,7 @@ public class DirectionHelper : StateMachineBehaviour
     {
         animator.SetBool("moving", PlayerDirectionManager.moving);
         animator.SetInteger("direction", PlayerDirectionManager.direction);
+        animator.SetBool("attacking", PlayerDirectionManager.attacking);
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

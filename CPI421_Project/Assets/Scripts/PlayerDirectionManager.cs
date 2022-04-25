@@ -6,6 +6,7 @@ public class PlayerDirectionManager : MonoBehaviour
 {
     public static int direction;
     public static bool moving;
+    public static bool attacking;
     public enum LRUD {left, right, up, down};
 
     Vector2 playerPosition;
@@ -51,5 +52,8 @@ public class PlayerDirectionManager : MonoBehaviour
         else {
             moving = false;
         }
+
+        // tracks whether player is attacking or not
+        attacking = Input.GetMouseButton(0);
     }
 }
