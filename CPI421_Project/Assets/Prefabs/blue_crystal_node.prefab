@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6234803846274970455}
   - component: {fileID: 6234803846274970454}
   - component: {fileID: 6234803846274970449}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: blue_crystal_node
   m_TagString: Crystal
   m_Icon: {fileID: 0}

@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 1134868429223673102}
   - component: {fileID: 1134868429223673103}
   - component: {fileID: 1134868429223673096}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: red_crystal_node
   m_TagString: Crystal
   m_Icon: {fileID: 0}

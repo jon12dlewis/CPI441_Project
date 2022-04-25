@@ -166,12 +166,12 @@ TextureImporter:
       name: ArmorSheet1_Bottoms_0
       rect:
         serializedVersion: 2
-        x: 85
-        y: 2100
-        width: 150
-        height: 150
-      alignment: 9
-      pivot: {x: 0.5641982, y: 0.5641976}
+        x: 97
+        y: 2124
+        width: 125
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -187,12 +187,12 @@ TextureImporter:
       name: ArmorSheet1_Bottoms_1
       rect:
         serializedVersion: 2
-        x: 405
-        y: 2100
-        width: 150
-        height: 150
-      alignment: 9
-      pivot: {x: 0.5641982, y: 0.5577783}
+        x: 415
+        y: 2124
+        width: 125
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -208,12 +208,12 @@ TextureImporter:
       name: ArmorSheet1_Bottoms_2
       rect:
         serializedVersion: 2
-        x: 735
-        y: 2100
-        width: 150
-        height: 150
-      alignment: 9
-      pivot: {x: 0.5385189, y: 0.57061684}
+        x: 740
+        y: 2124
+        width: 125
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -229,12 +229,12 @@ TextureImporter:
       name: ArmorSheet1_Bottoms_3
       rect:
         serializedVersion: 2
-        x: 1045
-        y: 2100
-        width: 150
-        height: 150
-      alignment: 9
-      pivot: {x: 0.5770369, y: 0.55135745}
+        x: 1063
+        y: 2124
+        width: 125
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -250,12 +250,12 @@ TextureImporter:
       name: ArmorSheet1_Bottoms_4
       rect:
         serializedVersion: 2
-        x: 85
-        y: 1600
-        width: 150
-        height: 150
-      alignment: 9
-      pivot: {x: 0.425956, y: 0.5}
+        x: 97
+        y: 1616
+        width: 125
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -271,12 +271,12 @@ TextureImporter:
       name: ArmorSheet1_Bottoms_5
       rect:
         serializedVersion: 2
-        x: 405
-        y: 1600
-        width: 150
-        height: 150
-      alignment: 9
-      pivot: {x: 0.4282562, y: 0.4889624}
+        x: 415
+        y: 1616
+        width: 125
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -292,12 +292,12 @@ TextureImporter:
       name: ArmorSheet1_Bottoms_6
       rect:
         serializedVersion: 2
-        x: 735
-        y: 1600
-        width: 150
-        height: 150
-      alignment: 9
-      pivot: {x: 0.33995646, y: 0.5}
+        x: 740
+        y: 1616
+        width: 125
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -313,12 +313,12 @@ TextureImporter:
       name: ArmorSheet1_Bottoms_7
       rect:
         serializedVersion: 2
-        x: 1045
-        y: 1600
-        width: 150
-        height: 150
-      alignment: 9
-      pivot: {x: 0.42825603, y: 0.4944816}
+        x: 1063
+        y: 1616
+        width: 125
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -334,12 +334,12 @@ TextureImporter:
       name: ArmorSheet1_Bottoms_8
       rect:
         serializedVersion: 2
-        x: 85
-        y: 1085
-        width: 150
-        height: 150
-      alignment: 9
-      pivot: {x: 0.4930253, y: 0.45815185}
+        x: 97
+        y: 1098
+        width: 125
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -355,12 +355,12 @@ TextureImporter:
       name: ArmorSheet1_Bottoms_9
       rect:
         serializedVersion: 2
-        x: 405
-        y: 1085
-        width: 150
-        height: 150
-      alignment: 9
-      pivot: {x: 0.4999998, y: 0.44420248}
+        x: 415
+        y: 1098
+        width: 125
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -376,12 +376,12 @@ TextureImporter:
       name: ArmorSheet1_Bottoms_10
       rect:
         serializedVersion: 2
-        x: 735
-        y: 1085
-        width: 150
-        height: 150
-      alignment: 9
-      pivot: {x: 0.44420207, y: 0.46512613}
+        x: 740
+        y: 1098
+        width: 125
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -397,12 +397,12 @@ TextureImporter:
       name: ArmorSheet1_Bottoms_11
       rect:
         serializedVersion: 2
-        x: 1045
-        y: 1085
-        width: 150
-        height: 150
-      alignment: 9
-      pivot: {x: 0.49302492, y: 0.44420248}
+        x: 1063
+        y: 1098
+        width: 125
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -418,10 +418,10 @@ TextureImporter:
       name: ArmorSheet1_Bottoms_12
       rect:
         serializedVersion: 2
-        x: 85
-        y: 570
-        width: 150
-        height: 150
+        x: 97
+        y: 585
+        width: 125
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -439,10 +439,10 @@ TextureImporter:
       name: ArmorSheet1_Bottoms_13
       rect:
         serializedVersion: 2
-        x: 405
-        y: 570
-        width: 150
-        height: 150
+        x: 415
+        y: 585
+        width: 125
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -460,12 +460,12 @@ TextureImporter:
       name: ArmorSheet1_Bottoms_14
       rect:
         serializedVersion: 2
-        x: 735
-        y: 570
-        width: 150
-        height: 150
-      alignment: 9
-      pivot: {x: 0.44151366, y: 0.5116976}
+        x: 740
+        y: 585
+        width: 125
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -481,10 +481,10 @@ TextureImporter:
       name: ArmorSheet1_Bottoms_15
       rect:
         serializedVersion: 2
-        x: 1045
-        y: 570
-        width: 150
-        height: 150
+        x: 1063
+        y: 585
+        width: 125
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -502,10 +502,10 @@ TextureImporter:
       name: ArmorSheet1_Bottoms_16
       rect:
         serializedVersion: 2
-        x: 85
-        y: 55
-        width: 150
-        height: 150
+        x: 97
+        y: 76
+        width: 125
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -523,10 +523,10 @@ TextureImporter:
       name: ArmorSheet1_Bottoms_17
       rect:
         serializedVersion: 2
-        x: 405
-        y: 55
-        width: 150
-        height: 150
+        x: 415
+        y: 76
+        width: 125
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -544,12 +544,12 @@ TextureImporter:
       name: ArmorSheet1_Bottoms_18
       rect:
         serializedVersion: 2
-        x: 735
-        y: 55
-        width: 150
-        height: 150
-      alignment: 9
-      pivot: {x: 0.3616215, y: 0.531934}
+        x: 740
+        y: 76
+        width: 125
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -565,12 +565,12 @@ TextureImporter:
       name: ArmorSheet1_Bottoms_19
       rect:
         serializedVersion: 2
-        x: 1045
-        y: 55
-        width: 150
-        height: 150
-      alignment: 9
-      pivot: {x: 0.5638664, y: 0.50000054}
+        x: 1063
+        y: 76
+        width: 125
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

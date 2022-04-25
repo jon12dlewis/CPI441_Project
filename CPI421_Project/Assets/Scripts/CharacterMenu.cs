@@ -245,11 +245,6 @@ public class CharacterMenu : MonoBehaviour
                 //pickAxe.GetComponent<PickAxe>().setDamage(6);
                 helmet.GetComponent<Helmet>().SetLevelAnimation(helmetSelected);
             break;
-            case 4:
-                //helmetDamage.text = "6";
-                //pickAxe.GetComponent<PickAxe>().setDamage(6);
-                helmet.GetComponent<Helmet>().SetLevelAnimation(helmetSelected);
-            break;
 
         }
     }
@@ -282,11 +277,6 @@ public class CharacterMenu : MonoBehaviour
                 //pickAxe.GetComponent<PickAxe>().setDamage(6);
                 chest.GetComponent<Armor_Chest>().SetLevelAnimation(chestSelected);
             break;
-            case 4:
-                //pickAxeDamage.text = "6";
-                //pickAxe.GetComponent<PickAxe>().setDamage(6);
-                chest.GetComponent<Armor_Chest>().SetLevelAnimation(chestSelected);
-            break;
 
         }
     }
@@ -315,11 +305,6 @@ public class CharacterMenu : MonoBehaviour
                 leg.GetComponent<Armor_Bottoms>().SetLevelAnimation(legsSelected);
             break;
             case 3:
-                //pickAxeDamage.text = "6";
-                //pickAxe.GetComponent<PickAxe>().setDamage(6);
-                leg.GetComponent<Armor_Bottoms>().SetLevelAnimation(legsSelected);
-            break;
-            case 4:
                 //pickAxeDamage.text = "6";
                 //pickAxe.GetComponent<PickAxe>().setDamage(6);
                 leg.GetComponent<Armor_Bottoms>().SetLevelAnimation(legsSelected);

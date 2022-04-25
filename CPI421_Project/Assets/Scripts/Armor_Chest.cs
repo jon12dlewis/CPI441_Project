@@ -57,11 +57,6 @@ public class Armor_Chest : MonoBehaviour
         animator.SetFloat("idle_vertical", direction.y);
 
         animator.SetFloat("speed", movement.sqrMagnitude);
-
-        if (Input.GetMouseButton(0))
-        {
-            animator.SetTrigger("Attack");
-        }
     }
 
     public void SetLevelAnimation(int level)

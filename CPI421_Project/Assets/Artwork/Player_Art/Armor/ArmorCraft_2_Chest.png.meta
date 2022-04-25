@@ -169,12 +169,12 @@ TextureImporter:
       name: ArmorCraft_2_Chest_0
       rect:
         serializedVersion: 2
-        x: 90
-        y: 150
-        width: 140
+        x: 49
+        y: 145
+        width: 225
         height: 125
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
