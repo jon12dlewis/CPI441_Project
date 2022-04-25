@@ -2,20 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public static bool OtherUIOpen = false;
+    public static PauseMenu Instance;
 
     public GameObject pauseMenuUI;
     [SerializeField] AudioSource open;
     [SerializeField] AudioSource close;
     [SerializeField] AudioSource buttonClick;
     [SerializeField] AudioSource buttonHover;
+    [SerializeField] Button homeButton;
+    [SerializeField] Text homeButtonText;
 
     void Awake() {
-        SceneManager.sceneLoaded += Reload;
+        SceneManager.activeSceneChanged += Reload;
+
+        // the code in this method prevents this manager from being destroyed on scene transition and ensure only one exists at a time.
+        if (Instance != null) {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+
+        if (SceneManager.GetActiveScene().name == "HomeBase") DisableButton();
     }
 
     // Update is called once per frame
@@ -43,7 +58,6 @@ public class PauseMenu : MonoBehaviour
     }
     public void Resume ()
     {
-        
         AudioEvents_V2.GamePaused();
         pauseMenuUI.transform.GetChild(0).gameObject.SetActive(false);
         pauseMenuUI.transform.GetChild(1).gameObject.SetActive(false);
@@ -55,6 +69,7 @@ public class PauseMenu : MonoBehaviour
     }
     void Pause ()
     {
+        Debug.Log("WTF");
         AudioEvents_V2.GamePaused();
         pauseMenuUI.SetActive(true);
         pauseMenuUI.transform.GetChild(0).gameObject.SetActive(true);
@@ -82,8 +97,26 @@ public class PauseMenu : MonoBehaviour
     }
 
     // necessary to reset these when we change scenes because animators don't close
-    void Reload(Scene scene, LoadSceneMode mode) {
+    void Reload(Scene current, Scene next) {
         GameIsPaused = false;
         OtherUIOpen = false;
+        Resume();
+
+        if (next.name == "HomeBase") {
+            DisableButton();
+        }
+        else {
+            EnableButton();
+        }
+    }
+
+    void DisableButton() {
+        homeButtonText.color = new Color32(169, 99, 0, 217);
+        homeButton.interactable = false;
+    }
+    
+    void EnableButton() {
+        homeButtonText.color = new Color32(255, 177, 13, 255);
+        homeButton.interactable = true;
     }
 }

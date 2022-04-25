@@ -61,12 +61,12 @@ MonoBehaviour:
   blue_crystals: 0
   yellow_crystals: 0
   red_crystals: 0
-  helmets: 000000000000000000000000
-  chests: 000000000000000000000000
-  legs: 000000000000000000000000
-  weapons: 000000000000000000000000
-  pickaxes: 000000000000000000000000
-  bows: 000000000000000000000000
+  helmetLevel: 1
+  chestLevel: 1
+  legLevel: 1
+  weaponLevel: 1
+  pickaxeLevel: 1
+  bowLevel: 1
   arrows: 0
   levelsCompleted: 0
   pickAxeSelected: 0
@@ -136,8 +136,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StimulusKey: {fileID: 7416556997557607225}
   mixer: {fileID: 24100000, guid: af8649a31f0a1904dbc44df07f370d85, type: 2}
-  snapshot1: {fileID: 4675736407107260339, guid: af8649a31f0a1904dbc44df07f370d85, type: 2}
-  snapshot2: {fileID: 24500006, guid: af8649a31f0a1904dbc44df07f370d85, type: 2}
+  snapshot1: {fileID: 24500006, guid: af8649a31f0a1904dbc44df07f370d85, type: 2}
+  snapshot2: {fileID: 4675736407107260339, guid: af8649a31f0a1904dbc44df07f370d85, type: 2}
   transitionSpeed: 0
 --- !u!114 &5679853037874774882
 MonoBehaviour:
@@ -151,9 +151,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a244160f0a25fd34998cdfa9fd722d1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemiesNearbyMusicKey: {fileID: 3681037310829138454}
-  CombatMusicKey: {fileID: 3266673192177964593}
-  PauseMusicKey: {fileID: 7416556997557607225}
 --- !u!1 &3266673192177964593
 GameObject:
   m_ObjectHideFlags: 0

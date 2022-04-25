@@ -23,6 +23,19 @@ public class ToggleButton : MonoBehaviour
         }
     }
 
+    public void ToggleMe2() {
+        if (showOnNextClick) {
+            animator.SetTrigger("weapon");
+            showOnNextClick = false;
+            if (openSound != null) openSound.Play();
+        }
+        else {
+            animator.SetTrigger("hidden");
+            showOnNextClick = true;
+            if (closeSound != null) closeSound.Play();
+        }
+    }
+
 
     void Update() {
 
