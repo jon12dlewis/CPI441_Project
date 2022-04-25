@@ -18,8 +18,8 @@ public class CraftingStation : Collidable
     public int chestLevel = 1;
     public int legLevel = 1;
 
-    public int max = 3;
-    public int min = 1;
+    public int max = 4;
+    public int min = 0;
 
     // Start is called before the first frame update
     protected override void Start()
@@ -38,17 +38,49 @@ public class CraftingStation : Collidable
         base.Update();  // Need to check collision
 
         helmetLevel = GameManager.instance.helmetLevel;
-        helmetImage.sprite = helmets[helmetLevel];
+        if(helmetLevel != 0)
+        {
+            helmetImage.sprite = helmets[helmetLevel-1];
+            helmetUpgradeButton.GetComponentInChildren<Text>().text = "Upgrade";
+        }
+        else
+        {
+            helmetImage.sprite = helmets[0];
+            helmetUpgradeButton.GetComponentInChildren<Text>().text = "Craft";
+        }
+
+
         if(helmetLevel >= 4)
         helmetUpgradeButton.SetActive(false);
 
         chestLevel = GameManager.instance.chestLevel;
-        chestImage.sprite = chests[chestLevel];
+        if(chestLevel != 0)
+        {
+            chestImage.sprite = chests[chestLevel-1];
+            chestUpgradeButton.transform.GetChild(0).GetComponent<Text>().text = "Upgrade";
+        }
+        else
+        {
+            chestImage.sprite = chests[0];
+            chestUpgradeButton.transform.GetChild(0).GetComponent<Text>().text = "Craft";
+        }
+
         if(chestLevel >= 4)
         chestUpgradeButton.SetActive(false);
 
         legLevel = GameManager.instance.legLevel;
-        legImage.sprite = legs[legLevel];
+        if(legLevel != 0)
+        {
+            legImage.sprite = legs[legLevel-1];
+            legUpgradeButton.transform.GetChild(0).GetComponent<Text>().text = "Upgrade";
+        }
+        else
+        {
+            legImage.sprite = legs[0];
+            legUpgradeButton.transform.GetChild(0).GetComponent<Text>().text = "Craft";
+        }
+
+
         if(legLevel >= 4)
         legUpgradeButton.SetActive(false);
     }
@@ -79,7 +111,7 @@ public class CraftingStation : Collidable
         
         if(helmetLevel > max)
         {
-            helmetLevel = min;
+            helmetLevel = max;
         }
         
 
@@ -107,7 +139,7 @@ public class CraftingStation : Collidable
                     helmetLevel = GameManager.instance.upgradeHelmetLevel();
                     GameManager.instance.TakeYellowCrystal(10);
                     GameManager.instance.TakeBlueCrystal(15);
-                    helmetImage.sprite = helmets[helmetLevel];
+                    helmetImage.sprite = helmets[helmetLevel-1];
                     Debug.Log("Crafting helmet 2");
                     updateHelmetStats();
                 }
@@ -125,10 +157,27 @@ public class CraftingStation : Collidable
                     GameManager.instance.TakeYellowCrystal(20);
                     GameManager.instance.TakeBlueCrystal(20);
                     GameManager.instance.TakeRedCrystal(15);
-                    if(helmetLevel >= 3)
-                        helmetLevel = 2;
-                    helmetImage.sprite = helmets[helmetLevel - 1];
+                    helmetImage.sprite = helmets[helmetLevel-1];
                     Debug.Log("Crafting helmet 3");
+                    updateHelmetStats();
+                }
+                else
+                {
+                    Debug.Log("Not Enough Crystals");
+                }
+            break;
+
+            case 3:
+                if(GameManager.instance.GetYellowCrystal() >= 20 && GameManager.instance.GetBlueCrystal() >= 20 && GameManager.instance.GetRedCrystal() >= 15)
+                {
+                    helmetLevel = GameManager.instance.upgradeHelmetLevel();
+                    GameManager.instance.TakeYellowCrystal(20);
+                    GameManager.instance.TakeBlueCrystal(20);
+                    GameManager.instance.TakeRedCrystal(15);
+                    //if(helmetLevel >= 4)  
+                    //    helmetLevel = 4;
+                    helmetImage.sprite = helmets[helmetLevel-1];
+                    Debug.Log("Crafting helmet 4");
                     helmetUpgradeButton.SetActive(false);
                     updateHelmetStats();
                 }
@@ -137,6 +186,7 @@ public class CraftingStation : Collidable
                     Debug.Log("Not Enough Crystals");
                 }
             break;
+
 
             default: 
                     
@@ -155,7 +205,7 @@ public class CraftingStation : Collidable
         
         if(chestLevel > max)
         {
-            chestLevel = min;
+            chestLevel = max;
         }
         
 
@@ -183,7 +233,7 @@ public class CraftingStation : Collidable
                     chestLevel = GameManager.instance.upgradeChestLevel();
                     GameManager.instance.TakeYellowCrystal(10);
                     GameManager.instance.TakeBlueCrystal(15);
-                    chestImage.sprite = chests[chestLevel];
+                    chestImage.sprite = chests[chestLevel-1];
                     Debug.Log("Crafting chest 2");
                     updateChestStats();
                 }
@@ -201,9 +251,26 @@ public class CraftingStation : Collidable
                     GameManager.instance.TakeYellowCrystal(20);
                     GameManager.instance.TakeBlueCrystal(20);
                     GameManager.instance.TakeRedCrystal(15);
-                    if(chestLevel >= 3)
-                        chestLevel = 2;
-                    chestImage.sprite = chests[chestLevel];
+                    chestImage.sprite = chests[chestLevel-1];
+                    Debug.Log("Crafting chest 3");
+                    updateChestStats();
+                }
+                else
+                {
+                    Debug.Log("Not Enough Crystals");
+                }
+            break;
+
+            case 3:
+                if(GameManager.instance.GetYellowCrystal() >= 20 && GameManager.instance.GetBlueCrystal() >= 20 && GameManager.instance.GetRedCrystal() >= 15)
+                {
+                    chestLevel = GameManager.instance.upgradeChestLevel();
+                    GameManager.instance.TakeYellowCrystal(20);
+                    GameManager.instance.TakeBlueCrystal(20);
+                    GameManager.instance.TakeRedCrystal(15);
+                    if(chestLevel >= 4)
+                        chestLevel = 4;
+                    chestImage.sprite = chests[chestLevel-1];
                     Debug.Log("Crafting chest 3");
                     chestUpgradeButton.SetActive(false);
                     updateChestStats();
@@ -213,6 +280,7 @@ public class CraftingStation : Collidable
                     Debug.Log("Not Enough Crystals");
                 }
             break;
+
 
             default: 
                     
@@ -231,7 +299,7 @@ public class CraftingStation : Collidable
         
         if(legLevel > max)
         {
-            legLevel = min;
+            legLevel = max;
         }
         
 
@@ -259,7 +327,7 @@ public class CraftingStation : Collidable
                     legLevel = GameManager.instance.upgradeLegLevel();
                     GameManager.instance.TakeYellowCrystal(10);
                     GameManager.instance.TakeBlueCrystal(15);
-                    legImage.sprite = legs[legLevel];
+                    legImage.sprite = legs[legLevel-1];
                     Debug.Log("Crafting leg 2");
                     updateLegStats();
                 }
@@ -277,9 +345,26 @@ public class CraftingStation : Collidable
                     GameManager.instance.TakeYellowCrystal(20);
                     GameManager.instance.TakeBlueCrystal(20);
                     GameManager.instance.TakeRedCrystal(15);
-                    if(legLevel >= 3)
-                        legLevel = 2;
-                    legImage.sprite = legs[legLevel];
+                    legImage.sprite = legs[legLevel-1];
+                    Debug.Log("Crafting leg 3");
+                    updateLegStats();
+                }
+                else
+                {
+                    Debug.Log("Not Enough Crystals");
+                }
+            break;
+
+            case 3:
+                if(GameManager.instance.GetYellowCrystal() >= 20 && GameManager.instance.GetBlueCrystal() >= 20 && GameManager.instance.GetRedCrystal() >= 15)
+                {
+                    legLevel = GameManager.instance.upgradeLegLevel();
+                    GameManager.instance.TakeYellowCrystal(20);
+                    GameManager.instance.TakeBlueCrystal(20);
+                    GameManager.instance.TakeRedCrystal(15);
+                    if(legLevel >= 4)
+                        legLevel = 4;
+                    legImage.sprite = legs[legLevel-1];
                     Debug.Log("Crafting leg 3");
                     legUpgradeButton.SetActive(false);
                     updateLegStats();
@@ -289,6 +374,7 @@ public class CraftingStation : Collidable
                     Debug.Log("Not Enough Crystals");
                 }
             break;
+
 
             default: 
                     

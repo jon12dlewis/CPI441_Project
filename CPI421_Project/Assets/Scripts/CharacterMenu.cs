@@ -288,11 +288,13 @@ public class CharacterMenu : MonoBehaviour
 
 
         
-        helmetDisplay.sprite = helmetImage[helmetSelected-1];
+        helmetDisplay.sprite = helmetImage[helmetSelected -1];
         //GameManager.instance.setWeapon(weaponSelected);
 
         //helmet.GetComponent<Helmet>().setImage(helmetImage[helmetSelected-1]);
-        helmetUI.sprite = helmetImage[helmetSelected-1];
+        helmetUI.sprite = helmetImage[helmetSelected -1];
+
+        Debug.Log(helmetSelected + "helmet level");
 
 
         switch(helmetSelected)
@@ -343,11 +345,11 @@ public class CharacterMenu : MonoBehaviour
 
 
 
-        chestDisplay.sprite = chestImage[chestSelected-1];
+        chestDisplay.sprite = chestImage[chestSelected -1];
         //GameManager.instance.setWeapon(weaponSelected);
 
         //chest.GetComponent<Chest>().setImage(chestImage[chestSelected-1]);
-        chestUI.sprite = chestImage[chestSelected-1];
+        chestUI.sprite = chestImage[chestSelected -1];
 
 
         switch(chestSelected)
@@ -397,11 +399,11 @@ public class CharacterMenu : MonoBehaviour
 
 
 
-        legsDisplay.sprite = legsImage[legsSelected-1];
+        legsDisplay.sprite = legsImage[legsSelected -1];
         //GameManager.instance.setWeapon(weaponSelected);
 
         //leg.GetComponent<Leg>().setImage(legImage[legSelected-1]);
-        legUI.sprite = legsImage[legsSelected-1];
+        legUI.sprite = legsImage[legsSelected -1];
 
 
         switch(legsSelected)
