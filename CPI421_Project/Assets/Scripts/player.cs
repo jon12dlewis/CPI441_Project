@@ -15,7 +15,9 @@ public class player : Mover
 
     public Animator animator;
 
-    public float moveSpeed = 2f; 
+    public int discoveryLevel = 0;
+
+    public float moveSpeed = 1f; 
 
     Vector2 movement; 
     Vector2 direction = new Vector2(0.0f, -1.0f);
@@ -55,38 +57,38 @@ public class player : Mover
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        if(mousePos.x > playerPosition.x + 1.5)
-        {
-            direction.x = 1;
-            direction.y = 0;
-        }
-        else
-        if(mousePos.x < playerPosition.x - 1.5)
-        {
-            direction.x = -1;
-            direction.y = 0;
-        }
-        else
-        if(mousePos.y > playerPosition.y + 1.5)
-        {
-            direction.x = 0;
-            direction.y = 1;
-        }
-        else
-        if(mousePos.y < playerPosition.y - 1.5)
-        {
-            direction.x = 0;
-            direction.y = -1;
+        // if(mousePos.x > playerPosition.x + 1.5)
+        // {
+        //     direction.x = 1;
+        //     direction.y = 0;
+        // }
+        // else
+        // if(mousePos.x < playerPosition.x - 1.5)
+        // {
+        //     direction.x = -1;
+        //     direction.y = 0;
+        // }
+        // else
+        // if(mousePos.y > playerPosition.y + 1.5)
+        // {
+        //     direction.x = 0;
+        //     direction.y = 1;
+        // }
+        // else
+        // if(mousePos.y < playerPosition.y - 1.5)
+        // {
+        //     direction.x = 0;
+        //     direction.y = -1;
 
-        }
+        // }
 
-        animator.SetFloat("horizontal", direction.x);
-        animator.SetFloat("vertical", direction.y);
+        // animator.SetFloat("horizontal", direction.x);
+        // animator.SetFloat("vertical", direction.y);
 
-        animator.SetFloat("idle_horizontal", direction.x);
-        animator.SetFloat("idle_vertical", direction.y);
+        // animator.SetFloat("idle_horizontal", direction.x);
+        // animator.SetFloat("idle_vertical", direction.y);
 
-        animator.SetFloat("speed", movement.sqrMagnitude);
+        // animator.SetFloat("speed", movement.sqrMagnitude);
 
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
@@ -143,6 +145,11 @@ public class player : Mover
             //sword.SetTrigger("Idle");
         }
 
+        // if (Input.GetMouseButton(0))
+        // {
+        //     animator.SetTrigger("Attack");
+        // }
+
         //UpdateMotor(new Vector3(movement.x,movement.y,0));
 
     }
@@ -150,12 +157,27 @@ public class player : Mover
     private void FixedUpdate()
     {
     
-        UpdateMotor(new Vector3(movement.x,movement.y,0));
+        UpdateMotor(new Vector3(movement.x * moveSpeed ,movement.y * moveSpeed,0));
     } 
 
     public void addHealth()
     {
         hitPoint += 1;
+    }
+
+    public void setSpeed(float Speed)
+    {
+        moveSpeed = Speed;              // Default is 2f
+    }
+
+    public void setDiscovery(int discovery)
+    {
+        discoveryLevel = discovery;
+    }
+
+    public int getDiscovery()
+    {
+        return discoveryLevel;
     }
 
     protected override void Death()

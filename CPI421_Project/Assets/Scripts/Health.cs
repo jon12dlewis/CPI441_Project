@@ -12,6 +12,9 @@ public class Health : MonoBehaviour
     public Image[] hearts;
     public Sprite fullHeart;
     public Sprite emptyHeart;
+    public float targetTime = 10.0f;
+
+    public bool regen = false;
 
     public player Player;
 
@@ -22,9 +25,28 @@ public class Health : MonoBehaviour
         maxHealth = Player.maxHitpoint;
     }
 
+    public void SetHealth()
+    {
+        Player = GameObject.Find("Player").GetComponent<player>();
+        health = Player.hitPoint;
+        maxHealth = Player.maxHitpoint;
+        numOfHearts = Player.maxHitpoint;
+    }
+
     void Update()
     {
         health = Player.hitPoint;
+
+         targetTime -= Time.deltaTime;
+ 
+        if(regen == true)
+        {
+            if(targetTime <= 0.0f)
+            {
+                Player.hitPoint += 1;
+                targetTime = 10.0f;
+            }
+        }
 
         if(health > numOfHearts)
         {
@@ -33,7 +55,7 @@ public class Health : MonoBehaviour
 
         for (int i = 0; i < hearts.Length; i++)
         {
-            if(i <health)
+            if(i < health)
             {
                 hearts[i].sprite = fullHeart;
             }
@@ -50,5 +72,6 @@ public class Health : MonoBehaviour
                 hearts[i].enabled = false;
             }
         }
+
     }
 }

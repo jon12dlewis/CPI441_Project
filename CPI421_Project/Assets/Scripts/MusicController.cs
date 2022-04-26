@@ -13,10 +13,9 @@ public class MusicController : MonoBehaviour
     void Awake() {
         currentMusicState = MusicState.Default;
         combatants = new LinkedList<GameObject>();
-        enemyCount = 0;
     }
 
-    void Update() {
+    void Update() { 
 
         // only player is remaining
         if (enemyCount == 0) {

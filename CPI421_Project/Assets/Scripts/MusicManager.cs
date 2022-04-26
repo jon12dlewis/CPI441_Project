@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
+// this class allows the music from the title scene to continue playing in the main menu and home base
 public class MusicManager : MonoBehaviour
 {
     public static MusicManager Instance;
-    public int Room;    // will represent what room we are currently in so we know what music to be playing.
     public AudioSource music;
 
     private void Awake()
@@ -21,11 +21,13 @@ public class MusicManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    // subscribe functions to loading levels
     void OnEnable() {
         levelSelect.loadLevel += StopMenuMusic;
         levelSelect.loadHomeBase += PlayMenuMusic;
     }
 
+    // unsubscribe functions to loading levels
     void OnDisable() {
         levelSelect.loadLevel -= StopMenuMusic;
         levelSelect.loadHomeBase -= PlayMenuMusic;
