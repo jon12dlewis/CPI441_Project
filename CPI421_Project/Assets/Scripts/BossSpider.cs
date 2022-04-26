@@ -20,6 +20,8 @@ public class BossSpider : Mover
 
     public GameObject Blocking1, Blocking2, Blocking3;
 
+    public GameObject BossCrystal;
+
     // AI
     public Transform target;
     NavMeshAgent agent;
@@ -244,12 +246,16 @@ public class BossSpider : Mover
     protected override void Death()
     {
         musicController.EnemyDisable(this.gameObject);
-        Destroy(gameObject);
+        Vector3 newRot = new Vector3(0,0,0);
+        Quaternion rot = Quaternion.Euler(newRot); 
+        Instantiate(BossCrystal, transform.position, rot);
+
         //GameManager.instance.expierence += xpValue;
         Blocking1.SetActive(false);
         Blocking2.SetActive(false);
         Blocking3.SetActive(false);
         //GameManager.instance.ShowText("+ " + xpValue + "xp", 60, Color.magenta, transform.position, Vector3.up * 40, 1.0f);
+        Destroy(gameObject);
     }
 
     void ShootUp()

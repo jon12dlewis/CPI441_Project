@@ -37,9 +37,10 @@ public class GameManager : MonoBehaviour
     // Logic
     public int mula;
     public int expierence;
-    public int blue_crystals = 100;
-    public int yellow_crystals = 100;
-    public int red_crystals = 100;
+    public int blue_crystals = 0;
+    public int yellow_crystals = 0;
+    public int red_crystals = 0;
+    public int bossCrystals = 0;
     
     public int helmetLevel = 1;
     public int chestLevel = 1;
@@ -88,7 +89,8 @@ public class GameManager : MonoBehaviour
         s += bowSelected.ToString() + "|";
         s += helmetSelected.ToString() + "|";
         s += chestSelected.ToString() + "|";
-        s += legSelected.ToString();
+        s += legSelected.ToString()  + "|";
+        s += bossCrystals.ToString();
         
         //"0|0|0|0|1|1|1|1|1|1|0|1|1|1|1|1|1"
 
@@ -99,7 +101,7 @@ public class GameManager : MonoBehaviour
 
     public void newGame()
     {
-        string s = "0|0|0|0|0|0|1|0|0|0|0|1|1|1|1|1|1";
+        string s = "0|0|0|0|0|0|1|0|0|0|0|1|1|1|1|1|1|0";
         PlayerPrefs.SetString("SaveState", s);
     }
 
@@ -130,6 +132,7 @@ public class GameManager : MonoBehaviour
         helmetSelected = int.Parse(data[15]);
         chestSelected = int.Parse(data[16]);
         legSelected = int.Parse(data[17]);
+        bossCrystals = int.Parse(data[18]);
 
         // change the weapon level
 
@@ -137,7 +140,8 @@ public class GameManager : MonoBehaviour
         floatingTextManager = GameObject.Find("FloatingTextManager").GetComponent<FloatingTextManager>();
         player = GameObject.Find("Player").GetComponent<Transform>();
         playerStartPos = GameObject.Find("PlayerStartingPosition").GetComponent<Transform>();
-        player.position = playerStartPos.position;
+        if(player != null && playerStartPos != null)
+            player.position = playerStartPos.position;
     }
 
     public string getString()
@@ -161,7 +165,8 @@ public class GameManager : MonoBehaviour
         s += bowSelected.ToString() + "|";
         s += helmetSelected.ToString() + "|";
         s += chestSelected.ToString() + "|";
-        s += legSelected.ToString();
+        s += legSelected.ToString() + "|";
+        s += bossCrystals.ToString();
 
         return s;
 
@@ -185,6 +190,12 @@ public class GameManager : MonoBehaviour
         yellow_crystals += ammount;
     }
 
+    public void GiveBossCrystal(int ammount)
+    {
+        Debug.Log("Boss Crystal Added");
+        bossCrystals += ammount;
+    }
+
     public void TakeBlueCrystal(int ammount)
     {
         Debug.Log("Blue Crystal Taken");
@@ -203,6 +214,11 @@ public class GameManager : MonoBehaviour
         yellow_crystals -= ammount;
     }
 
+    public void TakeBossCrystal(int ammount)
+    {
+        Debug.Log("Boss Crystal Taken");
+        bossCrystals -= ammount;
+    }
 
 
     public int GetBlueCrystal()
@@ -218,6 +234,11 @@ public class GameManager : MonoBehaviour
     public int GetYellowCrystal()
     {
         return yellow_crystals;
+    }
+
+    public int GetBossCrystal()
+    {
+        return bossCrystals;
     }
 
     public void GiveExpierence(int ammount)

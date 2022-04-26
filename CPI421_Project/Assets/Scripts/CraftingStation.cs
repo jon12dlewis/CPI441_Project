@@ -183,12 +183,13 @@ public class CraftingStation : Collidable
             break;
 
             case 3:
-                if(GameManager.instance.GetYellowCrystal() >= 20 && GameManager.instance.GetBlueCrystal() >= 20 && GameManager.instance.GetRedCrystal() >= 15)
+                if(GameManager.instance.GetYellowCrystal() >= 20 && GameManager.instance.GetBlueCrystal() >= 20 && GameManager.instance.GetRedCrystal() >= 15 && GameManager.instance.GetBossCrystal() >= 1)
                 {
                     helmetLevel = GameManager.instance.upgradeHelmetLevel();
                     GameManager.instance.TakeYellowCrystal(20);
                     GameManager.instance.TakeBlueCrystal(20);
                     GameManager.instance.TakeRedCrystal(15);
+                    GameManager.instance.TakeBossCrystal(1);
                     //if(helmetLevel >= 4)  
                     //    helmetLevel = 4;
                     helmetImage.sprite = helmets[helmetLevel-1];
@@ -277,12 +278,13 @@ public class CraftingStation : Collidable
             break;
 
             case 3:
-                if(GameManager.instance.GetYellowCrystal() >= 20 && GameManager.instance.GetBlueCrystal() >= 20 && GameManager.instance.GetRedCrystal() >= 15)
+                if(GameManager.instance.GetYellowCrystal() >= 20 && GameManager.instance.GetBlueCrystal() >= 20 && GameManager.instance.GetRedCrystal() >= 15 && GameManager.instance.GetBossCrystal() >= 1)
                 {
                     chestLevel = GameManager.instance.upgradeChestLevel();
                     GameManager.instance.TakeYellowCrystal(20);
                     GameManager.instance.TakeBlueCrystal(20);
                     GameManager.instance.TakeRedCrystal(15);
+                    GameManager.instance.TakeBossCrystal(1);
                     if(chestLevel >= 4)
                         chestLevel = 4;
                     chestImage.sprite = chests[chestLevel-1];
@@ -371,12 +373,13 @@ public class CraftingStation : Collidable
             break;
 
             case 3:
-                if(GameManager.instance.GetYellowCrystal() >= 20 && GameManager.instance.GetBlueCrystal() >= 20 && GameManager.instance.GetRedCrystal() >= 15)
+                if(GameManager.instance.GetYellowCrystal() >= 20 && GameManager.instance.GetBlueCrystal() >= 20 && GameManager.instance.GetRedCrystal() >= 15 && GameManager.instance.GetBossCrystal() >= 1)
                 {
                     legLevel = GameManager.instance.upgradeLegLevel();
                     GameManager.instance.TakeYellowCrystal(20);
                     GameManager.instance.TakeBlueCrystal(20);
                     GameManager.instance.TakeRedCrystal(15);
+                    GameManager.instance.TakeBossCrystal(1);
                     if(legLevel >= 4)
                         legLevel = 4;
                     legImage.sprite = legs[legLevel-1];
@@ -418,7 +421,7 @@ public class CraftingStation : Collidable
             break;
             case 3:
                     statsText.text = "Stats:\nDiscovery: +4";
-                    requirementsText.text = "Requirements:\nYellow Crystals: 30(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 20(" + GameManager.instance.GetBlueCrystal() + ")\nRed Crystals: 5(" + GameManager.instance.GetRedCrystal() +")" ;
+                    requirementsText.text = "Requirements:\nYellow Crystals: 30(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 20(" + GameManager.instance.GetBlueCrystal() + ")\nRed Crystals: 5(" + GameManager.instance.GetRedCrystal() +")\nQueen Crystals: 1(" + GameManager.instance.GetBossCrystal() +")" ;
             break;
         }
     }
@@ -441,7 +444,7 @@ public class CraftingStation : Collidable
             break;
             case 3:
                     statsText.text = "Stats:\nBuff: Regen";
-                    requirementsText.text = "Requirements:\nYellow Crystals: 30(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 20(" + GameManager.instance.GetBlueCrystal() + ")\nRed Crystals: 5(" + GameManager.instance.GetRedCrystal() +")" ;
+                    requirementsText.text = "Requirements:\nYellow Crystals: 30(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 20(" + GameManager.instance.GetBlueCrystal() + ")\nRed Crystals: 5(" + GameManager.instance.GetRedCrystal() +")\nQueen Crystals: 1(" + GameManager.instance.GetBossCrystal() +")" ;
             break;
         }
     }
@@ -464,7 +467,7 @@ public class CraftingStation : Collidable
             break;
             case 3:
                     statsText.text = "Stats:\nSpeed: +50%";
-                    requirementsText.text = "Requirements:\nYellow Crystals: 30(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 20(" + GameManager.instance.GetBlueCrystal() + ")\nRed Crystals: 5(" + GameManager.instance.GetRedCrystal() +")" ;
+                    requirementsText.text = "Requirements:\nYellow Crystals: 30(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 20(" + GameManager.instance.GetBlueCrystal() + ")\nRed Crystals: 5(" + GameManager.instance.GetRedCrystal() +")\nQueen Crystals: 1(" + GameManager.instance.GetBossCrystal() +")" ;
             break;
         }
     }

@@ -185,12 +185,13 @@ protected override void Start()
             break;
 
             case 3:
-                if(GameManager.instance.GetYellowCrystal() >= 20 && GameManager.instance.GetBlueCrystal() >= 20 && GameManager.instance.GetRedCrystal() >= 15)
+                if(GameManager.instance.GetYellowCrystal() >= 20 && GameManager.instance.GetBlueCrystal() >= 20 && GameManager.instance.GetRedCrystal() >= 15  && GameManager.instance.GetBossCrystal() >= 1)
                 {
                     weaponLevel = GameManager.instance.upgradeWeaponLevel();
                     GameManager.instance.TakeYellowCrystal(20);
                     GameManager.instance.TakeBlueCrystal(20);
                     GameManager.instance.TakeRedCrystal(15);
+                    GameManager.instance.TakeBossCrystal(1);
                     weaponImage.sprite = weapons[weaponLevel-1];
                     Debug.Log("Crafting Sword 3");
                     weaponUpgradeButton.SetActive(false);
@@ -271,12 +272,13 @@ protected override void Start()
             break;
 
             case 3:
-                if(GameManager.instance.GetYellowCrystal() >= 20 && GameManager.instance.GetBlueCrystal() >= 20 && GameManager.instance.GetRedCrystal() >= 15)
+                if(GameManager.instance.GetYellowCrystal() >= 20 && GameManager.instance.GetBlueCrystal() >= 20 && GameManager.instance.GetRedCrystal() >= 15  && GameManager.instance.GetBossCrystal() >= 1)
                 {
                     pickAxeLevel = GameManager.instance.upgradePickAxeLevel();
                     GameManager.instance.TakeYellowCrystal(20);
                     GameManager.instance.TakeBlueCrystal(20);
                     GameManager.instance.TakeRedCrystal(15);
+                    GameManager.instance.TakeBossCrystal(1);
                     pickAxeImage.sprite = pickAxes[pickAxeLevel-1];
                     Debug.Log("Crafting Sword 3");
                     pickAxeUpgradeButton.SetActive(false);
@@ -353,12 +355,13 @@ protected override void Start()
                 }
             break;
             case 3:
-                if(GameManager.instance.GetYellowCrystal() >= 20 && GameManager.instance.GetBlueCrystal() >= 20 && GameManager.instance.GetRedCrystal() >= 15)
+                if(GameManager.instance.GetYellowCrystal() >= 20 && GameManager.instance.GetBlueCrystal() >= 20 && GameManager.instance.GetRedCrystal() >= 15  && GameManager.instance.GetBossCrystal() >= 1)
                 {
                     bowLevel = GameManager.instance.upgradeBowLevel();
                     GameManager.instance.TakeYellowCrystal(20);
                     GameManager.instance.TakeBlueCrystal(20);
                     GameManager.instance.TakeRedCrystal(15);
+                    GameManager.instance.TakeBossCrystal(1);
                     bowImage.sprite = bows[bowLevel-1];
                     Debug.Log("Crafting Bow 3");
                     bowUpgradeButton.SetActive(false);
@@ -394,7 +397,7 @@ protected override void Start()
             break;
             case 3:
                     statsText.text = "Stats:\nDamage: +8";
-                    requirementsText.text = "Requirements:\nYellow Crystals: 30(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 20(" + GameManager.instance.GetBlueCrystal() + ")\nRed Crystals: 5(" + GameManager.instance.GetRedCrystal() +")" ;
+                    requirementsText.text = "Requirements:\nYellow Crystals: 30(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 20(" + GameManager.instance.GetBlueCrystal() + ")\nRed Crystals: 5(" + GameManager.instance.GetRedCrystal() +")\nQueen Crystals: 1(" + GameManager.instance.GetBossCrystal() +")" ;
             break;
         }
     }
@@ -417,7 +420,7 @@ protected override void Start()
             break;
             case 3:
                     statsText.text = "Stats:\nDamage: +8";
-                    requirementsText.text = "Requirements:\nYellow Crystals: 30(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 20(" + GameManager.instance.GetBlueCrystal() + ")\nRed Crystals: 5(" + GameManager.instance.GetRedCrystal() +")" ;
+                    requirementsText.text = "Requirements:\nYellow Crystals: 30(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 20(" + GameManager.instance.GetBlueCrystal() + ")\nRed Crystals: 5(" + GameManager.instance.GetRedCrystal() +")\nQueen Crystals: 1(" + GameManager.instance.GetBossCrystal() +")" ;
             break;
         }
     }
@@ -441,7 +444,7 @@ protected override void Start()
             break;
             case 3:
                     statsText.text = "Stats:\nDamage: +8";
-                    requirementsText.text = "Requirements:\nYellow Crystals: 30(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 20(" + GameManager.instance.GetBlueCrystal() + ")\nRed Crystals: 5(" + GameManager.instance.GetRedCrystal() +")" ;
+                    requirementsText.text = "Requirements:\nYellow Crystals: 30(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 20(" + GameManager.instance.GetBlueCrystal() + ")\nRed Crystals: 5(" + GameManager.instance.GetRedCrystal() +")\nQueen Crystals: 1(" + GameManager.instance.GetBossCrystal() +")" ;
             break;
         }
     }
