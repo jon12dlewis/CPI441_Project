@@ -188,6 +188,7 @@ MonoBehaviour:
   triggerLength: 10
   chaseLength: 20
   heart: {fileID: 8966516169936256971, guid: 99f818fc5bb6de745997871fcb3cc629, type: 3}
+  arrowDrop: {fileID: 6850053261020345122, guid: 7b18e1fa1f3a3bd4a9f5552162203e89, type: 3}
   target: {fileID: 0}
   agentSpeed: {x: 0, y: 0, z: 0}
   animator: {fileID: 7460864854419619204}

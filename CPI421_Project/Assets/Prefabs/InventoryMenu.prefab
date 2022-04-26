@@ -869,14 +869,17 @@ MonoBehaviour:
   - {fileID: -5452995409636915031, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
   - {fileID: -284684359218076793, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
   - {fileID: 6286047024291171867, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
+  - {fileID: -845853489801428507, guid: 229aedcf1f91dc34884587b65d5f8a6d, type: 3}
   weaponImage:
   - {fileID: -6165666198007455012, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
   - {fileID: 6323654629948150628, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
   - {fileID: 9129873020269735136, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
+  - {fileID: -8552024102949198075, guid: 65d6fe56d7dddea4796822e9200ba73d, type: 3}
   bowImage:
   - {fileID: 8908327582187454787, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
   - {fileID: 8844115668977670054, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
   - {fileID: 7003559093154264791, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
+  - {fileID: 2130688409787445167, guid: 42d1884e3f0de0f469833ad2ecfb1a1a, type: 3}
   helmetImage:
   - {fileID: -4781227989788599172, guid: 86e732b125894eb4ca183cb03fef01eb, type: 3}
   - {fileID: 5595627090532893865, guid: 11cacfc08711d08418db1f9af2000549, type: 3}
