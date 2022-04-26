@@ -60,6 +60,10 @@ public class player : Mover
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
+        if (hitPoint > 0) {
+            animator.SetBool("dead", false);    // panic fix
+        }
+
         // if(mousePos.x > playerPosition.x + 1.5)
         // {
         //     direction.x = 1;
@@ -189,7 +193,7 @@ public class player : Mover
         //Application.Quit();
         //hitPoint = maxHitpoint;
         moveSpeed = 0;
-        animator.SetTrigger("dead");
+        animator.SetBool("dead", true);
         GameManager.instance.SaveState();
         GameOverMenu = GameObject.Find("GameOverScreen");
         GameOverMenu.GetComponent<Animator>().SetTrigger("GameOver");
