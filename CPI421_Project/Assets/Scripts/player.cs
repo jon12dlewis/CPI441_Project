@@ -10,6 +10,7 @@ public class player : Mover
     public GameObject weapon;
     public GameObject pickaxe;
     public GameObject bow;
+    public GameObject GameOverMenu;
 
     public Transform startingPoint;
     private float coolDown = 1.5f;
@@ -182,13 +183,18 @@ public class player : Mover
         return discoveryLevel;
     }
 
+
     protected override void Death()
     {
         //Application.Quit();
-        hitPoint = 10;
+        //hitPoint = maxHitpoint;
+        moveSpeed = 0;
+        animator.SetTrigger("dead");
         GameManager.instance.SaveState();
-        UnityEngine.SceneManagement.SceneManager.LoadScene("HomeBase");
-        transform.position = startingPoint.position;
+        GameOverMenu = GameObject.Find("GameOverScreen");
+        GameOverMenu.GetComponent<Animator>().SetTrigger("GameOver");
+        //UnityEngine.SceneManagement.SceneManager.LoadScene("HomeBase");
+        //transform.position = startingPoint.position;
     
     }
     

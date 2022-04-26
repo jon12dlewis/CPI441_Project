@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Defense: '
+  m_Text: 'Buffs: '
 --- !u!1 &6346708695114731903
 GameObject:
   m_ObjectHideFlags: 0
@@ -857,6 +857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthText: {fileID: 6346708695866323420}
+  buffText: {fileID: 6346708696150543881}
   blueCrystalText: {fileID: 6346708696600070593}
   yellowCrystalText: {fileID: 6346708695830004386}
   redCrystalText: {fileID: 6346708695392642512}
@@ -909,6 +910,7 @@ MonoBehaviour:
   helmet: {fileID: 0}
   chest: {fileID: 0}
   leg: {fileID: 0}
+  healthUI: {fileID: 0}
   maxWeapon: 1
   maxPickAxe: 1
   maxBow: 1
@@ -1743,14 +1745,14 @@ RectTransform:
   m_GameObject: {fileID: 6346708696150543895}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5608, y: 1.5608, z: 1.5608}
+  m_LocalScale: {x: 1.28766, y: 5.3845353, z: 1.5608}
   m_Children: []
   m_Father: {fileID: 6346708696072589554}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 119, y: -130}
+  m_AnchoredPosition: {x: 57, y: -184}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6346708696150543882
@@ -1794,7 +1796,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '20
+  m_Text: '
 
 '
 --- !u!1 &6346708696169594920
