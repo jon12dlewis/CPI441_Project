@@ -131,6 +131,9 @@ public class Bow : MonoBehaviour
             case 3:
                 animator.SetTrigger("lvl3");
             break;
+            case 4:
+                animator.SetTrigger("lvlBoss");
+            break;
         }
     }
 
