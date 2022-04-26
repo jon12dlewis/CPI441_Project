@@ -405,19 +405,19 @@ public class CraftingStation : Collidable
         switch(helmetLevel)
         {
             case 0:
-                    statsText.text = "Stats:\nDefense: +1";
+                    statsText.text = "Stats:\nDiscovery: +1";
                     requirementsText.text = "Requirements:\nYellow Crystals: 10(" + GameManager.instance.GetYellowCrystal() + ")";
             break;
             case 1:
-                    statsText.text = "Stats:\nDefense: +3";
+                    statsText.text = "Stats:\nDiscovery: +2";
                     requirementsText.text = "Requirements:\nYellow Crystals: 15(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 10(" + GameManager.instance.GetBlueCrystal() + ")";
             break;
             case 2:
-                    statsText.text = "Stats:\nDefense: +5";
+                    statsText.text = "Stats:\nDiscovery: +3";
                     requirementsText.text = "Requirements:\nYellow Crystals: 30(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 20(" + GameManager.instance.GetBlueCrystal() + ")\nRed Crystals: 5(" + GameManager.instance.GetRedCrystal() +")" ;
             break;
             case 3:
-                    statsText.text = "Stats:\nDefense: +8";
+                    statsText.text = "Stats:\nDiscovery: +4";
                     requirementsText.text = "Requirements:\nYellow Crystals: 30(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 20(" + GameManager.instance.GetBlueCrystal() + ")\nRed Crystals: 5(" + GameManager.instance.GetRedCrystal() +")" ;
             break;
         }
@@ -428,19 +428,19 @@ public class CraftingStation : Collidable
         switch(chestLevel)
         {
             case 0:
-                    statsText.text = "Stats:\nDefense: +1";
+                    statsText.text = "Stats:\nHealth: +2";
                     requirementsText.text = "Requirements:\nYellow Crystals: 10(" + GameManager.instance.GetYellowCrystal() + ")";
             break;
             case 1:
-                    statsText.text = "Stats:\nDefense: +3";
+                    statsText.text = "Stats:\nHealth: +4";
                     requirementsText.text = "Requirements:\nYellow Crystals: 15(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 10(" + GameManager.instance.GetBlueCrystal() + ")";
             break;
             case 2:
-                    statsText.text = "Stats:\nDefense: +5";
+                    statsText.text = "Stats:\nHealth: +7";
                     requirementsText.text = "Requirements:\nYellow Crystals: 30(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 20(" + GameManager.instance.GetBlueCrystal() + ")\nRed Crystals: 5(" + GameManager.instance.GetRedCrystal() +")" ;
             break;
             case 3:
-                    statsText.text = "Stats:\nDefense: +8";
+                    statsText.text = "Stats:\nBuff: Regen";
                     requirementsText.text = "Requirements:\nYellow Crystals: 30(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 20(" + GameManager.instance.GetBlueCrystal() + ")\nRed Crystals: 5(" + GameManager.instance.GetRedCrystal() +")" ;
             break;
         }
@@ -451,19 +451,19 @@ public class CraftingStation : Collidable
         switch(legLevel)
         {
             case 0:
-                    statsText.text = "Stats:\nDefense: +1";
+                    statsText.text = "Stats:\nSpeed: +10%";
                     requirementsText.text = "Requirements:\nYellow Crystals: 10(" + GameManager.instance.GetYellowCrystal() + ")";
             break;
             case 1:
-                    statsText.text = "Stats:\nDefense: +3";
+                    statsText.text = "Stats:\nSpeed: +20%";
                     requirementsText.text = "Requirements:\nYellow Crystals: 15(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 10(" + GameManager.instance.GetBlueCrystal() + ")";
             break;
             case 2:
-                    statsText.text = "Stats:\nDefense: +5";
+                    statsText.text = "Stats:\nSpeed: +30%";
                     requirementsText.text = "Requirements:\nYellow Crystals: 30(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 20(" + GameManager.instance.GetBlueCrystal() + ")\nRed Crystals: 5(" + GameManager.instance.GetRedCrystal() +")" ;
             break;
             case 3:
-                    statsText.text = "Stats:\nDefense: +8";
+                    statsText.text = "Stats:\nSpeed: +50%";
                     requirementsText.text = "Requirements:\nYellow Crystals: 30(" + GameManager.instance.GetYellowCrystal() + ")\nBlue Crystals: 20(" + GameManager.instance.GetBlueCrystal() + ")\nRed Crystals: 5(" + GameManager.instance.GetRedCrystal() +")" ;
             break;
         }

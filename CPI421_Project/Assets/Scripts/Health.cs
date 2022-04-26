@@ -37,11 +37,11 @@ public class Health : MonoBehaviour
     {
         health = Player.hitPoint;
 
-         targetTime -= Time.deltaTime;
+        targetTime -= Time.deltaTime;
  
         if(regen == true)
         {
-            if(targetTime <= 0.0f)
+            if(targetTime <= 0.0f && health != Player.maxHitpoint)
             {
                 Player.hitPoint += 1;
                 targetTime = 10.0f;
