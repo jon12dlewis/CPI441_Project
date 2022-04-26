@@ -14,12 +14,17 @@ public class CraftingStation : Collidable
 
     public Sprite[] chests, helmets, legs;
 
+    [SerializeField] GameObject RisingTextContainer;
+    RisingText errorMessage;
+    [SerializeField] AudioSource errorSound;
+
     public int helmetLevel = 1;
     public int chestLevel = 1;
     public int legLevel = 1;
 
     public int max = 4;
     public int min = 0;
+
 
     // Start is called before the first frame update
     protected override void Start()
@@ -29,8 +34,19 @@ public class CraftingStation : Collidable
         requirementsText.text = "Requirements:\nYellow Crystals: 10 (" + GameManager.instance.GetYellowCrystal() + ")";
         helmetLevel = GameManager.instance.helmetLevel;
 
+        errorMessage = RisingTextContainer.GetComponent<RisingText>();
+
         updateHelmetStats();
     }
+
+
+    // displays the error message for not having enough crystals
+    void NotEnoughCrystals() {
+        Debug.Log("Not Enough Crystals");
+        errorMessage.SetTravelingTrue();
+        errorSound.Play();
+    }
+
 
     // Update is called once per frame
     protected override void Update()
@@ -127,7 +143,7 @@ public class CraftingStation : Collidable
                 }
                 else
                 {
-                    Debug.Log("Not Enough Crystals");
+                    NotEnoughCrystals();
                 }
             break;
 
@@ -144,7 +160,7 @@ public class CraftingStation : Collidable
                 }
                 else
                 {
-                    Debug.Log("Not Enough Crystals");
+                    NotEnoughCrystals();
                 }
 
             break;
@@ -162,7 +178,7 @@ public class CraftingStation : Collidable
                 }
                 else
                 {
-                    Debug.Log("Not Enough Crystals");
+                    NotEnoughCrystals();
                 }
             break;
 
@@ -182,7 +198,7 @@ public class CraftingStation : Collidable
                 }
                 else
                 {
-                    Debug.Log("Not Enough Crystals");
+                    NotEnoughCrystals();
                 }
             break;
 
@@ -221,7 +237,7 @@ public class CraftingStation : Collidable
                 }
                 else
                 {
-                    Debug.Log("Not Enough Crystals");
+                    NotEnoughCrystals();
                 }
             break;
 
@@ -238,7 +254,7 @@ public class CraftingStation : Collidable
                 }
                 else
                 {
-                    Debug.Log("Not Enough Crystals");
+                    NotEnoughCrystals();
                 }
 
             break;
@@ -256,7 +272,7 @@ public class CraftingStation : Collidable
                 }
                 else
                 {
-                    Debug.Log("Not Enough Crystals");
+                    NotEnoughCrystals();
                 }
             break;
 
@@ -276,7 +292,7 @@ public class CraftingStation : Collidable
                 }
                 else
                 {
-                    Debug.Log("Not Enough Crystals");
+                    NotEnoughCrystals();
                 }
             break;
 
@@ -315,7 +331,7 @@ public class CraftingStation : Collidable
                 }
                 else
                 {
-                    Debug.Log("Not Enough Crystals");
+                    NotEnoughCrystals();
                 }
             break;
 
@@ -332,7 +348,7 @@ public class CraftingStation : Collidable
                 }
                 else
                 {
-                    Debug.Log("Not Enough Crystals");
+                    NotEnoughCrystals();
                 }
 
             break;
@@ -350,7 +366,7 @@ public class CraftingStation : Collidable
                 }
                 else
                 {
-                    Debug.Log("Not Enough Crystals");
+                    NotEnoughCrystals();
                 }
             break;
 
@@ -370,7 +386,7 @@ public class CraftingStation : Collidable
                 }
                 else
                 {
-                    Debug.Log("Not Enough Crystals");
+                    NotEnoughCrystals();
                 }
             break;
 
