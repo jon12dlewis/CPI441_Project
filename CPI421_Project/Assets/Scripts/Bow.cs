@@ -63,13 +63,13 @@ public class Bow : MonoBehaviour
     
         if(equipped)
         {
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButton(0) && GameManager.instance.arrows > 0)
             {
                 if(Time.time - lastShot > coolDown)
                 {
                     lastShot = Time.time;
                     fireSound.Play(0);
-
+                    GameManager.instance.arrows -= 1;
                     switch(facing)
                     {
                         case 0:
@@ -95,24 +95,85 @@ public class Bow : MonoBehaviour
 
     void ShootUp()
     {
+        switch(GameManager.instance.bowLevel)
+        {
+            case 1:
+                arrow.GetComponent<Arrow>().setDamage(1);
+            break;
+            case 2:
+                arrow.GetComponent<Arrow>().setDamage(2);
+            break;
+            case 3:
+                arrow.GetComponent<Arrow>().setDamage(4);
+            break;
+            case 4:
+                arrow.GetComponent<Arrow>().setDamage(6);
+            break;
+        }
         Vector3 newRot = new Vector3(0,0,90);
         Quaternion rot = Quaternion.Euler(newRot); 
         Instantiate(arrow, transform.position, rot);
     }
     void ShootDown()
     {
+        switch(GameManager.instance.bowLevel)
+        {
+            case 1:
+                arrow.GetComponent<Arrow>().setDamage(1);
+            break;
+            case 2:
+                arrow.GetComponent<Arrow>().setDamage(2);
+            break;
+            case 3:
+                arrow.GetComponent<Arrow>().setDamage(4);
+            break;
+            case 4:
+                arrow.GetComponent<Arrow>().setDamage(6);
+            break;
+        }
         Vector3 newRot = new Vector3(0,0,270);
         Quaternion rot = Quaternion.Euler(newRot); 
         Instantiate(arrow, transform.position, rot);
     }
     void ShootLeft()
     {
+        switch(GameManager.instance.bowLevel)
+        {
+            case 1:
+                arrow.GetComponent<Arrow>().setDamage(1);
+            break;
+            case 2:
+                arrow.GetComponent<Arrow>().setDamage(2);
+            break;
+            case 3:
+                arrow.GetComponent<Arrow>().setDamage(4);
+            break;
+            case 4:
+                arrow.GetComponent<Arrow>().setDamage(6);
+            break;
+        }
         Vector3 newRot = new Vector3(0,0,0);
         Quaternion rot = Quaternion.Euler(newRot); 
         Instantiate(arrow, transform.position, rot);
     }
     void ShootRight()
     {
+        switch(GameManager.instance.bowLevel)
+        {
+            case 1:
+                arrow.GetComponent<Arrow>().setDamage(1);
+            break;
+            case 2:
+                arrow.GetComponent<Arrow>().setDamage(2);
+            break;
+            case 3:
+                arrow.GetComponent<Arrow>().setDamage(4);
+            break;
+            case 4:
+                arrow.GetComponent<Arrow>().setDamage(6);
+            break;
+        }
+
         Vector3 newRot = new Vector3(0,0,180);
         Quaternion rot = Quaternion.Euler(newRot); 
         Instantiate(arrow, transform.position, rot);

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CharacterMenu : MonoBehaviour
 {
-    public Text healthText, buffText, blueCrystalText, yellowCrystalText, redCrystalText, bossCrystalText, pickAxeDamage, weaponDamage, bowDamage;
+    public Text healthText, buffText, blueCrystalText, yellowCrystalText, redCrystalText, bossCrystalText, pickAxeDamage, weaponDamage, bowDamage, arrowAmmount;
     public player player; 
     public Sprite[] pickAxeImage, weaponImage, bowImage, helmetImage, chestImage, legsImage;
     public Image pickAxeDisplay, weaponDisplay, bowDisplay, helmetDisplay, chestDisplay, legsDisplay;
@@ -67,6 +67,7 @@ public class CharacterMenu : MonoBehaviour
         yellowCrystalText.text = GameManager.instance.yellow_crystals.ToString();
         redCrystalText.text = GameManager.instance.red_crystals.ToString();
         bossCrystalText.text = GameManager.instance.bossCrystals.ToString();
+        arrowAmmount.text = GameManager.instance.arrows.ToString();
     }
 
     public void setMax()

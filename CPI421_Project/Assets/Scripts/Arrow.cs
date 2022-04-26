@@ -37,6 +37,11 @@ public class Arrow : Collidable
         distanceTraveled = Mathf.Abs(Vector2.Distance(startPosition, transform.position));
         if (distanceTraveled > audioFalloff) mute = true;
     }
+
+    public void setDamage(int damage)
+    {
+        damagePoint = damage;
+    }
     
 
     protected override void OnCollide(Collider2D coll)
