@@ -36,17 +36,53 @@ protected override void Start()
     {
          base.Update();  // Need to check collision
          weaponLevel = GameManager.instance.weaponLevel;
-         weaponImage.sprite = weapons[weaponLevel];
+         //weaponImage.sprite = weapons[weaponLevel];
+        if(weaponLevel != 0)
+        {
+            weaponImage.sprite = weapons[weaponLevel-1];
+            weaponUpgradeButton.GetComponentInChildren<Text>().text = "Upgrade";
+        }
+        else
+        {
+            weaponImage.sprite = weapons[0];
+            weaponUpgradeButton.GetComponentInChildren<Text>().text = "Craft";
+        }
          if(weaponLevel >= 4)
             weaponUpgradeButton.SetActive(false);
 
+
         pickAxeLevel = GameManager.instance.pickaxeLevel;
-        pickAxeImage.sprite = pickAxes[pickAxeLevel];
+        //pickAxeImage.sprite = pickAxes[pickAxeLevel];
+
+        if(pickAxeLevel != 0)
+        {
+            pickAxeImage.sprite = pickAxes[pickAxeLevel-1];
+            pickAxeUpgradeButton.GetComponentInChildren<Text>().text = "Upgrade";
+        }
+        else
+        {
+            pickAxeImage.sprite = pickAxes[0];
+            pickAxeUpgradeButton.GetComponentInChildren<Text>().text = "Craft";
+        }
         if(pickAxeLevel >= 4)
             pickAxeUpgradeButton.SetActive(false);
 
         bowLevel = GameManager.instance.bowLevel;
-        bowImage.sprite = bows[bowLevel];
+
+        //bowImage.sprite = bows[bowLevel];
+
+        if(bowLevel != 0)
+        {
+            bowImage.sprite = bows[bowLevel-1];
+            bowUpgradeButton.GetComponentInChildren<Text>().text = "Upgrade";
+        }
+        else
+        {
+            bowImage.sprite = bows[0];
+            bowUpgradeButton.GetComponentInChildren<Text>().text = "Craft";
+        }
+
+
         if(bowLevel >= 4)
             bowUpgradeButton.SetActive(false);
 
