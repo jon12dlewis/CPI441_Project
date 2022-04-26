@@ -21,6 +21,10 @@ public class WeaponStation : Collidable
     public int max = 3;
     public int min = 1;
 
+    [SerializeField] GameObject RisingTextContainer;
+    RisingText errorMessage;
+    [SerializeField] AudioSource errorSound;
+
     // Start is called before the first frame update
 protected override void Start()
     {
@@ -29,6 +33,15 @@ protected override void Start()
         requirementsText.text = "Requirements:\nYellow Crystals: 10 (" + GameManager.instance.GetYellowCrystal() + ")";
         weaponLevel = GameManager.instance.weaponLevel;
         updateWeaponStats();
+
+        errorMessage = RisingTextContainer.GetComponent<RisingText>();
+    }
+
+    // displays the error message for not having enough crystals
+    void NotEnoughCrystals() {
+        Debug.Log("Not Enough Crystals");
+        errorMessage.SetTravelingTrue();
+        errorSound.Play();
     }
 
     // Update is called once per frame
@@ -132,7 +145,7 @@ protected override void Start()
                 }
                 else
                 {
-                    Debug.Log("Not Enough Crystals");
+                    NotEnoughCrystals();
                 }
             break;
 
@@ -149,7 +162,7 @@ protected override void Start()
                 }
                 else
                 {
-                    Debug.Log("Not Enough Crystals");
+                    NotEnoughCrystals();
                 }
 
             break;
@@ -167,7 +180,7 @@ protected override void Start()
                 }
                 else
                 {
-                    Debug.Log("Not Enough Crystals");
+                    NotEnoughCrystals();
                 }
             break;
 
@@ -185,7 +198,7 @@ protected override void Start()
                 }
                 else
                 {
-                    Debug.Log("Not Enough Crystals");
+                    NotEnoughCrystals();
                 }
             break;
 
@@ -218,7 +231,7 @@ protected override void Start()
                 }
                 else
                 {
-                    Debug.Log("Not Enough Crystals");
+                    NotEnoughCrystals();
                 }
             break;
 
@@ -235,7 +248,7 @@ protected override void Start()
                 }
                 else
                 {
-                    Debug.Log("Not Enough Crystals");
+                    NotEnoughCrystals();
                 }
 
             break;
@@ -253,7 +266,7 @@ protected override void Start()
                 }
                 else
                 {
-                    Debug.Log("Not Enough Crystals");
+                    NotEnoughCrystals();
                 }
             break;
 
@@ -271,7 +284,7 @@ protected override void Start()
                 }
                 else
                 {
-                    Debug.Log("Not Enough Crystals");
+                    NotEnoughCrystals();
                 }
             break;
 
@@ -301,7 +314,7 @@ protected override void Start()
                 }
                 else
                 {
-                    Debug.Log("Not Enough Crystals");
+                    NotEnoughCrystals();
                 }
             break;
 
@@ -318,7 +331,7 @@ protected override void Start()
                 }
                 else
                 {
-                    Debug.Log("Not Enough Crystals");
+                    NotEnoughCrystals();
                 }
 
             break;
@@ -336,7 +349,7 @@ protected override void Start()
                 }
                 else
                 {
-                    Debug.Log("Not Enough Crystals");
+                    NotEnoughCrystals();
                 }
             break;
             case 3:
@@ -353,7 +366,7 @@ protected override void Start()
                 }
                 else
                 {
-                    Debug.Log("Not Enough Crystals");
+                    NotEnoughCrystals();
                 }
             break;
 
