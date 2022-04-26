@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Save State");
         string s = "";
 
-        s += "0" + 1;
+        s += "0" + "|";
         s += blue_crystals.ToString() + "|";                        // Blue Crystals
         s += yellow_crystals.ToString() + "|";                      // Red Crystals
         s += red_crystals.ToString() + "|";                         // Yellow Crystals
