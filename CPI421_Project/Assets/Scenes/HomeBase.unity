@@ -5508,13 +5508,16 @@ MonoBehaviour:
   - {fileID: 8908327582187454787, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
   - {fileID: 8844115668977670054, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
   - {fileID: 7003559093154264791, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
+  - {fileID: 7003559093154264791, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
   weapons:
   - {fileID: -6165666198007455012, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
   - {fileID: 6323654629948150628, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
   - {fileID: 9129873020269735136, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
+  - {fileID: 9129873020269735136, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
   pickAxes:
   - {fileID: -5452995409636915031, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
   - {fileID: -284684359218076793, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
+  - {fileID: 6286047024291171867, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
   - {fileID: 6286047024291171867, guid: 335aef7dc9b21b543bce3065143de672, type: 3}
   weaponLevel: 1
   pickAxeLevel: 1

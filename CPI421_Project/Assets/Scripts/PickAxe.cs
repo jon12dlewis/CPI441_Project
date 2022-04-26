@@ -114,7 +114,7 @@ public class PickAxe : Collidable
 
     protected override void OnCollide(Collider2D coll)
     {
-        if(coll.tag == "Crystal" || coll.tag == "Fighter")
+        if(coll.tag == "Fighter")
         {
             if(coll.name == "Player")
                 return;
@@ -125,9 +125,49 @@ public class PickAxe : Collidable
                 origin = transform.position,
                 pushForce = pushForce
             };
-
             coll.SendMessage("RecieveDamage", dmg);
         }
+        else
+        if(coll.tag == "Crystal")
+        {
+            if((coll.GetComponent<crystal_node>().crystal_level) <= GameManager.instance.pickaxeLevel)
+            {
+                Damage dmg = new Damage
+                {
+                    damageAmount = damagePoint,
+                    origin = transform.position,
+                    pushForce = pushForce
+                };
+
+                coll.SendMessage("RecieveDamage", dmg);
+            }
+            else
+            if((coll.GetComponent<crystal_node>().crystal_level - 1) == GameManager.instance.pickaxeLevel)
+            {
+                Damage dmg = new Damage
+                {
+                    damageAmount = 1,
+                    origin = transform.position,
+                    pushForce = pushForce
+                };
+
+                coll.SendMessage("RecieveDamage", dmg);
+            }
+            else
+            {
+                Damage dmg = new Damage
+                {
+                    damageAmount = 0,
+                    origin = transform.position,
+                    pushForce = pushForce
+                };
+
+                coll.SendMessage("RecieveDamage", dmg);
+            }
+        }
+
+
+
     }
 
     private void SwingUp()

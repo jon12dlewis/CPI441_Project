@@ -277,6 +277,7 @@ public class CharacterMenu : MonoBehaviour
             helmetDisplay.enabled = false;
             helmetUI.enabled = false;
             helmet.SetActive(false);
+            player.setDiscovery(0);
             return;
         }
         else
@@ -302,22 +303,25 @@ public class CharacterMenu : MonoBehaviour
             case 1:
                 //helmetDamage.text = "1";
                 //helmet.GetComponent<PickAxe>().setDamage(1);
-                
+                player.setDiscovery(1);
                 helmet.GetComponent<Helmet>().SetLevelAnimation(helmetSelected);
             break;
             case 2:
                 //helmetDamage.text = "3";
                 //helmet.GetComponent<PickAxe>().setDamage(3);
+                player.setDiscovery(2);
                 helmet.GetComponent<Helmet>().SetLevelAnimation(helmetSelected);
             break;
             case 3:
                 //helmetDamage.text = "6";
                 //pickAxe.GetComponent<PickAxe>().setDamage(6);
+                player.setDiscovery(3);
                 helmet.GetComponent<Helmet>().SetLevelAnimation(helmetSelected);
             break;
             case 4:
                 //helmetDamage.text = "6";
                 //pickAxe.GetComponent<PickAxe>().setDamage(6);
+                player.setDiscovery(4);
                 helmet.GetComponent<Helmet>().SetLevelAnimation(helmetSelected);
             break;
 

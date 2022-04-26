@@ -15,6 +15,8 @@ public class player : Mover
 
     public Animator animator;
 
+    public int discoveryLevel = 0;
+
     public float moveSpeed = 1f; 
 
     Vector2 movement; 
@@ -166,6 +168,16 @@ public class player : Mover
     public void setSpeed(float Speed)
     {
         moveSpeed = Speed;              // Default is 2f
+    }
+
+    public void setDiscovery(int discovery)
+    {
+        discoveryLevel = discovery;
+    }
+
+    public int getDiscovery()
+    {
+        return discoveryLevel;
     }
 
     protected override void Death()
