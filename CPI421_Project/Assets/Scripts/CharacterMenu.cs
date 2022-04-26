@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CharacterMenu : MonoBehaviour
 {
-    public Text healthText, blueCrystalText, yellowCrystalText, redCrystalText, pickAxeDamage, weaponDamage, bowDamage;
+    public Text healthText, buffText, blueCrystalText, yellowCrystalText, redCrystalText, pickAxeDamage, weaponDamage, bowDamage;
     public player player; 
     public Sprite[] pickAxeImage, weaponImage, bowImage, helmetImage, chestImage, legsImage;
     public Image pickAxeDisplay, weaponDisplay, bowDisplay, helmetDisplay, chestDisplay, legsDisplay;
