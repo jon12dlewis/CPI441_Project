@@ -47,6 +47,8 @@ public class CharacterMenu : MonoBehaviour
 
         Debug.Log("I am setting all the display");
 
+        buffText.text = "";
+
         displayWeapon();
         displayPickAxe();
         displayBow();
@@ -324,22 +326,26 @@ public class CharacterMenu : MonoBehaviour
             case 1:
                 //helmetDamage.text = "1";
                 //helmet.GetComponent<PickAxe>().setDamage(1);
+                buffText.text += "Discovery: 1\n";
                 player.setDiscovery(1);
                 helmet.GetComponent<Helmet>().SetLevelAnimation(helmetSelected);
             break;
             case 2:
                 //helmetDamage.text = "3";
                 //helmet.GetComponent<PickAxe>().setDamage(3);
+                buffText.text += "Discovery: 2\n";
                 player.setDiscovery(2);
                 helmet.GetComponent<Helmet>().SetLevelAnimation(helmetSelected);
             break;
             case 3:
                 //helmetDamage.text = "6";
                 //pickAxe.GetComponent<PickAxe>().setDamage(6);
+                buffText.text += "Discovery: 3\n";
                 player.setDiscovery(3);
                 helmet.GetComponent<Helmet>().SetLevelAnimation(helmetSelected);
             break;
             case 4:
+            buffText.text += "Discovery: 4\n";
                 //helmetDamage.text = "6";
                 //pickAxe.GetComponent<PickAxe>().setDamage(6);
                 player.setDiscovery(4);
@@ -385,12 +391,14 @@ public class CharacterMenu : MonoBehaviour
                 //chestDamage.text = "1";
                 //chest.GetComponent<PickAxe>().setDamage(1);
                 chest.GetComponent<Armor_Chest>().SetLevelAnimation(chestSelected);
+                buffText.text += "Health: +2\n";
                 player.hitPoint = 5;
                 player.maxHitpoint = 5;
             break;
             case 2:
                 //chestDamage.text = "3";
                 //chest.GetComponent<Chest>().setDamage(3);
+                buffText.text += "Health: +4\n";
                 chest.GetComponent<Armor_Chest>().SetLevelAnimation(chestSelected);
                 player.hitPoint = 7;
                 player.maxHitpoint = 7;
@@ -398,6 +406,7 @@ public class CharacterMenu : MonoBehaviour
             case 3:
                 //pickAxeDamage.text = "6";
                 //pickAxe.GetComponent<PickAxe>().setDamage(6);
+                buffText.text += "Health: +7\n";
                 chest.GetComponent<Armor_Chest>().SetLevelAnimation(chestSelected);
                 player.hitPoint = 10;
                 player.maxHitpoint = 10;
@@ -405,6 +414,8 @@ public class CharacterMenu : MonoBehaviour
             case 4:
                 //pickAxeDamage.text = "6";
                 //pickAxe.GetComponent<PickAxe>().setDamage(6);
+                buffText.text += "Health: +7\n";
+                buffText.text += "Regen:\n";
                 chest.GetComponent<Armor_Chest>().SetLevelAnimation(chestSelected);
                 player.hitPoint = 10;
                 player.maxHitpoint = 10;
@@ -450,23 +461,27 @@ public class CharacterMenu : MonoBehaviour
                 //pickAxe.GetComponent<PickAxe>().setDamage(1);
                 player.setSpeed(1.1f);
                 leg.GetComponent<Armor_Bottoms>().SetLevelAnimation(legsSelected);
+                buffText.text += "Speed: +10%\n";
             break;
             case 2:
                 //pickAxeDamage.text = "3";
                 //pickAxe.GetComponent<PickAxe>().setDamage(3);
                 player.setSpeed(1.2f);
+                buffText.text += "Speed: +20%\n";
                 leg.GetComponent<Armor_Bottoms>().SetLevelAnimation(legsSelected);
             break;
             case 3:
                 //pickAxeDamage.text = "6";
                 //pickAxe.GetComponent<PickAxe>().setDamage(6);
                 player.setSpeed(1.3f);
+                buffText.text += "Speed: +30%\n";
                 leg.GetComponent<Armor_Bottoms>().SetLevelAnimation(legsSelected);
             break;
             case 4:
                 //pickAxeDamage.text = "6";
                 //pickAxe.GetComponent<PickAxe>().setDamage(6);
                 player.setSpeed(1.5f);
+                buffText.text += "Speed: +50%\n";
                 leg.GetComponent<Armor_Bottoms>().SetLevelAnimation(legsSelected);
             break;
 
