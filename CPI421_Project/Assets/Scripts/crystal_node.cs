@@ -11,8 +11,15 @@ public class crystal_node : Fighter
 
     public int crystal_level = 1;
 
+    private player Player;
+
     [SerializeField] AudioSource breakingSound;
     [SerializeField] AudioSource collectionSound;
+
+    public void Start()
+    {
+        Player = GameObject.Find("Player").GetComponent<player>();
+    }
 
     protected virtual void Update()
     {
@@ -59,24 +66,34 @@ public class crystal_node : Fighter
         var temp = Instantiate(deathSoundPrefab);
         temp.gameObject.SendMessage("SetAudioSource", collectionSound);
 
-        Destroy(gameObject);
+        int crystals_given = Random.Range(3 + Player.getDiscovery() , 7 + Player.getDiscovery());
+
         if(crystal_level == 1)
         {
-            GameManager.instance.GiveYellowCrystal(10);
+            GameManager.instance.GiveYellowCrystal(crystals_given);
             GameManager.instance.ShowText("Yellow Crystal Obtained ", 40, Color.blue, transform.position, Vector3.up * 40, 1.0f);
         }
         else
         if(crystal_level == 2)
         {
-            GameManager.instance.GiveBlueCrystal(10);
+            GameManager.instance.GiveBlueCrystal(crystals_given);
             GameManager.instance.ShowText("Blue Crystal Obtained ", 40, Color.blue, transform.position, Vector3.up * 40, 1.0f);
         }
         else
         if(crystal_level == 3)
         {
-            GameManager.instance.GiveRedCrystal(10);
+            GameManager.instance.GiveRedCrystal(crystals_given);
             GameManager.instance.ShowText("Red Crystal Obtained ", 40, Color.blue, transform.position, Vector3.up * 40, 1.0f);
         }
+        else
+        if(crystal_level == 4)
+        {
+            GameManager.instance.GiveRedCrystal(crystals_given);
+            GameManager.instance.ShowText("Red Crystal Obtained ", 40, Color.blue, transform.position, Vector3.up * 40, 1.0f);
+        }
+
+
+        Destroy(gameObject);
 
     }
 }

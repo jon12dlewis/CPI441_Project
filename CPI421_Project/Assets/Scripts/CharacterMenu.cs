@@ -17,6 +17,7 @@ public class CharacterMenu : MonoBehaviour
     public GameObject helmet;
     public GameObject chest;
     public GameObject leg;
+    public Health healthUI;
 
     int weaponSelected = 1;
     int pickAxeSelected = 1;
@@ -42,6 +43,8 @@ public class CharacterMenu : MonoBehaviour
         chest = player.transform.GetChild(5).gameObject;
         leg = player.transform.GetChild(4).gameObject;
 
+        healthUI = GameObject.Find("HUD").GetComponent<Health>();
+
         Debug.Log("I am setting all the display");
 
         displayWeapon();
@@ -50,6 +53,8 @@ public class CharacterMenu : MonoBehaviour
         displayLegs();
         displayChest();
         displayHelmet();
+        
+        healthUI.SetHealth();
     }
 
     // Update is called once per frame
@@ -277,6 +282,7 @@ public class CharacterMenu : MonoBehaviour
             helmetDisplay.enabled = false;
             helmetUI.enabled = false;
             helmet.SetActive(false);
+            player.setDiscovery(0);
             return;
         }
         else
@@ -302,22 +308,25 @@ public class CharacterMenu : MonoBehaviour
             case 1:
                 //helmetDamage.text = "1";
                 //helmet.GetComponent<PickAxe>().setDamage(1);
-                
+                player.setDiscovery(1);
                 helmet.GetComponent<Helmet>().SetLevelAnimation(helmetSelected);
             break;
             case 2:
                 //helmetDamage.text = "3";
                 //helmet.GetComponent<PickAxe>().setDamage(3);
+                player.setDiscovery(2);
                 helmet.GetComponent<Helmet>().SetLevelAnimation(helmetSelected);
             break;
             case 3:
                 //helmetDamage.text = "6";
                 //pickAxe.GetComponent<PickAxe>().setDamage(6);
+                player.setDiscovery(3);
                 helmet.GetComponent<Helmet>().SetLevelAnimation(helmetSelected);
             break;
             case 4:
                 //helmetDamage.text = "6";
                 //pickAxe.GetComponent<PickAxe>().setDamage(6);
+                player.setDiscovery(4);
                 helmet.GetComponent<Helmet>().SetLevelAnimation(helmetSelected);
             break;
 
@@ -334,6 +343,8 @@ public class CharacterMenu : MonoBehaviour
             chestDisplay.enabled = false;
             chestUI.enabled = false;
             chest.SetActive(false);
+            player.hitPoint = 3;
+            player.maxHitpoint = 3;
             return;
         }
         else
@@ -358,21 +369,30 @@ public class CharacterMenu : MonoBehaviour
                 //chestDamage.text = "1";
                 //chest.GetComponent<PickAxe>().setDamage(1);
                 chest.GetComponent<Armor_Chest>().SetLevelAnimation(chestSelected);
+                player.hitPoint = 5;
+                player.maxHitpoint = 5;
             break;
             case 2:
                 //chestDamage.text = "3";
                 //chest.GetComponent<Chest>().setDamage(3);
                 chest.GetComponent<Armor_Chest>().SetLevelAnimation(chestSelected);
+                player.hitPoint = 7;
+                player.maxHitpoint = 7;
             break;
             case 3:
                 //pickAxeDamage.text = "6";
                 //pickAxe.GetComponent<PickAxe>().setDamage(6);
                 chest.GetComponent<Armor_Chest>().SetLevelAnimation(chestSelected);
+                player.hitPoint = 10;
+                player.maxHitpoint = 10;
             break;
             case 4:
                 //pickAxeDamage.text = "6";
                 //pickAxe.GetComponent<PickAxe>().setDamage(6);
                 chest.GetComponent<Armor_Chest>().SetLevelAnimation(chestSelected);
+                player.hitPoint = 10;
+                player.maxHitpoint = 10;
+                healthUI.regen = true;
             break;
 
         }
@@ -388,6 +408,7 @@ public class CharacterMenu : MonoBehaviour
             legsDisplay.enabled = false;
             legUI.enabled = false;
             leg.SetActive(false);
+            player.setSpeed(1f);
             return;
         }
         else
@@ -411,21 +432,25 @@ public class CharacterMenu : MonoBehaviour
             case 1:
                 //pickAxeDamage.text = "1";
                 //pickAxe.GetComponent<PickAxe>().setDamage(1);
+                player.setSpeed(1.1f);
                 leg.GetComponent<Armor_Bottoms>().SetLevelAnimation(legsSelected);
             break;
             case 2:
                 //pickAxeDamage.text = "3";
                 //pickAxe.GetComponent<PickAxe>().setDamage(3);
+                player.setSpeed(1.2f);
                 leg.GetComponent<Armor_Bottoms>().SetLevelAnimation(legsSelected);
             break;
             case 3:
                 //pickAxeDamage.text = "6";
                 //pickAxe.GetComponent<PickAxe>().setDamage(6);
+                player.setSpeed(1.3f);
                 leg.GetComponent<Armor_Bottoms>().SetLevelAnimation(legsSelected);
             break;
             case 4:
                 //pickAxeDamage.text = "6";
                 //pickAxe.GetComponent<PickAxe>().setDamage(6);
+                player.setSpeed(1.5f);
                 leg.GetComponent<Armor_Bottoms>().SetLevelAnimation(legsSelected);
             break;
 

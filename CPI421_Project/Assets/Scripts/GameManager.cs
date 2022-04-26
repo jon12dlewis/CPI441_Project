@@ -99,7 +99,7 @@ public class GameManager : MonoBehaviour
 
     public void newGame()
     {
-        string s = "0|0|0|0|1|1|1|1|1|1|0|1|1|1|1|1|1";
+        string s = "0|0|0|0|0|0|1|0|0|0|0|1|1|1|1|1|1";
         PlayerPrefs.SetString("SaveState", s);
     }
 

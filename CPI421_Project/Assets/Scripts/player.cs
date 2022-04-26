@@ -15,7 +15,9 @@ public class player : Mover
 
     public Animator animator;
 
-    public float moveSpeed = 2f; 
+    public int discoveryLevel = 0;
+
+    public float moveSpeed = 1f; 
 
     Vector2 movement; 
     Vector2 direction = new Vector2(0.0f, -1.0f);
@@ -155,12 +157,27 @@ public class player : Mover
     private void FixedUpdate()
     {
     
-        UpdateMotor(new Vector3(movement.x,movement.y,0));
+        UpdateMotor(new Vector3(movement.x * moveSpeed ,movement.y * moveSpeed,0));
     } 
 
     public void addHealth()
     {
         hitPoint += 1;
+    }
+
+    public void setSpeed(float Speed)
+    {
+        moveSpeed = Speed;              // Default is 2f
+    }
+
+    public void setDiscovery(int discovery)
+    {
+        discoveryLevel = discovery;
+    }
+
+    public int getDiscovery()
+    {
+        return discoveryLevel;
     }
 
     protected override void Death()
