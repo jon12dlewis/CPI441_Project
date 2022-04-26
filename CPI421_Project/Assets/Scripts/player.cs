@@ -193,6 +193,7 @@ public class player : Mover
         GameManager.instance.SaveState();
         GameOverMenu = GameObject.Find("GameOverScreen");
         GameOverMenu.GetComponent<Animator>().SetTrigger("GameOver");
+        //Time.timeScale = 0;
         //UnityEngine.SceneManagement.SceneManager.LoadScene("HomeBase");
         //transform.position = startingPoint.position;
     
