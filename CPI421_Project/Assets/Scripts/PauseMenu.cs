@@ -133,12 +133,16 @@ public class PauseMenu : MonoBehaviour
     }
 
     void DisableButton() {
-        homeButtonText.color = new Color32(169, 99, 0, 217);
-        homeButton.interactable = false;
+        if (homeButtonText != null) {
+            homeButtonText.color = new Color32(169, 99, 0, 217);
+            homeButton.interactable = false;
+        }
     }
     
     void EnableButton() {
-        homeButtonText.color = new Color32(255, 177, 13, 255);
-        homeButton.interactable = true;
+        if (homeButtonText != null) {
+            homeButtonText.color = new Color32(255, 177, 13, 255);
+            homeButton.interactable = true;
+        }
     }
 }
