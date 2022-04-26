@@ -58,7 +58,7 @@ public class CharacterMenu : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void UpdateMenu()
+    public void Update()
     {
         healthText.text = player.hitPoint.ToString() + "/" +player.maxHitpoint.ToString();
         blueCrystalText.text = GameManager.instance.blue_crystals.ToString();
