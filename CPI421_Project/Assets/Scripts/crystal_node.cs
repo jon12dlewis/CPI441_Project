@@ -88,8 +88,8 @@ public class crystal_node : Fighter
         else
         if(crystal_level == 4)
         {
-            GameManager.instance.GiveRedCrystal(crystals_given);
-            GameManager.instance.ShowText("Red Crystal Obtained ", 40, Color.blue, transform.position, Vector3.up * 40, 1.0f);
+            GameManager.instance.GiveBossCrystal(1);
+            GameManager.instance.ShowText("BOss Crystal Obtained ", 40, Color.blue, transform.position, Vector3.up * 40, 1.0f);
         }
 
 

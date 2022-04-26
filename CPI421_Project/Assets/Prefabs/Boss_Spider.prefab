@@ -563,6 +563,10 @@ MonoBehaviour:
   distance: 0
   triggerLength: 10
   chaseLength: 10
+  Blocking1: {fileID: 0}
+  Blocking2: {fileID: 0}
+  Blocking3: {fileID: 0}
+  BossCrystal: {fileID: 612559454755988403, guid: c716a1e7ac2c33342a157ec8e3d86254, type: 3}
   target: {fileID: 0}
   agentSpeed: {x: 0, y: 0, z: 0}
   attack: 0
