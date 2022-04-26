@@ -18,6 +18,8 @@ public class BossSpider : Mover
     private Transform playerTransform;
     private Vector3 startingPosition;
 
+    public GameObject Blocking1, Blocking2, Blocking3;
+
     // AI
     public Transform target;
     NavMeshAgent agent;
@@ -243,8 +245,11 @@ public class BossSpider : Mover
     {
         musicController.EnemyDisable(this.gameObject);
         Destroy(gameObject);
-        GameManager.instance.expierence += xpValue;
-        GameManager.instance.ShowText("+ " + xpValue + "xp", 60, Color.magenta, transform.position, Vector3.up * 40, 1.0f);
+        //GameManager.instance.expierence += xpValue;
+        Blocking1.SetActive(false);
+        Blocking2.SetActive(false);
+        Blocking3.SetActive(false);
+        //GameManager.instance.ShowText("+ " + xpValue + "xp", 60, Color.magenta, transform.position, Vector3.up * 40, 1.0f);
     }
 
     void ShootUp()
