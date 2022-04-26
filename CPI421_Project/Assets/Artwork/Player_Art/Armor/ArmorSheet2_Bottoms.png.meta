@@ -394,12 +394,12 @@ TextureImporter:
       name: ArmorSheet2_Bottoms_8
       rect:
         serializedVersion: 2
-        x: 420
+        x: 425
         y: 1628
         width: 120
         height: 80
       alignment: 9
-      pivot: {x: 0.38158366, y: 0.5313446}
+      pivot: {x: 0.3350469, y: 0.54879606}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -416,7 +416,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 728
-        y: 1628
+        y: 1631
         width: 120
         height: 80
       alignment: 9
@@ -441,7 +441,7 @@ TextureImporter:
         width: 120
         height: 80
       alignment: 9
-      pivot: {x: 0.36068624, y: 0.49999848}
+      pivot: {x: 0.37232056, y: 0.53490144}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
