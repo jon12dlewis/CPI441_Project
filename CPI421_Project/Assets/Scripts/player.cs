@@ -12,6 +12,8 @@ public class player : Mover
     public GameObject bow;
 
     public Transform startingPoint;
+    private float coolDown = 1.5f;
+    private float lastChange;
 
     public Animator animator;
 
@@ -90,12 +92,12 @@ public class player : Mover
 
         // animator.SetFloat("speed", movement.sqrMagnitude);
 
-        if(Input.GetKeyDown(KeyCode.Alpha1))
+        if(Input.GetKey(KeyCode.Alpha1) && (Time.time - lastChange > coolDown))
         {
             //weapon.SetActive(false);
             //pickaxe.SetActive(true);
             //bow.SetActive(false);
-
+            lastChange = Time.time;
             //weapon.GetComponent<BoxCollider2D>().enabled = false;
             weapon.GetComponent<Weapon>().isEquipped(false);
             //pickaxe.GetComponent<BoxCollider2D>().enabled = true;
@@ -107,14 +109,14 @@ public class player : Mover
             pickAxe.SetTrigger("Idle");
         }
         else
-        if(Input.GetKeyDown(KeyCode.Alpha2))
+        if(Input.GetKey(KeyCode.Alpha2) && (Time.time - lastChange > coolDown))
         {
             /*
             weapon.SetActive(true);
             pickaxe.SetActive(false);
             bow.SetActive(false);
             */
-
+            lastChange = Time.time;
             //weapon.GetComponent<BoxCollider2D>().enabled = true;
             weapon.GetComponent<Weapon>().isEquipped(true);
             //pickaxe.GetComponent<BoxCollider2D>().enabled = false;
@@ -126,14 +128,14 @@ public class player : Mover
             sword.SetTrigger("Idle");
         }
         else
-        if(Input.GetKeyDown(KeyCode.Alpha3))
+        if(Input.GetKey(KeyCode.Alpha3) && (Time.time - lastChange > coolDown))
         {
             /*
             weapon.SetActive(false);
             pickaxe.SetActive(false);
             bow.SetActive(true);
             */
-
+            lastChange = Time.time;
             //weapon.GetComponent<BoxCollider2D>().enabled = false;
             weapon.GetComponent<Weapon>().isEquipped(false);
             //pickaxe.GetComponent<BoxCollider2D>().enabled = false;
