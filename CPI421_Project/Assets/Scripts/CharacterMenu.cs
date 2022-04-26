@@ -168,6 +168,10 @@ public class CharacterMenu : MonoBehaviour
                 weaponDamage.text = "6";
                 weapon.GetComponent<Weapon>().setDamage(6);
             break;
+            case 4:
+                weaponDamage.text = "8";
+                weapon.GetComponent<Weapon>().setDamage(8);
+            break;
             default:
                 weaponDamage.text = "69";
                 weapon.GetComponent<Weapon>().setDamage(1); 
@@ -221,6 +225,13 @@ public class CharacterMenu : MonoBehaviour
                 bow.GetComponent<Bow>().SetLevelAnimation(bowSelected);
                 //bow.GetComponent<Bow>().setDamage(6);
             break;
+            case 4:
+                bowDamage.text = "8";
+                bowDamage.text = "8";
+                bow.GetComponent<Bow>().SetLevelAnimation(bowSelected);
+                //bow.GetComponent<Bow>().setDamage(6);
+            break;
+
 
         }
 
@@ -266,6 +277,11 @@ public class CharacterMenu : MonoBehaviour
             case 3:
                 pickAxeDamage.text = "6";
                 pickAxe.GetComponent<PickAxe>().setDamage(6);
+                pickAxe.GetComponent<PickAxe>().setLevel(pickAxeSelected);
+            break;
+            case 4:
+                pickAxeDamage.text = "8";
+                pickAxe.GetComponent<PickAxe>().setDamage(8);
                 pickAxe.GetComponent<PickAxe>().setLevel(pickAxeSelected);
             break;
 
