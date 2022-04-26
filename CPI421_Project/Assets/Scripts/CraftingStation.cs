@@ -48,8 +48,7 @@ public class CraftingStation : Collidable
             helmetImage.sprite = helmets[0];
             helmetUpgradeButton.GetComponentInChildren<Text>().text = "Craft";
         }
-
-
+        
         if(helmetLevel >= 4)
         helmetUpgradeButton.SetActive(false);
 

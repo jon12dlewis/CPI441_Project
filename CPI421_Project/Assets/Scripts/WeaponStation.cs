@@ -36,17 +36,53 @@ protected override void Start()
     {
          base.Update();  // Need to check collision
          weaponLevel = GameManager.instance.weaponLevel;
-         weaponImage.sprite = weapons[weaponLevel];
+         //weaponImage.sprite = weapons[weaponLevel];
+        if(weaponLevel != 0)
+        {
+            weaponImage.sprite = weapons[weaponLevel-1];
+            weaponUpgradeButton.GetComponentInChildren<Text>().text = "Upgrade";
+        }
+        else
+        {
+            weaponImage.sprite = weapons[0];
+            weaponUpgradeButton.GetComponentInChildren<Text>().text = "Craft";
+        }
          if(weaponLevel >= 4)
             weaponUpgradeButton.SetActive(false);
 
+
         pickAxeLevel = GameManager.instance.pickaxeLevel;
-        pickAxeImage.sprite = pickAxes[pickAxeLevel];
+        //pickAxeImage.sprite = pickAxes[pickAxeLevel];
+
+        if(pickAxeLevel != 0)
+        {
+            pickAxeImage.sprite = pickAxes[pickAxeLevel-1];
+            pickAxeUpgradeButton.GetComponentInChildren<Text>().text = "Upgrade";
+        }
+        else
+        {
+            pickAxeImage.sprite = pickAxes[0];
+            pickAxeUpgradeButton.GetComponentInChildren<Text>().text = "Craft";
+        }
         if(pickAxeLevel >= 4)
             pickAxeUpgradeButton.SetActive(false);
 
         bowLevel = GameManager.instance.bowLevel;
-        bowImage.sprite = bows[bowLevel];
+
+        //bowImage.sprite = bows[bowLevel];
+
+        if(bowLevel != 0)
+        {
+            bowImage.sprite = bows[bowLevel-1];
+            bowUpgradeButton.GetComponentInChildren<Text>().text = "Upgrade";
+        }
+        else
+        {
+            bowImage.sprite = bows[0];
+            bowUpgradeButton.GetComponentInChildren<Text>().text = "Craft";
+        }
+
+
         if(bowLevel >= 4)
             bowUpgradeButton.SetActive(false);
 
@@ -107,7 +143,7 @@ protected override void Start()
                     weaponLevel = GameManager.instance.upgradeWeaponLevel();
                     GameManager.instance.TakeYellowCrystal(10);
                     GameManager.instance.TakeBlueCrystal(15);
-                    weaponImage.sprite = weapons[weaponLevel];
+                    weaponImage.sprite = weapons[weaponLevel-1];
                     Debug.Log("Crafting Sword 2");
                     updateWeaponStats();
                 }
@@ -125,9 +161,24 @@ protected override void Start()
                     GameManager.instance.TakeYellowCrystal(20);
                     GameManager.instance.TakeBlueCrystal(20);
                     GameManager.instance.TakeRedCrystal(15);
-                    if(weaponLevel >= 4)
-                        weaponLevel = 3;
-                    weaponImage.sprite = weapons[weaponLevel];
+                    weaponImage.sprite = weapons[weaponLevel-1];
+                    Debug.Log("Crafting Sword 3");
+                    updateWeaponStats();
+                }
+                else
+                {
+                    Debug.Log("Not Enough Crystals");
+                }
+            break;
+
+            case 3:
+                if(GameManager.instance.GetYellowCrystal() >= 20 && GameManager.instance.GetBlueCrystal() >= 20 && GameManager.instance.GetRedCrystal() >= 15)
+                {
+                    weaponLevel = GameManager.instance.upgradeWeaponLevel();
+                    GameManager.instance.TakeYellowCrystal(20);
+                    GameManager.instance.TakeBlueCrystal(20);
+                    GameManager.instance.TakeRedCrystal(15);
+                    weaponImage.sprite = weapons[weaponLevel-1];
                     Debug.Log("Crafting Sword 3");
                     weaponUpgradeButton.SetActive(false);
                     updateWeaponStats();
@@ -178,7 +229,7 @@ protected override void Start()
                     pickAxeLevel = GameManager.instance.upgradePickAxeLevel();
                     GameManager.instance.TakeYellowCrystal(10);
                     GameManager.instance.TakeBlueCrystal(15);
-                    pickAxeImage.sprite = pickAxes[pickAxeLevel];
+                    pickAxeImage.sprite = pickAxes[pickAxeLevel-1];
                     Debug.Log("Crafting pickAxe 2");
                     updatePickAxeStats();
                 }
@@ -196,9 +247,24 @@ protected override void Start()
                     GameManager.instance.TakeYellowCrystal(20);
                     GameManager.instance.TakeBlueCrystal(20);
                     GameManager.instance.TakeRedCrystal(15);
-                    if(pickAxeLevel >= 4)
-                        pickAxeLevel = 3;
-                    pickAxeImage.sprite = pickAxes[pickAxeLevel];
+                    pickAxeImage.sprite = pickAxes[pickAxeLevel-1];
+                    Debug.Log("Crafting Sword 3");
+                    updatePickAxeStats();
+                }
+                else
+                {
+                    Debug.Log("Not Enough Crystals");
+                }
+            break;
+
+            case 3:
+                if(GameManager.instance.GetYellowCrystal() >= 20 && GameManager.instance.GetBlueCrystal() >= 20 && GameManager.instance.GetRedCrystal() >= 15)
+                {
+                    pickAxeLevel = GameManager.instance.upgradePickAxeLevel();
+                    GameManager.instance.TakeYellowCrystal(20);
+                    GameManager.instance.TakeBlueCrystal(20);
+                    GameManager.instance.TakeRedCrystal(15);
+                    pickAxeImage.sprite = pickAxes[pickAxeLevel-1];
                     Debug.Log("Crafting Sword 3");
                     pickAxeUpgradeButton.SetActive(false);
                     updatePickAxeStats();
@@ -246,7 +312,7 @@ protected override void Start()
                     bowLevel = GameManager.instance.upgradeBowLevel();
                     GameManager.instance.TakeYellowCrystal(10);
                     GameManager.instance.TakeBlueCrystal(15);
-                    bowImage.sprite = bows[bowLevel];
+                    bowImage.sprite = bows[bowLevel-1];
                     Debug.Log("Crafting Bow 2");
                     updateBowStats();
                 }
@@ -264,9 +330,23 @@ protected override void Start()
                     GameManager.instance.TakeYellowCrystal(20);
                     GameManager.instance.TakeBlueCrystal(20);
                     GameManager.instance.TakeRedCrystal(15);
-                    if(bowLevel >= 4)
-                        bowLevel = 3;
-                    bowImage.sprite = bows[bowLevel];
+                    bowImage.sprite = bows[bowLevel-1];
+                    Debug.Log("Crafting Bow 3");
+                    updateBowStats();
+                }
+                else
+                {
+                    Debug.Log("Not Enough Crystals");
+                }
+            break;
+            case 3:
+                if(GameManager.instance.GetYellowCrystal() >= 20 && GameManager.instance.GetBlueCrystal() >= 20 && GameManager.instance.GetRedCrystal() >= 15)
+                {
+                    bowLevel = GameManager.instance.upgradeBowLevel();
+                    GameManager.instance.TakeYellowCrystal(20);
+                    GameManager.instance.TakeBlueCrystal(20);
+                    GameManager.instance.TakeRedCrystal(15);
+                    bowImage.sprite = bows[bowLevel-1];
                     Debug.Log("Crafting Bow 3");
                     bowUpgradeButton.SetActive(false);
                     updateBowStats();

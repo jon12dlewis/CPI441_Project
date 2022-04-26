@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "193254670345",
+    "firebase_url": "https://mine-your-own-business-default-rtdb.firebaseio.com",
+    "project_id": "mine-your-own-business",
+    "storage_bucket": "mine-your-own-business.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:193254670345:android:911cd8335f0f75a2cbf8d8",
+        "android_client_info": {
+          "package_name": "com.TSGH.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "193254670345-6lthh9v9ah07oh9nu2ngou5atbt3psfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHa4uDQxUWl4tfCC2PkluPdwggg8lgU4U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "193254670345-6lthh9v9ah07oh9nu2ngou5atbt3psfg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
