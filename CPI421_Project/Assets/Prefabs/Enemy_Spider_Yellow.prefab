@@ -343,8 +343,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74d70d5af36532c43b70579526923220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoint: 5
-  maxHitpoint: 5
+  hitPoint: 15
+  maxHitpoint: 15
   pushRecoverySpeed: 0.2
   wasHit: 0
   damageSound: {fileID: 1495802238239493578}

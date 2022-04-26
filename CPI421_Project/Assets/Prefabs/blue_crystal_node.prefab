@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoint: 10
-  maxHitpoint: 10
+  maxHitpoint: 15
   pushRecoverySpeed: 0.2
   wasHit: 0
   damageSound: {fileID: 6234803847466092365}
