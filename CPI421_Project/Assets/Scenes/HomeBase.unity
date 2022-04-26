@@ -3356,15 +3356,14 @@ MonoBehaviour:
   - {fileID: 5950978685415856814, guid: a780d7a0700339e46aab2cc00e3e16fe, type: 3}
   - {fileID: -8881663192579795401, guid: 1712b095aee3ed841a9a5e65487b8876, type: 3}
   - {fileID: 4944535040205966742, guid: 15e4f05dfb9954449bd84ee395ec66d0, type: 3}
-
+  - {fileID: -997670093131940233, guid: 9c50b6814961b5548921b52c01fb557c, type: 3}
   RisingTextContainer: {fileID: 901002813}
   errorSound: {fileID: 2002730163}
-
   helmetLevel: 1
   chestLevel: 1
   legLevel: 1
-  max: 3
-  min: 1
+  max: 4
+  min: 0
 --- !u!61 &449828702
 BoxCollider2D:
   m_ObjectHideFlags: 0
