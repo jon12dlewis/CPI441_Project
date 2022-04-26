@@ -189,6 +189,7 @@ public class player : Mover
         //Application.Quit();
         //hitPoint = maxHitpoint;
         moveSpeed = 0;
+        animator.SetTrigger("dead");
         GameManager.instance.SaveState();
         GameOverMenu = GameObject.Find("GameOverScreen");
         GameOverMenu.GetComponent<Animator>().SetTrigger("GameOver");
